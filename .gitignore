@@ -6,6 +6,10 @@ ehthumbs.db
 console.log
 rtb/server/ChatLog.txt
 rtb/logs/Chatlog.txt
+screenshot_*.png
 
 # Filetypes
+
 *.dso
+*.ml
+*.exe.stackdump
