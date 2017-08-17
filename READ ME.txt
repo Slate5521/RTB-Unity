@@ -1,11 +1,30 @@
-Click "Play RTB" to play the game.
+==PLAYING RTB==
 
-if it doesnt work for you...
+To play this game, simply run "Play RTB".
 
-Right click it
-select properties
-go to compatibility
-run it for compatibility mode - Windows XP - service pack 3
-run this program as an administrator
+Should it not work for you-
 
-click the MANUALS folder for help
+1) Right click Play RTB.bat
+2) Select properties
+3) Go to compatibility
+4) Run it for compatibility mode - Windows XP - Service Pack 3
+5) Run this program as an administrator
+
+
+==DOCUMENTATION / HELP==
+
+For instructions and tips in general, refer to the MANUALS folder. 
+
+It contains a valuable asset of knowledge relating to the XMENU and BAC'S PACK modpacks.
+
+In-game, press F1 to access the help menu, where more information is stored.
+
+
+==COMMUNITY==
+
+To stay in touch with the RTB / v0002 community, there are several websites that are still active:
+
+
+Discord Server - https://discord.gg/9mEXtND
+RTB Forums - http://s3.zetaboards.com/AndoRTB/index/
+Seph's V0002 Archive - http://sephrtbmods.webs.com/
