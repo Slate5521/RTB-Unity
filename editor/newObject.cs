@@ -1,2 +1,2 @@
-ObjectBuilderGui.newObject = new fxShapeReplicator(asdf) {
+ObjectBuilderGui.newObject = new fxSunLight(moon) {
 };

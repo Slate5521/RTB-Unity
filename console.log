@@ -1,0 +1,1238 @@
+//-------------------------- 8/17/2017 -- 13:21:08 -----
+Processor Init:
+   AMD (unknown), ~3.55 Ghz
+     (timed at roughly 3.55 Ghz)
+   FPU detected
+   MMX detected
+   SSE detected
+ 
+Math Init:
+   Installing Standard C extensions
+   Installing Assembly extensions
+   Installing FPU extensions
+   Installing MMX extensions
+   Installing SSE extensions
+ 
+Input Init:
+   keyboard0 input device created.
+   mouse0 input device created.
+   DirectInput enabled.
+
+--------- Loading MODS ---------
+Loading compiled script common/main.cs.
+Missing file: common/defaults.cs!
+Compiling rtb/main.cs...
+Loading compiled script rtb/main.cs.
+Compiling rtb/client/defaults.cs...
+Loading compiled script rtb/client/defaults.cs.
+Compiling rtb/server/defaults.cs...
+Loading compiled script rtb/server/defaults.cs.
+Compiling rtb/client/prefs.cs...
+Loading compiled script rtb/client/prefs.cs.
+Compiling rtb/server/prefs.cs...
+Loading compiled script rtb/server/prefs.cs.
+Missing file: rtb/mods/modsinit.cs!
+Compiling rtb/DedicatedConsole.cs...
+Loading compiled script rtb/DedicatedConsole.cs.
+Missing file: fps/command.cs!
+
+--------- Parsing Arguments ---------
+
+--------- Initializing MOD: Common ---------
+Loading compiled script common/client/canvas.cs.
+Loading compiled script common/client/audio.cs.
+
+--------- Initializing MOD: RTB ---------
+Compiling rtb/client/init.cs...
+Loading compiled script rtb/client/init.cs.
+Missing file: rtb/client/xnvision.cs!
+Compiling rtb/server/PTTAinit.cs...
+Loading compiled script rtb/server/PTTAinit.cs.
+Compiling rtb/data/init.cs...
+Loading compiled script rtb/data/init.cs.
+Missing file: rtb/data/terrains/grassland/propertyMap.cs!
+Missing file: rtb/data/terrains/scorched/propertyMap.cs!
+Compiling rtb/rss/main.cs...
+Loading compiled script rtb/rss/main.cs.
+Compiling rtb/server/ipBanList.cs...
+Loading compiled script rtb/server/ipBanList.cs.
+
+--------- Initializing FPS: Server ---------
+Loading compiled script common/server/audio.cs.
+Loading compiled script common/server/server.cs.
+Loading compiled script common/server/message.cs.
+Loading compiled script common/server/commands.cs.
+Loading compiled script common/server/missionInfo.cs.
+Loading compiled script common/server/missionLoad.cs.
+Loading compiled script common/server/missionDownload.cs.
+Loading compiled script common/server/clientConnection.cs.
+Loading compiled script common/server/kickban.cs.
+Loading compiled script common/server/game.cs.
+Compiling rtb/server/scripts/commands.cs...
+Loading compiled script rtb/server/scripts/commands.cs.
+Compiling rtb/server/scripts/centerPrint.cs...
+Loading compiled script rtb/server/scripts/centerPrint.cs.
+Compiling rtb/server/scripts/PTTAgame.cs...
+Loading compiled script rtb/server/scripts/PTTAgame.cs.
+Compiling rtb/server/rBans.cs...
+Loading compiled script rtb/server/rBans.cs.
+Compiling rtb/server/serverRules.cs...
+Loading compiled script rtb/server/serverRules.cs.
+Compiling rtb/server/clientCash.cs...
+Loading compiled script rtb/server/clientCash.cs.
+Missing file: rtb/server/clientRecords.cs!
+
+--------- Initializing MOD: Mrx's Menu ---------
+
+Compiling rtb/server/xinit.cs...
+Loading compiled script rtb/server/xinit.cs.
+Compiling rtb/server/x/xcommands.cs...
+Loading compiled script rtb/server/x/xcommands.cs.
+
+--------- Completed Initializing MOD: Mrx's Menu ---------
+
+
+--------- Initializing FPS: Client ---------
+Loading compiled script common/client/message.cs.
+Loading compiled script common/client/mission.cs.
+Loading compiled script common/client/missionDownload.cs.
+Loading compiled script common/client/actionMap.cs.
+Loading compiled script common/editor/editor.cs.
+Video Init:
+   Accelerated OpenGL display device detected.
+   Accelerated D3D device detected.
+   Voodoo 2 display device not detected.
+
+Activating the OpenGL display device...
+Activating the OpenGL display device...
+Setting screen mode to 1024x768x32 (w)...
+Creating a new window...
+Acquiring a new device context...
+Pixel format set:
+  32 color bits, 24 depth bits, 8 stencil bits
+Creating a new rendering context...
+Making the new rendering context current...
+OpenGL driver information:
+  Vendor: NVIDIA Corporation
+  Renderer: GeForce GTX 960/PCIe/SSE2
+  Version: 4.5.0 NVIDIA 378.66
+OpenGL Init: Enabled Extensions
+  ARB_multitexture (Max Texture Units: 4)
+  EXT_compiled_vertex_array
+  NV_vertex_array_range
+  EXT_texture_env_combine
+  EXT_packed_pixels
+  EXT_fog_coord
+  ARB_texture_compression
+  EXT_texture_compression_s3tc
+  (ARB|EXT)_texture_env_add
+  EXT_texture_filter_anisotropic (Max anisotropy: 16.000000)
+  WGL_EXT_swap_control
+OpenGL Init: Disabled Extensions
+  EXT_paletted_texture
+  3DFX_texture_compression_FXT1
+  NPatch tessellation
+
+Loading compiled script common/ui/defaultProfiles.cs.
+Loading compiled script common/ui/GuiEditorGui.gui.
+common/ui/GuiEditorGui.gui (0): Unable to instantiate non-conobject class GuiEditorRuler.
+common/ui/GuiEditorGui.gui (0): Unable to instantiate non-conobject class GuiEditorRuler.
+Loading compiled script common/ui/ConsoleDlg.gui.
+Loading compiled script common/ui/InspectDlg.gui.
+Loading compiled script common/ui/InspectAddFieldDlg.gui.
+Loading compiled script common/ui/LoadFileDlg.gui.
+Loading compiled script common/ui/SaveFileDlg.gui.
+Loading compiled script common/ui/MessageBoxOkDlg.gui.
+Loading compiled script common/ui/MessageBoxYesNoDlg.gui.
+Loading compiled script common/ui/MessageBoxOKCancelDlg.gui.
+Loading compiled script common/ui/MessagePopupDlg.gui.
+Loading compiled script common/ui/HelpDlg.gui.
+Loading compiled script common/ui/RecordingsDlg.gui.
+Loading compiled script common/client/metrics.cs.
+Loading compiled script common/ui/FrameOverlayGui.gui.
+Loading compiled script common/client/messageBox.cs.
+Loading compiled script common/client/screenshot.cs.
+Loading compiled script common/client/cursor.cs.
+Loading compiled script common/client/help.cs.
+Loading compiled script common/client/recordings.cs.
+
+OpenAL Driver Init:
+OpenAL
+   Vendor: Creative Labs Inc.
+   Version: OpenAL 1.0
+   Renderer: Software
+   Extensions: EAX 2.0, EAX 3.0, EAX Unified, and EAX-AC3
+
+Compiling rtb/client/scripts/audioProfiles.cs...
+Loading compiled script rtb/client/scripts/audioProfiles.cs.
+Compiling rtb/client/PTTA/PTTAexec.cs...
+Loading compiled script rtb/client/PTTA/PTTAexec.cs.
+Compiling rtb/client/PTTA/voting.gui...
+Loading compiled script rtb/client/PTTA/voting.gui.
+Compiling rtb/client/PTTA/voting.cs...
+Loading compiled script rtb/client/PTTA/voting.cs.
+Compiling rtb/client/PTTA/pttaGuiserver.gui...
+Loading compiled script rtb/client/PTTA/pttaGuiserver.gui.
+Compiling rtb/client/PTTA/pttaGuipersonal.gui...
+Loading compiled script rtb/client/PTTA/pttaGuipersonal.gui.
+Compiling rtb/client/PTTA/pttaGui.gui...
+Loading compiled script rtb/client/PTTA/pttaGui.gui.
+Compiling rtb/client/PTTA/Changemap.gui...
+Loading compiled script rtb/client/PTTA/Changemap.gui.
+Compiling rtb/client/PTTA/pttaGui.cs...
+Loading compiled script rtb/client/PTTA/pttaGui.cs.
+Loading compiled script rtb/client/PTTA/voting.gui.
+Compiling rtb/client/PTTA/playerList.cs...
+Loading compiled script rtb/client/PTTA/playerList.cs.
+Compiling rtb/client/PTTA/serverConnection.cs...
+Loading compiled script rtb/client/PTTA/serverConnection.cs.
+Compiling rtb/client/ui/defaultGameProfiles.cs...
+Loading compiled script rtb/client/ui/defaultGameProfiles.cs.
+Compiling rtb/client/ui2/PlayGui2.gui...
+Loading compiled script rtb/client/ui2/PlayGui2.gui.
+Compiling rtb/client/ui/ChatHud.gui...
+Loading compiled script rtb/client/ui/ChatHud.gui.
+Compiling rtb/client/ui/playerList.gui...
+Loading compiled script rtb/client/ui/playerList.gui.
+Missing file: rtb/client/scripts/annoy.cs!
+Compiling rtb/client/ui2/mainMenuGui.gui...
+Loading compiled script rtb/client/ui2/mainMenuGui.gui.
+Compiling rtb/client/ui2/automessage.gui...
+Loading compiled script rtb/client/ui2/automessage.gui.
+Compiling rtb/client/ui2/BACsM.gui...
+Loading compiled script rtb/client/ui2/BACsM.gui.
+Compiling rtb/client/ui2/WrenchM.gui...
+Loading compiled script rtb/client/ui2/WrenchM.gui.
+Compiling rtb/client/ui2/WandM.gui...
+Loading compiled script rtb/client/ui2/WandM.gui.
+Compiling rtb/client/ui2/cat.gui...
+Loading compiled script rtb/client/ui2/cat.gui.
+Compiling rtb/client/ui2/monkey.gui...
+Loading compiled script rtb/client/ui2/monkey.gui.
+Compiling rtb/client/ui/aboutDlg.gui...
+Loading compiled script rtb/client/ui/aboutDlg.gui.
+Compiling rtb/client/ui/PasswordBox.gui...
+Loading compiled script rtb/client/ui/PasswordBox.gui.
+Compiling rtb/client/ui2/startMissionGui.gui...
+Loading compiled script rtb/client/ui2/startMissionGui.gui.
+Compiling rtb/client/ui2/joinServerGui.gui...
+Loading compiled script rtb/client/ui2/joinServerGui.gui.
+Compiling rtb/client/ui2/serverfilter.gui...
+Loading compiled script rtb/client/ui2/serverfilter.gui.
+Compiling rtb/client/ui/endGameGui.gui...
+Loading compiled script rtb/client/ui/endGameGui.gui.
+Compiling rtb/client/ui2/loadingGui.gui...
+Loading compiled script rtb/client/ui2/loadingGui.gui.
+Compiling rtb/client/ui/optionsDlg.gui...
+Loading compiled script rtb/client/ui/optionsDlg.gui.
+Compiling rtb/client/ui/remapDlg.gui...
+Loading compiled script rtb/client/ui/remapDlg.gui.
+Compiling rtb/client/ui/messagegui.gui...
+Loading compiled script rtb/client/ui/messagegui.gui.
+Compiling rtb/client/ui/EditorGUI.gui...
+Loading compiled script rtb/client/ui/EditorGUI.gui.
+Compiling rtb/client/ui/CopsAndRobbers.gui...
+Loading compiled script rtb/client/ui/CopsAndRobbers.gui.
+Compiling rtb/client/ui2/moversGUI.gui...
+Loading compiled script rtb/client/ui2/moversGUI.gui.
+Compiling rtb/client/ui2/botOpGUI.gui...
+Loading compiled script rtb/client/ui2/botOpGUI.gui.
+Compiling rtb/client/ui/HelpDlg.gui...
+Loading compiled script rtb/client/ui/HelpDlg.gui.
+Compiling rtb/client/ui/MessageBoxOKDlg.gui...
+Loading compiled script rtb/client/ui/MessageBoxOKDlg.gui.
+Compiling rtb/client/ui/MessageBoxYesNoDlg.gui...
+Loading compiled script rtb/client/ui/MessageBoxYesNoDlg.gui.
+Loading compiled script rtb/client/ui/messagegui.gui.
+Compiling rtb/client/ui/MessagePopupDlg.gui...
+Loading compiled script rtb/client/ui/MessagePopupDlg.gui.
+Missing file: rtb/client/ui/serverconfig.gui!
+Compiling rtb/client/ui/serverrulesgui.gui...
+Loading compiled script rtb/client/ui/serverrulesgui.gui.
+Compiling rtb/client/ui/brickProperties.gui...
+Loading compiled script rtb/client/ui/brickProperties.gui.
+Compiling rtb/client/ui/playerrights.gui...
+Loading compiled script rtb/client/ui/playerrights.gui.
+Compiling rtb/client/ui/AMbbc.gui...
+Loading compiled script rtb/client/ui/AMbbc.gui.
+Compiling rtb/client/ui/bbcew.gui...
+Loading compiled script rtb/client/ui/bbcew.gui.
+Compiling rtb/client/ui/bbcrate.gui...
+Loading compiled script rtb/client/ui/bbcrate.gui.
+Compiling rtb/client/ui2/brickFX.gui...
+Loading compiled script rtb/client/ui2/brickFX.gui.
+Compiling rtb/client/ui2/admingui.gui...
+Loading compiled script rtb/client/ui2/admingui.gui.
+Compiling rtb/client/ui/fAdmin.gui...
+Loading compiled script rtb/client/ui/fAdmin.gui.
+Compiling rtb/client/ui/persistenceLoad.gui...
+Loading compiled script rtb/client/ui/persistenceLoad.gui.
+Compiling rtb/client/ui/AMcandr.gui...
+Loading compiled script rtb/client/ui/AMcandr.gui.
+Compiling rtb/client/ui/AMdeathmatch.gui...
+Loading compiled script rtb/client/ui/AMdeathmatch.gui.
+Compiling rtb/client/ui/appearance.gui...
+Loading compiled script rtb/client/ui/appearance.gui.
+Compiling rtb/client/ui/register.gui...
+Loading compiled script rtb/client/ui/register.gui.
+Compiling rtb/client/ui/login.gui...
+Loading compiled script rtb/client/ui/login.gui.
+Compiling rtb/client/ui2/impulseGUI.gui...
+Loading compiled script rtb/client/ui2/impulseGUI.gui.
+Compiling rtb/client/ui/tgelobby/execall.cs...
+Loading compiled script rtb/client/ui/tgelobby/execall.cs.
+Compiling rtb/client/ui/tgelobby/tgelobby_vars.cs...
+Loading compiled script rtb/client/ui/tgelobby/tgelobby_vars.cs.
+Compiling rtb/client/ui/tgelobby/lobby_profiles.cs...
+Loading compiled script rtb/client/ui/tgelobby/lobby_profiles.cs.
+Compiling rtb/client/ui/tgelobby/GuiLobby.cs...
+Loading compiled script rtb/client/ui/tgelobby/GuiLobby.cs.
+Compiling rtb/client/ui/tgelobby/GuiLobby.gui...
+Loading compiled script rtb/client/ui/tgelobby/GuiLobby.gui.
+Compiling rtb/client/ui/tgelobby/GuiLogonDlg.gui...
+Loading compiled script rtb/client/ui/tgelobby/GuiLogonDlg.gui.
+Compiling rtb/client/ui/tgelobby/CreateRoom_Dlg.gui...
+Loading compiled script rtb/client/ui/tgelobby/CreateRoom_Dlg.gui.
+Compiling rtb/client/PTTA/radar.cs...
+Loading compiled script rtb/client/PTTA/radar.cs.
+Compiling rtb/client/ui2/GuiRadar.gui...
+Loading compiled script rtb/client/ui2/GuiRadar.gui.
+Compiling rtb/client/PTTA/client.cs...
+Loading compiled script rtb/client/PTTA/client.cs.
+Compiling rtb/client/PTTA/missionDownload.cs...
+Loading compiled script rtb/client/PTTA/missionDownload.cs.
+Compiling rtb/client/PTTA/loadingGui.cs...
+Loading compiled script rtb/client/PTTA/loadingGui.cs.
+Compiling rtb/client/PTTA/optionsDlg.cs...
+Loading compiled script rtb/client/PTTA/optionsDlg.cs.
+Compiling rtb/client/PTTA/chatHud.cs...
+Loading compiled script rtb/client/PTTA/chatHud.cs.
+Compiling rtb/client/PTTA/messageHud.cs...
+Loading compiled script rtb/client/PTTA/messageHud.cs.
+Compiling rtb/client/scripts/playGui.cs...
+Loading compiled script rtb/client/scripts/playGui.cs.
+Compiling rtb/client/scripts/centerPrint.cs...
+Loading compiled script rtb/client/scripts/centerPrint.cs.
+Compiling rtb/client/scripts/game.cs...
+Loading compiled script rtb/client/scripts/game.cs.
+Compiling rtb/client/PTTA/msgCallbacks.cs...
+Loading compiled script rtb/client/PTTA/msgCallbacks.cs.
+Compiling rtb/client/scripts/startMissionGui.cs...
+Loading compiled script rtb/client/scripts/startMissionGui.cs.
+Compiling rtb/client/scripts/faceprintselect.cs...
+Loading compiled script rtb/client/scripts/faceprintselect.cs.
+Compiling rtb/client/scripts/printselect.cs...
+Loading compiled script rtb/client/scripts/printselect.cs.
+Compiling rtb/client/scripts/EditorGUI.cs...
+Loading compiled script rtb/client/scripts/EditorGUI.cs.
+Compiling rtb/client/scripts/botOpGUI.cs...
+Loading compiled script rtb/client/scripts/botOpGUI.cs.
+rtb/client/scripts/botOpGUI.cs (0): Unable to find object: 'moveMap' attempting to call function 'bindCmd'
+Compiling rtb/client/default.bind.cs...
+Loading compiled script rtb/client/default.bind.cs.
+Compiling rtb/client/config.cs...
+Loading compiled script rtb/client/config.cs.
+Compiling rtb/client/version.cs...
+Loading compiled script rtb/client/version.cs.
+Compiling rtb/client/PTTA/adminGui.cs...
+Loading compiled script rtb/client/PTTA/adminGui.cs.
+
+--------- Initializing MOD: Mrx's Menu ---------
+
+Compiling rtb/client/xinit.cs...
+Loading compiled script rtb/client/xinit.cs.
+Compiling rtb/client/x/xversion.cs...
+Loading compiled script rtb/client/x/xversion.cs.
+Missing file: rtb/client/x/x.cs!
+Compiling rtb/client/x/xhacks.cs...
+Loading compiled script rtb/client/x/xhacks.cs.
+Compiling rtb/client/x/xdefaultprefs.cs...
+Loading compiled script rtb/client/x/xdefaultprefs.cs.
+Compiling rtb/client/x/xprefs.cs...
+Loading compiled script rtb/client/x/xprefs.cs.
+Compiling rtb/client/x/XmusicGUI.gui...
+Loading compiled script rtb/client/x/XmusicGUI.gui.
+Compiling rtb/client/x/Xmusic.cs...
+Loading compiled script rtb/client/x/Xmusic.cs.
+Compiling rtb/client/x/XChat.cs...
+Loading compiled script rtb/client/x/XChat.cs.
+Compiling rtb/client/x/XChatGUI.gui...
+Loading compiled script rtb/client/x/XChatGUI.gui.
+Compiling rtb/client/x/xgui.cs...
+Loading compiled script rtb/client/x/xgui.cs.
+Compiling rtb/client/x/xpersonalgui.cs...
+Loading compiled script rtb/client/x/xpersonalgui.cs.
+Compiling rtb/client/x/xservergui.cs...
+Loading compiled script rtb/client/x/xservergui.cs.
+Compiling rtb/client/x/xgui.gui...
+Loading compiled script rtb/client/x/xgui.gui.
+Compiling rtb/client/x/xpersonalgui.gui...
+Loading compiled script rtb/client/x/xpersonalgui.gui.
+Compiling rtb/client/x/xservergui.gui...
+Loading compiled script rtb/client/x/xservergui.gui.
+Compiling rtb/client/x/xadmingui.gui...
+Loading compiled script rtb/client/x/xadmingui.gui.
+Compiling rtb/client/x/xnvision.cs...
+Loading compiled script rtb/client/x/xnvision.cs.
+XMenu Preferences Updated
+
+--------- Completed Initializing MOD: Mrx's Menu ---------
+
+Binding server port to default IP
+UDP initialized on port 0
+rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
+Missing file: rtb/rss/ui/rssguiprofiles.cs!
+Compiling rtb/rss/ui/rssGui.gui...
+Loading compiled script rtb/rss/ui/rssGui.gui.
+Compiling rtb/rss/rssGui.cs...
+Loading compiled script rtb/rss/rssGui.cs.
+Engine initialized...
+slopes
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+digitaldesigner
+DeepSeas
+deathvalley
+celestialdreams
+bedroom
+rtb/client/scripts/startMissionGui.cs (37): Unable to find object: 'OptSitting' attempting to call function 'setValue'
+deathvalley
+celestialdreams
+deathvalley
+rtb/client/scripts/startMissionGui.cs (69): Unable to find object: 'OptSitting' attempting to call function 'getValue'
+Exporting server prefs...
+rtb/server/scripts/PTTAgame.cs (140): Unable to find function serverstats
+rtb/server/scripts/PTTAgame.cs (141): Unable to find function AutoSave
+rtb/server/scripts/PTTAgame.cs (142): Unable to find function Adverts
+Compiling rtb/server/scripts/PTTA/PTTAexec.cs...
+Loading compiled script rtb/server/scripts/PTTA/PTTAexec.cs.
+Compiling rtb/server/scripts/PTTA/pttaCommands.cs...
+Loading compiled script rtb/server/scripts/PTTA/pttaCommands.cs.
+Compiling rtb/server/scripts/PTTA/sprayCan.cs...
+Loading compiled script rtb/server/scripts/PTTA/sprayCan.cs.
+Object 'AudioClosestLooping3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Compiling rtb/server/scripts/PTTA/letterCan.cs...
+Loading compiled script rtb/server/scripts/PTTA/letterCan.cs.
+Object 'AudioClosestLooping3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Compiling rtb/server/scripts/PTTA/EditorWand.cs...
+Loading compiled script rtb/server/scripts/PTTA/EditorWand.cs.
+Compiling rtb/server/scripts/PTTA/commands.cs...
+Loading compiled script rtb/server/scripts/PTTA/commands.cs.
+Compiling rtb/server/scripts/PTTA/BlackLetterCan.cs...
+Loading compiled script rtb/server/scripts/PTTA/BlackLetterCan.cs.
+Object 'AudioClosestLooping3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Compiling rtb/server/scripts/PTTA/hammer.cs...
+Loading compiled script rtb/server/scripts/PTTA/hammer.cs.
+Compiling rtb/server/scripts/PTTA/TextureCan.cs...
+Loading compiled script rtb/server/scripts/PTTA/TextureCan.cs.
+Object 'AudioClosestLooping3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Compiling rtb/server/scripts/PTTA/wand.cs...
+Loading compiled script rtb/server/scripts/PTTA/wand.cs.
+Compiling rtb/server/scripts/PTTA/key.cs...
+Loading compiled script rtb/server/scripts/PTTA/key.cs.
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Object 'AudioClosest3d' is not a member of the 'AudioDescription' data block class
+Compiling rtb/server/scripts/PTTA/wrench.cs...
+Loading compiled script rtb/server/scripts/PTTA/wrench.cs.
+Compiling rtb/server/scripts/constants.cs...
+Loading compiled script rtb/server/scripts/constants.cs.
+Compiling rtb/server/scripts/PTTA/serverCmd.cs...
+Loading compiled script rtb/server/scripts/PTTA/serverCmd.cs.
+Compiling rtb/server/scripts/PTTA/adminCommands.cs...
+Loading compiled script rtb/server/scripts/PTTA/adminCommands.cs.
+Compiling rtb/server/scripts/audioProfiles.cs...
+Loading compiled script rtb/server/scripts/audioProfiles.cs.
+Compiling rtb/server/scripts/camera.cs...
+Loading compiled script rtb/server/scripts/camera.cs.
+Compiling rtb/server/scripts/markers.cs...
+Loading compiled script rtb/server/scripts/markers.cs.
+... Shape with old version.
+Compiling rtb/server/scripts/triggers.cs...
+Loading compiled script rtb/server/scripts/triggers.cs.
+rtb/server/scripts/triggers.cs (248): Unable to find parent object Small for TriggerData.
+Compiling rtb/server/scripts/inventory.cs...
+Loading compiled script rtb/server/scripts/inventory.cs.
+Compiling rtb/server/scripts/shapeBase.cs...
+Loading compiled script rtb/server/scripts/shapeBase.cs.
+Compiling rtb/server/scripts/item.cs...
+Loading compiled script rtb/server/scripts/item.cs.
+Compiling rtb/server/scripts/staticShape.cs...
+Loading compiled script rtb/server/scripts/staticShape.cs.
+Compiling rtb/server/scripts/PTTA/weapon.cs...
+rtb/server/scripts/PTTA/weapon.cs (441): string always evaluates to 0.
+rtb/server/scripts/PTTA/weapon.cs (445): string always evaluates to 0.
+rtb/server/scripts/PTTA/weapon.cs (449): string always evaluates to 0.
+Loading compiled script rtb/server/scripts/PTTA/weapon.cs.
+Compiling rtb/server/scripts/radiusDamage.cs...
+Loading compiled script rtb/server/scripts/radiusDamage.cs.
+Compiling rtb/server/scripts/ptta/player.cs...
+Loading compiled script rtb/server/scripts/ptta/player.cs.
+Compiling rtb/data/shapes/player/player.cs...
+Loading compiled script rtb/data/shapes/player/player.cs.
+Compiling rtb/server/scripts/brick.cs...
+Loading compiled script rtb/server/scripts/brick.cs.
+Compiling rtb/server/scripts/Bricks/Brickexec.cs...
+Loading compiled script rtb/server/scripts/Bricks/Brickexec.cs.
+Compiling rtb/server/scripts/Bricks/brick2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/brick2x2.cs.
+Compiling rtb/server/scripts/Bricks/baseplate.cs...
+Loading compiled script rtb/server/scripts/Bricks/baseplate.cs.
+Attempting to re-link namespace pineTree from StaticShapeData to pineTree with non-zero refcount.
+Compiling rtb/server/scripts/Bricks/brick2x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/brick2x4.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/brick1x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/brick1x1.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/brick1x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/brick1x2.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/brick1x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/brick1x4.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/brick1x4x5window.cs...
+Loading compiled script rtb/server/scripts/Bricks/brick1x4x5window.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x4x5window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x5window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate1x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate1x1.cs.
+Warning: shape rtb/data/shapes/bricks/plate1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate1x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate1x2.cs.
+Warning: shape rtb/data/shapes/bricks/plate1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate1x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate1x4.cs.
+Warning: shape rtb/data/shapes/bricks/plate1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate1x6.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate1x6.cs.
+Warning: shape rtb/data/shapes/bricks/plate1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate1x8.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate1x8.cs.
+Warning: shape rtb/data/shapes/bricks/plate1x8.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x8.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate1x10.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate1x10.cs.
+Warning: shape rtb/data/shapes/bricks/plate1x10.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x10.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate2x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate2x4.cs.
+Warning: shape rtb/data/shapes/bricks/plate2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/plate6x12.cs...
+Loading compiled script rtb/server/scripts/Bricks/plate6x12.cs.
+Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/ABP.cs...
+Loading compiled script rtb/server/scripts/Bricks/ABP.cs.
+Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/BBP.cs...
+Loading compiled script rtb/server/scripts/Bricks/BBP.cs.
+Compiling rtb/server/scripts/Bricks/CBP.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope2x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope2x1.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope2x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope2x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope2x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope2x4.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope3x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope3x1.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope3x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope3x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope3x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope3x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slope3x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slope3x4.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeC2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeC2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeC3x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeC3x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI2x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI2x1.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI2x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI2x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI2x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI2x4.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI3x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI3x1.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI3x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI3x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI3x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI3x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeI3x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeI3x4.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeIC2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeIC2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeIC3x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeIC3x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeT2x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeT2x1.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeT2x1e.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeT2x1e.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeT2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeT2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeT2x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeT2x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeT2x4.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeT2x4.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeCC2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeCC2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/slopeCC3x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/slopeCC3x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick2x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick2x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick2x8.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick2x8.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick2x10.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick2x10.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x1x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x1x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x2x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x2x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x3x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x3x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x4x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x4x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x6x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x6x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x8x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x8x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x10x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x10x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x12x5.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x12x5.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate1x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate1x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate2x3.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate2x3.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate2x6.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate2x6.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate2x8.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate2x8.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate2x10.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate2x10.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate4x6.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate4x6.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate4x8.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate4x8.cs.
+Compiling rtb/server/scripts/Bricks/CBP/plate6x10.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/plate6x10.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x2x2window.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x2x2window.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x3x2window.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x3x2window.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick1x4x2window.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick1x4x2window.cs.
+Compiling rtb/server/scripts/Bricks/CBP/brick2x4x3window.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/brick2x4x3window.cs.
+Compiling rtb/server/scripts/Bricks/CBP/cylinder2x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/cylinder2x2.cs.
+Compiling rtb/server/scripts/Bricks/CBP/fence1x4x2.cs...
+Loading compiled script rtb/server/scripts/Bricks/CBP/fence1x4x2.cs.
+Compiling rtb/server/scripts/Bricks/KBP.cs...
+Loading compiled script rtb/server/scripts/Bricks/KBP.cs.
+Compiling rtb/server/scripts/Bricks/KBP/onewaybrick.cs...
+Loading compiled script rtb/server/scripts/Bricks/KBP/onewaybrick.cs.
+Compiling rtb/server/scripts/Bricks/RBP.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x2handle.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x2handle.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x3arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x3arch.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x3x2archcurve.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x3x2archcurve.cs.
+Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
+Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
+Compiling rtb/server/scripts/Bricks/RBP/brick1x4fence.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x4fence.cs.
+Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x4x2fencespindled.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x4x2fencespindled.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x4x6window.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x4x6window.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x5x4arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x5x4arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x5x4archinverted.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x5x4archinverted.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x12x3arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x12x3arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x1x2slope.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x1x2slope.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x1x3slope.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x1x3slope.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x1x3slopeInv.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x1x3slopeInv.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x1x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x1x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x2x2slope.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x2x2slope.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x2x2slopeQC.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x2x2slopeQC.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slopeQC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slopeQC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x2x3slope.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x2x3slope.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x2x3slopeDC.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x2x3slopeDC.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeDC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeDC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x2x3slopeInv.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x2x3slopeInv.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x2x5Lattice.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x2x5Lattice.cs.
+Warning: shape rtb/data/shapes/bricks/brick2x2x5Lattice.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x5Lattice.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick2x8x3arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick2x8x3arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick3x8x6window.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick3x8x6window.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick32x32.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick32x32.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brickantenna.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickantenna.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brickbar.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickbar.cs.
+Warning: shape rtb/data/shapes/bricks/brickbar1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickbar1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brickcub.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickcub.cs.
+Warning: shape rtb/data/shapes/bricks/brickcub.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickcub.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brickdoor1.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickdoor1.cs.
+Warning: shape rtb/data/shapes/bricks/brickdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brickfauset.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickfauset.cs.
+Warning: shape rtb/data/shapes/bricks/brickfauset.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickfauset.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brickfence1.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickfence1.cs.
+Warning: shape rtb/data/shapes/bricks/brickfence.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickfence.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brickseat.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickseat.cs.
+Compiling rtb/server/scripts/Bricks/RBP/rearwing.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/rearwing.cs.
+Warning: shape rtb/data/shapes/bricks/rearwing.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/rearwing.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brickGate.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickGate.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brickFX.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brickFX.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick8x8fgrill.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick8x8fgrill.cs.
+Warning: shape rtb/data/shapes/bricks/brick8x8fgrill.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick8x8fgrill.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x8x2arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x8x2arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x4arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x4arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x4walk.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x4walk.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x4x2arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x4x2arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x6arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x6arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x6x2arch.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x6x2arch.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x6x2archround.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x6x2archround.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x6x3archcurve.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x6x3archcurve.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x1t.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x1t.cs.
+Compiling rtb/server/scripts/Bricks/RBP/cylinder1x1t.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/cylinder1x1t.cs.
+Compiling rtb/server/scripts/Bricks/RBP/cylinder1x1ft.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/cylinder1x1ft.cs.
+Compiling rtb/server/scripts/Bricks/RBP/roadcurve.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/roadcurve.cs.
+Warning: shape rtb/data/shapes/bricks/roadcurve.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadcurve.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/roaddeadend.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/roaddeadend.cs.
+Warning: shape rtb/data/shapes/bricks/roaddeadend.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roaddeadend.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/roadstraight.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/roadstraight.cs.
+Warning: shape rtb/data/shapes/bricks/roadstraight.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadstraight.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/roadstraightxw.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/roadstraightxw.cs.
+Warning: shape rtb/data/shapes/bricks/roadstraightxw.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadstraightxw.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/roadT.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/roadT.cs.
+Warning: shape rtb/data/shapes/bricks/RoadT.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/RoadT.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/roadX.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/roadX.cs.
+Compiling rtb/server/scripts/Bricks/RBP/dynamite.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/dynamite.cs.
+Warning: shape rtb/data/shapes/bricks/dynamitebrick.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/dynamitebrick.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/plunger.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/plunger.cs.
+Compiling rtb/server/scripts/Bricks/RBP/CastleTurretTop4x8x21third.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/CastleTurretTop4x8x21third.cs.
+Compiling rtb/server/scripts/Bricks/RBP/CastleWall2x5x6.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/CastleWall2x5x6.cs.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x6.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x6.cs.
+Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/brick1x8.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/brick1x8.cs.
+Compiling rtb/server/scripts/Bricks/RBP/tile2x2r.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/tile2x2r.cs.
+Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Compiling rtb/server/scripts/Bricks/RBP/tile1x1.cs...
+Loading compiled script rtb/server/scripts/Bricks/RBP/tile1x1.cs.
+Compiling rtb/server/scripts/Vehicles/Vehicleexec.cs...
+Loading compiled script rtb/server/scripts/Vehicles/Vehicleexec.cs.
+Compiling rtb/server/scripts/Vehicles/car.cs...
+Loading compiled script rtb/server/scripts/Vehicles/car.cs.
+Compiling rtb/server/scripts/Vehicles/flyer.cs...
+Loading compiled script rtb/server/scripts/Vehicles/flyer.cs.
+Compiling rtb/server/scripts/Vehicles/legoatv.cs...
+Loading compiled script rtb/server/scripts/Vehicles/legoatv.cs.
+Warning: shape rtb/data/shapes/bricks/legoatv.dts collision detail 0 (Collision-2) bounds exceed that of shape.
+addthread empty
+Compiling rtb/server/scripts/Vehicles/legobase.cs...
+Loading compiled script rtb/server/scripts/Vehicles/legobase.cs.
+addthread empty
+Compiling rtb/server/scripts/Vehicles/legobike.cs...
+Loading compiled script rtb/server/scripts/Vehicles/legobike.cs.
+Warning: shape rtb/data/shapes/bricks/legobike.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+addthread empty
+Compiling rtb/server/scripts/Vehicles/legohorse.cs...
+Loading compiled script rtb/server/scripts/Vehicles/legohorse.cs.
+addthread empty
+Compiling rtb/server/scripts/Vehicles/legoplane.cs...
+Loading compiled script rtb/server/scripts/Vehicles/legoplane.cs.
+Validation required for shape: rtb/data/shapes/bricks/LegoPlane.dts
+Compiling rtb/server/scripts/Vehicles/ski.cs...
+Loading compiled script rtb/server/scripts/Vehicles/ski.cs.
+Compiling rtb/server/scripts/Vehicles/specialVehicles.cs...
+Loading compiled script rtb/server/scripts/Vehicles/specialVehicles.cs.
+addthread empty
+addthread empty
+Compiling rtb/server/scripts/Vehicles/vehicle.cs...
+Loading compiled script rtb/server/scripts/Vehicles/vehicle.cs.
+Compiling rtb/server/scripts/Tools/screwdriver.cs...
+Loading compiled script rtb/server/scripts/Tools/screwdriver.cs.
+Loading compiled script rtb/server/scripts/PTTA/PTTAexec.cs.
+Loading compiled script rtb/server/scripts/PTTA/pttaCommands.cs.
+Loading compiled script rtb/server/scripts/PTTA/sprayCan.cs.
+Loading compiled script rtb/server/scripts/PTTA/letterCan.cs.
+Loading compiled script rtb/server/scripts/PTTA/EditorWand.cs.
+Loading compiled script rtb/server/scripts/PTTA/commands.cs.
+Loading compiled script rtb/server/scripts/PTTA/BlackLetterCan.cs.
+Loading compiled script rtb/server/scripts/PTTA/hammer.cs.
+Loading compiled script rtb/server/scripts/PTTA/TextureCan.cs.
+Loading compiled script rtb/server/scripts/PTTA/wand.cs.
+Loading compiled script rtb/server/scripts/PTTA/key.cs.
+Loading compiled script rtb/server/scripts/PTTA/wrench.cs.
+Compiling rtb/server/scripts/Items/Itemexec.cs...
+Loading compiled script rtb/server/scripts/Items/Itemexec.cs.
+Compiling rtb/server/scripts/Items/100bill.cs...
+Loading compiled script rtb/server/scripts/Items/100bill.cs.
+Compiling rtb/server/scripts/Items/airtank.cs...
+Loading compiled script rtb/server/scripts/Items/airtank.cs.
+Compiling rtb/server/scripts/Items/book.cs...
+Loading compiled script rtb/server/scripts/Items/book.cs.
+Compiling rtb/server/scripts/Items/bucketPack.cs...
+Loading compiled script rtb/server/scripts/Items/bucketPack.cs.
+Compiling rtb/server/scripts/Items/camerass.cs...
+Loading compiled script rtb/server/scripts/Items/camerass.cs.
+ParticleEmitterData(cameraflashEmitter) periodVariance >= period
+Compiling rtb/server/scripts/Items/cape.cs...
+Loading compiled script rtb/server/scripts/Items/cape.cs.
+Compiling rtb/server/scripts/Items/ghost.cs...
+Loading compiled script rtb/server/scripts/Items/ghost.cs.
+Compiling rtb/server/scripts/Items/goblet.cs...
+Loading compiled script rtb/server/scripts/Items/goblet.cs.
+Compiling rtb/server/scripts/Items/helmet.cs...
+Loading compiled script rtb/server/scripts/Items/helmet.cs.
+Compiling rtb/server/scripts/Items/pack.cs...
+Loading compiled script rtb/server/scripts/Items/pack.cs.
+Compiling rtb/server/scripts/Items/plateMail.cs...
+Loading compiled script rtb/server/scripts/Items/plateMail.cs.
+Object 'swordDrawSound' is not a member of the 'AudioProfile' data block class
+Compiling rtb/server/scripts/Items/pointyHelmet.cs...
+Loading compiled script rtb/server/scripts/Items/pointyHelmet.cs.
+Object 'swordDrawSound' is not a member of the 'AudioProfile' data block class
+Compiling rtb/server/scripts/Items/quiver.cs...
+Loading compiled script rtb/server/scripts/Items/quiver.cs.
+Compiling rtb/server/scripts/Items/scoutHat.cs...
+Loading compiled script rtb/server/scripts/Items/scoutHat.cs.
+Compiling rtb/server/scripts/Items/shield.cs...
+Loading compiled script rtb/server/scripts/Items/shield.cs.
+Object 'swordDrawSound' is not a member of the 'AudioProfile' data block class
+Compiling rtb/server/scripts/Items/triPlume.cs...
+Loading compiled script rtb/server/scripts/Items/triPlume.cs.
+Compiling rtb/server/scripts/Items/visor.cs...
+Loading compiled script rtb/server/scripts/Items/visor.cs.
+Compiling rtb/server/scripts/AI/AIexec.cs...
+Loading compiled script rtb/server/scripts/AI/AIexec.cs.
+Compiling rtb/server/scripts/AI/Bots.cs...
+rtb/server/scripts/AI/Bots.cs (1818): string always evaluates to 0.
+Loading compiled script rtb/server/scripts/AI/Bots.cs.
+Compiling rtb/server/scripts/AI/Aibandit.cs...
+Loading compiled script rtb/server/scripts/AI/Aibandit.cs.
+Compiling rtb/server/scripts/AI/AiPlayer.cs...
+Loading compiled script rtb/server/scripts/AI/AiPlayer.cs.
+Compiling rtb/server/scripts/Weapons/Weaponexec.cs...
+Loading compiled script rtb/server/scripts/Weapons/Weaponexec.cs.
+Compiling rtb/server/scripts/Weapons/SWP.cs...
+Loading compiled script rtb/server/scripts/Weapons/SWP.cs.
+Compiling rtb/server/scripts/Weapons/SWP/lightsabre.cs...
+Loading compiled script rtb/server/scripts/Weapons/SWP/lightsabre.cs.
+Compiling rtb/server/scripts/Weapons/SWP/katana.cs...
+Loading compiled script rtb/server/scripts/Weapons/SWP/katana.cs.
+Compiling rtb/server/scripts/Weapons/SWP/Revolver.cs...
+Loading compiled script rtb/server/scripts/Weapons/SWP/Revolver.cs.
+Compiling rtb/server/scripts/Weapons/wary.cs...
+Loading compiled script rtb/server/scripts/Weapons/wary.cs.
+Compiling rtb/server/scripts/Weapons/wary/DMHealth.cs...
+Loading compiled script rtb/server/scripts/Weapons/wary/DMHealth.cs.
+Compiling rtb/server/scripts/Weapons/wary/flamethrower.cs...
+Loading compiled script rtb/server/scripts/Weapons/wary/flamethrower.cs.
+Compiling rtb/server/scripts/Weapons/axe.cs...
+Loading compiled script rtb/server/scripts/Weapons/axe.cs.
+Compiling rtb/server/scripts/Weapons/blaster.cs...
+Loading compiled script rtb/server/scripts/Weapons/blaster.cs.
+Compiling rtb/server/scripts/Weapons/bow.cs...
+Loading compiled script rtb/server/scripts/Weapons/bow.cs.
+Compiling rtb/server/scripts/Weapons/crossbow.cs...
+Loading compiled script rtb/server/scripts/Weapons/crossbow.cs.
+Compiling rtb/server/scripts/Weapons/duallightsabre.cs...
+Loading compiled script rtb/server/scripts/Weapons/duallightsabre.cs.
+Compiling rtb/server/scripts/Weapons/pickaxe.cs...
+Loading compiled script rtb/server/scripts/Weapons/pickaxe.cs.
+Compiling rtb/server/scripts/Weapons/rifle.cs...
+Loading compiled script rtb/server/scripts/Weapons/rifle.cs.
+Object 'RifleFireSound' is not a member of the 'AudioProfile' data block class
+Object 'RifleFireSound' is not a member of the 'AudioProfile' data block class
+Object 'RifleFireSound' is not a member of the 'AudioProfile' data block class
+Compiling rtb/server/scripts/Weapons/spear.cs...
+Loading compiled script rtb/server/scripts/Weapons/spear.cs.
+Compiling rtb/server/scripts/Weapons/speargun.cs...
+Loading compiled script rtb/server/scripts/Weapons/speargun.cs.
+Object 'speargunFireSound' is not a member of the 'AudioProfile' data block class
+Object 'speargunFireSound' is not a member of the 'AudioProfile' data block class
+Object 'speargunFireSound' is not a member of the 'AudioProfile' data block class
+Compiling rtb/server/scripts/Weapons/sword.cs...
+Loading compiled script rtb/server/scripts/Weapons/sword.cs.
+Compiling rtb/server/scripts/Weapons/chainsaw.cs...
+Loading compiled script rtb/server/scripts/Weapons/chainsaw.cs.
+Compiling rtb/server/scripts/Weapons/smokegrenade.cs...
+Loading compiled script rtb/server/scripts/Weapons/smokegrenade.cs.
+Error: shape rtb/data/shapes/bricks/brickWeapon.dts-collision detail 0 (Collision-2) bounds box invalid!
+Compiling rtb/server/scripts/PTTA/movers.cs...
+Loading compiled script rtb/server/scripts/PTTA/movers.cs.
+Compiling rtb/server/scripts/particles.cs...
+Loading compiled script rtb/server/scripts/particles.cs.
+Compiling rtb/server/scripts/bombexplosions.cs...
+Loading compiled script rtb/server/scripts/bombexplosions.cs.
+Compiling rtb/server/scripts/bombradiusdamage.cs...
+Loading compiled script rtb/server/scripts/bombradiusdamage.cs.
+Compiling rtb/server/scripts/PTTA/message.cs...
+Loading compiled script rtb/server/scripts/PTTA/message.cs.
+Compiling rtb/server/scripts/precipitation.cs...
+Loading compiled script rtb/server/scripts/precipitation.cs.
+Compiling rtb/server/scripts/PTTA/persistence.cs...
+Loading compiled script rtb/server/scripts/PTTA/persistence.cs.
+Compiling rtb/server/scripts/showImages.cs...
+Loading compiled script rtb/server/scripts/showImages.cs.
+Compiling rtb/server/scripts/inventorycommands.cs...
+Loading compiled script rtb/server/scripts/inventorycommands.cs.
+Compiling rtb/server/scripts/Brickprints.cs...
+Loading compiled script rtb/server/scripts/Brickprints.cs.
+Error: shape rtb/data/shapes/prints/tile2x2round/print2x2round.dts-collision detail 0 (Collision-1) bounds box invalid!
+Compiling rtb/server/scripts/environment.cs...
+Loading compiled script rtb/server/scripts/environment.cs.
+Compiling rtb/server/scripts/Radar.cs...
+Loading compiled script rtb/server/scripts/Radar.cs.
+*** LOADING MISSION: rtb/data/missions/deathvalley.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing rtb/data/missions/deathvalley.mis.
+*** Mission loaded
+-----------CONN = 2649
+Connect request from: IPX:33330070:6172616D7332:12288
+Checking IP Ban Entry Number: 0
+Connection established 2649
+CADD: 2650 local
+*** Sending mission load to client: rtb/data/missions/deathvalley.mis
+Mapping string: updatePrefs to index: 0
+Mapping string: ServerMessage to index: 1
+Mapping string: MsgConnectionError to index: 2
+Mapping string: MsgLoadInfo to index: 3
+Mapping string: MsgLoadDescripition to index: 4
+Mapping string: updatePrefs to index: 0
+Mapping string: messagesent to index: 1
+rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
+Blockdude: 
+rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Mapping string: MsgLoadInfoDone to index: 5
+Mapping string: MsgClientJoin to index: 6
+Mapping string: Connected to Server, %1. to index: 7
+Mapping string: Blockdude to index: 8
+rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
+rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
+Mapping string:  to index: 9
+Mapping string: Admins on this server:  to index: 10
+Mapping string: %1 to index: 11
+Mapping string: XAdmins on this server:  to index: 12
+Mapping string: %1 to index: 13
+Mapping string: MissionStartPhase1 to index: 14
+*** New Mission: rtb/data/missions/deathvalley.mis
+*** Phase 1: Download Datablocks & Targets
+rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
+rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
+Mapping string: ChatMessage to index: 15
+Mapping string: %1: %2 to index: 16
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Mapping string: MissionStartPhase1Ack to index: 2
+Warning: shape rtb/data/shapes/bricks/brick2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x5window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x5window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x8.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x8.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x10.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate1x10.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
+Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
+Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x1x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x1x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slopeQC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x2slopeQC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeDC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeDC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x5Lattice.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick2x2x5Lattice.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickbar1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickbar1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickcub.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickcub.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickfauset.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickfauset.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickfence.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brickfence.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/rearwing.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/rearwing.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick8x8fgrill.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick8x8fgrill.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadcurve.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadcurve.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roaddeadend.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roaddeadend.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadstraight.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadstraight.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadstraightxw.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/roadstraightxw.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/RoadT.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/RoadT.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/dynamitebrick.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/dynamitebrick.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape rtb/data/shapes/bricks/legoatv.dts collision detail 0 (Collision-2) bounds exceed that of shape.
+addthread empty
+addthread empty
+Warning: shape rtb/data/shapes/bricks/legobike.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+addthread empty
+addthread empty
+Validation required for shape: rtb/data/shapes/bricks/LegoPlane.dts
+addthread empty
+addthread empty
+Could not locate texture: rtb/data/shapes/wary/neonwhite.brickSide
+Could not locate texture: rtb/data/shapes/wary/neonwhite.2x2Bottom
+Could not locate texture: rtb/data/shapes/wary/Material01
+Error: shape rtb/data/shapes/bricks/brickWeapon.dts-collision detail 0 (Collision-2) bounds box invalid!
+Could not locate texture: rtb/data/shapes/player/Decals/base.backdecal.png
+Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
+Error: shape rtb/data/shapes/prints/tile2x2round/print2x2round.dts-collision detail 0 (Collision-1) bounds box invalid!
+Could not locate texture: 
+Could not locate texture: 
+Could not locate texture: 
+Could not locate texture: 
+Could not locate texture: 
+Mapping string: MissionStartPhase2 to index: 17
+*** Phase 2: Download Ghost Objects
+Mapping string: MissionStartPhase2Ack to index: 3
+Could not locate texture: 
+Could not locate texture: 
+Could not locate texture: 
+Could not locate texture: 
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 18
+Client Replication Startup has Happened!
+fxFoliageReplicator - Client Foliage Replication Startup is complete.
+*** Phase 3: Mission Lighting
+Lighting mission....
+    = terrain lit in 0.203 seconds
+ Scene lit in 0.219 seconds
+ Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_71e9bf96.ml'
+Mission lighting done
+getewsettingupdate: Unknown command.
+Mapping string: rotcompatibility to index: 4
+Mapping string: messageSent to index: 5
+rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
+Blockdude: /me is going to spawn in your server
+Mapping string: setstatus to index: 6
+rtb/server/scripts/PTTA/serverCmd.cs (2798): Unable to find object: '' attempting to call function 'setShapeName'
+Mapping string: MissionStartPhase3Ack to index: 7
+Set::getObject index out of range.
+Mapping string: rotiscompatible to index: 19
+Mapping string: name to index: 20
+Mapping string: *%1 %2 to index: 21
+Mapping string: MissionStart to index: 22
+Mapping string: SyncClock to index: 23
+Mapping string: MsgUpdateMoney to index: 24
+Mapping string: updateprefs to index: 25
+Mapping string: MsgClearInv to index: 26
+Mapping string: MsgHilightInv to index: 27
+Mapping string: MsgItemPickup to index: 28
+Mapping string: showBrickImage to index: 29
+Mapping string: storeCash to index: 8
+Mapping string: ShowBrickImage to index: 30
+rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
+rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
+Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
+*** Initial Control Object
+Could not locate texture: rtb/client/ui2/hudfill.png
+Could not locate texture: rtb/client/ui2/hudfill.png
+Activating DirectInput...
+keyboard0 input device acquired.
+Mapping string: white to index: 31
+Mapping string: Cool1 to index: 0
+Mapping string: Misc-Blank to index: 2
+Mapping string: Blockdude to index: 3
+Mapping string: red to index: 4
+Mapping string: UpdateRadar to index: 5
+rtb/client/PTTA/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
+Mapping string: freezeme to index: 9
+Mapping string: dropCameraAtPlayer to index: 10
+Mapping string: ModifyShiftSize to index: 11
+keyboard0 input device unacquired.
+DirectInput deactivated.
+Exporting client prefs
+Exporting all clients connected to this session's cash ammount for storage.
+Exporting server prefs
+Exporting IP banlist
+Exporting client prefs
+Exporting server prefs
+rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
+rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2681' attempting to call function 'delete'
+CDROP: 2650 IPX:33330070:6172616D7332:12288
+Shutting down the OpenGL display device...
+Making the GL rendering context not current...
+Deleting the GL rendering context...
+Releasing the device context...
