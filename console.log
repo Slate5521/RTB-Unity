@@ -1,0 +1,304 @@
+//-------------------------- 8/17/2017 -- 07:50:58 -----
+Processor Init:
+   AMD (unknown), ~3.50 Ghz
+     (timed at roughly 3.52 Ghz)
+   FPU detected
+   MMX detected
+   SSE detected
+ 
+Math Init:
+   Installing Standard C extensions
+   Installing Assembly extensions
+   Installing FPU extensions
+   Installing MMX extensions
+   Installing SSE extensions
+ 
+Input Init:
+   keyboard0 input device created.
+   mouse0 input device created.
+   DirectInput enabled.
+
+--------- Loading MODS ---------
+Loading compiled script common/main.cs.
+Missing file: common/defaults.cs!
+Loading compiled script rtb/main.cs.
+Loading compiled script rtb/client/defaults.cs.
+Loading compiled script rtb/server/defaults.cs.
+Loading compiled script rtb/client/prefs.cs.
+Loading compiled script rtb/server/prefs.cs.
+Missing file: rtb/mods/modsinit.cs!
+Loading compiled script rtb/DedicatedConsole.cs.
+Missing file: fps/command.cs!
+
+--------- Parsing Arguments ---------
+
+--------- Initializing MOD: Common ---------
+Loading compiled script common/client/canvas.cs.
+Loading compiled script common/client/audio.cs.
+
+--------- Initializing MOD: RTB ---------
+Loading compiled script rtb/client/init.cs.
+Missing file: rtb/client/xnvision.cs!
+Loading compiled script rtb/server/PTTAinit.cs.
+Loading compiled script rtb/data/init.cs.
+Missing file: rtb/data/terrains/grassland/propertyMap.cs!
+Missing file: rtb/data/terrains/scorched/propertyMap.cs!
+Loading compiled script rtb/rss/main.cs.
+Loading compiled script rtb/server/ipBanList.cs.
+
+--------- Initializing FPS: Server ---------
+Loading compiled script common/server/audio.cs.
+Loading compiled script common/server/server.cs.
+Loading compiled script common/server/message.cs.
+Loading compiled script common/server/commands.cs.
+Loading compiled script common/server/missionInfo.cs.
+Loading compiled script common/server/missionLoad.cs.
+Loading compiled script common/server/missionDownload.cs.
+Loading compiled script common/server/clientConnection.cs.
+Loading compiled script common/server/kickban.cs.
+Loading compiled script common/server/game.cs.
+Loading compiled script rtb/server/scripts/commands.cs.
+Loading compiled script rtb/server/scripts/centerPrint.cs.
+Loading compiled script rtb/server/scripts/PTTAgame.cs.
+Loading compiled script rtb/server/rBans.cs.
+Loading compiled script rtb/server/serverRules.cs.
+Loading compiled script rtb/server/clientCash.cs.
+Missing file: rtb/server/clientRecords.cs!
+
+--------- Initializing MOD: Mrx's Menu ---------
+
+Loading compiled script rtb/server/xinit.cs.
+Loading compiled script rtb/server/x/xcommands.cs.
+
+--------- Completed Initializing MOD: Mrx's Menu ---------
+
+
+--------- Initializing FPS: Client ---------
+Loading compiled script common/client/message.cs.
+Loading compiled script common/client/mission.cs.
+Loading compiled script common/client/missionDownload.cs.
+Loading compiled script common/client/actionMap.cs.
+Loading compiled script common/editor/editor.cs.
+Video Init:
+   Accelerated OpenGL display device detected.
+   Accelerated D3D device detected.
+   Voodoo 2 display device not detected.
+
+Activating the OpenGL display device...
+Activating the OpenGL display device...
+Setting screen mode to 1024x768x32 (w)...
+Creating a new window...
+Acquiring a new device context...
+Pixel format set:
+  32 color bits, 24 depth bits, 8 stencil bits
+Creating a new rendering context...
+Making the new rendering context current...
+OpenGL driver information:
+  Vendor: NVIDIA Corporation
+  Renderer: GeForce GTX 960/PCIe/SSE2
+  Version: 4.5.0 NVIDIA 378.66
+OpenGL Init: Enabled Extensions
+  ARB_multitexture (Max Texture Units: 4)
+  EXT_compiled_vertex_array
+  NV_vertex_array_range
+  EXT_texture_env_combine
+  EXT_packed_pixels
+  EXT_fog_coord
+  ARB_texture_compression
+  EXT_texture_compression_s3tc
+  (ARB|EXT)_texture_env_add
+  EXT_texture_filter_anisotropic (Max anisotropy: 16.000000)
+  WGL_EXT_swap_control
+OpenGL Init: Disabled Extensions
+  EXT_paletted_texture
+  3DFX_texture_compression_FXT1
+  NPatch tessellation
+
+Loading compiled script common/ui/defaultProfiles.cs.
+Loading compiled script common/ui/GuiEditorGui.gui.
+common/ui/GuiEditorGui.gui (0): Unable to instantiate non-conobject class GuiEditorRuler.
+common/ui/GuiEditorGui.gui (0): Unable to instantiate non-conobject class GuiEditorRuler.
+Loading compiled script common/ui/ConsoleDlg.gui.
+Loading compiled script common/ui/InspectDlg.gui.
+Loading compiled script common/ui/InspectAddFieldDlg.gui.
+Loading compiled script common/ui/LoadFileDlg.gui.
+Loading compiled script common/ui/SaveFileDlg.gui.
+Loading compiled script common/ui/MessageBoxOkDlg.gui.
+Loading compiled script common/ui/MessageBoxYesNoDlg.gui.
+Loading compiled script common/ui/MessageBoxOKCancelDlg.gui.
+Loading compiled script common/ui/MessagePopupDlg.gui.
+Loading compiled script common/ui/HelpDlg.gui.
+Loading compiled script common/ui/RecordingsDlg.gui.
+Loading compiled script common/client/metrics.cs.
+Loading compiled script common/ui/FrameOverlayGui.gui.
+Loading compiled script common/client/messageBox.cs.
+Loading compiled script common/client/screenshot.cs.
+Loading compiled script common/client/cursor.cs.
+Loading compiled script common/client/help.cs.
+Loading compiled script common/client/recordings.cs.
+
+OpenAL Driver Init:
+OpenAL
+   Vendor: Creative Labs Inc.
+   Version: OpenAL 1.0
+   Renderer: Software
+   Extensions: EAX 2.0, EAX 3.0, EAX Unified, and EAX-AC3
+
+Loading compiled script rtb/client/scripts/audioProfiles.cs.
+Loading compiled script rtb/client/PTTA/PTTAexec.cs.
+Loading compiled script rtb/client/PTTA/voting.gui.
+Loading compiled script rtb/client/PTTA/voting.cs.
+Loading compiled script rtb/client/PTTA/pttaGuiserver.gui.
+Loading compiled script rtb/client/PTTA/pttaGuipersonal.gui.
+Loading compiled script rtb/client/PTTA/pttaGui.gui.
+Loading compiled script rtb/client/PTTA/Changemap.gui.
+Loading compiled script rtb/client/PTTA/pttaGui.cs.
+Loading compiled script rtb/client/PTTA/voting.gui.
+Loading compiled script rtb/client/PTTA/playerList.cs.
+Loading compiled script rtb/client/PTTA/serverConnection.cs.
+Loading compiled script rtb/client/ui/defaultGameProfiles.cs.
+Loading compiled script rtb/client/ui2/PlayGui2.gui.
+Compiling rtb/client/ui/ChatHud.gui...
+Loading compiled script rtb/client/ui/ChatHud.gui.
+Loading compiled script rtb/client/ui/playerList.gui.
+Missing file: rtb/client/scripts/annoy.cs!
+Loading compiled script rtb/client/ui2/mainMenuGui.gui.
+Loading compiled script rtb/client/ui2/automessage.gui.
+Loading compiled script rtb/client/ui2/BACsM.gui.
+Loading compiled script rtb/client/ui2/WrenchM.gui.
+Loading compiled script rtb/client/ui2/WandM.gui.
+Loading compiled script rtb/client/ui2/cat.gui.
+Loading compiled script rtb/client/ui2/monkey.gui.
+Loading compiled script rtb/client/ui/aboutDlg.gui.
+Loading compiled script rtb/client/ui/PasswordBox.gui.
+Loading compiled script rtb/client/ui2/startMissionGui.gui.
+Loading compiled script rtb/client/ui2/joinServerGui.gui.
+Loading compiled script rtb/client/ui2/serverfilter.gui.
+Loading compiled script rtb/client/ui/endGameGui.gui.
+Loading compiled script rtb/client/ui2/loadingGui.gui.
+Loading compiled script rtb/client/ui/optionsDlg.gui.
+Loading compiled script rtb/client/ui/remapDlg.gui.
+Loading compiled script rtb/client/ui/messagegui.gui.
+Compiling rtb/client/ui/EditorGUI.gui...
+Loading compiled script rtb/client/ui/EditorGUI.gui.
+Loading compiled script rtb/client/ui/CopsAndRobbers.gui.
+Loading compiled script rtb/client/ui2/moversGUI.gui.
+Loading compiled script rtb/client/ui2/botOpGUI.gui.
+Loading compiled script rtb/client/ui/HelpDlg.gui.
+Loading compiled script rtb/client/ui/MessageBoxOKDlg.gui.
+Loading compiled script rtb/client/ui/MessageBoxYesNoDlg.gui.
+Loading compiled script rtb/client/ui/messagegui.gui.
+Loading compiled script rtb/client/ui/MessagePopupDlg.gui.
+Missing file: rtb/client/ui/serverconfig.gui!
+Loading compiled script rtb/client/ui/serverrulesgui.gui.
+Loading compiled script rtb/client/ui/brickProperties.gui.
+Loading compiled script rtb/client/ui/playerrights.gui.
+Loading compiled script rtb/client/ui/AMbbc.gui.
+Loading compiled script rtb/client/ui/bbcew.gui.
+Loading compiled script rtb/client/ui/bbcrate.gui.
+Loading compiled script rtb/client/ui2/brickFX.gui.
+Loading compiled script rtb/client/ui2/admingui.gui.
+Loading compiled script rtb/client/ui/fAdmin.gui.
+Loading compiled script rtb/client/ui/persistenceLoad.gui.
+Loading compiled script rtb/client/ui/AMcandr.gui.
+Loading compiled script rtb/client/ui/AMdeathmatch.gui.
+Loading compiled script rtb/client/ui/appearance.gui.
+Loading compiled script rtb/client/ui/register.gui.
+Loading compiled script rtb/client/ui/login.gui.
+Loading compiled script rtb/client/ui2/impulseGUI.gui.
+Loading compiled script rtb/client/ui/tgelobby/execall.cs.
+Loading compiled script rtb/client/ui/tgelobby/tgelobby_vars.cs.
+Loading compiled script rtb/client/ui/tgelobby/lobby_profiles.cs.
+Loading compiled script rtb/client/ui/tgelobby/GuiLobby.cs.
+Loading compiled script rtb/client/ui/tgelobby/GuiLobby.gui.
+Loading compiled script rtb/client/ui/tgelobby/GuiLogonDlg.gui.
+Loading compiled script rtb/client/ui/tgelobby/CreateRoom_Dlg.gui.
+Loading compiled script rtb/client/PTTA/radar.cs.
+Loading compiled script rtb/client/ui2/GuiRadar.gui.
+Loading compiled script rtb/client/PTTA/client.cs.
+Loading compiled script rtb/client/PTTA/missionDownload.cs.
+Loading compiled script rtb/client/PTTA/loadingGui.cs.
+Loading compiled script rtb/client/PTTA/optionsDlg.cs.
+Loading compiled script rtb/client/PTTA/chatHud.cs.
+Loading compiled script rtb/client/PTTA/messageHud.cs.
+Loading compiled script rtb/client/scripts/playGui.cs.
+Loading compiled script rtb/client/scripts/centerPrint.cs.
+Loading compiled script rtb/client/scripts/game.cs.
+Loading compiled script rtb/client/PTTA/msgCallbacks.cs.
+Loading compiled script rtb/client/scripts/startMissionGui.cs.
+Loading compiled script rtb/client/scripts/faceprintselect.cs.
+Loading compiled script rtb/client/scripts/printselect.cs.
+Compiling rtb/client/scripts/EditorGUI.cs...
+Loading compiled script rtb/client/scripts/EditorGUI.cs.
+Loading compiled script rtb/client/scripts/botOpGUI.cs.
+rtb/client/scripts/botOpGUI.cs (0): Unable to find object: 'moveMap' attempting to call function 'bindCmd'
+Missing file: rtb/client/PTTA/default.bind.cs!
+Missing file: rtb/client/config2.cs!
+Loading compiled script rtb/client/version.cs.
+Loading compiled script rtb/client/PTTA/adminGui.cs.
+
+--------- Initializing MOD: Mrx's Menu ---------
+
+Loading compiled script rtb/client/xinit.cs.
+rtb/client/xinit.cs (33): Unable to find object: 'moveMap' attempting to call function 'bind'
+rtb/client/xinit.cs (56): Unable to find object: 'moveMap' attempting to call function 'bindCmd'
+Loading compiled script rtb/client/x/xversion.cs.
+Missing file: rtb/client/x/x.cs!
+Loading compiled script rtb/client/x/xhacks.cs.
+Loading compiled script rtb/client/x/xdefaultprefs.cs.
+Loading compiled script rtb/client/x/xprefs.cs.
+Loading compiled script rtb/client/x/XmusicGUI.gui.
+Loading compiled script rtb/client/x/Xmusic.cs.
+rtb/client/x/Xmusic.cs (0): Unable to find object: 'moveMap' attempting to call function 'bind'
+Loading compiled script rtb/client/x/XChat.cs.
+rtb/client/x/XChat.cs (0): Unable to find object: 'moveMap' attempting to call function 'bind'
+Loading compiled script rtb/client/x/XChatGUI.gui.
+Loading compiled script rtb/client/x/xgui.cs.
+Loading compiled script rtb/client/x/xpersonalgui.cs.
+Loading compiled script rtb/client/x/xservergui.cs.
+Loading compiled script rtb/client/x/xgui.gui.
+Loading compiled script rtb/client/x/xpersonalgui.gui.
+Loading compiled script rtb/client/x/xservergui.gui.
+Loading compiled script rtb/client/x/xadmingui.gui.
+Loading compiled script rtb/client/x/xnvision.cs.
+XMenu Preferences Updated
+
+--------- Completed Initializing MOD: Mrx's Menu ---------
+
+Binding server port to default IP
+UDP initialized on port 0
+rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
+Missing file: rtb/rss/ui/rssguiprofiles.cs!
+Loading compiled script rtb/rss/ui/rssGui.gui.
+Loading compiled script rtb/rss/rssGui.cs.
+Engine initialized...
+botoff
+slopes
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+digitaldesigner
+DeepSeas
+deathvalley
+celestialdreams
+bedroom
+rtb/client/scripts/startMissionGui.cs (37): Unable to find object: 'OptSitting' attempting to call function 'setValue'
+rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
+Missing file: rtb/rss/ui/rssguiprofiles.cs!
+Loading compiled script rtb/rss/ui/rssGui.gui.
+Loading compiled script rtb/rss/rssGui.cs.
+Exporting client prefs
+Exporting all clients connected to this session's cash ammount for storage.
+Exporting server prefs
+Exporting IP banlist
+Exporting client prefs
+Exporting server prefs
+Shutting down the OpenGL display device...
+Making the GL rendering context not current...
+Deleting the GL rendering context...
+Releasing the device context...
