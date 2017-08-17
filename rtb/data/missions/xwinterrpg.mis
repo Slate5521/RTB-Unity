@@ -1,0 +1,142 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "Winter RPG";
+	 bitmap = "Winter RPG";
+         desclines = "3";
+         desc0 = "For Low-Lag Winter RPGs.\nFlat, No terrain map.\n\nMade By MrX";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "-32 -296 368.131";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Spooky3/resource.dml";
+      cloudHeightPer[0] = "0.4";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.0015";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1000";
+      fogDistance = "500";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "0";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.900000 1.000000";
+      ambient = "0.600000 0.600000 0.600000 1.000000";
+         position = "0 0 0";
+         locked = "true";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-37.2 -191.6 385 0";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+      new SpawnSphere() {
+         position = "-52.933 -175.909 384.6 0";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+   };
+   new StaticShape(GroundPlate) {
+      position = "-7967.48 -8175.56 368.8";
+      rotation = "1 0 0 0";
+      scale = "1000 1000 1.66666";
+      dataBlock = "gray32";
+         oldskinname = "base14";
+         OwnerIP = "local";
+         BrickGhostOwner = "2635";
+         skinname = "base14";
+         customscale = "1000 1000 1.66666";
+   };
+   new WaterBlock(Ground) {
+      position = "-40 -296 368.131";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 1";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/terrains/winter/snowy02";
+      ShoreTexture = "~/data/terrains/winter/snowy02";
+      envMapOverTexture = "~/data/terrains/winter/snowy02";
+      envMapUnderTexture = "~/data/terrains/winter/snowy02";
+      submergeTexture[0] = "~/data/terrains/winter/snowy02";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "0";
+      surfaceOpacity = "1";
+      envMapIntensity = "0";
+      TessSurface = "50";
+      TessShore = "70";
+      SurfaceParallax = "1";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "1";
+      DistortMag = "0.1";
+      DistortTime = "564";
+      ShoreDepth = "20";
+      DepthGradient = "1";
+      MinAlpha = "0.03";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         floodFill = "1";
+         textureSize = "32 32";
+         params2 = "0.39 0.39 0.2 0.133";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params1 = "0.63 -2.41 0.33 0.21";
+   };
+  
+};
+//--- OBJECT WRITE END ---
+schedule( 2000, 0, winterrpgLoadexec);
+function winterrpgLoadexec()
+{
+	messageAll("MsgPersistence", "\c2Winter RPG Map By Mrx - Get Mrx's Mods(C) @ www.mrx-rtb.co.nr");
+}

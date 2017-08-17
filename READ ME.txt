@@ -1,0 +1,11 @@
+Click "Play RTB" to play the game.
+
+if it doesnt work for you...
+
+Right click it
+select properties
+go to compatibility
+run it for compatibility mode - Windows XP - service pack 3
+run this program as an administrator
+
+click the MANUALS folder for help

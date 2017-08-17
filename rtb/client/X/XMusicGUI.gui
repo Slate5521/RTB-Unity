@@ -1,0 +1,133 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(XMusicGUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "160 88";
+      extent = "320 304";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "X Music Player";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(XMusicGUI);";
+
+      new GuiButtonCtrl(PlayMusic) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 196";
+         extent = "130 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "XNewMusic();";
+         helpTag = "0";
+         text = "Play Music |>";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(stopMusic) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "170 196";
+         extent = "130 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "stopXMusic();";
+         helpTag = "0";
+         text = "Stop Music []";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "20 40";
+         extent = "280 145";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(XMusicList) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "261 48";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiButtonCtrl(NextTrack) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "170 240";
+         extent = "130 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "XNextTrack();";
+         helpTag = "0";
+         text = "Next Track >";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(PrevTrack) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 240";
+         extent = "130 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "XPrevTrack();";
+         helpTag = "0";
+         text = "< Previous Track";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "60 280";
+         extent = "207 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "MrX\'s Mods (C) - http://www.mrx-rtb.co.nr";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
