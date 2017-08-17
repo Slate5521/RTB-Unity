@@ -1,7 +1,7 @@
-//-------------------------- 8/17/2017 -- 07:52:19 -----
+//-------------------------- 8/17/2017 -- 08:54:13 -----
 Processor Init:
    AMD (unknown), ~3.55 Ghz
-     (timed at roughly 3.57 Ghz)
+     (timed at roughly 3.56 Ghz)
    FPU detected
    MMX detected
    SSE detected
@@ -402,9 +402,7 @@ deathvalley
 celestialdreams
 bedroom
 rtb/client/scripts/startMissionGui.cs (37): Unable to find object: 'OptSitting' attempting to call function 'setValue'
-celestialdreams
-deathvalley
-celestialdreams
+DeepSeas
 deathvalley
 rtb/client/scripts/startMissionGui.cs (69): Unable to find object: 'OptSitting' attempting to call function 'getValue'
 Exporting server prefs...
@@ -1009,28 +1007,12 @@ Loading compiled script rtb/server/scripts/Radar.cs.
 *** Stage 1 load
 *** Stage 2 load
 Executing rtb/data/missions/deathvalley.mis.
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
-Object 'ghostBrick1x1' is not a member of the 'GameBaseData' data block class
-rtb/data/missions/deathvalley.mis (0): Register object failed for object (null).
 *** Mission loaded
------------CONN = 2635
-Connect request from: IPX:6D010000:490000002F00:0
+-----------CONN = 2648
+Connect request from: IPX:2E350070:6172616D7331:12288
 Checking IP Ban Entry Number: 0
-Connection established 2635
-CADD: 2636 local
+Connection established 2648
+CADD: 2649 local
 *** Sending mission load to client: rtb/data/missions/deathvalley.mis
 Mapping string: updatePrefs to index: 0
 Mapping string: ServerMessage to index: 1
@@ -1188,11 +1170,10 @@ Client Replication Startup has Happened!
 fxFoliageReplicator - Client Foliage Replication Startup is complete.
 *** Phase 3: Mission Lighting
 Lighting mission....
-    = terrain lit in 0.219 seconds
- Scene lit in 0.577 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
+    = terrain lit in 0.202 seconds
+ Scene lit in 0.218 seconds
+ Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_7c7b7aa1.ml'
 Mission lighting done
-getewsettingupdate: Unknown command.
 Mapping string: rotcompatibility to index: 4
 Mapping string: messageSent to index: 5
 rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
@@ -1213,6 +1194,7 @@ Mapping string: MsgClearInv to index: 26
 Mapping string: MsgHilightInv to index: 27
 Mapping string: MsgItemPickup to index: 28
 Mapping string: showBrickImage to index: 29
+getewsettingupdate: Unknown command.
 Mapping string: storeCash to index: 8
 Mapping string: ShowBrickImage to index: 30
 rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
@@ -1223,30 +1205,24 @@ Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
 *** Initial Control Object
 Could not locate texture: rtb/client/ui2/hudfill.png
 Could not locate texture: rtb/client/ui2/hudfill.png
+Activating DirectInput...
+keyboard0 input device acquired.
 Mapping string: white to index: 31
 Mapping string: Cool1 to index: 0
 Mapping string: Misc-Blank to index: 2
 Mapping string: Blockdude to index: 3
-Mapping string: UpdateRadar to index: 4
+Mapping string: red to index: 4
+Mapping string: UpdateRadar to index: 5
 rtb/client/PTTA/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
 Mapping string: dropCameraAtPlayer to index: 9
-Compiling common/editor/cursors.cs...
+Mapping string: freezeme to index: 10
+Mapping string: DropPlayerAtCamera to index: 11
 Loading compiled script common/editor/cursors.cs.
-Compiling common/editor/editor.bind.cs...
 Loading compiled script common/editor/editor.bind.cs.
-Compiling common/editor/ObjectBuilderGui.gui...
 Loading compiled script common/editor/ObjectBuilderGui.gui.
-Compiling common/editor/EditorGui.gui...
 Loading compiled script common/editor/EditorGui.gui.
-Compiling common/editor/EditorGui.cs...
 Loading compiled script common/editor/EditorGui.cs.
-Compiling common/editor/WorldEditorSettingsDlg.gui...
 Loading compiled script common/editor/WorldEditorSettingsDlg.gui.
-Compiling common/editor/TerrainEditorVSettingsGui.gui...
 Loading compiled script common/editor/TerrainEditorVSettingsGui.gui.
 General\tTab_general\tgeneral_min_height\t50\tgeneral_scale\t300\tgeneral_water\t0.000\tgeneral_centerx\t0\tgeneral_centery\t0
 Tab data: General^Tab_general^general_min_height^50^general_scale^300^general_water^0.000^general_centerx^0^general_centery^0 tab: Tab_general
@@ -2277,7 +2253,6 @@ Obj: ThunderCrash2Sound -
 Obj: ThunderCrash3Sound - 
 Obj: ThunderCrash4Sound - 
 Obj: LightningStorm - 
-Compiling common/editor/editorRender.cs...
 Loading compiled script common/editor/editorRender.cs.
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
@@ -2285,56 +2260,17 @@ Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Mapping string: freezeme to index: 10
-Mapping string: red to index: 5
-Mapping string: ModifyShiftSize to index: 11
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
+Compiling editor/newObject.cs...
+Loading compiled script editor/newObject.cs.
 Mapping string: MouseScroll to index: 12
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
 keyboard0 input device unacquired.
 DirectInput deactivated.
    keyboard0 input device created.
    mouse0 input device created.
 Activating DirectInput...
 keyboard0 input device acquired.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: rtb/client/ui2/hudfill.png
 Could not locate texture: rtb/client/ui2/hudfill.png
-Mapping string: DropPlayerAtCamera to index: 13
-Mapping string: freeHands to index: 14
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
@@ -2359,731 +2295,16 @@ Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: rtb/client/ui2/hudfill.png
 Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
-Mapping string: getServerRules to index: 15
-Mapping string: setRules to index: 7
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-==>$timescale=5;
-keyboard0 input device acquired.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
+Mapping string: ModifyShiftSize to index: 13
+    = terrain lit in 0.219 seconds
  Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.202 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.203 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.187 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.202 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.203 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.187 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.202 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Set::getObject index out of range.
-Set::getObject index out of range.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-    = terrain lit in 0.202 seconds
- Scene lit in 0.202 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
+ Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_7c7b7aa1.ml'
 Could not locate texture: rtb/client/ui2/hudfill.png
 Could not locate texture: rtb/client/ui2/hudfill.png
 keyboard0 input device unacquired.
@@ -3108,516 +2329,25 @@ Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: rtb/client/ui2/hudfill.png
 Could not locate texture: rtb/client/ui2/hudfill.png
-Mapping string: suicide to index: 16
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-Mapping string: MsgClientScoreChanged to index: 10
-Mapping string: MsgClientKilled to index: 11
-Mapping string: %1 takes the easy way out... to index: 12
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/client/PTTA/radar.cs (318): Unable to find object: '44063' attempting to call function 'schedule'
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.187 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.187 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.187 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
+Mapping string: RadarStop to index: 14
+Mapping string: RadarOff to index: 7
+XMenu Preferences Updated
 Could not locate texture: rtb/client/ui2/GameModePreviews/deathmatch.png
-Mapping string: getBanList to index: 17
-Mapping string: getPLayerList to index: 18
-Mapping string: getPLayerTeamList to index: 19
-Mapping string: getTeamList to index: 20
-Mapping string: MsgSendPlayerTeamList to index: 14
-Mapping string: placebase to index: 21
+Mapping string: getBanList to index: 15
+Mapping string: getPLayerList to index: 16
+Mapping string: getPLayerTeamList to index: 17
+Mapping string: getTeamList to index: 18
+Mapping string: MsgSendPlayerTeamList to index: 10
+XMenu Preferences Updated
+XMenu Preferences Updated
+XMenu Preferences Updated
+XMenu Preferences Updated
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
 Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Mapping string: useInventory to index: 22
-Mapping string: construction to index: 15
-Mapping string: shiftBrick to index: 23
-Mapping string: plantBrick to index: 24
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-==>$timescale=1;
-keyboard0 input device acquired.
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/client/PTTA/radar.cs (318): Unable to find object: '56448' attempting to call function 'schedule'
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/GameModePreviews/deathmatch.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Set::getObject index out of range.
-Set::getObject index out of range.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: fps/data/terrains/grassland/grass
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Mapping string: doAction to index: 25
-No object found
-Mapping string: DismountVehicle to index: 26
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-    = terrain lit in 0.187 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Set::getObject index out of range.
-Set::getObject index out of range.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-    = terrain lit in 0.202 seconds
- Scene lit in 0.202 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.202 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.202 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.202 seconds
- Scene lit in 0.202 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.171 seconds
- Scene lit in 0.187 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/GameModePreviews/deathmatch.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-No ghost brick found
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Mapping string: Skis to index: 16
-    = terrain lit in 0.187 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Mapping string: RadarStop to index: 27
-Mapping string: RadarOff to index: 17
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.218 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-    = terrain lit in 0.187 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.203 seconds
- Scene lit in 0.203 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-    = terrain lit in 0.187 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_44c40385.ml'
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-Could not locate texture: rtb/client/ui2/hudfill.png
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
 Could not locate texture: rtb/client/ui2/hudfill.png
 Could not locate texture: rtb/client/ui2/hudfill.png
 keyboard0 input device unacquired.
@@ -3632,8 +2362,8 @@ rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' att
 rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
 rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
 rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '70087' attempting to call function 'delete'
-CDROP: 2636 IPX:6D010000:490000002F00:0
+rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2679' attempting to call function 'delete'
+CDROP: 2649 IPX:2E350070:6172616D7331:12288
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...

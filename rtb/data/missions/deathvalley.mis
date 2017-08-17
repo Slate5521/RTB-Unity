@@ -1,14 +1,14 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
+      cdTrack = "2";
       CTF_scoreLimit = "5";
       musicTrack = "lush";
-      cdTrack = "2";
 
    new ScriptObject(MissionInfo) {
-         desclines = "3";
+         bitmap = "deathvalley";
          desc0 = "This is an edited version of Happy Valley. The safe zones are marked off. Use the world editor to learn how to place them. Map By Wedge";
          name = "Death Valley";
-         bitmap = "deathvalley";
+         desclines = "3";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -48,10 +48,10 @@ new SimGroup(MissionGroup) {
       direction = "0.530786 0.292587 -0.795399";
       color = "1.000000 0.730000 0.660000 1.000000";
       ambient = "0.600000 0.450000 0.460000 1.000000";
-         rotation = "1 0 0 0";
-         locked = "true";
-         scale = "1 1 1";
          position = "0 0 0";
+         locked = "true";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
    };
    new TerrainBlock(Terrain) {
       rotation = "1 0 0 0";
@@ -59,8 +59,8 @@ new SimGroup(MissionGroup) {
       detailTexture = "~/data/terrains/details/detail1";
       terrainFile = "./deathvalley.ter";
       squareSize = "8";
-         locked = "true";
          position = "-1024 -1024 0";
+         locked = "true";
    };
    new SimGroup(PlayerDropPoints) {
 
@@ -115,18 +115,18 @@ new SimGroup(MissionGroup) {
       MinAlpha = "0.25";
       MaxAlpha = "0.7";
       removeWetEdges = "0";
-         envMapTexture = "fps/data/skies/sunset_0007";
          params0 = "0.32 -0.67 0.066 0.5";
-         params1 = "0.63 -2.41 0.33 0.21";
-         params3 = "1.21 -0.61 0.13 -0.33";
-         params2 = "0.39 0.39 0.2 0.133";
-         seedPoints = "0 0 1 0 1 1 0 1";
          floodFill = "1";
+         params1 = "0.63 -2.41 0.33 0.21";
          extent = "100 100 10";
          textureSize = "32 32";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params2 = "0.39 0.39 0.2 0.133";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         seedPoints = "0 0 1 0 1 1 0 1";
    };
    new WheeledVehicle() {
-      position = "0 0 -7.5503e+007";
+      position = "0 0 -7.61017e+007";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";
@@ -274,7 +274,7 @@ new SimGroup(MissionGroup) {
       rotate = "0";
    };
    new WheeledVehicle() {
-      position = "0 0 -2.08829e+006";
+      position = "0 0 -2.68816e+006";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";
@@ -347,6 +347,62 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "0.001 0.001 0.001";
       dataBlock = "flowers";
+   };
+   new fxSunLight(moon) {
+      position = "85.7 -179.489 107.472";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/lightFalloffMono";
+      RemoteFlareBitmap = "common/lighting/TehMoon";
+      SunAzimuth = "90";
+      SunElevation = "30";
+      FlareTP = "1";
+      Colour = "0.860000 0.450000 0.450000 1.000000";
+      Brightness = "0.32";
+      FlareSize = "1";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "0";
+      AnimRotation = "0";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "5";
+      RotationTime = "155";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
    };
 };
 //--- OBJECT WRITE END ---
