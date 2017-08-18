@@ -40,7 +40,7 @@ $maxRange = 3200;	//$minRange * ($zoomFactor ^ 5)
 $zoomFactor = 2;	//Factor used when zooming in/out
 $zoomThreshold = 0.05;  //Factor used when determining when to zoom in/out  (like if range is currently 1600, then average distance must be < 1200 or > 2000 before zoom happens)
 
-exec("~/client/ui2/GuiRadar.gui");
+exec("~/client/ui/GuiRadar.gui");
 
 addMessageCallback('RadarOff', handleRadarOff);
 addMessageCallback('UpdateRadar', handleUpdateRadar);
@@ -139,7 +139,7 @@ function toggleRadarSize()
 			minExtent = "100 100";
 			visible = $clientradarrunning;
 			helpTag = "0";
-			bitmap = "~/client/ui2/radar/radar2.png";
+			bitmap = "~/client/ui/radar/radar2.png";
 			wrap = "0";
 		};
 
@@ -154,7 +154,7 @@ function toggleRadarSize()
 			minExtent = "10 10";
 			visible = "0";
 			helpTag = "0";
-			bitmap = "~/client/ui2/radar/north.png";
+			bitmap = "~/client/ui/radar/north.png";
 			wrap = "0";
 		};
 
@@ -196,7 +196,7 @@ function toggleRadarSize()
 			minExtent = "200 200";
 			visible = $clientradarrunning;
 			helpTag = "0";
-			bitmap = "~/client/ui2/radar/radar.png";
+			bitmap = "~/client/ui/radar/radar.png";
 			wrap = "0";
 		};
 		PlayGui.add(Radar);
@@ -210,7 +210,7 @@ function toggleRadarSize()
 			minExtent = "10 10";
 			visible = "0";
 			helpTag = "0";
-			bitmap = "~/client/ui2/radar/north.png";
+			bitmap = "~/client/ui/radar/north.png";
 			wrap = "0";
 		};
 
@@ -329,7 +329,7 @@ function handleUpdateRadar(%msgType, %dummy, %myPos, %range, %numBlips, %blipLis
 	         minExtent = "10 10";
 	         visible = "0";
 	         helpTag = "0";
-	         bitmap = "~/client/ui2/radar/blip" @ %type @ ".png";
+	         bitmap = "~/client/ui/radar/blip" @ %type @ ".png";
 	         wrap = "0";
 		};
 	
