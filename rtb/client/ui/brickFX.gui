@@ -57,20 +57,6 @@ new GuiControl(brickFX) {
          groupNum = "-1";
          buttonType = "RadioButton";
       };
-      new GuiButtonCtrl() {
-         profile = "GuiButtonProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "11 139";
-         extent = "140 30";
-         minExtent = "8 2";
-         visible = "1";
-         command = "applybFX();";
-         helpTag = "0";
-         text = "Apply";
-         groupNum = "-1";
-         buttonType = "PushButton";
-      };
       new GuiRadioCtrl(lightpulsing) {
          profile = "GuiRadioProfile";
          horizSizing = "right";
@@ -84,18 +70,6 @@ new GuiControl(brickFX) {
          text = "Light (Pulsing";
          groupNum = "-1";
          buttonType = "RadioButton";
-      };
-      new GuiTextCtrl() {
-         profile = "GuiTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "13 32";
-         extent = "120 18";
-         minExtent = "8 2";
-         visible = "1";
-         helpTag = "0";
-         text = "What kind of Special FX?";
-         maxLength = "255";
       };
       new GuiRadioCtrl(lightsteady) {
          profile = "GuiRadioProfile";
@@ -124,6 +98,46 @@ new GuiControl(brickFX) {
          text = "Bubbles";
          groupNum = "-1";
          buttonType = "RadioButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 139";
+         extent = "90 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "applybFX();";
+         helpTag = "0";
+         text = "Apply";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "118 139";
+         extent = "90 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "removeFX();";
+         helpTag = "0";
+         text = "Remove";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "13 32";
+         extent = "120 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "What kind of Special FX?";
+         maxLength = "255";
       };
    };
 };

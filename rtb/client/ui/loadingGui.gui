@@ -25,7 +25,7 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
       profile = "LoadingGuiContentProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "92 86";
+      position = "79 86";
       extent = "482 308";
       minExtent = "8 8";
       visible = "1";
@@ -36,7 +36,7 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
          horizSizing = "right";
          vertSizing = "bottom";
          position = "170 6";
-         extent = "8 28";
+         extent = "100 28";
          minExtent = "8 8";
          visible = "1";
          helpTag = "0";
@@ -60,7 +60,7 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
          profile = "GuiProgressProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "158 262";
+         position = "158 250";
          extent = "262 25";
          minExtent = "8 8";
          visible = "1";
@@ -75,7 +75,7 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
             minExtent = "8 8";
             visible = "1";
             helpTag = "0";
-            text = "LOADING MISSION";
+            text = "Waiting for Server Loading Information...";
             maxLength = "255";
          };
       };
@@ -83,14 +83,14 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "90 262";
+         position = "90 250";
          extent = "65 25";
          minExtent = "20 20";
          visible = "1";
          command = "disconnect();";
          accelerator = "escape";
          helpTag = "0";
-         text = "CANCEL";
+         text = "Cancel";
          groupNum = "-1";
          buttonType = "PushButton";
       };
@@ -103,7 +103,7 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
-         bitmap = "~/data/missions/previews/celestialdreams.png";
+         bitmap = "~/data/missions/previews/RTBIsle.png";
          wrap = "0";
       };
       new GuiBitmapCtrl() {
@@ -116,6 +116,29 @@ new GuiChunkedBitmapCtrl(LoadingGui) {
          visible = "1";
          helpTag = "0";
          wrap = "0";
+      };
+      new GuiProgressCtrl(DownloadProgress) {
+         profile = "GuiProgressProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "90 278";
+         extent = "330 25";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiTextCtrl(DownloadProgressTxt) {
+            profile = "GuiProgressTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 3";
+            extent = "330 20";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            text = "No Download in Progress.";
+            maxLength = "255";
+         };
       };
    };
 };

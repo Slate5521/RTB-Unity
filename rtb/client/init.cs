@@ -63,33 +63,32 @@ function initClient()
 
 	// Load up the Game GUIs
 	exec("./ui/defaultGameProfiles.cs");
-	exec("./ui2/PlayGui2.gui");
+	exec("./ui/PlayGui2.gui");
 	exec("./ui/ChatHud.gui");
 	exec("./ui/playerList.gui");
 
 	exec("./scripts/annoy.cs");
 
 	// Load up the shell GUIs
-	exec("./ui2/mainMenuGui.gui");
-	exec("./ui2/automessage.gui");
-	exec("./ui2/BACsM.gui");
-	exec("./ui2/WrenchM.gui");
-	exec("./ui2/WandM.gui");
-	exec("./ui2/cat.gui");
-	exec("./ui2/monkey.gui");
+	exec("./ui/mainMenuGui.gui");
+	exec("./ui/automessage.gui");
+	exec("./ui/BACsM.gui");
+	exec("./ui/WrenchM.gui");
+	exec("./ui/WandM.gui");
+	exec("./ui/cat.gui");
+	exec("./ui/monkey.gui");
 	exec("./ui/aboutDlg.gui");
 	exec("./ui/PasswordBox.gui");
-	exec("./ui2/startMissionGui.gui");
-	exec("./ui2/joinServerGui.gui");
+	exec("./ui/startMissionGui.gui");
+	exec("./ui/joinServerGui.gui");
 	exec("./ui/endGameGui.gui");
-	exec("./ui2/loadingGui.gui");
+	exec("./ui/loadingGui.gui");
 	exec("./ui/optionsDlg.gui");
 	exec("./ui/remapDlg.gui");
-	exec("./ui/messagegui.gui");
 	exec("./ui/EditorGUI.gui");
 	exec("./ui/CopsAndRobbers.gui");
-	exec("./ui2/moversGUI.gui");
-	exec("./ui2/botOpGUI.gui");
+	exec("./ui/moversGUI.gui");
+	exec("./ui/botOpGUI.gui");
 	exec("./ui/HelpDlg.gui");
 	exec("./ui/MessageBoxOKDlg.gui");
 	exec("./ui/MessageBoxYesNoDlg.gui");
@@ -102,8 +101,8 @@ function initClient()
 	exec("./ui/AMbbc.gui");
 	exec("./ui/bbcew.gui");
 	exec("./ui/bbcrate.gui");
-	exec("./ui2/brickFX.gui");
-	exec("./ui2/admingui.gui");
+	exec("./ui/brickFX.gui");
+	exec("./ui/admingui.gui");
 	exec("./ui/fAdmin.gui");
 	exec("./ui/persistenceLoad.gui");
 	exec("./ui/AMcandr.gui");
@@ -111,7 +110,7 @@ function initClient()
 	exec("./ui/appearance.gui");
 	exec("./ui/register.gui");
 	exec("./ui/login.gui");
-	exec("./ui2/impulseGUI.gui");
+	exec("./ui/impulseGUI.gui");
 	exec("./ui/tgelobby/execall.cs");
 
 	// Client scripts

@@ -51,46 +51,6 @@ new GuiControl(ImpulseGUI) {
             text = "Enter your Impulse Values:";
             maxLength = "255";
          };
-         new GuiButtonCtrl(applyimpulseBtn) {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "52 269";
-            extent = "213 39";
-            minExtent = "8 2";
-            visible = "1";
-            command = "ApplyImpulseSettings();";
-            helpTag = "0";
-            text = "Done";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiSliderCtrl(sliZimpulse) {
-            profile = "GuiSliderProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "16 180";
-            extent = "301 33";
-            minExtent = "8 2";
-            visible = "1";
-            variable = "value";
-            helpTag = "0";
-            range = "-30.000000 30.000000";
-            ticks = "20";
-            value = "30";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "9 100";
-            extent = "50 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "Y Impulse:";
-            maxLength = "255";
-         };
          new GuiTextCtrl() {
             profile = "GuiTextProfile";
             horizSizing = "right";
@@ -107,7 +67,7 @@ new GuiControl(ImpulseGUI) {
             profile = "GuiSliderProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "15 61";
+            position = "15 60";
             extent = "302 33";
             minExtent = "8 2";
             visible = "1";
@@ -115,7 +75,33 @@ new GuiControl(ImpulseGUI) {
             helpTag = "0";
             range = "-30.000000 30.000000";
             ticks = "20";
-            value = "30";
+            value = "0";
+         };
+         new GuiButtonCtrl(zeroXimpulse) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "156 92";
+            extent = "11 12";
+            minExtent = "8 2";
+            visible = "1";
+            command = "sliXimpulse.SetValue(\sliXimpulse.SetValue = (0));";
+            helpTag = "0";
+            text = "^";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 100";
+            extent = "50 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y Impulse:";
+            maxLength = "255";
          };
          new GuiSliderCtrl(sliYimpulse) {
             profile = "GuiSliderProfile";
@@ -129,7 +115,21 @@ new GuiControl(ImpulseGUI) {
             helpTag = "0";
             range = "-30.000000 30.000000";
             ticks = "20";
-            value = "30";
+            value = "0";
+         };
+         new GuiButtonCtrl(zeroYimpulse) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "156 152";
+            extent = "11 12";
+            minExtent = "8 2";
+            visible = "1";
+            command = "sliYimpulse.SetValue(\sliYimpulse.SetValue = (0));";
+            helpTag = "0";
+            text = "^";
+            groupNum = "-1";
+            buttonType = "PushButton";
          };
          new GuiTextCtrl() {
             profile = "GuiTextProfile";
@@ -143,39 +143,94 @@ new GuiControl(ImpulseGUI) {
             text = "Z Impulse:";
             maxLength = "255";
          };
+         new GuiSliderCtrl(sliZimpulse) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "16 180";
+            extent = "301 33";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "-30.000000 30.000000";
+            ticks = "20";
+            value = "0";
+         };
+         new GuiButtonCtrl(zeroZimpulse) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "156 212";
+            extent = "11 12";
+            minExtent = "8 2";
+            visible = "1";
+            command = "sliZimpulse.SetValue(\sliZimpulse.SetValue = (0));";
+            helpTag = "0";
+            text = "^";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(applyimpulseBtn) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "12 320";
+            extent = "120 39";
+            minExtent = "8 2";
+            visible = "1";
+            command = "ApplyImpulseSettings();";
+            helpTag = "0";
+            text = "Apply Impulse";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
          new GuiButtonCtrl(removeimpulseBtn) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "52 316";
-            extent = "213 39";
+            position = "195 320";
+            extent = "120 39";
             minExtent = "8 2";
             visible = "1";
             command = "RemoveImpulseSettings();";
             helpTag = "0";
-            text = "Remove Jumper Properties";
+            text = "Remove Impulse";
             groupNum = "-1";
             buttonType = "PushButton";
          };
          new GuiCheckBoxCtrl(isTriggeredJumper) {
-            profile = "GuiCheckBoxProfile";
+            profile = "GuiRadioProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "35 223";
+            position = "105 223";
             extent = "140 30";
             minExtent = "8 2";
             visible = "1";
+            command = "triggertxt.setValue(\"jsid.setVisible(true); jsidDown.setVisible(true); jsidUp.setVisible(true); jsidtxt.setVisible(true); $Pref::Wrench::MTypeS = \"Triggered\"; isJumperTrigger.setValue(0);";
             helpTag = "0";
             text = "Is Triggered Jumper";
             groupNum = "-1";
             buttonType = "ToggleButton";
          };
-         new GuiTextEditSliderCtrl(jumpsetid) {
-            profile = "GuiDefaultProfile";
+         new GuiTextCtrl(jsidtxt) {
+            profile = "GuiTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "226 229";
-            extent = "51 24";
+            position = "76 264";
+            extent = "59 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Jump Set ID:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(jsid) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "136 265";
+            extent = "60 18";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
@@ -184,21 +239,34 @@ new GuiControl(ImpulseGUI) {
             password = "0";
             tabComplete = "0";
             sinkAllKeyEvents = "0";
-            format = "%3.0f";
-            range = "1.000000 200.000000";
-            increment = "1";
          };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
+         new GuiButtonCtrl(jsidUp) {
+            profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "168 229";
-            extent = "59 18";
+            position = "197 252";
+            extent = "38 22";
             minExtent = "8 2";
             visible = "1";
+            command = "jsid.SetValue(jsid.getValue()+1);";
             helpTag = "0";
-            text = "Jump Set ID:";
-            maxLength = "255";
+            text = "Up";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(jsidDown) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "197 275";
+            extent = "38 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "jsid.SetValue(jsid.getValue()-1); if(jsid.getValue() < 0) jsid.setValue(0);";
+            helpTag = "0";
+            text = "Down";
+            groupNum = "-1";
+            buttonType = "PushButton";
          };
       };
    };

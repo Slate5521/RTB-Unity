@@ -4,7 +4,7 @@ new GuiControl(botOpGUI) {
    horizSizing = "right";
    vertSizing = "bottom";
    position = "0 0";
-   extent = "640 480";
+   extent = "800 600";
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
@@ -13,21 +13,21 @@ new GuiControl(botOpGUI) {
       profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "39 12";
+      position = "119 72";
       extent = "561 455";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
       text = "Options";
       maxLength = "255";
-      resizeWidth = "0";
-      resizeHeight = "0";
+      resizeWidth = "1";
+      resizeHeight = "1";
       canMove = "1";
-      canClose = "0";
-      canMinimize = "0";
-      canMaximize = "0";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
       minSize = "50 50";
-      closeCommand = "Canvas.popDialog(optionsDlg);";
+      closeCommand = "canvas.popDialog(botopgui);";
 
       new GuiScrollCtrl(PsBots) {
          profile = "GuiScrollProfile";
@@ -49,7 +49,7 @@ new GuiControl(botOpGUI) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "1 1";
-            extent = "81 2";
+            extent = "80 2";
             minExtent = "8 2";
             visible = "1";
             command = "selOwnBot();";
@@ -59,6 +59,7 @@ new GuiControl(botOpGUI) {
             columns = "0";
             fitParentWidth = "1";
             clipColumnText = "0";
+               TotAm = "0";
          };
       };
       new GuiButtonCtrl() {
@@ -133,7 +134,7 @@ new GuiControl(botOpGUI) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "145 2";
+               extent = "144 2";
                minExtent = "8 2";
                visible = "1";
                helpTag = "0";
@@ -466,6 +467,20 @@ new GuiControl(botOpGUI) {
          command = "openBotApp();";
          helpTag = "0";
          text = "Bot Appearance";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 420";
+         extent = "140 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "OpenClose(BACsM,botopgui);";
+         helpTag = "0";
+         text = "Open BAC's MENU";
          groupNum = "-1";
          buttonType = "PushButton";
       };

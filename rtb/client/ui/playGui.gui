@@ -1,5 +1,3 @@
-
-
 //--- OBJECT WRITE BEGIN ---
 new GameTSCtrl(PlayGui) {
    profile = "GuiContentProfile";
@@ -19,7 +17,7 @@ new GameTSCtrl(PlayGui) {
       horizSizing = "relative";
       vertSizing = "relative";
       position = "0 0";
-      extent = "640 440";
+      extent = "640 435";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -35,7 +33,7 @@ new GameTSCtrl(PlayGui) {
       profile = "InventoryTextProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "28 170";
+      position = "28 230";
       extent = "100 18";
       minExtent = "8 2";
       visible = "1";
@@ -46,7 +44,7 @@ new GameTSCtrl(PlayGui) {
       profile = "InventoryTextProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "68 170";
+      position = "68 230";
       extent = "100 18";
       minExtent = "8 2";
       visible = "1";
@@ -121,20 +119,20 @@ new GameTSCtrl(PlayGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "3 417";
+      position = "3 355";
       extent = "80 60";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "./hudfill.png";
+      bitmap = "~/data/shapes/bricks/Previews/Plate1x1.png";
       wrap = "0";
    };
    new GuiControl(InventoryControl) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "top";
-      position = "66 418";
-      extent = "508 90";
+      position = "-189 417";
+      extent = "1018 90";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -185,7 +183,7 @@ new GameTSCtrl(PlayGui) {
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
-         bitmap = "./GUIbrickSide.png";
+         bitmap = "./GUIBrickSideHilight.png";
          wrap = "1";
 
          new GuiTextCtrl(TxtInvSlot2) {
@@ -328,7 +326,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "0 32";
+         position = "510 2";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -365,7 +363,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "102 32";
+         position = "612 2";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -402,7 +400,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "204 32";
+         position = "714 2";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -439,7 +437,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "306 32";
+         position = "816 2";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -476,7 +474,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "408 32";
+         position = "918 2";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -506,6 +504,376 @@ new GameTSCtrl(PlayGui) {
             visible = "1";
             helpTag = "0";
             text = "10:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot11BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "0 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot11) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "11:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot12BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "102 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot12) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "12:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot13BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "204 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot13) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "13:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot14BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "306 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot14) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "14:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot15BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "408 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot15) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "15:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot16BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "510 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot16) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "16:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot17BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "612 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot17) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "17:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot18BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "714 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot18) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "18:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot19BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "816 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot19) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "19:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot20BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "918 32";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot20) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "RTB Pwnz";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "20:";
             maxLength = "255";
          };
       };
