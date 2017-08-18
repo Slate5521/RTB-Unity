@@ -10,6 +10,7 @@ screenshot_*.png
 
 # Filetypes
 
-*.dso
+*.cs.dso
+*.gui.dso
 *.ml
 *.exe.stackdump

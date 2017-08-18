@@ -44,7 +44,16 @@ function createServer(%serverType, %mission)
 
    // Load the mission
    $ServerGroup = new SimGroup(ServerGroup);
-   onServerCreated();
+   onServerCreated(%mission);
+   
+   // check to see if the mission has custom datablocks
+//	%missionDBFile = filePath(%mission) @ "/" @ fileBase(%mission) @ ".datablocks.cs";
+//	error("autism" SPC %missionDBFile);
+//	if(isFile(%missionDBFile)) {
+//		echo("Executing map-specific datablocks:" SPC %missionDBFile);
+//		exec(%missionDBFile);
+//	}
+   
    loadMission(%mission, true);
 }
 

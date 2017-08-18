@@ -119,7 +119,7 @@ function listClients()
 	}
 }
 
-function onServerCreated()
+function onServerCreated(%mission)
 {
    // Server::GameType is sent to the master server.
    // This variable should uniquely identify your game and/or mod.
@@ -162,6 +162,13 @@ function onServerCreated()
    exec("./radiusDamage.cs");
    exec("./ptta/player.cs");
    exec("./brick.cs");
+   
+    // Check to see if the mission has custom datablocks
+	%missionDBFile = filePath(%mission) @ "/" @ fileBase(%mission) @ ".datablocks.cs";
+	if(isFile(%missionDBFile)) {
+		echo("Executing map-specific datablocks:" SPC %missionDBFile);
+		exec(%missionDBFile);
+	}
 
    //###################################
    //# Indiv. File Execs.
@@ -190,6 +197,7 @@ function onServerCreated()
    exec("./Brickprints.cs");
    exec("./environment.cs");
    exec("./Radar.cs");
+   
 
    //PTTA COMMANDS
    //exec("./pttaCommands.cs");
