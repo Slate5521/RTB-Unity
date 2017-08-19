@@ -1,8 +1,8 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
       cdTrack = "2";
-      musicTrack = "lush";
       CTF_scoreLimit = "5";
+      musicTrack = "lush";
 
    new ScriptObject(MissionInfo) {
          name = "Lavapit Update";
@@ -27,9 +27,9 @@ new SimGroup(MissionGroup) {
       cloudSpeed1 = "0.0005";
       cloudSpeed2 = "0.001";
       cloudSpeed3 = "0.0003";
-      visibleDistance = "500";
-      fogDistance = "100";
-      fogColor = "0.370000 0.190000 0.130000 1.000000";
+      visibleDistance = "800";
+      fogDistance = "150";
+      fogColor = "0.200000 0.100000 0.100000 1.000000";
       fogVolume1 = "0 0 0";
       fogVolume2 = "0 0 0";
       fogVolume3 = "0 0 0";
@@ -48,10 +48,10 @@ new SimGroup(MissionGroup) {
       direction = "0.57735 0.57735 -0.57735";
       color = "1.000000 0.800000 0.700000 1.000000";
       ambient = "0.700000 0.600000 0.550000 1.000000";
+         rotation = "1 0 0 0";
          scale = "1 1 1";
          locked = "true";
          position = "0 0 0";
-         rotation = "1 0 0 0";
    };
    new TerrainBlock(Terrain) {
       rotation = "1 0 0 0";
@@ -129,50 +129,50 @@ new SimGroup(MissionGroup) {
       density = "1";
       viscosity = "40";
       waveMagnitude = "8";
-      surfaceOpacity = "0.8";
-      envMapIntensity = "0.06";
+      surfaceOpacity = "0.98";
+      envMapIntensity = "0.02";
       TessSurface = "28";
       TessShore = "30";
       SurfaceParallax = "4";
-      FlowAngle = "45";
-      FlowRate = "0.1";
+      FlowAngle = "78";
+      FlowRate = "0.02";
       DistortGridScale = "0.1";
-      DistortMag = "0";
-      DistortTime = "100";
+      DistortMag = "0.056";
+      DistortTime = "500";
       ShoreDepth = "4";
       DepthGradient = "1";
       MinAlpha = "0.25";
       MaxAlpha = "0.7";
       removeWetEdges = "0";
-         textureSize = "32 32";
+         floodFill = "1";
          seedPoints = "0 0 1 0 1 1 0 1";
+         envMapTexture = "fps/data/skies/sunset_0007";
          params3 = "1.21 -0.61 0.13 -0.33";
          params0 = "0.32 -0.67 0.066 0.5";
-         params2 = "0.39 0.39 0.2 0.133";
-         extent = "100 100 10";
-         floodFill = "1";
-         envMapTexture = "fps/data/skies/sunset_0007";
          params1 = "0.63 -2.41 0.33 0.21";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "32 32";
+         extent = "100 100 10";
    };
    new StaticShape() {
       position = "-55.9621 -175.957 163.398";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "gray32";
-         Down3 = "11072";
-         Down8 = "11124";
          Down = "11054";
-         Down4 = "11078";
-         Down7 = "11120";
-         Down10 = "11236";
-         Down1 = "11060";
-         Down5 = "11082";
-         Down2 = "11066";
-         BrickGhostOwner = "2638";
-         Down6 = "11112";
-         Down9 = "11130";
-         downSize = "11";
          skinname = "base";
+         Down8 = "11124";
+         Down5 = "11082";
+         BrickGhostOwner = "2638";
+         Down4 = "11078";
+         Down2 = "11066";
+         downSize = "11";
+         Down7 = "11120";
+         Down6 = "11112";
+         Down10 = "11236";
+         Down9 = "11130";
+         Down3 = "11072";
+         Down1 = "11060";
    };
    new StaticShape() {
       position = "-55.9621 -207.957 163.398";
@@ -180,10 +180,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "2613";
          up1 = "20278";
+         BrickGhostOwner = "2613";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -192,29 +192,29 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20297";
+         up5 = "20385";
+         up1 = "20282";
+         BrickGhostOwner = "10428";
+         up2 = "20284";
          up6 = "20401";
-         upSize = "9";
          up7 = "20413";
+         upSize = "9";
+         Up = "20280";
          up8 = "20431";
          up4 = "20383";
-         BrickGhostOwner = "10428";
-         up1 = "20282";
-         up5 = "20385";
-         up2 = "20284";
-         Up = "20280";
    };
    new StaticShape() {
       position = "-71.9622 -191.957 163.398";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "gray32";
-         upSize = "2";
-         up1 = "20433";
-         Up = "20411";
          skinname = "base";
+         up1 = "20433";
+         upSize = "2";
+         Up = "20411";
    };
    new WheeledVehicle() {
-      position = "0 0 -3.97318e+007";
+      position = "0 0 -4.78472e+007";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";
@@ -222,7 +222,7 @@ new SimGroup(MissionGroup) {
          initialPosition = "0 0 -90";
    };
    new WheeledVehicle() {
-      position = "0 0 -2.83686e+007";
+      position = "0 0 -3.64712e+007";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";
@@ -236,7 +236,7 @@ new SimGroup(MissionGroup) {
       dataBlock = "flowers";
    };
    new WheeledVehicle() {
-      position = "0 0 -1.00342e+008";
+      position = "0 0 -1.07707e+008";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";
@@ -249,10 +249,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "2638";
          up1 = "20278";
+         BrickGhostOwner = "2638";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -260,49 +260,49 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "gray32";
-         Down3 = "11208";
          up3 = "20399";
-         Down8 = "11382";
          Down = "11190";
-         upSize = "4";
-         Down4 = "11354";
-         Down7 = "11374";
-         Down10 = "11404";
-         Down1 = "11196";
-         Down5 = "11364";
-         Down2 = "11202";
-         BrickGhostOwner = "2638";
-         up1 = "20278";
-         Down6 = "11368";
-         Down9 = "11386";
-         up2 = "20280";
-         Up = "20276";
-         downSize = "11";
          skinname = "base";
+         Down8 = "11382";
+         Down5 = "11364";
+         up1 = "20278";
+         BrickGhostOwner = "2638";
+         Down4 = "11354";
+         up2 = "20280";
+         Down2 = "11202";
+         downSize = "11";
+         Down7 = "11374";
+         Down6 = "11368";
+         upSize = "4";
+         Down10 = "11404";
+         Up = "20276";
+         Down9 = "11386";
+         Down3 = "11208";
+         Down1 = "11196";
    };
    new StaticShape() {
       position = "-71.9622 -175.957 163.398";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "gray32";
-         Down3 = "10982";
          up3 = "20399";
-         Down8 = "11010";
          Down = "10926";
-         upSize = "4";
-         Down4 = "10988";
-         Down7 = "11004";
-         Down1 = "10966";
-         Down5 = "10994";
-         Down2 = "10976";
-         BrickGhostOwner = "2638";
-         up1 = "20278";
-         Down6 = "10998";
-         Down9 = "11016";
-         up2 = "20280";
-         Up = "20276";
-         downSize = "10";
          skinname = "base";
+         Down8 = "11010";
+         Down5 = "10994";
+         up1 = "20278";
+         BrickGhostOwner = "2638";
+         Down4 = "10988";
+         up2 = "20280";
+         Down2 = "10976";
+         downSize = "10";
+         Down7 = "11004";
+         Down6 = "10998";
+         upSize = "4";
+         Up = "20276";
+         Down9 = "11016";
+         Down3 = "10982";
+         Down1 = "10966";
    };
    new StaticShape() {
       position = "-39.9621 -191.957 163.398";
@@ -310,48 +310,48 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "2638";
-         up1 = "20278";
-         up2 = "20280";
-         Up = "20276";
          skinname = "base";
+         up1 = "20278";
+         BrickGhostOwner = "2638";
+         up2 = "20280";
+         upSize = "4";
+         Up = "20276";
    };
    new StaticShape() {
       position = "-51.9621 -207.957 163.398";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 270";
-         currentRotSetting = "3";
          BrickGhostOwner = "2638";
+         currentRotSetting = "3";
+         eulerrot = "0 0 270";
    };
    new StaticShape() {
       position = "-51.9621 -255.957 163.398";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 270";
-         currentRotSetting = "3";
          BrickGhostOwner = "25979";
+         currentRotSetting = "3";
+         eulerrot = "0 0 270";
    };
    new StaticShape() {
       position = "-51.9621 -239.957 163.398";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 270";
-         currentRotSetting = "3";
          BrickGhostOwner = "2613";
+         currentRotSetting = "3";
+         eulerrot = "0 0 270";
    };
    new StaticShape() {
       position = "-51.9621 -223.957 163.398";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 270";
-         currentRotSetting = "3";
          BrickGhostOwner = "2613";
+         currentRotSetting = "3";
+         eulerrot = "0 0 270";
    };
    new FileObject() {
    };
@@ -373,10 +373,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "25979";
          up1 = "20278";
+         BrickGhostOwner = "25979";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new FileObject() {
@@ -397,10 +397,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "25979";
          up1 = "20278";
+         BrickGhostOwner = "25979";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -409,10 +409,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
          up1 = "20278";
+         BrickGhostOwner = "30951";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -421,10 +421,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "25979";
          up1 = "20278";
+         BrickGhostOwner = "25979";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -433,10 +433,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "25979";
          up1 = "20278";
+         BrickGhostOwner = "25979";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -445,10 +445,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "25979";
          up1 = "20278";
+         BrickGhostOwner = "25979";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -457,10 +457,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "25979";
          up1 = "20278";
+         BrickGhostOwner = "25979";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -469,10 +469,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "25979";
          up1 = "20278";
+         BrickGhostOwner = "25979";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new FileObject() {
@@ -488,36 +488,36 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 180";
-         currentRotSetting = "2";
          BrickGhostOwner = "30951";
+         currentRotSetting = "2";
+         eulerrot = "0 0 180";
    };
    new StaticShape() {
       position = "-87.962 -291.957 163.398";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 180";
-         currentRotSetting = "2";
          BrickGhostOwner = "30951";
+         currentRotSetting = "2";
+         eulerrot = "0 0 180";
    };
    new StaticShape() {
       position = "-119.962 -291.957 163.398";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 180";
-         currentRotSetting = "2";
          BrickGhostOwner = "30951";
+         currentRotSetting = "2";
+         eulerrot = "0 0 180";
    };
    new StaticShape() {
       position = "-103.962 -291.957 163.398";
       rotation = "0 0 1 180";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 180";
-         currentRotSetting = "2";
          BrickGhostOwner = "30951";
+         currentRotSetting = "2";
+         eulerrot = "0 0 180";
    };
    new StaticShape() {
       position = "-183.962 -319.957 163.398";
@@ -525,10 +525,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
          up1 = "20278";
+         BrickGhostOwner = "30951";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -537,10 +537,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
          up1 = "20278";
+         BrickGhostOwner = "30951";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -549,10 +549,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
          up1 = "20278";
+         BrickGhostOwner = "30951";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -561,10 +561,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -573,10 +573,11 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
+         skinname = "base";
          up1 = "20278";
+         BrickGhostOwner = "17656";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -585,10 +586,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
          up1 = "20278";
+         BrickGhostOwner = "30951";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -597,10 +598,12 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
+         skinname = "base";
          up1 = "20278";
+         BrickGhostOwner = "17656";
+         oldskinname = "base";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -609,10 +612,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
          up1 = "20278";
+         BrickGhostOwner = "30951";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -620,36 +623,37 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 -1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 90";
-         currentRotSetting = "1";
          BrickGhostOwner = "30951";
+         currentRotSetting = "1";
+         eulerrot = "0 0 90";
    };
    new StaticShape() {
       position = "-155.962 -271.957 163.398";
       rotation = "0 0 -1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 90";
-         currentRotSetting = "1";
+         skinname = "red";
          BrickGhostOwner = "30951";
+         currentRotSetting = "1";
+         eulerrot = "0 0 90";
    };
    new StaticShape() {
       position = "-155.962 -255.957 163.398";
       rotation = "0 0 -1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 90";
-         currentRotSetting = "1";
          BrickGhostOwner = "30951";
+         currentRotSetting = "1";
+         eulerrot = "0 0 90";
    };
    new StaticShape() {
       position = "-155.962 -239.957 163.398";
       rotation = "0 0 -1 90.0002";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 90";
-         currentRotSetting = "1";
          BrickGhostOwner = "30951";
+         currentRotSetting = "1";
+         eulerrot = "0 0 90";
    };
    new StaticShape() {
       position = "-183.962 -175.957 163.398";
@@ -657,10 +661,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -669,10 +673,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "30951";
          up1 = "20278";
+         BrickGhostOwner = "30951";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -681,10 +685,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -693,10 +697,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -705,10 +709,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -717,10 +721,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -729,10 +733,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -741,10 +745,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "3242";
          up1 = "20278";
+         BrickGhostOwner = "3242";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new FileObject() {
@@ -754,36 +758,36 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 0";
-         currentRotSetting = "0";
          BrickGhostOwner = "30951";
+         currentRotSetting = "0";
+         eulerrot = "0 0 0";
    };
    new StaticShape() {
       position = "-135.962 -187.957 163.398";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 0";
-         currentRotSetting = "0";
          BrickGhostOwner = "30951";
+         currentRotSetting = "0";
+         eulerrot = "0 0 0";
    };
    new StaticShape() {
       position = "-119.962 -187.957 163.398";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 0";
-         currentRotSetting = "0";
          BrickGhostOwner = "30951";
+         currentRotSetting = "0";
+         eulerrot = "0 0 0";
    };
    new StaticShape() {
       position = "-103.962 -187.957 163.398";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "staticplate16x32";
-         eulerrot = "0 0 0";
-         currentRotSetting = "0";
          BrickGhostOwner = "30951";
+         currentRotSetting = "0";
+         eulerrot = "0 0 0";
    };
    new StaticShape() {
       position = "-145.894 -181.027 284.779 0";
@@ -804,10 +808,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "2672";
          up1 = "20278";
+         BrickGhostOwner = "2672";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new InteriorInstance() {
@@ -837,10 +841,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "2672";
          up1 = "20278";
+         BrickGhostOwner = "2672";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -849,10 +853,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "2672";
          up1 = "20278";
+         BrickGhostOwner = "2672";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
@@ -861,10 +865,10 @@ new SimGroup(MissionGroup) {
       scale = "1 1 1";
       dataBlock = "gray32";
          up3 = "20399";
-         upSize = "4";
-         BrickGhostOwner = "2672";
          up1 = "20278";
+         BrickGhostOwner = "2672";
          up2 = "20280";
+         upSize = "4";
          Up = "20276";
    };
    new StaticShape() {
