@@ -84,33 +84,27 @@ function parseArgs()
 
 function onStart()
 {
-   Parent::onStart();
-   echo("\n--------- Initializing MOD: RTB ---------");
+	Parent::onStart();
+	echo("\n--------- Initializing MOD: RTB ---------");
+	
+	// Load the scripts that start it all...
+	exec("./client/init.cs");
+	exec("./server/init.cs");
+	exec("./data/init.cs");
+	exec("./rss/main.cs");
+		
+	//load ip banlist
+	exec("./server/ipBanList.cs");
 
-   // Load the scripts that start it all...
-%PTTAstart = 0;
-   exec("./client/init.cs");
-   exec("./server/PTTAinit.cs");
-if(%PTTAstart $= 0)
-{
-   exec("./server/init.cs");
-}
-   exec("./data/init.cs");
-   exec("./rss/main.cs");
-//   exec("./community/init.cs");
-
-   //load ip banlist
-   exec("./server/ipBanList.cs");
-
-   // Server gets loaded for all sessions, since clients
-   // can host in-game servers.
-   initServer();
-
-   // Start up in either client, or dedicated server mode
-   if ($Server::Dedicated)
-      initDedicated();
-   else
-      initClient();
+	// Server gets loaded for all sessions, since clients
+	// can host in-game servers.
+	initServer();
+	
+	// Start up in either client, or dedicated server mode
+	if ($Server::Dedicated)
+		initDedicated();
+	else
+		initClient();
 }
 
 function onExit()
