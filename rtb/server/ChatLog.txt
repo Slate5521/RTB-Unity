@@ -332,3 +332,324 @@ Blockdude: /me is going to spawn in your server
 Blockdude: 
 Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
 Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Narfiuse: /me is going to spawn in your server
+Super Mario: 
+Super Mario:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Super Mario: «= XMenu =» : hai :«= 1.0 =»
+Super Mario: /me is going to spawn in your server
+Super Mario: 
+Super Mario:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Super Mario: /me is going to spawn in your server
+Super Mario.1: 
+Super Mario.1:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude(): «= XMenu =» : y :«= 1.0 =»
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: «= XMenu =» : hello :«= 1.0 =»
+Blockdude: «= XMenu =» : I'm modifying terrain :«= 1.0 =»
+Narfiuse: hi
+Narfiuse: /me is going to spawn in your server
+Blockdude: «= XMenu =» : can you see the new terrain? :«= 1.0 =»
+Narfiuse: i'll rejoin
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Narfiuse: /me is going to spawn in your server
+Narfiuse: something supposed to be where i'm standing?
+Blockdude: «= XMenu =» : yes :«= 1.0 =»
+Blockdude: «= XMenu =» : terrain :«= 1.0 =»
+Narfiuse: don't see anything
+Blockdude: «= XMenu =» : o.o :«= 1.0 =»
+Narfiuse: i see only the changes you made to the lava flow
+Blockdude: «= XMenu =» : check your mission folder for LavaPit3.ter? :«= 1.0 =»
+Narfiuse: yes it is
+Blockdude: «= XMenu =» : delete it and rejoin :«= 1.0 =»
+Narfiuse: ok
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Narfiuse: ~downloading~
+Narfiuse: :3
+Blockdude: «= XMenu =» : awesome sauce :D :«= 1.0 =»
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Narfiuse: /me is going to spawn in your server
+Narfiuse: yes
+Narfiuse: works
+Blockdude: «= XMenu =» : nice :D :«= 1.0 =»
+Blockdude: «= XMenu =» : What do you think about this? :«= 1.0 =»
+Blockdude: «= XMenu =» : I'm gonna do this for all 4 :«= 1.0 =»
+Blockdude: «= XMenu =» : Then have an interior underneath the baseplates :«= 1.0 =»
+Blockdude: «= XMenu =» : that you can build in :«= 1.0 =»
+Narfiuse: nice
+Narfiuse: looks nice too
+Narfiuse: what if you change the skies to space
+Narfiuse: i think it would look nice
+Blockdude: «= XMenu =» : it probably would :«= 1.0 =»
+Narfiuse: with the red/brown fog
+Blockdude: «= XMenu =» : I'm gonna leave the skies to seph though :«= 1.0 =»
+Narfiuse: ah
+Blockdude: «= XMenu =» : I'm bad at that sorta stuff :«= 1.0 =»
+Blockdude: «= XMenu =» : brb :«= 1.0 =»
+Blockdude: «= XMenu =» : feel free to build if you want :«= 1.0 =»
+Narfiuse: ad pas?
+Narfiuse: i'll be just making silly stuff cuz u working here
+Blockdude: «= XMenu =» : hey :«= 1.0 =»
+Blockdude: «= XMenu =» : can you kill yourself rlly fast :«= 1.0 =»
+Blockdude: «= XMenu =» : your animations are wonky :«= 1.0 =»
+Blockdude: «= XMenu =» : ok :«= 1.0 =»
+Blockdude: «= XMenu =» : just wanted to make sure it wasn't on my end :«= 1.0 =»
+Narfiuse: server is kind of buggy laggy don't know how to call that
+Narfiuse: it takes me a one step backward when i go forward
+Narfiuse: after i stop walking
+Narfiuse: even when i rotating my figure
+Blockdude: «= XMenu =» : oh :«= 1.0 =»
+Blockdude: «= XMenu =» : it might be because you're in Israel :«= 1.0 =»
+Narfiuse: antisemitism
+Narfiuse: jk
+Blockdude: «= XMenu =» : jews don't deserve good internet :«= 1.0 =»
+Narfiuse: =[[[[
+Narfiuse: do what you need to do i'm not making anything important
+Narfiuse: btw is that supposed to be grass
+Blockdude: «= XMenu =» : no :«= 1.0 =»
+Narfiuse: so it is
+Blockdude: «= XMenu =» : I haven't changed the texture yet :«= 1.0 =»
+Narfiuse: oh
+Blockdude: «= XMenu =» : I gotta restar :«= 1.0 =»
+Narfiuse: ok
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+DShiznit: 
+DShiznit:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+DShiznit: /me is going to spawn in your server
+DShiznit: this is so cool
+Blockdude: «= XMenu =» : want to see the previous version of the map :«= 1.0 =»
+Blockdude: «= XMenu =» : the original :«= 1.0 =»
+DShiznit: the original was just these floating platforms right?
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+DShiznit: 
+DShiznit:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+Blockdude: «= XMenu =» : uh oh :«= 1.0 =»
+Blockdude: «= XMenu =» : the lava was glitched :«= 1.0 =»
+Blockdude: «= XMenu =» : in previous versions :«= 1.0 =»
+DShiznit: /me is going to spawn in your server
+Blockdude: «= XMenu =» : I added terrain to this specific version just to see what'd happen and it fixed the lava :«= 1.0 
+DShiznit: what was wrong with the lava?
+Blockdude: «= XMenu =» : there were squares of no texture :«= 1.0 =»
+DShiznit: ah
+DShiznit: yeah I think I remember
+DShiznit: I like yours a lot
+DShiznit: We should port yours to OpenBlock eventually
+Blockdude: «= XMenu =» : you bet I'm going to :«= 1.0 =»
+DShiznit: by port I mean recreate
+DShiznit: at least as far as the .mis goes
+Blockdude: «= XMenu =» : the interior is dimensioned similarly :«= 1.0 =»
+DShiznit: I also wouldn't have the lava move so much
+DShiznit: at least not in one direction
+DShiznit: but that's just me and my personal tastes
+Blockdude: «= XMenu =» : could tone it down :«= 1.0 =»
+Blockdude: «= XMenu =» : it's up to seph ultimately :«= 1.0 =»
+DShiznit: why?
+Blockdude: «= XMenu =» : he might get weird if I take over the water/skybox department :«= 1.0 =»
+Blockdude: «= XMenu =» : he's better at that sorta stuff too :«= 1.0 =»
+DShiznit: oh well ok
+Blockdude: «= XMenu =» : man even if making those interiors was cancer it's so worth it :«= 1.0 =»
+DShiznit: while you can port them to T3D no problem
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+DShiznit: 
+DShiznit:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: /me is going to spawn in your server
+DShiznit: /me is going to spawn in your server
+DShiznit: You can also make more detailed models if you want to
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+DShiznit: 
+DShiznit:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: «= XMenu =» : hmm :«= 1.0 =»
+Blockdude: /me is going to spawn in your server
+DShiznit: /me is going to spawn in your server
+Blockdude: «= XMenu =» : so there's still greenhills :«= 1.0 =»
+DShiznit: what do you mean?
+Blockdude: «= XMenu =» : I think Seph wants to do something with greenhills :«= 1.0 =»
+DShiznit: waht for OpenBlock?
+Blockdude: «= XMenu =» : no modify it for rtb :«= 1.0 =»
+DShiznit: I was thinking when we get that far we try to recreate some of the most popular maps
+DShiznit: Bedroom, Blocktopia, Green Hills, RTB Isles
+DShiznit: with new names of course
+Blockdude: «= XMenu =» : bedroom isn't copyright :«= 1.0 =»
+DShiznit: well yeah
+DShiznit: obviousl
+Blockdude: «= XMenu =» : The Hills :«= 1.0 =»
+DShiznit: we could probably reuse some of hte more generic names like that
+Blockdude: «= XMenu =» : oh I see an issue already :«= 1.0 =»
+Blockdude: «= XMenu =» : oh no :«= 1.0 =»
+DShiznit: what?
+DShiznit: oh
+DShiznit: derpy lighting
+DShiznit: yeah you can thank the engine for that
+DShiznit: does your interior have lighting?
+Blockdude: «= XMenu =» : from the interior :«= 1.0 =»
+DShiznit: it must
+Blockdude: «= XMenu =» : nope :«= 1.0 =»
+Blockdude: «= XMenu =» : it has to? :«= 1.0 =»
+Blockdude: «= XMenu =» : shit :«= 1.0 =»
+Blockdude: «= XMenu =» : when seph gets around to lighting this map I'll set the interior lighting to the skyobx light :«= 
+DShiznit: taht might fix it
+Blockdude: «= XMenu =» : so you don't see derpy light :«= 1.0 =»
+Blockdude: «= XMenu =» : nice :«= 1.0 =»
+Blockdude: «= XMenu =» : this looks kinda derpy :«= 1.0 =»
+DShiznit: you might be able to set the interior's lighting in f11
+DShiznit: I'm not actually sure
+Blockdude: «= XMenu =» : nope :«= 1.0 =»
+DShiznit: heh
+DShiznit: I can destroy the bridges
+Blockdude: «= XMenu =» : you always could :«= 1.0 =»
+Blockdude: «= XMenu =» : even in the previous :«= 1.0 =»
+Blockdude: «= XMenu =» : decided to keep it that way :«= 1.0 =»
+DShiznit: *waves bye bye
+Blockdude: «= XMenu =» : get fucked :«= 1.0 =»
+Blockdude: «= XMenu =» : I should probably shut the server down and push what I have to Seph :«= 1.0 =»
+DShiznit: ok
+Blockdude: 
+Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Narfiuse: 
+Narfiuse:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Blockdude: «= XMenu =» : ohai :«= 1.0 =»
+Blockdude: /me is going to spawn in your server
+Narfiuse: hey
+Narfiuse: new textures :3
+Narfiuse: from where you imported them
+Blockdude: «= XMenu =» : kitchen :o :«= 1.0 =»
+Narfiuse: other blocklands versions?
+Narfiuse: oh
+Narfiuse: /me is going to spawn in your server
+Narfiuse: spawnu
+Narfiuse: very good design this could be addictive map
+Blockdude: «= XMenu =» : ty :«= 1.0 =»
+Narfiuse: put the space skies for a sec
+Narfiuse: lets see how it looks
+Narfiuse: but leave the fog as it is
+Narfiuse: do i need to rejoin to see that?
+Blockdude: «= XMenu =» : I don't think so :«= 1.0 =»
+Blockdude: «= XMenu =» : the sky isn't changing o.o :«= 1.0 =»
+Narfiuse: =O
+Blockdude: «= XMenu =» : nvm :«= 1.0 =»
+Narfiuse: there
+Narfiuse: fog is too strong
+Narfiuse: it looks okie
+Narfiuse: had a different image in my head
+Blockdude: «= XMenu =» : me too :«= 1.0 =»
+Blockdude: «= XMenu =» : I gotta hop off now :«= 1.0 =»
+Narfiuse: bye
+Blockdude: «= XMenu =» : bye :«= 1.0 =»
+Narfiuse: wait
+Blockdude: «= XMenu =» : ? :«= 1.0 =»
+Narfiuse: do you upload this
+Blockdude: «= XMenu =» : soon :«= 1.0 =»
+Narfiuse: ok
+Narfiuse: cya
+Blockdude: «= XMenu =» : I'm :«= 1.0 =»

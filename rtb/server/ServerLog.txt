@@ -18,3 +18,121 @@ Name: Blockdude ip:  Time Exited: 410.563019 bricks placed: 0 Kicked/Banned?: No
 Name: Blockdude ip:  Time Exited: 56.445004 bricks placed: 0 Kicked/Banned?: No
 >>EXIT<<
 Name: Blockdude ip:  Time Exited: 46.919003 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 3120.228027
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 3195.057129 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Super Mario ip: 70.196.16.223 Time Entered: 3949.275146
+>>EXIT<<
+Name: Super Mario ip: 70.196.16.223 Time Exited: 4044.207275 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Super Mario ip: 70.196.16.223 Time Entered: 4236.469238
+>>*NAME CHANGE*<<
+Name: Super Mario.1 ip: 70.196.16.223 Previous Name: Super Mario
+>>ENTER<<
+Name: Super Mario.1 ip: 70.196.16.223 Time Entered: 4471.166016
+>>EXIT<<
+Name: Super Mario.1 ip: 70.196.16.223 Time Exited: 4474.705078 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Super Mario ip: 70.196.16.223 Time Exited: 4519.048340 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 104.089005 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 195.619003 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 239.501007 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 22.921001 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 606.643005 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 356.039032 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 549.712036 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 637.167053
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 834.444031 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 841.668030
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 999.825073 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 1032.213989
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 1108.027100 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 1175.408081
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 1260.212036 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 1269.130005 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 36.734001
+>>*ADMIN*<<
+Name: Narfiuse ip: 185.120.126.45 Time: 244.766006 by: Blockdude
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 989.703064 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 989.703064 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 1139.591064 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 1486.673096 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 298.698029 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 1156.597046
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 1189.527100 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 2410.838135 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 69.542000 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 97.673004 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 214.119003 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 65.903999 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 398.838013 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 82.437004 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 249.295013 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 37.979000 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 210.001007 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip: local Time Exited: 4.900000 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 83.127007 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 123.346008 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 44.101002 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 420.959015 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 45.162003 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 819.325012 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 569.291016 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: DShiznit ip: 100.14.182.171 Time Entered: 94.522003
+>>*ADMIN*<<
+Name: DShiznit ip: 100.14.182.171 Time: 1092.735107 by: Blockdude
+>>EXIT<<
+Name: DShiznit ip: 100.14.182.171 Time Exited: 1453.676025 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 1456.023071 bricks placed: 0 Kicked/Banned?: No
+>>ENTER<<
+Name: Narfiuse ip: 185.120.126.45 Time Entered: 1461.244019
+>>EXIT<<
+Name: Narfiuse ip: 185.120.126.45 Time Exited: 1870.512085 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 1872.647095 bricks placed: 0 Kicked/Banned?: No

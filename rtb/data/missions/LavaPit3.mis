@@ -1,0 +1,877 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         name = "Lavapit Update";
+         desclines = "2";
+         bitmap = "lavapit2";
+         desc0 = "Its lava, its everywhere. Your f***ed.\nBy ReD_eYe\nUpdate by Mocheeze";
+   };
+   new MissionArea(MissionArea) {
+      area = "-408 -608 656 720";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/sky_blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      fogDistance = "100";
+      fogColor = "0.370000 0.190000 0.130000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.200000 0.100000 0.100000 1.000000";
+      useSkyTextures = "0";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "1.000000 0.800000 0.700000 1.000000";
+      ambient = "0.700000 0.600000 0.550000 1.000000";
+         scale = "1 1 1";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./LavaPit3.ter";
+      squareSize = "8";
+         locked = "true";
+         position = "-1024 -1024 3128";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-103.942 -183.998 166.398";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+      new SpawnSphere() {
+         position = "-104.257 -295.613 166.029";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+      new SpawnSphere() {
+         position = "-159.498 -233.776 165.928";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+      new SpawnSphere() {
+         position = "-47.2868 -233.527 166.004";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+   };
+   new WaterBlock() {
+      position = "-8 -200 -268.227";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 400";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/lava2";
+      ShoreTexture = "~/data/water/lava2";
+      submergeTexture[0] = "~/data/water/lava2";
+      liquidType = "Lava";
+      density = "1";
+      viscosity = "40";
+      waveMagnitude = "8";
+      surfaceOpacity = "0.8";
+      envMapIntensity = "0.06";
+      TessSurface = "28";
+      TessShore = "30";
+      SurfaceParallax = "4";
+      FlowAngle = "45";
+      FlowRate = "0.1";
+      DistortGridScale = "0.1";
+      DistortMag = "0";
+      DistortTime = "100";
+      ShoreDepth = "4";
+      DepthGradient = "1";
+      MinAlpha = "0.25";
+      MaxAlpha = "0.7";
+      removeWetEdges = "0";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "0.32 -0.67 0.066 0.5";
+         params2 = "0.39 0.39 0.2 0.133";
+         extent = "100 100 10";
+         floodFill = "1";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params1 = "0.63 -2.41 0.33 0.21";
+   };
+   new StaticShape() {
+      position = "-55.9621 -175.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         Down3 = "11072";
+         Down8 = "11124";
+         Down = "11054";
+         Down4 = "11078";
+         Down7 = "11120";
+         Down10 = "11236";
+         Down1 = "11060";
+         Down5 = "11082";
+         Down2 = "11066";
+         BrickGhostOwner = "2638";
+         Down6 = "11112";
+         Down9 = "11130";
+         downSize = "11";
+         skinname = "base";
+   };
+   new StaticShape() {
+      position = "-55.9621 -207.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "2613";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-71.9622 -207.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20297";
+         up6 = "20401";
+         upSize = "9";
+         up7 = "20413";
+         up8 = "20431";
+         up4 = "20383";
+         BrickGhostOwner = "10428";
+         up1 = "20282";
+         up5 = "20385";
+         up2 = "20284";
+         Up = "20280";
+   };
+   new StaticShape() {
+      position = "-71.9622 -191.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         upSize = "2";
+         up1 = "20433";
+         Up = "20411";
+         skinname = "base";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.97318e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -2.83686e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "-42.9656 -212.804 181.034 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.00342e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "-39.9621 -207.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "2638";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-39.9621 -175.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         Down3 = "11208";
+         up3 = "20399";
+         Down8 = "11382";
+         Down = "11190";
+         upSize = "4";
+         Down4 = "11354";
+         Down7 = "11374";
+         Down10 = "11404";
+         Down1 = "11196";
+         Down5 = "11364";
+         Down2 = "11202";
+         BrickGhostOwner = "2638";
+         up1 = "20278";
+         Down6 = "11368";
+         Down9 = "11386";
+         up2 = "20280";
+         Up = "20276";
+         downSize = "11";
+         skinname = "base";
+   };
+   new StaticShape() {
+      position = "-71.9622 -175.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         Down3 = "10982";
+         up3 = "20399";
+         Down8 = "11010";
+         Down = "10926";
+         upSize = "4";
+         Down4 = "10988";
+         Down7 = "11004";
+         Down1 = "10966";
+         Down5 = "10994";
+         Down2 = "10976";
+         BrickGhostOwner = "2638";
+         up1 = "20278";
+         Down6 = "10998";
+         Down9 = "11016";
+         up2 = "20280";
+         Up = "20276";
+         downSize = "10";
+         skinname = "base";
+   };
+   new StaticShape() {
+      position = "-39.9621 -191.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "2638";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+         skinname = "base";
+   };
+   new StaticShape() {
+      position = "-51.9621 -207.957 163.398";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 270";
+         currentRotSetting = "3";
+         BrickGhostOwner = "2638";
+   };
+   new StaticShape() {
+      position = "-51.9621 -255.957 163.398";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 270";
+         currentRotSetting = "3";
+         BrickGhostOwner = "25979";
+   };
+   new StaticShape() {
+      position = "-51.9621 -239.957 163.398";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 270";
+         currentRotSetting = "3";
+         BrickGhostOwner = "2613";
+   };
+   new StaticShape() {
+      position = "-51.9621 -223.957 163.398";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 270";
+         currentRotSetting = "3";
+         BrickGhostOwner = "2613";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "-55.9621 -287.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "25979";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "-58.7743 -263.188 197.028 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "-39.9621 -319.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "25979";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-71.9621 -319.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-55.9621 -319.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "25979";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-71.9621 -303.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "25979";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-39.9621 -303.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "25979";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-39.9621 -287.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "25979";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-71.9621 -287.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "25979";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "-59.7589 -302.891 224.17 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new StaticShape() {
+      position = "-71.9621 -291.957 163.398";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 180";
+         currentRotSetting = "2";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-87.962 -291.957 163.398";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 180";
+         currentRotSetting = "2";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-119.962 -291.957 163.398";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 180";
+         currentRotSetting = "2";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-103.962 -291.957 163.398";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 180";
+         currentRotSetting = "2";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-183.962 -319.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-151.962 -303.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-151.962 -319.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-167.962 -175.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-167.962 -287.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-167.962 -319.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-183.962 -287.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-183.962 -303.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-155.962 -223.957 163.398";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 90";
+         currentRotSetting = "1";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-155.962 -271.957 163.398";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 90";
+         currentRotSetting = "1";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-155.962 -255.957 163.398";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 90";
+         currentRotSetting = "1";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-155.962 -239.957 163.398";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 90";
+         currentRotSetting = "1";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-183.962 -175.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-151.962 -287.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "30951";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-167.962 -207.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-151.962 -207.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-183.962 -207.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-151.962 -191.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-183.962 -191.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-151.962 -175.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "3242";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "-87.962 -187.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 0";
+         currentRotSetting = "0";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-135.962 -187.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 0";
+         currentRotSetting = "0";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-119.962 -187.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 0";
+         currentRotSetting = "0";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-103.962 -187.957 163.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticplate16x32";
+         eulerrot = "0 0 0";
+         currentRotSetting = "0";
+         BrickGhostOwner = "30951";
+   };
+   new StaticShape() {
+      position = "-145.894 -181.027 284.779 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new InteriorInstance() {
+      position = "-159.965 -183.94 146.429";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/emiko/lavapit_base.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-167.962 -191.957 146.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "2672";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new InteriorInstance() {
+      position = "-47.965 -183.94 146.429";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/emiko/lavapit_base.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-159.965 -295.94 146.429";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/emiko/lavapit_base.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-47.965 -295.94 146.429";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/emiko/lavapit_base.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-167.962 -303.957 146.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "2672";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-55.962 -191.957 146.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "2672";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-55.962 -303.957 146.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up3 = "20399";
+         upSize = "4";
+         BrickGhostOwner = "2672";
+         up1 = "20278";
+         up2 = "20280";
+         Up = "20276";
+   };
+   new StaticShape() {
+      position = "-70.0091 -188.918 233.202 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+};
+//--- OBJECT WRITE END ---
