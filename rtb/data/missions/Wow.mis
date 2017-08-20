@@ -1,0 +1,258 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         name = "Wow";
+         descLines = "2";
+         desc0 = "An easter egg from the RTB version 1.032.\n\nPart of Bleh\'s Map Restoration Project";
+   };
+   new MissionArea(MissionArea) {
+      area = "-448 -592 976 1040";
+      flightCeiling = "2000";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 2000";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/GloriousMorning/GloriousMorning.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "900";
+      fogDistance = "550";
+      fogColor = "0.600000 0.650000 0.700000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.800000 0.700000 1.000000";
+      ambient = "0.560000 0.540000 0.540000 1.000000";
+         scale = "1 1 1";
+         position = "0 0 0";
+         locked = "true";
+         rotation = "1 0 0 0";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./Wow.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-49.8858 -103.255 915.221";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new WaterBlock(Water) {
+      position = "-856 -312 703.673";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 190";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/Water01";
+      ShoreTexture = "~/data/water/Water01";
+      envMapOverTexture = "~/data/skies/GloriousMorning/GloriousMorning_0007";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "40";
+      waveMagnitude = "3";
+      surfaceOpacity = "0.65";
+      envMapIntensity = "0.7";
+      TessSurface = "30";
+      TessShore = "30";
+      SurfaceParallax = "1";
+      FlowAngle = "110";
+      FlowRate = "0.08";
+      DistortGridScale = "0.01";
+      DistortMag = "0.2";
+      DistortTime = "20";
+      ShoreDepth = "1";
+      DepthGradient = "100";
+      MinAlpha = "1";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         params0 = "0.32 -0.67 0.066 0.5";
+         textureSize = "64 64";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params2 = "0.39 0.39 0.2 0.133";
+         envMapTexture = "rtb/data/skies/GloriousMorning/GloriousMorning_0007";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         extent = "256 256 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         floodFill = "1";
+   };
+      new StaticShape() {
+      position = "50.3044 -519.883 1377.81";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "66.3001 -519.883 1377.81";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-89.0718 -236.496 903.366";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-153.092 -157.986 903.996";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-87.7111 -146.402 903.896";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "166.651 -252.272 903.889";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "299.586 -240.005 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "363.51 50.5127 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "305.792 2.91404 903.976";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "28.1531 286.235 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "291.735 197.379 903.968";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-19.2433 200.363 921.746";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-19.6707 253.123 903.851";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-200.904 89.7942 903.518";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-208.551 -35.1603 903.587";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-222.68 -252.697 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-194.596 -382.321 904.378";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-262.014 -415.779 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-156.53 -680.246 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "-120.707 -903.181 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "126.309 -907.834 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "353.811 -529.402 903.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+      new StaticShape() {
+      position = "366.317 -379.445 903.994";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+
+
+};
+//--- OBJECT WRITE END ---

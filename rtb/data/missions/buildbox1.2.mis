@@ -1,0 +1,339 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         name = "BuildBox 1.2";
+	 desc0 = "A BLM map.\n\nThis map is part of Bleh\'s Map Revival Project.";
+         descLines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/sky_blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "400";
+      fogDistance = "100";
+      fogColor = "0.100000 0.100000 0.100000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.100000 0.100000 0.100000 1.000000";
+      useSkyTextures = "0";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.657367 0.537066 -0.52861";
+      color = "0.100000 0.100000 0.100000 1.000000";
+      ambient = "0.100000 0.100000 0.100000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "35.7934 -34.7822 -34.859";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "4";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new InteriorInstance() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/lego/box.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "0 0 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "0 -16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-16 0 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-16 -16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "16 0 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "16 -16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "16 -32 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-32 0 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-32 -32 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-32 -16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-16 -32 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "0 -32 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-32 16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-16 16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "0 16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "16 16 -38.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-40 -23 25";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-40 25 25";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "24 25 25";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "24 -39 25";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new Item() {
+      position = "-39.5 28.5 25.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 31 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "brick1x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 31.5 25.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick2x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 34.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "brick1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 37.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "brick2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 27.5 25.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 30 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "plate1x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 33.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "plate1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 36 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "plate2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 38.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "plate1x6";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 39.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "plate1x8";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.5 40.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "plate1x10";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-30.5 40.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "plate6x12";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.2693 26.7455 26.0311";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "hammer";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-39.234 25.751 26.0443";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "sprayCan";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-33 40.5 25.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "brick1x4x5window";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,4543 @@
+// Add Extra Map Items
+// Search for baseplates
+for (%i = 0; %i < MissionGroup.getCount(); %i++)
+{
+	%obj = MissionGroup.getObject(%i);
+	if (%obj.dataBlock $= "gray32")
+	{
+		if (%obj.position $= "-7967.48 -8175.56 368.8")
+		{
+			%obj.setSkinName("black");
+			%block8068 = %obj;
+		}
+	}
+}
+
+// Block creation
+%block27838 = new StaticShape()
+{
+	position = "26.52 -412.06 380.733";
+	rotation = "0.57735 0.577352 0.57735 240";
+	scale = "1 1 1.99999";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "90 0 90";
+	isDoor = "1";
+	Steps = "100";
+	StepTime = "10";
+	RotateXYZ = "0 0 -90";
+	ReturnDelay = "2000";
+	ReturnToggle = "0";
+	Elevator = "0";
+	Private = "";
+	noCollision = "0";
+	isMoving = "0";
+	TriggerDoorID = "";
+	HasReturned = "1";
+	isImpulseTrigger = "";
+	TriggerCloak = "";
+	KeyProtected = "0";
+	Password = "";
+	Team = "";
+	Group = "";
+	isLocked = "";
+	DoorType = "3";
+	MoveNums = "";
+	OnMoveNum = "1";
+	MoveXYZ = "0 0 0";
+	origpos = "26.52 -412.06 369.933 0.57735 0.577352 0.57735 4.18879";
+	origrot = "90 0 90";
+	awaitingReturn = "0";
+};
+MissionCleanup.add(%block27838);
+%block27838.setSkinName("brown");
+%block27838.SkinName="brown";
+%block27838.NoDestroy="";
+%block27838.isJail="";
+%block27838.JailMaxCount="";
+%block27838.isBankTrigger="";
+%block27838.isBaseTrigger="";
+%block27838.isRobberSpawn="";
+%block27838.isCopSpawn="";
+%block27838.TriggerSize="";
+%block27838.setShapeName("");
+
+%block27839 = new StaticShape()
+{
+	position = "26.52 -391.46 382.853";
+	rotation = "0 -1 0 90.0002";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 0";
+};
+MissionCleanup.add(%block27839);
+%block27839.setSkinName("blue");
+%block27839.SkinName="blue";
+%block27839.NoDestroy="";
+%block27839.isJail="";
+%block27839.JailMaxCount="";
+%block27839.isBankTrigger="";
+%block27839.isBaseTrigger="";
+%block27839.isRobberSpawn="";
+%block27839.isCopSpawn="";
+%block27839.TriggerSize="";
+%block27839.setShapeName("");
+
+%block27840 = new StaticShape()
+{
+	position = "33.52 -390.66 382.853";
+	rotation = "0.707108 -8.96324e-007 -0.707106 180";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 180";
+};
+MissionCleanup.add(%block27840);
+%block27840.setSkinName("blue");
+%block27840.SkinName="blue";
+%block27840.NoDestroy="";
+%block27840.isJail="";
+%block27840.JailMaxCount="";
+%block27840.isBankTrigger="";
+%block27840.isBaseTrigger="";
+%block27840.isRobberSpawn="";
+%block27840.isCopSpawn="";
+%block27840.TriggerSize="";
+%block27840.setShapeName("");
+
+%block27841 = new StaticShape()
+{
+	position = "12.62 -409.36 381.44";
+	rotation = "-0.152148 -0.303136 0.940723 128.213";
+	scale = "2.9 0.7 1.66666";
+	dataBlock = "statictile1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-20 30 240";
+};
+MissionCleanup.add(%block27841);
+%block27841.setSkinName("white");
+%block27841.SkinName="white";
+%block27841.NoDestroy="";
+%block27841.isJail="";
+%block27841.JailMaxCount="";
+%block27841.isBankTrigger="";
+%block27841.isBaseTrigger="";
+%block27841.isRobberSpawn="";
+%block27841.isCopSpawn="";
+%block27841.TriggerSize="";
+%block27841.setShapeName("");
+
+%block27842 = new StaticShape()
+{
+	position = "32.82 -391.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27842);
+%block27842.setSkinName("white");
+%block27842.SkinName="white";
+%block27842.NoDestroy="";
+%block27842.isJail="";
+%block27842.JailMaxCount="";
+%block27842.isBankTrigger="";
+%block27842.isBaseTrigger="";
+%block27842.isRobberSpawn="";
+%block27842.isCopSpawn="";
+%block27842.TriggerSize="";
+%block27842.setShapeName("");
+
+%block27843 = new StaticShape()
+{
+	position = "10.32 -380.76 369.333";
+	rotation = "0 0 1 67";
+	scale = "1 8.6 10.004";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -67";
+};
+MissionCleanup.add(%block27843);
+%block27843.setSkinName("white");
+%block27843.SkinName="white";
+%block27843.NoDestroy="";
+%block27843.isJail="";
+%block27843.JailMaxCount="";
+%block27843.isBankTrigger="";
+%block27843.isBaseTrigger="";
+%block27843.isRobberSpawn="";
+%block27843.isCopSpawn="";
+%block27843.TriggerSize="";
+%block27843.setShapeName("");
+
+%block27844 = new StaticShape()
+{
+	position = "28.0513 -405.052 369.843";
+	rotation = "1 0 0 0";
+	scale = "0.001 0.001 0.001";
+	dataBlock = "staticPlate1x1";
+	ownerIP = "";
+	ownerAway = "1";
+	EulerRot = "";
+};
+MissionCleanup.add(%block27844);
+%block27844.setSkinName("");
+%block27844.SkinName="";
+%block27844.NoDestroy="";
+%block27844.isJail="";
+%block27844.JailMaxCount="";
+%block27844.isBankTrigger="";
+%block27844.isBaseTrigger="";
+%block27844.isRobberSpawn="";
+%block27844.isCopSpawn="";
+%block27844.TriggerSize="";
+%block27844.setShapeName("");
+
+%block27845 = new StaticShape()
+{
+	position = "3.62 -426.06 369.333";
+	rotation = "0 0 1 90.0002";
+	scale = "2.5 20.5 100";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block27845);
+%block27845.setSkinName("white");
+%block27845.SkinName="white";
+%block27845.NoDestroy="";
+%block27845.isJail="";
+%block27845.JailMaxCount="";
+%block27845.isBankTrigger="";
+%block27845.isBaseTrigger="";
+%block27845.isRobberSpawn="";
+%block27845.isCopSpawn="";
+%block27845.TriggerSize="";
+%block27845.setShapeName("");
+
+%block27846 = new StaticShape()
+{
+	position = "12.02 -407.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27846);
+%block27846.setSkinName("brown");
+%block27846.SkinName="brown";
+%block27846.NoDestroy="";
+%block27846.isJail="";
+%block27846.JailMaxCount="";
+%block27846.isBankTrigger="";
+%block27846.isBaseTrigger="";
+%block27846.isRobberSpawn="";
+%block27846.isCopSpawn="";
+%block27846.TriggerSize="";
+%block27846.setShapeName("");
+
+%block27847 = new StaticShape()
+{
+	position = "26.52 -388.46 382.853";
+	rotation = "0 -1 0 90.0002";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 0";
+};
+MissionCleanup.add(%block27847);
+%block27847.setSkinName("blue");
+%block27847.SkinName="blue";
+%block27847.NoDestroy="";
+%block27847.isJail="";
+%block27847.JailMaxCount="";
+%block27847.isBankTrigger="";
+%block27847.isBaseTrigger="";
+%block27847.isRobberSpawn="";
+%block27847.isCopSpawn="";
+%block27847.TriggerSize="";
+%block27847.setShapeName("");
+
+%block27848 = new StaticShape()
+{
+	position = "24.02 -420.56 380.133 0 0 1 1.5708";
+	position = "24.02 -420.56 380.133";
+	rotation = "0 0 270";
+	scale = "1 1 1.33333";
+	dataBlock = "staticBrick1x4x5window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 190.8";
+	isDoor = "1";
+	Steps = "100";
+	StepTime = "10";
+	RotateXYZ = "0 0 -90";
+	ReturnDelay = "2000";
+	ReturnToggle = "0";
+	Elevator = "0";
+	Private = "";
+	noCollision = "0";
+	isMoving = "1";
+	TriggerDoorID = "";
+	HasReturned = "0";
+	isImpulseTrigger = "";
+	TriggerCloak = "";
+	KeyProtected = "0";
+	Password = "";
+	Team = "";
+	Group = "";
+	isLocked = "";
+	DoorType = "3";
+	MoveNums = "";
+	OnMoveNum = "1";
+	MoveXYZ = "0 0 0";
+	origpos = "24.02 -420.56 380.133 0 0 1 1.5708";
+	origrot = "0 0 270";
+	awaitingReturn = "0";
+};
+MissionCleanup.add(%block27848);
+%block27848.setSkinName("blueDark");
+%block27848.SkinName="blueDark";
+%block27848.NoDestroy="";
+%block27848.isJail="";
+%block27848.JailMaxCount="";
+%block27848.isBankTrigger="";
+%block27848.isBaseTrigger="";
+%block27848.isRobberSpawn="";
+%block27848.isCopSpawn="";
+%block27848.TriggerSize="";
+%block27848.setShapeName("");
+
+%block27849 = new StaticShape()
+{
+	position = "11.02 -423.56 381.333";
+	rotation = "1 0 0 0";
+	scale = "5.1 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27849);
+%block27849.setSkinName("brown");
+%block27849.SkinName="brown";
+%block27849.NoDestroy="";
+%block27849.isJail="";
+%block27849.JailMaxCount="";
+%block27849.isBankTrigger="";
+%block27849.isBaseTrigger="";
+%block27849.isRobberSpawn="";
+%block27849.isCopSpawn="";
+%block27849.TriggerSize="";
+%block27849.setShapeName("");
+
+%block27850 = new StaticShape()
+{
+	position = "3.02 -426.56 369.133";
+	rotation = "1 0 0 0";
+	scale = "16 37.6 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27850);
+%block27850.setSkinName("tandark");
+%block27850.SkinName="tandark";
+%block27850.NoDestroy="";
+%block27850.isJail="";
+%block27850.JailMaxCount="";
+%block27850.isBankTrigger="";
+%block27850.isBaseTrigger="";
+%block27850.isRobberSpawn="";
+%block27850.isCopSpawn="";
+%block27850.TriggerSize="";
+%block27850.setShapeName("");
+
+%block27851 = new StaticShape()
+{
+	position = "32.82 -382.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27851);
+%block27851.setSkinName("white");
+%block27851.SkinName="white";
+%block27851.NoDestroy="";
+%block27851.isJail="";
+%block27851.JailMaxCount="";
+%block27851.isBankTrigger="";
+%block27851.isBaseTrigger="";
+%block27851.isRobberSpawn="";
+%block27851.isCopSpawn="";
+%block27851.TriggerSize="";
+%block27851.setShapeName("");
+
+%block27852 = new StaticShape()
+{
+	position = "26.92 -388.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27852);
+%block27852.setSkinName("white");
+%block27852.SkinName="white";
+%block27852.NoDestroy="";
+%block27852.isJail="";
+%block27852.JailMaxCount="";
+%block27852.isBankTrigger="";
+%block27852.isBaseTrigger="";
+%block27852.isRobberSpawn="";
+%block27852.isCopSpawn="";
+%block27852.TriggerSize="";
+%block27852.setShapeName("");
+
+%block27853 = new StaticShape()
+{
+	position = "27.92 -405.755 380.933";
+	rotation = "0 0 1 90.0002";
+	scale = "1 0.9 0.666664";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block27853);
+%block27853.setSkinName("graydark");
+%block27853.SkinName="graydark";
+%block27853.NoDestroy="";
+%block27853.isJail="";
+%block27853.JailMaxCount="";
+%block27853.isBankTrigger="";
+%block27853.isBaseTrigger="";
+%block27853.isRobberSpawn="";
+%block27853.isCopSpawn="";
+%block27853.TriggerSize="";
+%block27853.setShapeName("");
+
+%block27854 = new StaticShape()
+{
+	position = "26.92 -385.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27854);
+%block27854.setSkinName("white");
+%block27854.SkinName="white";
+%block27854.NoDestroy="";
+%block27854.isJail="";
+%block27854.JailMaxCount="";
+%block27854.isBankTrigger="";
+%block27854.isBaseTrigger="";
+%block27854.isRobberSpawn="";
+%block27854.isCopSpawn="";
+%block27854.TriggerSize="";
+%block27854.setShapeName("");
+
+%block27855 = new StaticShape()
+{
+	position = "3.12 -388.06 369.333";
+	rotation = "0 0 1 35";
+	scale = "1 3.3 100";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -35";
+};
+MissionCleanup.add(%block27855);
+%block27855.setSkinName("white");
+%block27855.SkinName="white";
+%block27855.NoDestroy="";
+%block27855.isJail="";
+%block27855.JailMaxCount="";
+%block27855.isBankTrigger="";
+%block27855.isBaseTrigger="";
+%block27855.isRobberSpawn="";
+%block27855.isCopSpawn="";
+%block27855.TriggerSize="";
+%block27855.setShapeName("");
+
+%block27856 = new StaticShape()
+{
+	position = "24.52 -392.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "3 13 2.99998";
+	dataBlock = "staticcylinder2x2";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27856);
+%block27856.setSkinName("white");
+%block27856.SkinName="white";
+%block27856.NoDestroy="";
+%block27856.isJail="";
+%block27856.JailMaxCount="";
+%block27856.isBankTrigger="";
+%block27856.isBaseTrigger="";
+%block27856.isRobberSpawn="";
+%block27856.isCopSpawn="";
+%block27856.TriggerSize="";
+%block27856.setShapeName("");
+
+%block27857 = new StaticShape()
+{
+	position = "32.82 -388.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27857);
+%block27857.setSkinName("white");
+%block27857.SkinName="white";
+%block27857.NoDestroy="";
+%block27857.isJail="";
+%block27857.JailMaxCount="";
+%block27857.isBankTrigger="";
+%block27857.isBaseTrigger="";
+%block27857.isRobberSpawn="";
+%block27857.isCopSpawn="";
+%block27857.TriggerSize="";
+%block27857.setShapeName("");
+
+%block27858 = new StaticShape()
+{
+	position = "33.52 -382.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27858);
+%block27858.setSkinName("white");
+%block27858.SkinName="white";
+%block27858.NoDestroy="";
+%block27858.isJail="";
+%block27858.JailMaxCount="";
+%block27858.isBankTrigger="";
+%block27858.isBaseTrigger="";
+%block27858.isRobberSpawn="";
+%block27858.isCopSpawn="";
+%block27858.TriggerSize="";
+%block27858.setShapeName("");
+
+%block27859 = new StaticShape()
+{
+	position = "25.52 -382.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27859);
+%block27859.setSkinName("white");
+%block27859.SkinName="white";
+%block27859.NoDestroy="";
+%block27859.isJail="";
+%block27859.JailMaxCount="";
+%block27859.isBankTrigger="";
+%block27859.isBaseTrigger="";
+%block27859.isRobberSpawn="";
+%block27859.isCopSpawn="";
+%block27859.TriggerSize="";
+%block27859.setShapeName("");
+
+%block27860 = new StaticShape()
+{
+	position = "33.52 -391.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27860);
+%block27860.setSkinName("white");
+%block27860.SkinName="white";
+%block27860.NoDestroy="";
+%block27860.isJail="";
+%block27860.JailMaxCount="";
+%block27860.isBankTrigger="";
+%block27860.isBaseTrigger="";
+%block27860.isRobberSpawn="";
+%block27860.isCopSpawn="";
+%block27860.TriggerSize="";
+%block27860.setShapeName("");
+
+%block27861 = new StaticShape()
+{
+	position = "25.52 -391.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27861);
+%block27861.setSkinName("white");
+%block27861.SkinName="white";
+%block27861.NoDestroy="";
+%block27861.isJail="";
+%block27861.JailMaxCount="";
+%block27861.isBankTrigger="";
+%block27861.isBaseTrigger="";
+%block27861.isRobberSpawn="";
+%block27861.isCopSpawn="";
+%block27861.TriggerSize="";
+%block27861.setShapeName("");
+
+%block27862 = new StaticShape()
+{
+	position = "32.52 -379.06 381.733";
+	rotation = "0 0 1 90.0002";
+	scale = "13 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block27862);
+%block27862.setSkinName("brown");
+%block27862.SkinName="brown";
+%block27862.NoDestroy="";
+%block27862.isJail="";
+%block27862.JailMaxCount="";
+%block27862.isBankTrigger="";
+%block27862.isBaseTrigger="";
+%block27862.isRobberSpawn="";
+%block27862.isCopSpawn="";
+%block27862.TriggerSize="";
+%block27862.setShapeName("");
+
+%block27863 = new StaticShape()
+{
+	position = "19.02 -426.535 379.333";
+	rotation = "0 1 0 0.104678";
+	scale = "8 41.9 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -0.1 0";
+};
+MissionCleanup.add(%block27863);
+%block27863.setSkinName("white");
+%block27863.SkinName="white";
+%block27863.NoDestroy="";
+%block27863.isJail="";
+%block27863.JailMaxCount="";
+%block27863.isBankTrigger="";
+%block27863.isBaseTrigger="";
+%block27863.isRobberSpawn="";
+%block27863.isCopSpawn="";
+%block27863.TriggerSize="";
+%block27863.setShapeName("");
+
+%block27864 = new StaticShape()
+{
+	position = "31.52 -411.56 380.733";
+	rotation = "-0.57735 0.577352 0.57735 120";
+	scale = "1 1 1.99999";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "90 0 -90";
+	isDoor = "1";
+	Steps = "100";
+	StepTime = "10";
+	RotateXYZ = "0 0 -90";
+	ReturnDelay = "2000";
+	ReturnToggle = "0";
+	Elevator = "0";
+	Private = "";
+	noCollision = "0";
+	isMoving = "0";
+	TriggerDoorID = "";
+	HasReturned = "1";
+	isImpulseTrigger = "";
+	TriggerCloak = "";
+	KeyProtected = "0";
+	Password = "";
+	Team = "";
+	Group = "";
+	isLocked = "";
+	DoorType = "3";
+	MoveNums = "";
+	OnMoveNum = "1";
+	MoveXYZ = "0 0 0";
+	origpos = "31.52 -411.56 369.933 -0.57735 0.577352 0.57735 2.0944";
+	origrot = "90 0 -90";
+	awaitingReturn = "0";
+};
+MissionCleanup.add(%block27864);
+%block27864.setSkinName("brown");
+%block27864.SkinName="brown";
+%block27864.NoDestroy="";
+%block27864.isJail="";
+%block27864.JailMaxCount="";
+%block27864.isBankTrigger="";
+%block27864.isBaseTrigger="";
+%block27864.isRobberSpawn="";
+%block27864.isCopSpawn="";
+%block27864.TriggerSize="";
+%block27864.setShapeName("");
+
+%block27865 = new StaticShape()
+{
+	position = "33.52 -388.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27865);
+%block27865.setSkinName("white");
+%block27865.SkinName="white";
+%block27865.NoDestroy="";
+%block27865.isJail="";
+%block27865.JailMaxCount="";
+%block27865.isBankTrigger="";
+%block27865.isBaseTrigger="";
+%block27865.isRobberSpawn="";
+%block27865.isCopSpawn="";
+%block27865.TriggerSize="";
+%block27865.setShapeName("");
+
+%block27866 = new StaticShape()
+{
+	position = "26.02 -414.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 3.66664";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27866);
+%block27866.setSkinName("white");
+%block27866.SkinName="white";
+%block27866.NoDestroy="";
+%block27866.isJail="";
+%block27866.JailMaxCount="";
+%block27866.isBankTrigger="";
+%block27866.isBaseTrigger="";
+%block27866.isRobberSpawn="";
+%block27866.isCopSpawn="";
+%block27866.TriggerSize="";
+%block27866.setShapeName("");
+
+%block27867 = new StaticShape()
+{
+	position = "27.92 -404.86 380.133";
+	rotation = "0 0 1 90.0002";
+	scale = "1 0.9 0.799997";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block27867);
+%block27867.setSkinName("graydark");
+%block27867.SkinName="graydark";
+%block27867.NoDestroy="";
+%block27867.isJail="";
+%block27867.JailMaxCount="";
+%block27867.isBankTrigger="";
+%block27867.isBaseTrigger="";
+%block27867.isRobberSpawn="";
+%block27867.isCopSpawn="";
+%block27867.TriggerSize="";
+%block27867.setShapeName("");
+
+%block27868 = new StaticShape()
+{
+	position = "3.62 -388.06 369.333";
+	rotation = "0 0 1 180";
+	scale = "1.3 38.5 100";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27868);
+%block27868.setSkinName("white");
+%block27868.SkinName="white";
+%block27868.NoDestroy="";
+%block27868.isJail="";
+%block27868.JailMaxCount="";
+%block27868.isBankTrigger="";
+%block27868.isBaseTrigger="";
+%block27868.isRobberSpawn="";
+%block27868.isCopSpawn="";
+%block27868.TriggerSize="";
+%block27868.setShapeName("");
+
+%block27869 = new StaticShape()
+{
+	position = "4.02 -407.06 382.503";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27869);
+%block27869.setSkinName("brown");
+%block27869.SkinName="brown";
+%block27869.NoDestroy="";
+%block27869.isJail="";
+%block27869.JailMaxCount="";
+%block27869.isBankTrigger="";
+%block27869.isBaseTrigger="";
+%block27869.isRobberSpawn="";
+%block27869.isCopSpawn="";
+%block27869.TriggerSize="";
+%block27869.setShapeName("");
+
+%block27870 = new StaticShape()
+{
+	position = "27.92 -403.865 380.933";
+	rotation = "0 0 1 90.0002";
+	scale = "1 0.9 0.666664";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block27870);
+%block27870.setSkinName("graydark");
+%block27870.SkinName="graydark";
+%block27870.NoDestroy="";
+%block27870.isJail="";
+%block27870.JailMaxCount="";
+%block27870.isBankTrigger="";
+%block27870.isBaseTrigger="";
+%block27870.isRobberSpawn="";
+%block27870.isCopSpawn="";
+%block27870.TriggerSize="";
+%block27870.setShapeName("");
+
+%block27871 = new StaticShape()
+{
+	position = "15.2 -412.875 380.245";
+	rotation = "0.540716 -0.644403 -0.540714 114.405";
+	scale = "0.8 2.4 0.333331";
+	dataBlock = "staticslope1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 80";
+};
+MissionCleanup.add(%block27871);
+%block27871.setSkinName("black");
+%block27871.SkinName="black";
+%block27871.NoDestroy="";
+%block27871.isJail="";
+%block27871.JailMaxCount="";
+%block27871.isBankTrigger="";
+%block27871.isBaseTrigger="";
+%block27871.isRobberSpawn="";
+%block27871.isCopSpawn="";
+%block27871.TriggerSize="";
+%block27871.setShapeName("");
+
+%block27872 = new StaticShape()
+{
+	position = "10.02 -393.06 382.503";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27872);
+%block27872.setSkinName("brown");
+%block27872.SkinName="brown";
+%block27872.NoDestroy="";
+%block27872.isJail="";
+%block27872.JailMaxCount="";
+%block27872.isBankTrigger="";
+%block27872.isBaseTrigger="";
+%block27872.isRobberSpawn="";
+%block27872.isCopSpawn="";
+%block27872.TriggerSize="";
+%block27872.setShapeName("");
+
+%block27873 = new StaticShape()
+{
+	position = "18.52 -413.36 380.133";
+	rotation = "0.608121 0.510276 0.608118 125.932";
+	scale = "0.1 0.2 0.5";
+	dataBlock = "staticslope1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -90 260";
+};
+MissionCleanup.add(%block27873);
+%block27873.setSkinName("black");
+%block27873.SkinName="black";
+%block27873.NoDestroy="";
+%block27873.isJail="";
+%block27873.JailMaxCount="";
+%block27873.isBankTrigger="";
+%block27873.isBaseTrigger="";
+%block27873.isRobberSpawn="";
+%block27873.isCopSpawn="";
+%block27873.TriggerSize="";
+%block27873.setShapeName("");
+
+%block27874 = new StaticShape()
+{
+	position = "23.52 -407.06 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27874);
+%block27874.setSkinName("white");
+%block27874.SkinName="white";
+%block27874.NoDestroy="";
+%block27874.isJail="";
+%block27874.JailMaxCount="";
+%block27874.isBankTrigger="";
+%block27874.isBaseTrigger="";
+%block27874.isRobberSpawn="";
+%block27874.isCopSpawn="";
+%block27874.TriggerSize="";
+%block27874.setShapeName("");
+
+%block27875 = new StaticShape()
+{
+	position = "13.52 -410.41 379.773";
+	rotation = "1 0 0 0";
+	scale = "1 1 1";
+	dataBlock = "staticbrickhammer";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27875);
+%block27875.setSkinName("red");
+%block27875.SkinName="red";
+%block27875.NoDestroy="";
+%block27875.isJail="";
+%block27875.JailMaxCount="";
+%block27875.isBankTrigger="";
+%block27875.isBaseTrigger="";
+%block27875.isRobberSpawn="";
+%block27875.isCopSpawn="";
+%block27875.TriggerSize="";
+%block27875.setShapeName("");
+
+%block27876 = new StaticShape()
+{
+	position = "26.52 -403.96 381.935";
+	rotation = "0.707108 -8.96324e-007 -0.707106 180";
+	scale = "0.4 5.6 6.43329";
+	dataBlock = "staticslope1x3round";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 180";
+};
+MissionCleanup.add(%block27876);
+%block27876.setSkinName("brown");
+%block27876.SkinName="brown";
+%block27876.NoDestroy="";
+%block27876.isJail="";
+%block27876.JailMaxCount="";
+%block27876.isBankTrigger="";
+%block27876.isBaseTrigger="";
+%block27876.isRobberSpawn="";
+%block27876.isCopSpawn="";
+%block27876.TriggerSize="";
+%block27876.setShapeName("");
+
+%block27877 = new StaticShape()
+{
+	position = "14.02 -412.66 380.253";
+	rotation = "0.608121 0.510276 -0.608118 234.068";
+	scale = "0.3 2.6 1.33333";
+	dataBlock = "staticslope1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 260";
+};
+MissionCleanup.add(%block27877);
+%block27877.setSkinName("black");
+%block27877.SkinName="black";
+%block27877.NoDestroy="";
+%block27877.isJail="";
+%block27877.JailMaxCount="";
+%block27877.isBankTrigger="";
+%block27877.isBaseTrigger="";
+%block27877.isRobberSpawn="";
+%block27877.isCopSpawn="";
+%block27877.TriggerSize="";
+%block27877.setShapeName("");
+
+%block27878 = new StaticShape()
+{
+	position = "18.02 -407.06 380.133";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27878);
+%block27878.setSkinName("brown");
+%block27878.SkinName="brown";
+%block27878.NoDestroy="";
+%block27878.isJail="";
+%block27878.JailMaxCount="";
+%block27878.isBankTrigger="";
+%block27878.isBaseTrigger="";
+%block27878.isRobberSpawn="";
+%block27878.isCopSpawn="";
+%block27878.TriggerSize="";
+%block27878.setShapeName("");
+
+%block27879 = new StaticShape()
+{
+	position = "27.52 -406.06 380.933";
+	rotation = "1 0 0 0";
+	scale = "3.4 2 1";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27879);
+%block27879.setSkinName("black");
+%block27879.SkinName="black";
+%block27879.NoDestroy="";
+%block27879.isJail="";
+%block27879.JailMaxCount="";
+%block27879.isBankTrigger="";
+%block27879.isBaseTrigger="";
+%block27879.isRobberSpawn="";
+%block27879.isCopSpawn="";
+%block27879.TriggerSize="";
+%block27879.setShapeName("");
+
+%block27880 = new StaticShape()
+{
+	position = "11.445 -408.885 380.133";
+	rotation = "1 0 0 0";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27880);
+%block27880.setSkinName("white");
+%block27880.SkinName="white";
+%block27880.NoDestroy="";
+%block27880.isJail="";
+%block27880.JailMaxCount="";
+%block27880.isBankTrigger="";
+%block27880.isBaseTrigger="";
+%block27880.isRobberSpawn="";
+%block27880.isCopSpawn="";
+%block27880.TriggerSize="";
+%block27880.setShapeName("");
+
+%block27881 = new StaticShape()
+{
+	position = "13.52 -411.56 380.103";
+	rotation = "1 0 0 0";
+	scale = "1.8 1.9 0.333333";
+	dataBlock = "statictile2x2round";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27881);
+%block27881.setSkinName("red");
+%block27881.SkinName="red";
+%block27881.NoDestroy="";
+%block27881.isJail="";
+%block27881.JailMaxCount="";
+%block27881.isBankTrigger="";
+%block27881.isBaseTrigger="";
+%block27881.isRobberSpawn="";
+%block27881.isCopSpawn="";
+%block27881.TriggerSize="";
+%block27881.setShapeName("");
+
+%block27882 = new StaticShape()
+{
+	position = "17.47 -411.94 380.131";
+	rotation = "0 0 1 90.0002";
+	scale = "1 1.4 2.66665";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block27882);
+%block27882.setSkinName("black");
+%block27882.SkinName="black";
+%block27882.NoDestroy="";
+%block27882.isJail="";
+%block27882.JailMaxCount="";
+%block27882.isBankTrigger="";
+%block27882.isBaseTrigger="";
+%block27882.isRobberSpawn="";
+%block27882.isCopSpawn="";
+%block27882.TriggerSize="";
+%block27882.setShapeName("");
+
+%block27883 = new StaticShape()
+{
+	position = "14.02 -402.06 381.333";
+	rotation = "0 0 -1 90.0002";
+	scale = "5.1 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 90";
+};
+MissionCleanup.add(%block27883);
+%block27883.setSkinName("brown");
+%block27883.SkinName="brown";
+%block27883.NoDestroy="";
+%block27883.isJail="";
+%block27883.JailMaxCount="";
+%block27883.isBankTrigger="";
+%block27883.isBaseTrigger="";
+%block27883.isRobberSpawn="";
+%block27883.isCopSpawn="";
+%block27883.TriggerSize="";
+%block27883.setShapeName("");
+
+%block27884 = new StaticShape()
+{
+	position = "7.02 -418.36 381.843";
+	rotation = "-0.707106 8.96324e-007 0.707108 180";
+	scale = "1 1 1";
+	dataBlock = "staticbrickbook";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "180 -90 0";
+};
+MissionCleanup.add(%block27884);
+%block27884.setSkinName("base4");
+%block27884.SkinName="base4";
+%block27884.NoDestroy="";
+%block27884.isJail="";
+%block27884.JailMaxCount="";
+%block27884.isBankTrigger="";
+%block27884.isBaseTrigger="";
+%block27884.isRobberSpawn="";
+%block27884.isCopSpawn="";
+%block27884.TriggerSize="";
+%block27884.setShapeName("");
+
+%block27885 = new StaticShape()
+{
+	position = "24.62 -407.06 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27885);
+%block27885.setSkinName("white");
+%block27885.SkinName="white";
+%block27885.NoDestroy="";
+%block27885.isJail="";
+%block27885.JailMaxCount="";
+%block27885.isBankTrigger="";
+%block27885.isBaseTrigger="";
+%block27885.isRobberSpawn="";
+%block27885.isCopSpawn="";
+%block27885.TriggerSize="";
+%block27885.setShapeName("");
+
+%block27886 = new StaticShape()
+{
+	position = "7.02 -418.06 381.643";
+	rotation = "-0.707106 8.96324e-007 0.707108 180";
+	scale = "1 1 1";
+	dataBlock = "staticbrickbook";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "180 -90 0";
+};
+MissionCleanup.add(%block27886);
+%block27886.setSkinName("base12");
+%block27886.SkinName="base12";
+%block27886.NoDestroy="";
+%block27886.isJail="";
+%block27886.JailMaxCount="";
+%block27886.isBankTrigger="";
+%block27886.isBaseTrigger="";
+%block27886.isRobberSpawn="";
+%block27886.isCopSpawn="";
+%block27886.TriggerSize="";
+%block27886.setShapeName("");
+
+%block27955 = new StaticShape()
+{
+	position = "6.02 -400.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.33328";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27955);
+%block27955.setSkinName("brownlight");
+%block27955.SkinName="brownlight";
+%block27955.NoDestroy="";
+%block27955.isJail="";
+%block27955.JailMaxCount="";
+%block27955.isBankTrigger="";
+%block27955.isBaseTrigger="";
+%block27955.isRobberSpawn="";
+%block27955.isCopSpawn="";
+%block27955.TriggerSize="";
+%block27955.setShapeName("");
+
+%block27956 = new StaticShape()
+{
+	position = "13.22 -409.06 379.973";
+	rotation = "-0.409137 0.250563 0.877397 93.8413";
+	scale = "4 1 1.99999";
+	dataBlock = "statictile1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "40 10 270";
+};
+MissionCleanup.add(%block27956);
+%block27956.setSkinName("black");
+%block27956.SkinName="black";
+%block27956.NoDestroy="";
+%block27956.isJail="";
+%block27956.JailMaxCount="";
+%block27956.isBankTrigger="";
+%block27956.isBaseTrigger="";
+%block27956.isRobberSpawn="";
+%block27956.isCopSpawn="";
+%block27956.TriggerSize="";
+%block27956.setShapeName("");
+
+%block27957 = new StaticShape()
+{
+	position = "15.52 -410.46 380.773";
+	rotation = "1 0 0 0";
+	scale = "1 0.5 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27957);
+%block27957.setSkinName("black");
+%block27957.SkinName="black";
+%block27957.NoDestroy="";
+%block27957.isJail="";
+%block27957.JailMaxCount="";
+%block27957.isBankTrigger="";
+%block27957.isBaseTrigger="";
+%block27957.isRobberSpawn="";
+%block27957.isCopSpawn="";
+%block27957.TriggerSize="";
+%block27957.setShapeName("");
+
+%block27959 = new StaticShape()
+{
+	position = "19.02 -421.56 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 7.2 4.66663";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27959);
+%block27959.setSkinName("brownlight");
+%block27959.SkinName="brownlight";
+%block27959.NoDestroy="";
+%block27959.isJail="";
+%block27959.JailMaxCount="";
+%block27959.isBankTrigger="";
+%block27959.isBaseTrigger="";
+%block27959.isRobberSpawn="";
+%block27959.isCopSpawn="";
+%block27959.TriggerSize="";
+%block27959.setShapeName("");
+
+%block27960 = new StaticShape()
+{
+	position = "7.02 -420.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.33328";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27960);
+%block27960.setSkinName("brownlight");
+%block27960.SkinName="brownlight";
+%block27960.NoDestroy="";
+%block27960.isJail="";
+%block27960.JailMaxCount="";
+%block27960.isBankTrigger="";
+%block27960.isBaseTrigger="";
+%block27960.isRobberSpawn="";
+%block27960.isCopSpawn="";
+%block27960.TriggerSize="";
+%block27960.setShapeName("");
+
+%block27961 = new StaticShape()
+{
+	position = "10.52 -410.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27961);
+%block27961.setSkinName("red");
+%block27961.SkinName="red";
+%block27961.NoDestroy="";
+%block27961.isJail="";
+%block27961.JailMaxCount="";
+%block27961.isBankTrigger="";
+%block27961.isBaseTrigger="";
+%block27961.isRobberSpawn="";
+%block27961.isCopSpawn="";
+%block27961.TriggerSize="";
+%block27961.setShapeName("");
+
+%block27962 = new StaticShape()
+{
+	position = "11.395 -409.21 380.133";
+	rotation = "1 0 0 0";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27962);
+%block27962.setSkinName("white");
+%block27962.SkinName="white";
+%block27962.NoDestroy="";
+%block27962.isJail="";
+%block27962.JailMaxCount="";
+%block27962.isBankTrigger="";
+%block27962.isBaseTrigger="";
+%block27962.isRobberSpawn="";
+%block27962.isCopSpawn="";
+%block27962.TriggerSize="";
+%block27962.setShapeName("");
+
+%block27963 = new StaticShape()
+{
+	position = "7.02 -418.585 381.633";
+	rotation = "-0.707106 8.96324e-007 0.707108 180";
+	scale = "1 1 1";
+	dataBlock = "staticbrickbook";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "180 -90 0";
+};
+MissionCleanup.add(%block27963);
+%block27963.setSkinName("3");
+%block27963.SkinName="3";
+%block27963.NoDestroy="";
+%block27963.isJail="";
+%block27963.JailMaxCount="";
+%block27963.isBankTrigger="";
+%block27963.isBaseTrigger="";
+%block27963.isRobberSpawn="";
+%block27963.isCopSpawn="";
+%block27963.TriggerSize="";
+%block27963.setShapeName("");
+
+%block27964 = new StaticShape()
+{
+	position = "20.52 -398.06 381.333";
+	rotation = "0 0 1 180";
+	scale = "5.1 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27964);
+%block27964.setSkinName("brown");
+%block27964.SkinName="brown";
+%block27964.NoDestroy="";
+%block27964.isJail="";
+%block27964.JailMaxCount="";
+%block27964.isBankTrigger="";
+%block27964.isBaseTrigger="";
+%block27964.isRobberSpawn="";
+%block27964.isCopSpawn="";
+%block27964.TriggerSize="";
+%block27964.setShapeName("");
+
+%block27965 = new StaticShape()
+{
+	position = "10.02 -407.06 380.133";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27965);
+%block27965.setSkinName("brown");
+%block27965.SkinName="brown";
+%block27965.NoDestroy="";
+%block27965.isJail="";
+%block27965.JailMaxCount="";
+%block27965.isBankTrigger="";
+%block27965.isBaseTrigger="";
+%block27965.isRobberSpawn="";
+%block27965.isCopSpawn="";
+%block27965.TriggerSize="";
+%block27965.setShapeName("");
+
+%block27967 = new StaticShape()
+{
+	position = "16.82 -410.46 380.133";
+	rotation = "0 0 1 130";
+	scale = "1 2.7 2.66665";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 230";
+};
+MissionCleanup.add(%block27967);
+%block27967.setSkinName("black");
+%block27967.SkinName="black";
+%block27967.NoDestroy="";
+%block27967.isJail="";
+%block27967.JailMaxCount="";
+%block27967.isBankTrigger="";
+%block27967.isBaseTrigger="";
+%block27967.isRobberSpawn="";
+%block27967.isCopSpawn="";
+%block27967.TriggerSize="";
+%block27967.setShapeName("");
+
+%block27968 = new StaticShape()
+{
+	position = "16.57 -411.035 380.133";
+	rotation = "0 0 1 130";
+	scale = "1 1.6 2.66665";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 230";
+};
+MissionCleanup.add(%block27968);
+%block27968.setSkinName("black");
+%block27968.SkinName="black";
+%block27968.NoDestroy="";
+%block27968.isJail="";
+%block27968.JailMaxCount="";
+%block27968.isBankTrigger="";
+%block27968.isBaseTrigger="";
+%block27968.isRobberSpawn="";
+%block27968.isCopSpawn="";
+%block27968.TriggerSize="";
+%block27968.setShapeName("");
+
+%block27969 = new StaticShape()
+{
+	position = "15.02 -411.86 380.373";
+	rotation = "1 0 0 0";
+	scale = "1 0.8 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27969);
+%block27969.setSkinName("black");
+%block27969.SkinName="black";
+%block27969.NoDestroy="";
+%block27969.isJail="";
+%block27969.JailMaxCount="";
+%block27969.isBankTrigger="";
+%block27969.isBaseTrigger="";
+%block27969.isRobberSpawn="";
+%block27969.isCopSpawn="";
+%block27969.TriggerSize="";
+%block27969.setShapeName("");
+
+%block27970 = new StaticShape()
+{
+	position = "12.675 -409.115 379.961";
+	rotation = "-0.323616 0.323616 0.889126 96.7175";
+	scale = "1 1 1.66666";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "40 0 270";
+};
+MissionCleanup.add(%block27970);
+%block27970.setSkinName("brownlight");
+%block27970.SkinName="brownlight";
+%block27970.NoDestroy="";
+%block27970.isJail="";
+%block27970.JailMaxCount="";
+%block27970.isBankTrigger="";
+%block27970.isBaseTrigger="";
+%block27970.isRobberSpawn="";
+%block27970.isCopSpawn="";
+%block27970.TriggerSize="";
+%block27970.setShapeName("");
+
+%block27971 = new StaticShape()
+{
+	position = "10.02 -407.06 382.503";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27971);
+%block27971.setSkinName("brown");
+%block27971.SkinName="brown";
+%block27971.NoDestroy="";
+%block27971.isJail="";
+%block27971.JailMaxCount="";
+%block27971.isBankTrigger="";
+%block27971.isBaseTrigger="";
+%block27971.isRobberSpawn="";
+%block27971.isCopSpawn="";
+%block27971.TriggerSize="";
+%block27971.setShapeName("");
+
+%block27972 = new StaticShape()
+{
+	position = "18.02 -407.06 382.503";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27972);
+%block27972.setSkinName("brown");
+%block27972.SkinName="brown";
+%block27972.NoDestroy="";
+%block27972.isJail="";
+%block27972.JailMaxCount="";
+%block27972.isBankTrigger="";
+%block27972.isBaseTrigger="";
+%block27972.isRobberSpawn="";
+%block27972.isCopSpawn="";
+%block27972.TriggerSize="";
+%block27972.setShapeName("");
+
+%block27974 = new StaticShape()
+{
+	position = "4.02 -393.06 382.503";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27974);
+%block27974.setSkinName("brown");
+%block27974.SkinName="brown";
+%block27974.NoDestroy="";
+%block27974.isJail="";
+%block27974.JailMaxCount="";
+%block27974.isBankTrigger="";
+%block27974.isBaseTrigger="";
+%block27974.isRobberSpawn="";
+%block27974.isCopSpawn="";
+%block27974.TriggerSize="";
+%block27974.setShapeName("");
+
+%block27975 = new StaticShape()
+{
+	position = "24.52 -379.06 381.733";
+	rotation = "0 0 1 90.0002";
+	scale = "13 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block27975);
+%block27975.setSkinName("brown");
+%block27975.SkinName="brown";
+%block27975.NoDestroy="";
+%block27975.isJail="";
+%block27975.JailMaxCount="";
+%block27975.isBankTrigger="";
+%block27975.isBaseTrigger="";
+%block27975.isRobberSpawn="";
+%block27975.isCopSpawn="";
+%block27975.TriggerSize="";
+%block27975.setShapeName("");
+
+%block27976 = new StaticShape()
+{
+	position = "15.32 -410.76 380.28";
+	rotation = "0 1 0 100";
+	scale = "1 1 1";
+	dataBlock = "staticBrick1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -100 0";
+};
+MissionCleanup.add(%block27976);
+%block27976.setSkinName("tan");
+%block27976.SkinName="tan";
+%block27976.NoDestroy="";
+%block27976.isJail="";
+%block27976.JailMaxCount="";
+%block27976.isBankTrigger="";
+%block27976.isBaseTrigger="";
+%block27976.isRobberSpawn="";
+%block27976.isCopSpawn="";
+%block27976.TriggerSize="";
+%block27976.setShapeName("");
+
+%block27977 = new StaticShape()
+{
+	position = "11.32 -410.385 380.073";
+	rotation = "0 0 -1 15";
+	scale = "3.4 3.65 0.333333";
+	dataBlock = "staticcylinder1x1ft";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 15";
+};
+MissionCleanup.add(%block27977);
+%block27977.setSkinName("red");
+%block27977.SkinName="red";
+%block27977.NoDestroy="";
+%block27977.isJail="";
+%block27977.JailMaxCount="";
+%block27977.isBankTrigger="";
+%block27977.isBaseTrigger="";
+%block27977.isRobberSpawn="";
+%block27977.isCopSpawn="";
+%block27977.TriggerSize="";
+%block27977.setShapeName("");
+
+%block27978 = new StaticShape()
+{
+	position = "17.52 -400.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.33328";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27978);
+%block27978.setSkinName("brownlight");
+%block27978.SkinName="brownlight";
+%block27978.NoDestroy="";
+%block27978.isJail="";
+%block27978.JailMaxCount="";
+%block27978.isBankTrigger="";
+%block27978.isBaseTrigger="";
+%block27978.isRobberSpawn="";
+%block27978.isCopSpawn="";
+%block27978.TriggerSize="";
+%block27978.setShapeName("");
+
+%block27979 = new StaticShape()
+{
+	position = "23.02 -414.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 3.66664";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27979);
+%block27979.setSkinName("white");
+%block27979.SkinName="white";
+%block27979.NoDestroy="";
+%block27979.isJail="";
+%block27979.JailMaxCount="";
+%block27979.isBankTrigger="";
+%block27979.isBaseTrigger="";
+%block27979.isRobberSpawn="";
+%block27979.isCopSpawn="";
+%block27979.TriggerSize="";
+%block27979.setShapeName("");
+
+%block27980 = new StaticShape()
+{
+	position = "10.02 -393.06 380.133";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27980);
+%block27980.setSkinName("brown");
+%block27980.SkinName="brown";
+%block27980.NoDestroy="";
+%block27980.isJail="";
+%block27980.JailMaxCount="";
+%block27980.isBankTrigger="";
+%block27980.isBaseTrigger="";
+%block27980.isRobberSpawn="";
+%block27980.isCopSpawn="";
+%block27980.TriggerSize="";
+%block27980.setShapeName("");
+
+%block27981 = new StaticShape()
+{
+	position = "18.02 -393.06 380.133";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27981);
+%block27981.setSkinName("brown");
+%block27981.SkinName="brown";
+%block27981.NoDestroy="";
+%block27981.isJail="";
+%block27981.JailMaxCount="";
+%block27981.isBankTrigger="";
+%block27981.isBaseTrigger="";
+%block27981.isRobberSpawn="";
+%block27981.isCopSpawn="";
+%block27981.TriggerSize="";
+%block27981.setShapeName("");
+
+%block27982 = new StaticShape()
+{
+	position = "7.02 -418.96 381.763";
+	rotation = "-0.678597 -0.281085 0.6786 211.4";
+	scale = "1 1 1";
+	dataBlock = "staticbrickbook";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "225 -90 0";
+};
+MissionCleanup.add(%block27982);
+%block27982.setSkinName("base3");
+%block27982.SkinName="base3";
+%block27982.NoDestroy="";
+%block27982.isJail="";
+%block27982.JailMaxCount="";
+%block27982.isBankTrigger="";
+%block27982.isBaseTrigger="";
+%block27982.isRobberSpawn="";
+%block27982.isCopSpawn="";
+%block27982.TriggerSize="";
+%block27982.setShapeName("");
+
+%block27983 = new StaticShape()
+{
+	position = "32.82 -385.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27983);
+%block27983.setSkinName("white");
+%block27983.SkinName="white";
+%block27983.NoDestroy="";
+%block27983.isJail="";
+%block27983.JailMaxCount="";
+%block27983.isBankTrigger="";
+%block27983.isBaseTrigger="";
+%block27983.isRobberSpawn="";
+%block27983.isCopSpawn="";
+%block27983.TriggerSize="";
+%block27983.setShapeName("");
+
+%block27984 = new StaticShape()
+{
+	position = "26.92 -382.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27984);
+%block27984.setSkinName("white");
+%block27984.SkinName="white";
+%block27984.NoDestroy="";
+%block27984.isJail="";
+%block27984.JailMaxCount="";
+%block27984.isBankTrigger="";
+%block27984.isBaseTrigger="";
+%block27984.isRobberSpawn="";
+%block27984.isCopSpawn="";
+%block27984.TriggerSize="";
+%block27984.setShapeName("");
+
+%block27985 = new StaticShape()
+{
+	position = "9.02 -398.06 381.333";
+	rotation = "0 0 1 180";
+	scale = "5.1 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block27985);
+%block27985.setSkinName("brown");
+%block27985.SkinName="brown";
+%block27985.NoDestroy="";
+%block27985.isJail="";
+%block27985.JailMaxCount="";
+%block27985.isBankTrigger="";
+%block27985.isBaseTrigger="";
+%block27985.isRobberSpawn="";
+%block27985.isCopSpawn="";
+%block27985.TriggerSize="";
+%block27985.setShapeName("");
+
+%block27986 = new StaticShape()
+{
+	position = "26.52 -403.96 381.735";
+	rotation = "-4.54747e-012 1 2.53519e-006 90.0002";
+	scale = "0.4 5.6 6.43329";
+	dataBlock = "staticslope1x3round";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "180 90 180";
+};
+MissionCleanup.add(%block27986);
+%block27986.setSkinName("brown");
+%block27986.SkinName="brown";
+%block27986.NoDestroy="";
+%block27986.isJail="";
+%block27986.JailMaxCount="";
+%block27986.isBankTrigger="";
+%block27986.isBaseTrigger="";
+%block27986.isRobberSpawn="";
+%block27986.isCopSpawn="";
+%block27986.TriggerSize="";
+%block27986.setShapeName("");
+
+%block27987 = new StaticShape()
+{
+	position = "12.02 -415.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.33328";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27987);
+%block27987.setSkinName("brownlight");
+%block27987.SkinName="brownlight";
+%block27987.NoDestroy="";
+%block27987.isJail="";
+%block27987.JailMaxCount="";
+%block27987.isBankTrigger="";
+%block27987.isBaseTrigger="";
+%block27987.isRobberSpawn="";
+%block27987.isCopSpawn="";
+%block27987.TriggerSize="";
+%block27987.setShapeName("");
+
+%block27988 = new StaticShape()
+{
+	position = "12.02 -400.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.33328";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27988);
+%block27988.setSkinName("brownlight");
+%block27988.SkinName="brownlight";
+%block27988.NoDestroy="";
+%block27988.isJail="";
+%block27988.JailMaxCount="";
+%block27988.isBankTrigger="";
+%block27988.isBaseTrigger="";
+%block27988.isRobberSpawn="";
+%block27988.isCopSpawn="";
+%block27988.TriggerSize="";
+%block27988.setShapeName("");
+
+%block27989 = new StaticShape()
+{
+	position = "19.52 -414.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 3.66664";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27989);
+%block27989.setSkinName("white");
+%block27989.SkinName="white";
+%block27989.NoDestroy="";
+%block27989.isJail="";
+%block27989.JailMaxCount="";
+%block27989.isBankTrigger="";
+%block27989.isBaseTrigger="";
+%block27989.isRobberSpawn="";
+%block27989.isCopSpawn="";
+%block27989.TriggerSize="";
+%block27989.setShapeName("");
+
+%block27990 = new StaticShape()
+{
+	position = "4.02 -393.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27990);
+%block27990.setSkinName("brown");
+%block27990.SkinName="brown";
+%block27990.NoDestroy="";
+%block27990.isJail="";
+%block27990.JailMaxCount="";
+%block27990.isBankTrigger="";
+%block27990.isBaseTrigger="";
+%block27990.isRobberSpawn="";
+%block27990.isCopSpawn="";
+%block27990.TriggerSize="";
+%block27990.setShapeName("");
+
+%block27991 = new StaticShape()
+{
+	position = "11.52 -409.56 380.133";
+	rotation = "1 0 0 0";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27991);
+%block27991.setSkinName("white");
+%block27991.SkinName="white";
+%block27991.NoDestroy="";
+%block27991.isJail="";
+%block27991.JailMaxCount="";
+%block27991.isBankTrigger="";
+%block27991.isBaseTrigger="";
+%block27991.isRobberSpawn="";
+%block27991.isCopSpawn="";
+%block27991.TriggerSize="";
+%block27991.setShapeName("");
+
+%block27992 = new StaticShape()
+{
+	position = "27.02 -426.56 369.133";
+	rotation = "1 0 0 0";
+	scale = "1.5 6 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block27992);
+%block27992.setSkinName("tandark");
+%block27992.SkinName="tandark";
+%block27992.NoDestroy="";
+%block27992.isJail="";
+%block27992.JailMaxCount="";
+%block27992.isBankTrigger="";
+%block27992.isBaseTrigger="";
+%block27992.isRobberSpawn="";
+%block27992.isCopSpawn="";
+%block27992.TriggerSize="";
+%block27992.setShapeName("");
+
+%block27993 = new StaticShape()
+{
+	position = "18.22 -377.46 369.333";
+	rotation = "0 0 1 82";
+	scale = "1 8.8 10.004";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -82";
+};
+MissionCleanup.add(%block27993);
+%block27993.setSkinName("white");
+%block27993.SkinName="white";
+%block27993.NoDestroy="";
+%block27993.isJail="";
+%block27993.JailMaxCount="";
+%block27993.isBankTrigger="";
+%block27993.isBaseTrigger="";
+%block27993.isRobberSpawn="";
+%block27993.isCopSpawn="";
+%block27993.TriggerSize="";
+%block27993.setShapeName("");
+
+%block27994 = new StaticShape()
+{
+	position = "26.92 -376.26 369.333";
+	rotation = "0 0 1 88.9998";
+	scale = "1 8.8 10.004";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -89";
+};
+MissionCleanup.add(%block27994);
+%block27994.setSkinName("white");
+%block27994.SkinName="white";
+%block27994.NoDestroy="";
+%block27994.isJail="";
+%block27994.JailMaxCount="";
+%block27994.isBankTrigger="";
+%block27994.isBaseTrigger="";
+%block27994.isRobberSpawn="";
+%block27994.isCopSpawn="";
+%block27994.TriggerSize="";
+%block27994.setShapeName("");
+
+%block27995 = new StaticShape()
+{
+	position = "15.02 -411.06 380.133";
+	rotation = "0 0 1 20";
+	scale = "1.5 1.1 2.79998";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -20";
+};
+MissionCleanup.add(%block27995);
+%block27995.setSkinName("black");
+%block27995.SkinName="black";
+%block27995.NoDestroy="";
+%block27995.isJail="";
+%block27995.JailMaxCount="";
+%block27995.isBankTrigger="";
+%block27995.isBaseTrigger="";
+%block27995.isRobberSpawn="";
+%block27995.isCopSpawn="";
+%block27995.TriggerSize="";
+%block27995.setShapeName("");
+
+%block27996 = new StaticShape()
+{
+	position = "12.52 -409.06 380.133";
+	rotation = "-0.323616 0.323616 0.889126 96.7175";
+	scale = "1 1 5.33329";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "40 0 270";
+};
+MissionCleanup.add(%block27996);
+%block27996.setSkinName("white");
+%block27996.SkinName="white";
+%block27996.NoDestroy="";
+%block27996.isJail="";
+%block27996.JailMaxCount="";
+%block27996.isBankTrigger="";
+%block27996.isBaseTrigger="";
+%block27996.isRobberSpawn="";
+%block27996.isCopSpawn="";
+%block27996.TriggerSize="";
+%block27996.setShapeName("");
+
+%block27997 = new StaticShape()
+{
+	position = "15.55 -413.015 380.235";
+	rotation = "0.608121 0.510276 -0.608118 234.068";
+	scale = "0.1 0.1 0.133333";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 260";
+};
+MissionCleanup.add(%block27997);
+%block27997.setSkinName("black");
+%block27997.SkinName="black";
+%block27997.NoDestroy="";
+%block27997.isJail="";
+%block27997.JailMaxCount="";
+%block27997.isBankTrigger="";
+%block27997.isBaseTrigger="";
+%block27997.isRobberSpawn="";
+%block27997.isCopSpawn="";
+%block27997.TriggerSize="";
+%block27997.setShapeName("");
+
+%block27998 = new StaticShape()
+{
+	position = "27.02 -376.055 368.877";
+	rotation = "0.707108 -8.96324e-007 0.707106 180";
+	scale = "1 89 40.3302";
+	dataBlock = "staticslope1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -90 180";
+};
+MissionCleanup.add(%block27998);
+%block27998.setSkinName("tandark");
+%block27998.SkinName="tandark";
+%block27998.NoDestroy="";
+%block27998.isJail="";
+%block27998.JailMaxCount="";
+%block27998.isBankTrigger="";
+%block27998.isBaseTrigger="";
+%block27998.isRobberSpawn="";
+%block27998.isCopSpawn="";
+%block27998.TriggerSize="";
+%block27998.setShapeName("");
+
+%block27999 = new StaticShape()
+{
+	position = "26.52 -382.46 382.853";
+	rotation = "0 -1 0 90.0002";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 0";
+};
+MissionCleanup.add(%block27999);
+%block27999.setSkinName("blue");
+%block27999.SkinName="blue";
+%block27999.NoDestroy="";
+%block27999.isJail="";
+%block27999.JailMaxCount="";
+%block27999.isBankTrigger="";
+%block27999.isBaseTrigger="";
+%block27999.isRobberSpawn="";
+%block27999.isCopSpawn="";
+%block27999.TriggerSize="";
+%block27999.setShapeName("");
+
+%block28000 = new StaticShape()
+{
+	position = "33.52 -387.66 382.853";
+	rotation = "0.707108 -8.96324e-007 -0.707106 180";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 180";
+};
+MissionCleanup.add(%block28000);
+%block28000.setSkinName("blue");
+%block28000.SkinName="blue";
+%block28000.NoDestroy="";
+%block28000.isJail="";
+%block28000.JailMaxCount="";
+%block28000.isBankTrigger="";
+%block28000.isBaseTrigger="";
+%block28000.isRobberSpawn="";
+%block28000.isCopSpawn="";
+%block28000.TriggerSize="";
+%block28000.setShapeName("");
+
+%block28001 = new StaticShape()
+{
+	position = "33.52 -381.66 382.853";
+	rotation = "0.707108 -8.96324e-007 -0.707106 180";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 180";
+};
+MissionCleanup.add(%block28001);
+%block28001.setSkinName("blue");
+%block28001.SkinName="blue";
+%block28001.NoDestroy="";
+%block28001.isJail="";
+%block28001.JailMaxCount="";
+%block28001.isBankTrigger="";
+%block28001.isBaseTrigger="";
+%block28001.isRobberSpawn="";
+%block28001.isCopSpawn="";
+%block28001.TriggerSize="";
+%block28001.setShapeName("");
+
+%block28002 = new StaticShape()
+{
+	position = "11.92 -408.91 380.133";
+	rotation = "-0.701674 0.701674 0.123724 28.2121";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "20 -20 0";
+};
+MissionCleanup.add(%block28002);
+%block28002.setSkinName("white");
+%block28002.SkinName="white";
+%block28002.NoDestroy="";
+%block28002.isJail="";
+%block28002.JailMaxCount="";
+%block28002.isBankTrigger="";
+%block28002.isBaseTrigger="";
+%block28002.isRobberSpawn="";
+%block28002.isCopSpawn="";
+%block28002.TriggerSize="";
+%block28002.setShapeName("");
+
+%block28003 = new StaticShape()
+{
+	position = "13.02 -422.56 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.33328";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28003);
+%block28003.setSkinName("brownlight");
+%block28003.SkinName="brownlight";
+%block28003.NoDestroy="";
+%block28003.isJail="";
+%block28003.JailMaxCount="";
+%block28003.isBankTrigger="";
+%block28003.isBaseTrigger="";
+%block28003.isRobberSpawn="";
+%block28003.isCopSpawn="";
+%block28003.TriggerSize="";
+%block28003.setShapeName("");
+
+%block28004 = new StaticShape()
+{
+	position = "4.02 -407.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28004);
+%block28004.setSkinName("brown");
+%block28004.SkinName="brown";
+%block28004.NoDestroy="";
+%block28004.isJail="";
+%block28004.JailMaxCount="";
+%block28004.isBankTrigger="";
+%block28004.isBaseTrigger="";
+%block28004.isRobberSpawn="";
+%block28004.isCopSpawn="";
+%block28004.TriggerSize="";
+%block28004.setShapeName("");
+
+%block28078 = new StaticShape()
+{
+	position = "12.02 -409.56 381.2";
+	rotation = "0 1 0 60.0001";
+	scale = "1 1 2.99998";
+	dataBlock = "statictile1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -60 0";
+};
+MissionCleanup.add(%block28078);
+%block28078.setSkinName("tan");
+%block28078.SkinName="tan";
+%block28078.NoDestroy="";
+%block28078.isJail="";
+%block28078.JailMaxCount="";
+%block28078.isBankTrigger="";
+%block28078.isBaseTrigger="";
+%block28078.isRobberSpawn="";
+%block28078.isCopSpawn="";
+%block28078.TriggerSize="";
+%block28078.setShapeName("Eric");
+
+%block28079 = new StaticShape()
+{
+	position = "12.12 -408.86 380.84";
+	rotation = "-0.152148 -0.303136 0.940723 128.213";
+	scale = "2.9 0.7 1.66666";
+	dataBlock = "statictile1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-20 30 240";
+};
+MissionCleanup.add(%block28079);
+%block28079.setSkinName("white");
+%block28079.SkinName="white";
+%block28079.NoDestroy="";
+%block28079.isJail="";
+%block28079.JailMaxCount="";
+%block28079.isBankTrigger="";
+%block28079.isBaseTrigger="";
+%block28079.isRobberSpawn="";
+%block28079.isCopSpawn="";
+%block28079.TriggerSize="";
+%block28079.setShapeName("");
+
+%block28080 = new StaticShape()
+{
+	position = "15.52 -411.46 380.773";
+	rotation = "1 0 0 0";
+	scale = "1 0.6 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28080);
+%block28080.setSkinName("black");
+%block28080.SkinName="black";
+%block28080.NoDestroy="";
+%block28080.isJail="";
+%block28080.JailMaxCount="";
+%block28080.isBankTrigger="";
+%block28080.isBaseTrigger="";
+%block28080.isRobberSpawn="";
+%block28080.isCopSpawn="";
+%block28080.TriggerSize="";
+%block28080.setShapeName("");
+
+%block28081 = new StaticShape()
+{
+	position = "26.02 -412.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 2.99998";
+	dataBlock = "staticBrick1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28081);
+%block28081.setSkinName("brown");
+%block28081.SkinName="brown";
+%block28081.NoDestroy="";
+%block28081.isJail="";
+%block28081.JailMaxCount="";
+%block28081.isBankTrigger="";
+%block28081.isBaseTrigger="";
+%block28081.isRobberSpawn="";
+%block28081.isCopSpawn="";
+%block28081.TriggerSize="";
+%block28081.setShapeName("");
+
+%block28082 = new StaticShape()
+{
+	position = "15.22 -412.725 380.055";
+	rotation = "0 0 1 100";
+	scale = "0.5 1 1";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -100";
+};
+MissionCleanup.add(%block28082);
+%block28082.setSkinName("black");
+%block28082.SkinName="black";
+%block28082.NoDestroy="";
+%block28082.isJail="";
+%block28082.JailMaxCount="";
+%block28082.isBankTrigger="";
+%block28082.isBaseTrigger="";
+%block28082.isRobberSpawn="";
+%block28082.isCopSpawn="";
+%block28082.TriggerSize="";
+%block28082.setShapeName("");
+
+%block28083 = new StaticShape()
+{
+	position = "13.595 -411.135 380.123";
+	rotation = "1 0 0 0";
+	scale = "1.2 1.3 0.333333";
+	dataBlock = "statictile2x2round";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28083);
+%block28083.setSkinName("redDark");
+%block28083.SkinName="redDark";
+%block28083.NoDestroy="";
+%block28083.isJail="";
+%block28083.JailMaxCount="";
+%block28083.isBankTrigger="";
+%block28083.isBaseTrigger="";
+%block28083.isRobberSpawn="";
+%block28083.isCopSpawn="";
+%block28083.TriggerSize="";
+%block28083.setShapeName("");
+
+%block28084 = new StaticShape()
+{
+	position = "18.245 -413.41 380.173";
+	rotation = "0.705759 -0.0617458 -0.705756 172.934";
+	scale = "0.4 0.3 3.33331";
+	dataBlock = "staticbrickcup";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 170";
+};
+MissionCleanup.add(%block28084);
+%block28084.setSkinName("black");
+%block28084.SkinName="black";
+%block28084.NoDestroy="";
+%block28084.isJail="";
+%block28084.JailMaxCount="";
+%block28084.isBankTrigger="";
+%block28084.isBaseTrigger="";
+%block28084.isRobberSpawn="";
+%block28084.isCopSpawn="";
+%block28084.TriggerSize="";
+%block28084.setShapeName("");
+
+%block28085 = new StaticShape()
+{
+	position = "12.17 -409.51 381.023";
+	rotation = "0 1 0 45";
+	scale = "0.9 0.9 1.8";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 -45 0";
+};
+MissionCleanup.add(%block28085);
+%block28085.setSkinName("tan");
+%block28085.SkinName="tan";
+%block28085.NoDestroy="";
+%block28085.isJail="";
+%block28085.JailMaxCount="";
+%block28085.isBankTrigger="";
+%block28085.isBaseTrigger="";
+%block28085.isRobberSpawn="";
+%block28085.isCopSpawn="";
+%block28085.TriggerSize="";
+%block28085.setShapeName("");
+
+%block28086 = new StaticShape()
+{
+	position = "3.52 -389.06 379.333";
+	rotation = "1 0 0 180";
+	scale = "25 38 0.333333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "180 0 0";
+};
+MissionCleanup.add(%block28086);
+%block28086.setSkinName("white");
+%block28086.SkinName="white";
+%block28086.NoDestroy="";
+%block28086.isJail="";
+%block28086.JailMaxCount="";
+%block28086.isBankTrigger="";
+%block28086.isBaseTrigger="";
+%block28086.isRobberSpawn="";
+%block28086.isCopSpawn="";
+%block28086.TriggerSize="";
+%block28086.setShapeName("");
+
+%block28087 = new StaticShape()
+{
+	position = "26.52 -398.56 381.733";
+	rotation = "1 0 0 0";
+	scale = "4 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28087);
+%block28087.setSkinName("brown");
+%block28087.SkinName="brown";
+%block28087.NoDestroy="";
+%block28087.isJail="";
+%block28087.JailMaxCount="";
+%block28087.isBankTrigger="";
+%block28087.isBaseTrigger="";
+%block28087.isRobberSpawn="";
+%block28087.isCopSpawn="";
+%block28087.TriggerSize="";
+%block28087.setShapeName("");
+
+%block28088 = new StaticShape()
+{
+	position = "25.52 -385.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28088);
+%block28088.setSkinName("white");
+%block28088.SkinName="white";
+%block28088.NoDestroy="";
+%block28088.isJail="";
+%block28088.JailMaxCount="";
+%block28088.isBankTrigger="";
+%block28088.isBaseTrigger="";
+%block28088.isRobberSpawn="";
+%block28088.isCopSpawn="";
+%block28088.TriggerSize="";
+%block28088.setShapeName("");
+
+%block28089 = new StaticShape()
+{
+	position = "27.095 -389.06 379.735";
+	rotation = "0.577352 -0.57735 -0.57735 120";
+	scale = "0.86 15.9 21.4321";
+	dataBlock = "staticslope1x3round";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 90";
+};
+MissionCleanup.add(%block28089);
+%block28089.setSkinName("tandark");
+%block28089.SkinName="tandark";
+%block28089.NoDestroy="";
+%block28089.isJail="";
+%block28089.JailMaxCount="";
+%block28089.isBankTrigger="";
+%block28089.isBaseTrigger="";
+%block28089.isRobberSpawn="";
+%block28089.isCopSpawn="";
+%block28089.TriggerSize="";
+%block28089.setShapeName("");
+
+%block28090 = new StaticShape()
+{
+	position = "12.02 -407.06 382.503";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28090);
+%block28090.setSkinName("brown");
+%block28090.SkinName="brown";
+%block28090.NoDestroy="";
+%block28090.isJail="";
+%block28090.JailMaxCount="";
+%block28090.isBankTrigger="";
+%block28090.isBaseTrigger="";
+%block28090.isRobberSpawn="";
+%block28090.isCopSpawn="";
+%block28090.TriggerSize="";
+%block28090.setShapeName("");
+
+%block28091 = new StaticShape()
+{
+	position = "14.52 -409.06 380.133";
+	rotation = "0 0 -1 90.0002";
+	scale = "1 1 1";
+	dataBlock = "staticbrickbook";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 90";
+};
+MissionCleanup.add(%block28091);
+%block28091.setSkinName("black");
+%block28091.SkinName="black";
+%block28091.NoDestroy="";
+%block28091.isJail="";
+%block28091.JailMaxCount="";
+%block28091.isBankTrigger="";
+%block28091.isBaseTrigger="";
+%block28091.isRobberSpawn="";
+%block28091.isCopSpawn="";
+%block28091.TriggerSize="";
+%block28091.setShapeName("Holy Quran");
+
+%block28092 = new StaticShape()
+{
+	position = "25.52 -388.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28092);
+%block28092.setSkinName("white");
+%block28092.SkinName="white";
+%block28092.NoDestroy="";
+%block28092.isJail="";
+%block28092.JailMaxCount="";
+%block28092.isBankTrigger="";
+%block28092.isBaseTrigger="";
+%block28092.isRobberSpawn="";
+%block28092.isCopSpawn="";
+%block28092.TriggerSize="";
+%block28092.setShapeName("");
+
+%block28093 = new StaticShape()
+{
+	position = "33.52 -385.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 4.99996";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28093);
+%block28093.setSkinName("white");
+%block28093.SkinName="white";
+%block28093.NoDestroy="";
+%block28093.isJail="";
+%block28093.JailMaxCount="";
+%block28093.isBankTrigger="";
+%block28093.isBaseTrigger="";
+%block28093.isRobberSpawn="";
+%block28093.isCopSpawn="";
+%block28093.TriggerSize="";
+%block28093.setShapeName("");
+
+%block28094 = new StaticShape()
+{
+	position = "18.845 -413.495 380.173";
+	rotation = "0.705759 -0.0617458 -0.705756 172.934";
+	scale = "0.2 0.2 3.46664";
+	dataBlock = "staticbrickcup";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 170";
+};
+MissionCleanup.add(%block28094);
+%block28094.setSkinName("black");
+%block28094.SkinName="black";
+%block28094.NoDestroy="";
+%block28094.isJail="";
+%block28094.JailMaxCount="";
+%block28094.isBankTrigger="";
+%block28094.isBaseTrigger="";
+%block28094.isRobberSpawn="";
+%block28094.isCopSpawn="";
+%block28094.TriggerSize="";
+%block28094.setShapeName("");
+
+%block28095 = new StaticShape()
+{
+	position = "12.72 -409.06 379.973";
+	rotation = "-0.409137 0.250563 0.877397 93.8413";
+	scale = "4 1 1.99999";
+	dataBlock = "statictile1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "40 10 270";
+};
+MissionCleanup.add(%block28095);
+%block28095.setSkinName("black");
+%block28095.SkinName="black";
+%block28095.NoDestroy="";
+%block28095.isJail="";
+%block28095.JailMaxCount="";
+%block28095.isBankTrigger="";
+%block28095.isBaseTrigger="";
+%block28095.isRobberSpawn="";
+%block28095.isCopSpawn="";
+%block28095.TriggerSize="";
+%block28095.setShapeName("");
+
+%block28096 = new StaticShape()
+{
+	position = "12.02 -393.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28096);
+%block28096.setSkinName("brown");
+%block28096.SkinName="brown";
+%block28096.NoDestroy="";
+%block28096.isJail="";
+%block28096.JailMaxCount="";
+%block28096.isBankTrigger="";
+%block28096.isBaseTrigger="";
+%block28096.isRobberSpawn="";
+%block28096.isCopSpawn="";
+%block28096.TriggerSize="";
+%block28096.setShapeName("");
+
+%block28097 = new StaticShape()
+{
+	position = "26.92 -391.56 381.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 0.333334";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28097);
+%block28097.setSkinName("white");
+%block28097.SkinName="white";
+%block28097.NoDestroy="";
+%block28097.isJail="";
+%block28097.JailMaxCount="";
+%block28097.isBankTrigger="";
+%block28097.isBaseTrigger="";
+%block28097.isRobberSpawn="";
+%block28097.isCopSpawn="";
+%block28097.TriggerSize="";
+%block28097.setShapeName("");
+
+%block28098 = new StaticShape()
+{
+	position = "27.02 -376.055 379.277";
+	rotation = "0.707108 -8.96324e-007 0.707106 180";
+	scale = "1 89 40.3302";
+	dataBlock = "staticslope1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -90 180";
+};
+MissionCleanup.add(%block28098);
+%block28098.setSkinName("tandark");
+%block28098.SkinName="tandark";
+%block28098.NoDestroy="";
+%block28098.isJail="";
+%block28098.JailMaxCount="";
+%block28098.isBankTrigger="";
+%block28098.isBaseTrigger="";
+%block28098.isRobberSpawn="";
+%block28098.isCopSpawn="";
+%block28098.TriggerSize="";
+%block28098.setShapeName("");
+
+%block28099 = new StaticShape()
+{
+	position = "18.02 -393.06 382.503";
+	rotation = "0 0 1 180";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block28099);
+%block28099.setSkinName("brown");
+%block28099.SkinName="brown";
+%block28099.NoDestroy="";
+%block28099.isJail="";
+%block28099.JailMaxCount="";
+%block28099.isBankTrigger="";
+%block28099.isBaseTrigger="";
+%block28099.isRobberSpawn="";
+%block28099.isCopSpawn="";
+%block28099.TriggerSize="";
+%block28099.setShapeName("");
+
+%block28100 = new StaticShape()
+{
+	position = "3.02 -426.535 379.333";
+	rotation = "1 0 0 0";
+	scale = "16 37.6 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28100);
+%block28100.setSkinName("white");
+%block28100.SkinName="white";
+%block28100.NoDestroy="";
+%block28100.isJail="";
+%block28100.JailMaxCount="";
+%block28100.isBankTrigger="";
+%block28100.isBaseTrigger="";
+%block28100.isRobberSpawn="";
+%block28100.isCopSpawn="";
+%block28100.TriggerSize="";
+%block28100.setShapeName("");
+
+%block28101 = new StaticShape()
+{
+	position = "43.22 -376.16 369.333";
+	rotation = "0 0 1 197.8";
+	scale = "0.9 46.7 10.004";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 162.2";
+};
+MissionCleanup.add(%block28101);
+%block28101.setSkinName("white");
+%block28101.SkinName="white";
+%block28101.NoDestroy="";
+%block28101.isJail="";
+%block28101.JailMaxCount="";
+%block28101.isBankTrigger="";
+%block28101.isBaseTrigger="";
+%block28101.isRobberSpawn="";
+%block28101.isCopSpawn="";
+%block28101.TriggerSize="";
+%block28101.setShapeName("");
+
+%block28102 = new StaticShape()
+{
+	position = "19.02 -426.56 369.133";
+	rotation = "0 1 0 0.104678";
+	scale = "8 41.9 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -0.1 0";
+};
+MissionCleanup.add(%block28102);
+%block28102.setSkinName("tandark");
+%block28102.SkinName="tandark";
+%block28102.NoDestroy="";
+%block28102.isJail="";
+%block28102.JailMaxCount="";
+%block28102.isBankTrigger="";
+%block28102.isBaseTrigger="";
+%block28102.isRobberSpawn="";
+%block28102.isCopSpawn="";
+%block28102.TriggerSize="";
+%block28102.setShapeName("");
+
+%block28103 = new StaticShape()
+{
+	position = "16.16 -413.02 379.907";
+	rotation = "0.608119 0.510272 0.608123 125.932";
+	scale = "0.7 1.7 0.333333";
+	dataBlock = "staticslope1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "180 90 80";
+};
+MissionCleanup.add(%block28103);
+%block28103.setSkinName("black");
+%block28103.SkinName="black";
+%block28103.NoDestroy="";
+%block28103.isJail="";
+%block28103.JailMaxCount="";
+%block28103.isBankTrigger="";
+%block28103.isBaseTrigger="";
+%block28103.isRobberSpawn="";
+%block28103.isCopSpawn="";
+%block28103.TriggerSize="";
+%block28103.setShapeName("");
+
+%block28104 = new StaticShape()
+{
+	position = "6.02 -417.06 381.333";
+	rotation = "0 0 1 90.0002";
+	scale = "5.1 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block28104);
+%block28104.setSkinName("brown");
+%block28104.SkinName="brown";
+%block28104.NoDestroy="";
+%block28104.isJail="";
+%block28104.JailMaxCount="";
+%block28104.isBankTrigger="";
+%block28104.isBaseTrigger="";
+%block28104.isRobberSpawn="";
+%block28104.isCopSpawn="";
+%block28104.TriggerSize="";
+%block28104.setShapeName("");
+
+%block28105 = new StaticShape()
+{
+	position = "32.52 -392.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "3 13 2.99998";
+	dataBlock = "staticcylinder2x2";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28105);
+%block28105.setSkinName("white");
+%block28105.SkinName="white";
+%block28105.NoDestroy="";
+%block28105.isJail="";
+%block28105.JailMaxCount="";
+%block28105.isBankTrigger="";
+%block28105.isBaseTrigger="";
+%block28105.isRobberSpawn="";
+%block28105.isCopSpawn="";
+%block28105.TriggerSize="";
+%block28105.setShapeName("");
+
+%block28106 = new StaticShape()
+{
+	position = "29.02 -405.915 380.933";
+	rotation = "1 0 0 0";
+	scale = "0.5 1.7 8.33326";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28106);
+%block28106.setSkinName("black");
+%block28106.SkinName="black";
+%block28106.NoDestroy="";
+%block28106.isJail="";
+%block28106.JailMaxCount="";
+%block28106.isBankTrigger="";
+%block28106.isBaseTrigger="";
+%block28106.isRobberSpawn="";
+%block28106.isCopSpawn="";
+%block28106.TriggerSize="";
+%block28106.setShapeName("");
+
+%block28107 = new StaticShape()
+{
+	position = "27.02 -388.96 369.335";
+	rotation = "0.577352 -0.57735 -0.57735 120";
+	scale = "1.1 15.9 21.3321";
+	dataBlock = "staticslope1x3round";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 90";
+};
+MissionCleanup.add(%block28107);
+%block28107.setSkinName("tandark");
+%block28107.SkinName="tandark";
+%block28107.NoDestroy="";
+%block28107.isJail="";
+%block28107.JailMaxCount="";
+%block28107.isBankTrigger="";
+%block28107.isBaseTrigger="";
+%block28107.isRobberSpawn="";
+%block28107.isCopSpawn="";
+%block28107.TriggerSize="";
+%block28107.setShapeName("");
+
+%block28108 = new StaticShape()
+{
+	position = "33.52 -384.66 382.853";
+	rotation = "0.707108 -8.96324e-007 -0.707106 180";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 180";
+};
+MissionCleanup.add(%block28108);
+%block28108.setSkinName("blue");
+%block28108.SkinName="blue";
+%block28108.NoDestroy="";
+%block28108.isJail="";
+%block28108.JailMaxCount="";
+%block28108.isBankTrigger="";
+%block28108.isBaseTrigger="";
+%block28108.isRobberSpawn="";
+%block28108.isCopSpawn="";
+%block28108.TriggerSize="";
+%block28108.setShapeName("");
+
+%block28109 = new StaticShape()
+{
+	position = "35.72 -375.885 369.333";
+	rotation = "0 0 1 88.9998";
+	scale = "1.4 7.4 92.6654";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -89";
+};
+MissionCleanup.add(%block28109);
+%block28109.setSkinName("white");
+%block28109.SkinName="white";
+%block28109.NoDestroy="";
+%block28109.isJail="";
+%block28109.JailMaxCount="";
+%block28109.isBankTrigger="";
+%block28109.isBaseTrigger="";
+%block28109.isRobberSpawn="";
+%block28109.isCopSpawn="";
+%block28109.TriggerSize="";
+%block28109.setShapeName("");
+
+%block28110 = new StaticShape()
+{
+	position = "28.62 -404.66 380.131";
+	rotation = "0 0 1 180";
+	scale = "1 0.9 0.799997";
+	dataBlock = "staticbrickbar1x4x2";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 180";
+};
+MissionCleanup.add(%block28110);
+%block28110.setSkinName("graydark");
+%block28110.SkinName="graydark";
+%block28110.NoDestroy="";
+%block28110.isJail="";
+%block28110.JailMaxCount="";
+%block28110.isBankTrigger="";
+%block28110.isBaseTrigger="";
+%block28110.isRobberSpawn="";
+%block28110.isCopSpawn="";
+%block28110.TriggerSize="";
+%block28110.setShapeName("");
+
+%block28111 = new StaticShape()
+{
+	position = "15.56 -413.04 380.053";
+	rotation = "0 0 1 210";
+	scale = "0.3 0.4 1";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -210";
+};
+MissionCleanup.add(%block28111);
+%block28111.setSkinName("black");
+%block28111.SkinName="black";
+%block28111.NoDestroy="";
+%block28111.isJail="";
+%block28111.JailMaxCount="";
+%block28111.isBankTrigger="";
+%block28111.isBaseTrigger="";
+%block28111.isRobberSpawn="";
+%block28111.isCopSpawn="";
+%block28111.TriggerSize="";
+%block28111.setShapeName("");
+
+%block28112 = new StaticShape()
+{
+	position = "11.595 -409.035 380.133";
+	rotation = "1 0 0 0";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28112);
+%block28112.setSkinName("white");
+%block28112.SkinName="white";
+%block28112.NoDestroy="";
+%block28112.isJail="";
+%block28112.JailMaxCount="";
+%block28112.isBankTrigger="";
+%block28112.isBaseTrigger="";
+%block28112.isRobberSpawn="";
+%block28112.isCopSpawn="";
+%block28112.TriggerSize="";
+%block28112.setShapeName("");
+
+%block28113 = new StaticShape()
+{
+	position = "10.92 -409.56 380.133";
+	rotation = "1 0 0 0";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28113);
+%block28113.setSkinName("white");
+%block28113.SkinName="white";
+%block28113.NoDestroy="";
+%block28113.isJail="";
+%block28113.JailMaxCount="";
+%block28113.isBankTrigger="";
+%block28113.isBaseTrigger="";
+%block28113.isRobberSpawn="";
+%block28113.isCopSpawn="";
+%block28113.TriggerSize="";
+%block28113.setShapeName("");
+
+%block28114 = new StaticShape()
+{
+	position = "11.595 -409.61 379.163";
+	rotation = "0 1 0 4.99997";
+	scale = "0.9 1.3 1";
+	dataBlock = "staticbrickAntennat";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 -5 0";
+};
+MissionCleanup.add(%block28114);
+%block28114.setSkinName("red");
+%block28114.SkinName="red";
+%block28114.NoDestroy="";
+%block28114.isJail="";
+%block28114.JailMaxCount="";
+%block28114.isBankTrigger="";
+%block28114.isBaseTrigger="";
+%block28114.isRobberSpawn="";
+%block28114.isCopSpawn="";
+%block28114.TriggerSize="";
+%block28114.setShapeName("");
+
+%block28115 = new StaticShape()
+{
+	position = "12.02 -393.06 382.503";
+	rotation = "1 0 0 0";
+	scale = "3 0.8 1";
+	dataBlock = "staticbrickcub";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28115);
+%block28115.setSkinName("brown");
+%block28115.SkinName="brown";
+%block28115.NoDestroy="";
+%block28115.isJail="";
+%block28115.JailMaxCount="";
+%block28115.isBankTrigger="";
+%block28115.isBaseTrigger="";
+%block28115.isRobberSpawn="";
+%block28115.isCopSpawn="";
+%block28115.TriggerSize="";
+%block28115.setShapeName("");
+
+%block28116 = new StaticShape()
+{
+	position = "11.845 -412.91 381.533";
+	rotation = "0 0 -1 45";
+	scale = "1 1 1";
+	dataBlock = "staticbrickcup";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 45";
+};
+MissionCleanup.add(%block28116);
+%block28116.setSkinName("tan");
+%block28116.SkinName="tan";
+%block28116.NoDestroy="";
+%block28116.isJail="";
+%block28116.JailMaxCount="";
+%block28116.isBankTrigger="";
+%block28116.isBaseTrigger="";
+%block28116.isRobberSpawn="";
+%block28116.isCopSpawn="";
+%block28116.TriggerSize="";
+%block28116.setShapeName("");
+
+%block28117 = new StaticShape()
+{
+	position = "14.745 -422.985 381.533";
+	rotation = "0 0 1 135";
+	scale = "1 1 1";
+	dataBlock = "staticbrickcup";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 -135";
+};
+MissionCleanup.add(%block28117);
+%block28117.setSkinName("tan");
+%block28117.SkinName="tan";
+%block28117.NoDestroy="";
+%block28117.isJail="";
+%block28117.JailMaxCount="";
+%block28117.isBankTrigger="";
+%block28117.isBaseTrigger="";
+%block28117.isRobberSpawn="";
+%block28117.isCopSpawn="";
+%block28117.TriggerSize="";
+%block28117.setShapeName("");
+
+%block28118 = new StaticShape()
+{
+	position = "11.02 -409.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "0.1 0.1 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28118);
+%block28118.setSkinName("white");
+%block28118.SkinName="white";
+%block28118.NoDestroy="";
+%block28118.isJail="";
+%block28118.JailMaxCount="";
+%block28118.isBankTrigger="";
+%block28118.isBaseTrigger="";
+%block28118.isRobberSpawn="";
+%block28118.isCopSpawn="";
+%block28118.TriggerSize="";
+%block28118.setShapeName("");
+
+%block28119 = new StaticShape()
+{
+	position = "5.02 -385.36 369.333";
+	rotation = "0 0 1 49";
+	scale = "1 7 10";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -49";
+};
+MissionCleanup.add(%block28119);
+%block28119.setSkinName("white");
+%block28119.SkinName="white";
+%block28119.NoDestroy="";
+%block28119.isJail="";
+%block28119.JailMaxCount="";
+%block28119.isBankTrigger="";
+%block28119.isBaseTrigger="";
+%block28119.isRobberSpawn="";
+%block28119.isCopSpawn="";
+%block28119.TriggerSize="";
+%block28119.setShapeName("");
+
+%block28120 = new StaticShape()
+{
+	position = "11.42 -409.86 380.133";
+	rotation = "1 0 0 0";
+	scale = "1.1 1.1 0.133333";
+	dataBlock = "statictile2x2round";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28120);
+%block28120.setSkinName("redDark");
+%block28120.SkinName="redDark";
+%block28120.NoDestroy="";
+%block28120.isJail="";
+%block28120.JailMaxCount="";
+%block28120.isBankTrigger="";
+%block28120.isBaseTrigger="";
+%block28120.isRobberSpawn="";
+%block28120.isCopSpawn="";
+%block28120.TriggerSize="";
+%block28120.setShapeName("");
+
+%block28121 = new StaticShape()
+{
+	position = "24.52 -406.96 382.853";
+	rotation = "0 -1 0 90.0002";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 0";
+};
+MissionCleanup.add(%block28121);
+%block28121.setSkinName("blue");
+%block28121.SkinName="blue";
+%block28121.NoDestroy="";
+%block28121.isJail="";
+%block28121.JailMaxCount="";
+%block28121.isBankTrigger="";
+%block28121.isBaseTrigger="";
+%block28121.isRobberSpawn="";
+%block28121.isCopSpawn="";
+%block28121.TriggerSize="";
+%block28121.setShapeName("");
+
+%block28122 = new StaticShape()
+{
+	position = "23.52 -421.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.99994";
+	dataBlock = "staticBrick1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28122);
+%block28122.setSkinName("white");
+%block28122.SkinName="white";
+%block28122.NoDestroy="";
+%block28122.isJail="";
+%block28122.JailMaxCount="";
+%block28122.isBankTrigger="";
+%block28122.isBaseTrigger="";
+%block28122.isRobberSpawn="";
+%block28122.isCopSpawn="";
+%block28122.TriggerSize="";
+%block28122.setShapeName("");
+
+%block28123 = new StaticShape()
+{
+	position = "28.02 -421.06 380.133";
+	rotation = "0 0 -1 90.0002";
+	scale = "1 1 1.33333";
+	dataBlock = "staticBrick1x4x5window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 90";
+	isDoor = "1";
+	Steps = "100";
+	StepTime = "10";
+	RotateXYZ = "0 0 -90";
+	ReturnDelay = "2000";
+	ReturnToggle = "0";
+	Elevator = "0";
+	Private = "";
+	noCollision = "0";
+	isMoving = "0";
+	TriggerDoorID = "";
+	HasReturned = "1";
+	isImpulseTrigger = "";
+	TriggerCloak = "";
+	KeyProtected = "0";
+	Password = "";
+	Team = "";
+	Group = "";
+	isLocked = "";
+	DoorType = "3";
+	MoveNums = "";
+	OnMoveNum = "1";
+	MoveXYZ = "0 0 0";
+	origpos = "28.02 -421.06 369.333 0 0 -1 1.5708";
+	origrot = "0 0 90";
+	awaitingReturn = "0";
+};
+MissionCleanup.add(%block28123);
+%block28123.setSkinName("blueDark");
+%block28123.SkinName="blueDark";
+%block28123.NoDestroy="";
+%block28123.isJail="";
+%block28123.JailMaxCount="";
+%block28123.isBankTrigger="";
+%block28123.isBaseTrigger="";
+%block28123.isRobberSpawn="";
+%block28123.isCopSpawn="";
+%block28123.TriggerSize="";
+%block28123.setShapeName("");
+
+%block28124 = new StaticShape()
+{
+	position = "28.02 -421.06 380.133";
+	rotation = "1 0 0 0";
+	scale = "1 1 6.99994";
+	dataBlock = "staticBrick1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28124);
+%block28124.setSkinName("white");
+%block28124.SkinName="white";
+%block28124.NoDestroy="";
+%block28124.isJail="";
+%block28124.JailMaxCount="";
+%block28124.isBankTrigger="";
+%block28124.isBaseTrigger="";
+%block28124.isRobberSpawn="";
+%block28124.isCopSpawn="";
+%block28124.TriggerSize="";
+%block28124.setShapeName("");
+
+%block28125 = new StaticShape()
+{
+	position = "26.52 -385.46 382.853";
+	rotation = "0 -1 0 90.0002";
+	scale = "0.7 0.8 0.133333";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 90 0";
+};
+MissionCleanup.add(%block28125);
+%block28125.setSkinName("blue");
+%block28125.SkinName="blue";
+%block28125.NoDestroy="";
+%block28125.isJail="";
+%block28125.JailMaxCount="";
+%block28125.isBankTrigger="";
+%block28125.isBaseTrigger="";
+%block28125.isRobberSpawn="";
+%block28125.isCopSpawn="";
+%block28125.TriggerSize="";
+%block28125.setShapeName("");
+
+%block28126 = new StaticShape()
+{
+	position = "53.6217 -365.56 370.287";
+	rotation = "1 0 0 0";
+	scale = "0.001 0.001 0.001";
+	dataBlock = "staticPlate1x1";
+	ownerIP = "";
+	ownerAway = "1";
+	EulerRot = "";
+};
+MissionCleanup.add(%block28126);
+%block28126.setSkinName("");
+%block28126.SkinName="";
+%block28126.NoDestroy="";
+%block28126.isJail="";
+%block28126.JailMaxCount="";
+%block28126.isBankTrigger="";
+%block28126.isBaseTrigger="";
+%block28126.isRobberSpawn="";
+%block28126.isCopSpawn="";
+%block28126.TriggerSize="";
+%block28126.setShapeName("");
+
+%block28127 = new StaticShape()
+{
+	position = "14.02 -417.06 381.333";
+	rotation = "0 0 -1 90.0002";
+	scale = "5.1 3 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 90";
+};
+MissionCleanup.add(%block28127);
+%block28127.setSkinName("brown");
+%block28127.SkinName="brown";
+%block28127.NoDestroy="";
+%block28127.isJail="";
+%block28127.JailMaxCount="";
+%block28127.isBankTrigger="";
+%block28127.isBaseTrigger="";
+%block28127.isRobberSpawn="";
+%block28127.isCopSpawn="";
+%block28127.TriggerSize="";
+%block28127.setShapeName("");
+
+%block28199 = new StaticShape()
+{
+	position = "14.445 -410.135 380.073";
+	rotation = "0 0 -1 15";
+	scale = "1.5 1.35 0.333333";
+	dataBlock = "staticcylinder1x1ft";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 15";
+};
+MissionCleanup.add(%block28199);
+%block28199.setSkinName("red");
+%block28199.SkinName="red";
+%block28199.NoDestroy="";
+%block28199.isJail="";
+%block28199.JailMaxCount="";
+%block28199.isBankTrigger="";
+%block28199.isBaseTrigger="";
+%block28199.isRobberSpawn="";
+%block28199.isCopSpawn="";
+%block28199.TriggerSize="";
+%block28199.setShapeName("");
+
+%block28200 = new StaticShape()
+{
+	position = "15.52 -411.46 380.573";
+	rotation = "1 0 0 0";
+	scale = "1 1.5 1";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block28200);
+%block28200.setSkinName("tan");
+%block28200.SkinName="tan";
+%block28200.NoDestroy="";
+%block28200.isJail="";
+%block28200.JailMaxCount="";
+%block28200.isBankTrigger="";
+%block28200.isBaseTrigger="";
+%block28200.isRobberSpawn="";
+%block28200.isCopSpawn="";
+%block28200.TriggerSize="";
+%block28200.setShapeName("");
+
+%block28201 = new StaticShape()
+{
+	position = "16.52 -411.86 380.173";
+	rotation = "0 0 -1 90.0002";
+	scale = "1 1.5 1";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 90";
+};
+MissionCleanup.add(%block28201);
+%block28201.setSkinName("tan");
+%block28201.SkinName="tan";
+%block28201.NoDestroy="";
+%block28201.isJail="";
+%block28201.JailMaxCount="";
+%block28201.isBankTrigger="";
+%block28201.isBaseTrigger="";
+%block28201.isRobberSpawn="";
+%block28201.isCopSpawn="";
+%block28201.TriggerSize="";
+%block28201.setShapeName("");
+
+%block28202 = new StaticShape()
+{
+	position = "16.22 -411.36 380.363";
+	rotation = "0 0 1 90.0002";
+	scale = "1 0.6 0.1";
+	dataBlock = "statictile1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 270";
+};
+MissionCleanup.add(%block28202);
+%block28202.setSkinName("black");
+%block28202.SkinName="black";
+%block28202.NoDestroy="";
+%block28202.isJail="";
+%block28202.JailMaxCount="";
+%block28202.isBankTrigger="";
+%block28202.isBaseTrigger="";
+%block28202.isRobberSpawn="";
+%block28202.isCopSpawn="";
+%block28202.TriggerSize="";
+%block28202.setShapeName("");
+
+%block28203 = new StaticShape()
+{
+	position = "14.72 -410.76 380.28";
+	rotation = "0 1 0 120";
+	scale = "1 1 0.666666";
+	dataBlock = "staticBrick1x1";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 -120 0";
+};
+MissionCleanup.add(%block28203);
+%block28203.setSkinName("black");
+%block28203.SkinName="black";
+%block28203.NoDestroy="";
+%block28203.isJail="";
+%block28203.JailMaxCount="";
+%block28203.isBankTrigger="";
+%block28203.isBaseTrigger="";
+%block28203.isRobberSpawn="";
+%block28203.isCopSpawn="";
+%block28203.TriggerSize="";
+%block28203.setShapeName("Dylan");
+
+%block30070 = new StaticShape()
+{
+	position = "23.52 -384.56 379.933";
+	rotation = "1 0 0 0";
+	scale = "1 1 16.6659";
+	dataBlock = "staticBrick1x1t";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block30070);
+%block30070.setSkinName("");
+%block30070.SkinName="";
+%block30070.NoDestroy="";
+%block30070.isJail="";
+%block30070.JailMaxCount="";
+%block30070.isBankTrigger="";
+%block30070.isBaseTrigger="";
+%block30070.isRobberSpawn="";
+%block30070.isCopSpawn="";
+%block30070.TriggerSize="";
+%block30070.setShapeName("");
+
+%block35413 = new StaticShape()
+{
+	position = "19.02 -426.535 379.533";
+	rotation = "0 1 0 0.104678";
+	scale = "8 41.9 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 -0.1 0";
+};
+MissionCleanup.add(%block35413);
+%block35413.setSkinName("tandark");
+%block35413.SkinName="tandark";
+%block35413.NoDestroy="";
+%block35413.isJail="";
+%block35413.JailMaxCount="";
+%block35413.isBankTrigger="";
+%block35413.isBaseTrigger="";
+%block35413.isRobberSpawn="";
+%block35413.isCopSpawn="";
+%block35413.TriggerSize="";
+%block35413.setShapeName("");
+
+%block37104 = new StaticShape()
+{
+	position = "3.02 -426.535 379.533";
+	rotation = "1 0 0 0";
+	scale = "16 37.6 1";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block37104);
+%block37104.setSkinName("tandark");
+%block37104.SkinName="tandark";
+%block37104.NoDestroy="";
+%block37104.isJail="";
+%block37104.JailMaxCount="";
+%block37104.isBankTrigger="";
+%block37104.isBaseTrigger="";
+%block37104.isRobberSpawn="";
+%block37104.isCopSpawn="";
+%block37104.TriggerSize="";
+%block37104.setShapeName("");
+
+%block38070 = new StaticShape()
+{
+	position = "27.02 -426.56 379.333";
+	rotation = "1 0 0 0";
+	scale = "1.5 6 2.33332";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block38070);
+%block38070.setSkinName("tan");
+%block38070.SkinName="tan";
+%block38070.NoDestroy="";
+%block38070.isJail="";
+%block38070.JailMaxCount="";
+%block38070.isBankTrigger="";
+%block38070.isBaseTrigger="";
+%block38070.isRobberSpawn="";
+%block38070.isCopSpawn="";
+%block38070.TriggerSize="";
+%block38070.setShapeName("");
+
+%block38702 = new StaticShape()
+{
+	position = "5.02 -385.36 379.733";
+	rotation = "0 0 1 49";
+	scale = "1 7 10";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -49";
+};
+MissionCleanup.add(%block38702);
+%block38702.setSkinName("");
+%block38702.SkinName="";
+%block38702.NoDestroy="";
+%block38702.isJail="";
+%block38702.JailMaxCount="";
+%block38702.isBankTrigger="";
+%block38702.isBaseTrigger="";
+%block38702.isRobberSpawn="";
+%block38702.isCopSpawn="";
+%block38702.TriggerSize="";
+%block38702.setShapeName("");
+
+%block38919 = new StaticShape()
+{
+	position = "10.32 -380.76 379.733";
+	rotation = "0 0 1 67";
+	scale = "1 8.6 10.004";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -67";
+};
+MissionCleanup.add(%block38919);
+%block38919.setSkinName("");
+%block38919.SkinName="";
+%block38919.NoDestroy="";
+%block38919.isJail="";
+%block38919.JailMaxCount="";
+%block38919.isBankTrigger="";
+%block38919.isBaseTrigger="";
+%block38919.isRobberSpawn="";
+%block38919.isCopSpawn="";
+%block38919.TriggerSize="";
+%block38919.setShapeName("");
+
+%block39166 = new StaticShape()
+{
+	position = "18.22 -377.46 379.733";
+	rotation = "0 0 1 82";
+	scale = "1 8.8 10.004";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -82";
+};
+MissionCleanup.add(%block39166);
+%block39166.setSkinName("");
+%block39166.SkinName="";
+%block39166.NoDestroy="";
+%block39166.isJail="";
+%block39166.JailMaxCount="";
+%block39166.isBankTrigger="";
+%block39166.isBaseTrigger="";
+%block39166.isRobberSpawn="";
+%block39166.isCopSpawn="";
+%block39166.TriggerSize="";
+%block39166.setShapeName("");
+
+%block39840 = new StaticShape()
+{
+	position = "26.92 -376.26 379.733";
+	rotation = "0 0 1 88.9998";
+	scale = "1 8.8 10.004";
+	dataBlock = "staticplate1x2tile";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "0 0 -89";
+};
+MissionCleanup.add(%block39840);
+%block39840.setSkinName("");
+%block39840.SkinName="";
+%block39840.NoDestroy="";
+%block39840.isJail="";
+%block39840.JailMaxCount="";
+%block39840.isBankTrigger="";
+%block39840.isBaseTrigger="";
+%block39840.isRobberSpawn="";
+%block39840.isCopSpawn="";
+%block39840.TriggerSize="";
+%block39840.setShapeName("");
+
+%block40050 = new StaticShape()
+{
+	position = "27.02 -376.08 379.247";
+	rotation = "0.707108 -8.96324e-007 0.707106 180";
+	scale = "1 89 40.3302";
+	dataBlock = "staticslope1x1";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 -90 180";
+};
+MissionCleanup.add(%block40050);
+%block40050.setSkinName("white");
+%block40050.SkinName="white";
+%block40050.NoDestroy="";
+%block40050.isJail="";
+%block40050.JailMaxCount="";
+%block40050.isBankTrigger="";
+%block40050.isBaseTrigger="";
+%block40050.isRobberSpawn="";
+%block40050.isCopSpawn="";
+%block40050.TriggerSize="";
+%block40050.setShapeName("");
+
+%block41630 = new StaticShape()
+{
+	position = "5.02 -385.36 389.333";
+	rotation = "0.840554 -0.38306 0.383058 99.9023";
+	scale = "1 3.8 1.89999";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 311";
+};
+MissionCleanup.add(%block41630);
+%block41630.setSkinName("blueDark");
+%block41630.SkinName="blueDark";
+%block41630.NoDestroy="";
+%block41630.isJail="";
+%block41630.JailMaxCount="";
+%block41630.isBankTrigger="";
+%block41630.isBaseTrigger="";
+%block41630.isRobberSpawn="";
+%block41630.isCopSpawn="";
+%block41630.TriggerSize="";
+%block41630.setShapeName("");
+
+%block41362 = new StaticShape()
+{
+	position = "27.07 -389.01 379.315";
+	rotation = "0.577352 -0.57735 -0.57735 120";
+	scale = "0.16 15.9 21.4321";
+	dataBlock = "staticslope1x3round";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 90 90";
+};
+MissionCleanup.add(%block41362);
+%block41362.setSkinName("white");
+%block41362.SkinName="white";
+%block41362.NoDestroy="";
+%block41362.isJail="";
+%block41362.JailMaxCount="";
+%block41362.isBankTrigger="";
+%block41362.isBaseTrigger="";
+%block41362.isRobberSpawn="";
+%block41362.isCopSpawn="";
+%block41362.TriggerSize="";
+%block41362.setShapeName("");
+
+%block42440 = new StaticShape()
+{
+	position = "19.02 -384.56 379.333";
+	rotation = "1 0 0 180";
+	scale = "8 4.5 0.333334";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "180 0 0";
+};
+MissionCleanup.add(%block42440);
+%block42440.setSkinName("white");
+%block42440.SkinName="white";
+%block42440.NoDestroy="";
+%block42440.isJail="";
+%block42440.JailMaxCount="";
+%block42440.isBankTrigger="";
+%block42440.isBaseTrigger="";
+%block42440.isRobberSpawn="";
+%block42440.isCopSpawn="";
+%block42440.TriggerSize="";
+%block42440.setShapeName("");
+
+%block42982 = new StaticShape()
+{
+	position = "10.22 -380.86 389.333";
+	rotation = "0.733297 -0.480769 0.480767 107.495";
+	scale = "1 3.8 2.36665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -66.5";
+};
+MissionCleanup.add(%block42982);
+%block42982.setSkinName("blueDark");
+%block42982.SkinName="blueDark";
+%block42982.NoDestroy="";
+%block42982.isJail="";
+%block42982.JailMaxCount="";
+%block42982.isBankTrigger="";
+%block42982.isBaseTrigger="";
+%block42982.isRobberSpawn="";
+%block42982.isCopSpawn="";
+%block42982.TriggerSize="";
+%block42982.setShapeName("");
+
+%block45332 = new StaticShape()
+{
+	position = "26.92 -376.26 389.333";
+	rotation = "0.587426 -0.572247 0.572245 119.138";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -88.5";
+};
+MissionCleanup.add(%block45332);
+%block45332.setSkinName("blueDark");
+%block45332.SkinName="blueDark";
+%block45332.NoDestroy="";
+%block45332.isJail="";
+%block45332.JailMaxCount="";
+%block45332.isBankTrigger="";
+%block45332.isBaseTrigger="";
+%block45332.isRobberSpawn="";
+%block45332.isCopSpawn="";
+%block45332.TriggerSize="";
+%block45332.setShapeName("");
+
+%block44615 = new StaticShape()
+{
+	position = "18.12 -377.46 389.333";
+	rotation = "0.627681 -0.550463 0.550461 115.769";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -82.5";
+};
+MissionCleanup.add(%block44615);
+%block44615.setSkinName("blueDark");
+%block44615.SkinName="blueDark";
+%block44615.NoDestroy="";
+%block44615.isJail="";
+%block44615.JailMaxCount="";
+%block44615.isBankTrigger="";
+%block44615.isBaseTrigger="";
+%block44615.isRobberSpawn="";
+%block44615.isCopSpawn="";
+%block44615.TriggerSize="";
+%block44615.setShapeName("");
+
+%block48081 = new StaticShape()
+{
+	position = "5.02 -385.36 378.933";
+	rotation = "0.840554 -0.38306 0.383058 99.902";
+	scale = "1 3.8 1.89999";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 311";
+};
+MissionCleanup.add(%block48081);
+%block48081.setSkinName("blueDark");
+%block48081.SkinName="blueDark";
+%block48081.NoDestroy="";
+%block48081.isJail="";
+%block48081.JailMaxCount="";
+%block48081.isBankTrigger="";
+%block48081.isBaseTrigger="";
+%block48081.isRobberSpawn="";
+%block48081.isCopSpawn="";
+%block48081.TriggerSize="";
+%block48081.setShapeName("");
+
+%block48529 = new StaticShape()
+{
+	position = "10.22 -380.86 378.933";
+	rotation = "0.733297 -0.480769 0.480767 107.495";
+	scale = "1 3.8 2.36665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -66.5";
+};
+MissionCleanup.add(%block48529);
+%block48529.setSkinName("blueDark");
+%block48529.SkinName="blueDark";
+%block48529.NoDestroy="";
+%block48529.isJail="";
+%block48529.JailMaxCount="";
+%block48529.isBankTrigger="";
+%block48529.isBaseTrigger="";
+%block48529.isRobberSpawn="";
+%block48529.isCopSpawn="";
+%block48529.TriggerSize="";
+%block48529.setShapeName("");
+
+%block48766 = new StaticShape()
+{
+	position = "18.12 -377.46 378.933";
+	rotation = "0.627681 -0.550463 0.550461 115.769";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -82.5";
+};
+MissionCleanup.add(%block48766);
+%block48766.setSkinName("blueDark");
+%block48766.SkinName="blueDark";
+%block48766.NoDestroy="";
+%block48766.isJail="";
+%block48766.JailMaxCount="";
+%block48766.isBankTrigger="";
+%block48766.isBaseTrigger="";
+%block48766.isRobberSpawn="";
+%block48766.isCopSpawn="";
+%block48766.TriggerSize="";
+%block48766.setShapeName("");
+
+%block49339 = new StaticShape()
+{
+	position = "26.92 -376.26 378.933";
+	rotation = "0.587426 -0.572247 0.572245 119.138";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -88.5";
+};
+MissionCleanup.add(%block49339);
+%block49339.setSkinName("blueDark");
+%block49339.SkinName="blueDark";
+%block49339.NoDestroy="";
+%block49339.isJail="";
+%block49339.JailMaxCount="";
+%block49339.isBankTrigger="";
+%block49339.isBaseTrigger="";
+%block49339.isRobberSpawn="";
+%block49339.isCopSpawn="";
+%block49339.TriggerSize="";
+%block49339.setShapeName("");
+
+%block50733 = new StaticShape()
+{
+	position = "26.52 -403.96 379.735";
+	rotation = "-4.54747e-012 1 2.53519e-006 89.9999";
+	scale = "4 5.6 6.43329";
+	dataBlock = "staticslope1x3round";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "180 90 180";
+};
+MissionCleanup.add(%block50733);
+%block50733.setSkinName("brown");
+%block50733.SkinName="brown";
+%block50733.NoDestroy="";
+%block50733.isJail="";
+%block50733.JailMaxCount="";
+%block50733.isBankTrigger="";
+%block50733.isBaseTrigger="";
+%block50733.isRobberSpawn="";
+%block50733.isCopSpawn="";
+%block50733.TriggerSize="";
+%block50733.setShapeName("");
+
+%block50983 = new StaticShape()
+{
+	position = "26.52 -403.96 381.735";
+	rotation = "0.707108 -8.96324e-007 -0.707106 180";
+	scale = "4 5.6 6.43329";
+	dataBlock = "staticslope1x3round";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 90 180";
+};
+MissionCleanup.add(%block50983);
+%block50983.setSkinName("brown");
+%block50983.SkinName="brown";
+%block50983.NoDestroy="";
+%block50983.isJail="";
+%block50983.JailMaxCount="";
+%block50983.isBankTrigger="";
+%block50983.isBaseTrigger="";
+%block50983.isRobberSpawn="";
+%block50983.isCopSpawn="";
+%block50983.TriggerSize="";
+%block50983.setShapeName("");
+
+%block53573 = new StaticShape()
+{
+	position = "29.07 -418.56 378.933";
+	rotation = "0.975821 -0.154555 0.154554 91.4023";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -18";
+};
+MissionCleanup.add(%block53573);
+%block53573.setSkinName("blueDark");
+%block53573.SkinName="blueDark";
+%block53573.NoDestroy="";
+%block53573.isJail="";
+%block53573.JailMaxCount="";
+%block53573.isBankTrigger="";
+%block53573.isBaseTrigger="";
+%block53573.isRobberSpawn="";
+%block53573.isCopSpawn="";
+%block53573.TriggerSize="";
+%block53573.setShapeName("");
+
+%block51279 = new StaticShape()
+{
+	position = "26.52 -398.56 379.733";
+	rotation = "1 0 0 0";
+	scale = "4 3 9.99987";
+	dataBlock = "staticplate2x2tile";
+	ownerIP = "local";
+	ownerAway = "1";
+	EulerRot = "0 0 0";
+};
+MissionCleanup.add(%block51279);
+%block51279.setSkinName("brown");
+%block51279.SkinName="brown";
+%block51279.NoDestroy="";
+%block51279.isJail="";
+%block51279.JailMaxCount="";
+%block51279.isBankTrigger="";
+%block51279.isBaseTrigger="";
+%block51279.isRobberSpawn="";
+%block51279.isCopSpawn="";
+%block51279.TriggerSize="";
+%block51279.setShapeName("");
+
+%block51729 = new StaticShape()
+{
+	position = "39.92 -384.81 378.933";
+	rotation = "0.97712 -0.150393 0.150393 91.326";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -17.5";
+};
+MissionCleanup.add(%block51729);
+%block51729.setSkinName("blueDark");
+%block51729.SkinName="blueDark";
+%block51729.NoDestroy="";
+%block51729.isJail="";
+%block51729.JailMaxCount="";
+%block51729.isBankTrigger="";
+%block51729.isBaseTrigger="";
+%block51729.isRobberSpawn="";
+%block51729.isCopSpawn="";
+%block51729.TriggerSize="";
+%block51729.setShapeName("");
+
+%block52071 = new StaticShape()
+{
+	position = "37.22 -393.26 378.933";
+	rotation = "0.97712 -0.150393 0.150393 91.326";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -17.5";
+};
+MissionCleanup.add(%block52071);
+%block52071.setSkinName("blueDark");
+%block52071.SkinName="blueDark";
+%block52071.NoDestroy="";
+%block52071.isJail="";
+%block52071.JailMaxCount="";
+%block52071.isBankTrigger="";
+%block52071.isBaseTrigger="";
+%block52071.isRobberSpawn="";
+%block52071.isCopSpawn="";
+%block52071.TriggerSize="";
+%block52071.setShapeName("");
+
+%block52325 = new StaticShape()
+{
+	position = "34.57 -401.66 378.933";
+	rotation = "0.97712 -0.150393 0.150393 91.326";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -17.5";
+};
+MissionCleanup.add(%block52325);
+%block52325.setSkinName("blueDark");
+%block52325.SkinName="blueDark";
+%block52325.NoDestroy="";
+%block52325.isJail="";
+%block52325.JailMaxCount="";
+%block52325.isBankTrigger="";
+%block52325.isBaseTrigger="";
+%block52325.isRobberSpawn="";
+%block52325.isCopSpawn="";
+%block52325.TriggerSize="";
+%block52325.setShapeName("");
+
+%block53307 = new StaticShape()
+{
+	position = "31.82 -410.11 378.933";
+	rotation = "0.975821 -0.154555 0.154554 91.4023";
+	scale = "1 3.8 2.46665";
+	dataBlock = "staticbrick1x4x6window";
+	ownerIP = "185.120.126.5";
+	ownerAway = "1";
+	EulerRot = "-90 0 -18";
+};
+MissionCleanup.add(%block53307);
+%block53307.setSkinName("blueDark");
+%block53307.SkinName="blueDark";
+%block53307.NoDestroy="";
+%block53307.isJail="";
+%block53307.JailMaxCount="";
+%block53307.isBankTrigger="";
+%block53307.isBaseTrigger="";
+%block53307.isRobberSpawn="";
+%block53307.isCopSpawn="";
+%block53307.TriggerSize="";
+%block53307.setShapeName("");
+
+// Block links
+%block27838.upSize = "0";
+%block27838.downSize = "0";
+%block27839.upSize = "0";
+%block27839.downSize = "0";
+%block27840.upSize = "0";
+%block27840.downSize = "0";
+%block27842.upSize = "0";
+%block27842.downSize = "0";
+%block27843.upSize = "0";
+%block27843.downSize = "0";
+%block27844.upSize = "0";
+%block27844.downSize = "0";
+%block27845.upSize = "0";
+%block27845.downSize = "0";
+%block27846.upSize = "0";
+%block27846.downSize = "0";
+%block27847.upSize = "0";
+%block27847.downSize = "0";
+%block27848.upSize = "0";
+%block27848.downSize = "0";
+%block27849.upSize = "0";
+%block27849.downSize = "0";
+%block27850.upSize = "0";
+%block27850.downSize = "0";
+%block27851.upSize = "0";
+%block27851.downSize = "0";
+%block27852.upSize = "0";
+%block27852.downSize = "0";
+%block27853.upSize = "0";
+%block27853.downSize = "0";
+%block27854.upSize = "0";
+%block27854.downSize = "0";
+%block27855.upSize = "0";
+%block27855.downSize = "0";
+%block27856.upSize = "0";
+%block27856.downSize = "0";
+%block27857.upSize = "0";
+%block27857.downSize = "0";
+%block27858.upSize = "0";
+%block27858.downSize = "0";
+%block27859.upSize = "0";
+%block27859.downSize = "0";
+%block27860.upSize = "0";
+%block27860.downSize = "0";
+%block27861.upSize = "0";
+%block27861.downSize = "0";
+%block27862.upSize = "0";
+%block27862.downSize = "0";
+%block27863.upSize = "0";
+%block27863.downSize = "0";
+%block27864.upSize = "0";
+%block27864.downSize = "0";
+%block27865.upSize = "0";
+%block27865.downSize = "0";
+%block27866.upSize = "0";
+%block27866.downSize = "0";
+%block27867.upSize = "0";
+%block27867.downSize = "0";
+%block27868.upSize = "0";
+%block27868.downSize = "0";
+%block27869.upSize = "0";
+%block27869.downSize = "0";
+%block27870.upSize = "0";
+%block27870.downSize = "0";
+%block27871.upSize = "0";
+%block27871.downSize = "0";
+%block27872.upSize = "0";
+%block27872.downSize = "0";
+%block27873.upSize = "0";
+%block27873.downSize = "0";
+%block27874.upSize = "0";
+%block27874.downSize = "0";
+%block27875.upSize = "0";
+%block27875.downSize = "0";
+%block27876.upSize = "0";
+%block27876.downSize = "0";
+%block27877.upSize = "0";
+%block27877.downSize = "0";
+%block27878.upSize = "0";
+%block27878.downSize = "0";
+%block27879.upSize = "0";
+%block27879.downSize = "0";
+%block27882.upSize = "0";
+%block27882.downSize = "0";
+%block27883.upSize = "0";
+%block27883.downSize = "0";
+%block27884.upSize = "0";
+%block27884.downSize = "0";
+%block27885.upSize = "0";
+%block27885.downSize = "0";
+%block27886.upSize = "0";
+%block27886.downSize = "0";
+%block27955.upSize = "0";
+%block27955.downSize = "0";
+%block27957.upSize = "0";
+%block27957.downSize = "0";
+%block27959.upSize = "0";
+%block27959.downSize = "0";
+%block27960.upSize = "0";
+%block27960.downSize = "0";
+%block27963.upSize = "0";
+%block27963.downSize = "0";
+%block27964.upSize = "0";
+%block27964.downSize = "0";
+%block27965.upSize = "0";
+%block27965.downSize = "0";
+%block27967.upSize = "0";
+%block27967.downSize = "0";
+%block27968.upSize = "0";
+%block27968.downSize = "0";
+%block27969.upSize = "0";
+%block27969.downSize = "0";
+%block27970.upSize = "0";
+%block27970.downSize = "0";
+%block27971.upSize = "0";
+%block27971.downSize = "0";
+%block27972.upSize = "0";
+%block27972.downSize = "0";
+%block27974.upSize = "0";
+%block27974.downSize = "0";
+%block27975.upSize = "0";
+%block27975.downSize = "0";
+%block27976.upSize = "0";
+%block27976.downSize = "0";
+%block27977.upSize = "0";
+%block27977.downSize = "0";
+%block27978.upSize = "0";
+%block27978.downSize = "0";
+%block27979.upSize = "0";
+%block27979.downSize = "0";
+%block27980.upSize = "0";
+%block27980.downSize = "0";
+%block27981.upSize = "0";
+%block27981.downSize = "0";
+%block27982.upSize = "0";
+%block27982.downSize = "0";
+%block27983.upSize = "0";
+%block27983.downSize = "0";
+%block27984.upSize = "0";
+%block27984.downSize = "0";
+%block27985.upSize = "0";
+%block27985.downSize = "0";
+%block27986.upSize = "0";
+%block27986.downSize = "0";
+%block27987.upSize = "0";
+%block27987.downSize = "0";
+%block27988.upSize = "0";
+%block27988.downSize = "0";
+%block27989.upSize = "0";
+%block27989.downSize = "0";
+%block27990.upSize = "0";
+%block27990.downSize = "0";
+%block27992.upSize = "0";
+%block27992.downSize = "0";
+%block27993.upSize = "0";
+%block27993.downSize = "0";
+%block27994.upSize = "0";
+%block27994.downSize = "0";
+%block27995.upSize = "0";
+%block27995.downSize = "0";
+%block27996.upSize = "0";
+%block27996.downSize = "0";
+%block27997.upSize = "0";
+%block27997.downSize = "0";
+%block27998.upSize = "0";
+%block27998.downSize = "0";
+%block27999.upSize = "0";
+%block27999.downSize = "0";
+%block28000.upSize = "0";
+%block28000.downSize = "0";
+%block28001.upSize = "0";
+%block28001.downSize = "0";
+%block28003.upSize = "0";
+%block28003.downSize = "0";
+%block28004.upSize = "0";
+%block28004.downSize = "0";
+%block28081.upSize = "0";
+%block28081.downSize = "0";
+%block28082.upSize = "0";
+%block28082.downSize = "0";
+%block28084.upSize = "0";
+%block28084.downSize = "0";
+%block28086.upSize = "0";
+%block28086.downSize = "0";
+%block28087.upSize = "0";
+%block28087.downSize = "0";
+%block28088.upSize = "0";
+%block28088.downSize = "0";
+%block28089.upSize = "0";
+%block28089.downSize = "0";
+%block28090.upSize = "0";
+%block28090.downSize = "0";
+%block28091.upSize = "0";
+%block28091.downSize = "0";
+%block28092.upSize = "0";
+%block28092.downSize = "0";
+%block28093.upSize = "0";
+%block28093.downSize = "0";
+%block28094.upSize = "0";
+%block28094.downSize = "0";
+%block28096.upSize = "0";
+%block28096.downSize = "0";
+%block28097.upSize = "0";
+%block28097.downSize = "0";
+%block28098.upSize = "0";
+%block28098.downSize = "0";
+%block28099.upSize = "0";
+%block28099.downSize = "0";
+%block28100.up[0] = %block37104;
+%block28100.upSize = "1";
+%block28100.downSize = "0";
+%block28101.upSize = "0";
+%block28101.downSize = "0";
+%block28102.upSize = "0";
+%block28102.downSize = "0";
+%block28103.upSize = "0";
+%block28103.downSize = "0";
+%block28104.upSize = "0";
+%block28104.downSize = "0";
+%block28105.upSize = "0";
+%block28105.downSize = "0";
+%block28106.upSize = "0";
+%block28106.downSize = "0";
+%block28107.upSize = "0";
+%block28107.downSize = "0";
+%block28108.upSize = "0";
+%block28108.downSize = "0";
+%block28109.upSize = "0";
+%block28109.downSize = "0";
+%block28110.upSize = "0";
+%block28110.downSize = "0";
+%block28111.upSize = "0";
+%block28111.downSize = "0";
+%block28114.upSize = "0";
+%block28114.downSize = "0";
+%block28115.upSize = "0";
+%block28115.downSize = "0";
+%block28116.upSize = "0";
+%block28116.downSize = "0";
+%block28117.upSize = "0";
+%block28117.downSize = "0";
+%block28119.upSize = "0";
+%block28119.downSize = "0";
+%block28121.upSize = "0";
+%block28121.downSize = "0";
+%block28122.upSize = "0";
+%block28122.downSize = "0";
+%block28123.upSize = "0";
+%block28123.downSize = "0";
+%block28124.upSize = "0";
+%block28124.downSize = "0";
+%block28125.upSize = "0";
+%block28125.downSize = "0";
+%block28126.upSize = "0";
+%block28126.downSize = "0";
+%block28127.upSize = "0";
+%block28127.downSize = "0";
+%block28199.upSize = "0";
+%block28199.downSize = "0";
+%block28200.upSize = "0";
+%block28200.downSize = "0";
+%block28201.upSize = "0";
+%block28201.downSize = "0";
+%block28203.upSize = "0";
+%block28203.downSize = "0";
+%block30070.upSize = "0";
+%block30070.downSize = "0";
+%block35413.upSize = "0";
+%block35413.down[0] = %block27863;
+%block35413.downSize = "1";
+%block37104.upSize = "0";
+%block37104.down[0] = %block28100;
+%block37104.downSize = "1";
+%block38070.upSize = "0";
+%block38070.downSize = "0";
+%block38702.upSize = "0";
+%block38702.downSize = "0";
+%block38919.upSize = "0";
+%block38919.downSize = "0";
+%block39166.upSize = "0";
+%block39166.downSize = "0";
+%block39840.upSize = "0";
+%block39840.downSize = "0";
+%block40050.upSize = "0";
+%block40050.downSize = "0";
+%block41630.upSize = "0";
+%block41630.downSize = "0";
+%block41362.upSize = "0";
+%block41362.downSize = "0";
+%block42440.upSize = "0";
+%block42440.downSize = "0";
+%block42982.upSize = "0";
+%block42982.downSize = "0";
+%block45332.upSize = "0";
+%block45332.downSize = "0";
+%block44615.upSize = "0";
+%block44615.downSize = "0";
+%block48081.upSize = "0";
+%block48081.downSize = "0";
+%block48529.upSize = "0";
+%block48529.downSize = "0";
+%block48766.upSize = "0";
+%block48766.downSize = "0";
+%block49339.upSize = "0";
+%block49339.downSize = "0";
+%block50733.upSize = "0";
+%block50733.downSize = "0";
+%block50983.upSize = "0";
+%block50983.downSize = "0";
+%block53573.upSize = "0";
+%block53573.downSize = "0";
+%block51279.upSize = "0";
+%block51279.downSize = "0";
+%block51729.upSize = "0";
+%block51729.downSize = "0";
+%block52071.upSize = "0";
+%block52071.downSize = "0";
+%block52325.upSize = "0";
+%block52325.downSize = "0";
+%block53307.upSize = "0";
+%block53307.downSize = "0";
+// Baseplate links
+%i = %block8068.upSize;
+%block8068.upSize = %i;
+%i = %block8068.downSize;
+%block8068.downSize = %i;
+$numBlocks = 14018;
