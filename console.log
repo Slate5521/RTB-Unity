@@ -1,4 +1,4 @@
-//-------------------------- 8/17/2017 -- 13:21:08 -----
+//-------------------------- 8/17/2017 -- 17:03:24 -----
 Processor Init:
    AMD (unknown), ~3.55 Ghz
      (timed at roughly 3.55 Ghz)
@@ -402,8 +402,8 @@ deathvalley
 celestialdreams
 bedroom
 rtb/client/scripts/startMissionGui.cs (37): Unable to find object: 'OptSitting' attempting to call function 'setValue'
-deathvalley
 celestialdreams
+DeepSeas
 deathvalley
 rtb/client/scripts/startMissionGui.cs (69): Unable to find object: 'OptSitting' attempting to call function 'getValue'
 Exporting server prefs...
@@ -1010,7 +1010,7 @@ Loading compiled script rtb/server/scripts/Radar.cs.
 Executing rtb/data/missions/deathvalley.mis.
 *** Mission loaded
 -----------CONN = 2649
-Connect request from: IPX:33330070:6172616D7332:12288
+Connect request from: IPX:6E764D61:705465787475:25970
 Checking IP Ban Entry Number: 0
 Connection established 2649
 CADD: 2650 local
@@ -1170,12 +1170,8 @@ Mapping string: MissionStartPhase3 to index: 18
 Client Replication Startup has Happened!
 fxFoliageReplicator - Client Foliage Replication Startup is complete.
 *** Phase 3: Mission Lighting
-Lighting mission....
-    = terrain lit in 0.203 seconds
- Scene lit in 0.219 seconds
- Successfully saved mission lighting file: 'rtb/data/missions/deathvalley_71e9bf96.ml'
+ Successfully loaded mission lighting file: 'rtb/data/missions/deathvalley_71e9bf96.ml'
 Mission lighting done
-getewsettingupdate: Unknown command.
 Mapping string: rotcompatibility to index: 4
 Mapping string: messageSent to index: 5
 rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
@@ -1212,27 +1208,1171 @@ Mapping string: white to index: 31
 Mapping string: Cool1 to index: 0
 Mapping string: Misc-Blank to index: 2
 Mapping string: Blockdude to index: 3
+getewsettingupdate: Unknown command.
 Mapping string: red to index: 4
+Mapping string: useInventory to index: 9
 Mapping string: UpdateRadar to index: 5
 rtb/client/PTTA/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
-Mapping string: freezeme to index: 9
-Mapping string: dropCameraAtPlayer to index: 10
-Mapping string: ModifyShiftSize to index: 11
-keyboard0 input device unacquired.
-DirectInput deactivated.
+Mapping string: MouseScroll to index: 10
+Could not locate texture: rtb/client/ui2/GameModePreviews/deathmatch.png
+Mapping string: getBanList to index: 11
+Mapping string: getPLayerList to index: 12
+Mapping string: getPLayerTeamList to index: 13
+Mapping string: getTeamList to index: 14
+Mapping string: MsgSendPlayerTeamList to index: 7
+Mapping string: startDeathmatch to index: 15
+Loading compiled script rtb/server/scripts/ptta/player.cs.
+Loading compiled script rtb/data/shapes/player/player.cs.
+Mapping string: yellow to index: 10
+Mapping string: redlight to index: 11
+Mapping string: black to index: 12
+blaster
+Mapping string: base to index: 14
+Could not locate texture: rtb/data/shapes/bricks/Previews/smokegrenade.png
+Could not locate texture: rtb/data/shapes/bricks/Previews/Rifle.png
+Mapping string: grayDark to index: 15
+rifle
+rifle
+rifle
+Mapping string: freeHands to index: 16
+Mapping string: dropCameraAtPlayer to index: 17
+Mapping string: DropPlayerAtCamera to index: 18
+Loading compiled script common/editor/cursors.cs.
+Loading compiled script common/editor/editor.bind.cs.
+Loading compiled script common/editor/ObjectBuilderGui.gui.
+Loading compiled script common/editor/EditorGui.gui.
+Loading compiled script common/editor/EditorGui.cs.
+Loading compiled script common/editor/WorldEditorSettingsDlg.gui.
+Loading compiled script common/editor/TerrainEditorVSettingsGui.gui.
+General\tTab_general\tgeneral_min_height\t50\tgeneral_scale\t300\tgeneral_water\t0.000\tgeneral_centerx\t0\tgeneral_centery\t0
+Tab data: General^Tab_general^general_min_height^50^general_scale^300^general_water^0.000^general_centerx^0^general_centery^0 tab: Tab_general
+Heightfield::eval:0  General
+Heightfield::eval:0  General
+Heightfield::eval:0  General
+Obj: sprayFireSound - 
+Obj: sprayHitSound - 
+Obj: sprayActivateSound - 
+Obj: sprayCanProjectile - 
+Obj: sprayCan - Tools
+Obj: SprayCanImage - 
+Obj: lettercanProjectile - 
+Obj: lettercan - Tools
+Obj: lettercanImage - 
+Obj: editorWandExplosionParticle - 
+Obj: editorWandExplosionEmitter - 
+Obj: editorWandExplosion - 
+Obj: editorWandProjectile - 
+Obj: editorWand - Tools
+Obj: editorwandImage - 
+Obj: blacklettercanProjectile - 
+Obj: blacklettercan - Tools
+Obj: blacklettercanImage - 
+Obj: hammerExplosionParticle - 
+Obj: hammerExplosionEmitter - 
+Obj: hammerExplosion - 
+Obj: hammerProjectile - 
+Obj: hammer - Tools
+Obj: hammerImage - 
+Obj: textureCanProjectile - 
+Obj: textureCan - Tools
+Obj: textureCanImage - 
+Obj: wandExplosionParticle - 
+Obj: wandExplosionEmitter - 
+Obj: wandExplosion - 
+Obj: wandProjectile - 
+Obj: wand - Tools
+Obj: wandImage - 
+Obj: keyHitSound - 
+Obj: keyActivateSound - 
+Obj: keyExplosionParticle - 
+Obj: keyExplosionEmitter - 
+Obj: keyExplosion - 
+Obj: keyProjectile - 
+Obj: key - Tools
+Obj: keyImage - 
+Obj: wrenchExplosionParticle - 
+Obj: wrenchExplosionEmitter - 
+Obj: wrenchExplosion - 
+Obj: wrenchProjectile - 
+Obj: wrench - Tools
+Obj: wrenchImage - 
+Obj: AudioDefault3d - 
+Obj: AudioClose3d - 
+Obj: AudioClosest3d - 
+Obj: AudioDefaultLooping3d - 
+Obj: AudioCloseLooping3d - 
+Obj: AudioClosestLooping3d - 
+Obj: Audio2D - 
+Obj: AudioLooping2D - 
+Obj: takeme - 
+Obj: Observer - 
+Obj: WayPointMarker - Misc
+Obj: SpawnSphereMarker - Misc
+Obj: BotMarker - Misc
+Obj: SafeTrigger - 
+Obj: HealthTrigger - 
+Obj: StealTrigger - 
+Obj: DepositTrigger - 
+Obj: KillZone - 
+Obj: Energizer - 
+Obj: AntiGravity - 
+Obj: SizeTrigger - 
+Obj: Huge - 
+Obj: weaponSwitchSound - 
+Obj: MiniFigDts - 
+Obj: JumpSound - 
+Obj: DeathCrySound - 
+Obj: PainCrySound - 
+Obj: ArmorMoveBubblesSound - 
+Obj: WaterBreathMaleSound - 
+Obj: FootLightSoftSound - 
+Obj: FootLightHardSound - 
+Obj: FootLightMetalSound - 
+Obj: FootLightSnowSound - 
+Obj: FootLightShallowSplashSound - 
+Obj: FootLightWadingSound - 
+Obj: FootLightUnderwaterSound - 
+Obj: FootLightBubblesSound - 
+Obj: ImpactLightSoftSound - 
+Obj: ImpactLightHardSound - 
+Obj: ImpactLightMetalSound - 
+Obj: ImpactLightSnowSound - 
+Obj: ImpactLightWaterEasySound - 
+Obj: ImpactLightWaterMediumSound - 
+Obj: ImpactLightWaterHardSound - 
+Obj: ExitingWaterLightSound - 
+Obj: PlayerSplashMist - 
+Obj: PlayerSplashMistEmitter - 
+Obj: PlayerBubbleParticle - 
+Obj: PlayerBubbleEmitter - 
+Obj: PlayerFoamParticle - 
+Obj: PlayerFoamEmitter - 
+Obj: PlayerFoamDropletsParticle - 
+Obj: PlayerFoamDropletsEmitter - 
+Obj: PlayerSplashParticle - 
+Obj: PlayerSplashEmitter - 
+Obj: PlayerSplash - 
+Obj: LightPuff - 
+Obj: LightPuffEmitter - 
+Obj: LiftoffDust - 
+Obj: LiftoffDustEmitter - 
+Obj: LightMaleFootprint - 
+Obj: PlayerDebris - 
+Obj: LightMaleHumanArmor - 
+Obj: brickMoveSound - 
+Obj: brickPlantSound - 
+Obj: brickRotateSound - 
+Obj: brickExplosionSound - 
+Obj: brickTrailParticle - 
+Obj: brickTrailEmitter - 
+Obj: brickExplosionParticle - 
+Obj: brickExplosionEmitter - 
+Obj: brickExplosion - 
+Obj: brickDeployExplosion - 
+Obj: brickDeployProjectile - 
+Obj: brick2x2 - BrickItems
+Obj: staticBrick2x2 - Bricks
+Obj: brick2x2Image - 
+Obj: glassA - Glass
+Obj: gray32 - Baseplates
+Obj: flowers - Statics
+Obj: pineTree - Statics
+Obj: brick2x4 - BrickItems
+Obj: staticBrick2x4 - Bricks
+Obj: brick2x4Image - 
+Obj: brick1x1 - BrickItems
+Obj: staticBrick1x1 - Bricks
+Obj: brick1x1Image - 
+Obj: brick1x2 - BrickItems
+Obj: staticBrick1x2 - Bricks
+Obj: brick1x2Image - 
+Obj: brick1x4 - BrickItems
+Obj: staticBrick1x4 - Bricks
+Obj: brick1x4Image - 
+Obj: brick1x4x5window - BrickItems
+Obj: staticBrick1x4x5window - Bricks
+Obj: brick1x4x5windowImage - 
+Obj: plate1x1 - BrickItems
+Obj: staticPlate1x1 - Bricks
+Obj: plate1x1Image - 
+Obj: plate1x2 - BrickItems
+Obj: staticPlate1x2 - Bricks
+Obj: plate1x2Image - 
+Obj: plate1x4 - BrickItems
+Obj: staticPlate1x4 - Bricks
+Obj: plate1x4Image - 
+Obj: plate1x6 - BrickItems
+Obj: staticPlate1x6 - Bricks
+Obj: plate1x6Image - 
+Obj: plate1x8 - BrickItems
+Obj: staticPlate1x8 - Bricks
+Obj: plate1x8Image - 
+Obj: plate1x10 - BrickItems
+Obj: staticPlate1x10 - Bricks
+Obj: plate1x10Image - 
+Obj: plate2x4 - BrickItems
+Obj: staticPlate2x4 - Bricks
+Obj: plate2x4Image - 
+Obj: plate6x12 - BrickItems
+Obj: staticPlate6x12 - Bricks
+Obj: plate6x12Image - 
+Obj: slope1x3round - BrickItems
+Obj: staticslope1x3round - Bricks
+Obj: slope1x3roundImage - 
+Obj: brick2x1x1curve - BrickItems
+Obj: staticbrick2x1x1curve - Bricks
+Obj: brick2x1x1curveImage - 
+Obj: slope1x1 - BrickItems
+Obj: staticslope1x1 - Bricks
+Obj: slope1x1Image - 
+Obj: brick1x1handle - BrickItems
+Obj: staticbrick1x1handle - Bricks
+Obj: brick1x1handleImage - 
+Obj: bar1x4x2 - BrickItems
+Obj: staticbrickbar1x4x2 - Bricks
+Obj: bar1x4x2Image - 
+Obj: Bar1x3 - BrickItems
+Obj: staticbrickBar1x3 - Bricks
+Obj: Bar1x3Image - 
+Obj: wing9x4 - BrickItems
+Obj: staticplatewing9x4 - Bricks
+Obj: wing9x4Image - 
+Obj: panelwt - BrickItems
+Obj: staticbrickpanelwt - Bricks
+Obj: panelwtImage - 
+Obj: plate1x2handles - BrickItems
+Obj: staticplate1x2handles - Bricks
+Obj: plate1x2handlesImage - 
+Obj: baseplate48 - BrickItems
+Obj: staticbrickbaseplate48 - Bricks
+Obj: baseplate48Image - 
+Obj: antenna1x1x8 - BrickItems
+Obj: staticbrickantenna1x1x8 - Bricks
+Obj: antenna1x1x8Image - 
+Obj: plate1x2hook - BrickItems
+Obj: staticplate1x2hook - Bricks
+Obj: plate1x2hookImage - 
+Obj: brick2x3arch - BrickItems
+Obj: staticbrick2x3arch - Bricks
+Obj: brick2x3archImage - 
+Obj: slope2x3x1 - BrickItems
+Obj: staticslope2x3x1 - Bricks
+Obj: slope2x3x1Image - 
+Obj: slope2x3x1b - BrickItems
+Obj: staticslope2x3x1b - Bricks
+Obj: slope2x3x1bImage - 
+Obj: slope6x1x5 - BrickItems
+Obj: staticslope6x1x5 - Bricks
+Obj: slope6x1x5Image - 
+Obj: brick4x4qcyl - BrickItems
+Obj: staticbrick4x4qcyl - Bricks
+Obj: brick4x4qcylImage - 
+Obj: plate1x2s1 - BrickItems
+Obj: staticplate1x2s1 - Bricks
+Obj: plate1x2s1Image - 
+Obj: plate1x2je - BrickItems
+Obj: staticplate1x2je - Bricks
+Obj: plate1x2jeImage - 
+Obj: cone3x3x2 - BrickItems
+Obj: staticcylindercone3x3x2 - Bricks
+Obj: cone3x3x2Image - 
+Obj: cone2x2x2 - BrickItems
+Obj: staticcylindercone2x2x2 - Bricks
+Obj: cone2x2x2Image - 
+Obj: rocket1x1 - BrickItems
+Obj: staticcylinder1x1rocket - Bricks
+Obj: rocket1x1Image - 
+Obj: rocket1x1t - BrickItems
+Obj: staticcylinder1x1rockett - Bricks
+Obj: rocket1x1tImage - 
+Obj: brickAntennat - BrickItems
+Obj: staticbrickAntennat - Bricks
+Obj: brickAntennatImage - 
+Obj: plate1x2handle - BrickItems
+Obj: staticplate1x2handle - Bricks
+Obj: plate1x2handleImage - 
+Obj: grill1x2 - BrickItems
+Obj: staticplate1x2grill - Bricks
+Obj: grill1x2Image - 
+Obj: plate16x32 - BrickItems
+Obj: staticplate16x32 - Bricks
+Obj: plate16x32Image - 
+Obj: wing8x4l - BrickItems
+Obj: staticplate8x4wingl - Bricks
+Obj: wing8x4lImage - 
+Obj: wing8x4r - BrickItems
+Obj: staticplate8x4wingr - Bricks
+Obj: wing8x4rImage - 
+Obj: tile1x2 - BrickItems
+Obj: staticplate1x2tile - Bricks
+Obj: tile1x2Image - 
+Obj: tile2x2 - BrickItems
+Obj: staticplate2x2tile - Bricks
+Obj: tile2x2Image - 
+Obj: cylinder1x1 - BrickItems
+Obj: staticcylinder1x1 - Bricks
+Obj: cylinder1x1Image - 
+Obj: cylinder1x1p - BrickItems
+Obj: staticcylinder1x1p - Bricks
+Obj: cylinder1x1pImage - 
+Obj: cylinder1x1f - BrickItems
+Obj: staticcylinder1x1f - Bricks
+Obj: cylinder1x1fImage - 
+Obj: cylinder1x1fp - BrickItems
+Obj: staticcylinder1x1fp - Bricks
+Obj: cylinder1x1fpImage - 
+Obj: print1x2Image - 
+Obj: tile1x1 - BrickItems
+Obj: statictile1x1 - Bricks
+Obj: tile1x1Image - 
+Obj: tile2x2round - BrickItems
+Obj: statictile2x2round - Bricks
+Obj: tile2x2roundImage - 
+Obj: stickDrawSound - 
+Obj: stickHitSound - 
+Obj: stickExplosionParticle - 
+Obj: stickExplosionEmitter - 
+Obj: stickExplosion - 
+Obj: stickProjectile - 
+Obj: stick - Weapon
+Obj: stickImage - 
+Obj: spacevisorShowImage - 
+Obj: brickpinetree - BrickItems
+Obj: staticbrickpinetree - Bricks
+Obj: brickpinetreeImage - 
+Obj: brickflower - BrickItems
+Obj: staticbrickflower - Bricks
+Obj: brickflowerImage - 
+Obj: brickcat - BrickItems
+Obj: staticbrickcat - Bricks
+Obj: brickcatImage - 
+Obj: brickmonkey - BrickItems
+Obj: staticbrickmonkey - Bricks
+Obj: brickmonkeyImage - 
+Obj: brickcup - BrickItems
+Obj: staticbrickcup - Bricks
+Obj: brickcupImage - 
+Obj: brickgoblet - BrickItems
+Obj: staticbrickgoblet - Bricks
+Obj: brickgobletImage - 
+Obj: brickgoblet2 - BrickItems
+Obj: staticbrickgoblet2 - Bricks
+Obj: brickgoblet2Image - 
+Obj: brickbook - BrickItems
+Obj: staticbrickbook - Bricks
+Obj: brickbookImage - 
+Obj: brickwand - BrickItems
+Obj: staticbrickwand - Bricks
+Obj: brickwandImage - 
+Obj: brickdrill - BrickItems
+Obj: staticbrickdrill - Bricks
+Obj: brickdrillImage - 
+Obj: brickscrewdriver - BrickItems
+Obj: staticbrickscrewdriver - Bricks
+Obj: brickscrewdriverImage - 
+Obj: brickhammer - BrickItems
+Obj: staticbrickhammer - Bricks
+Obj: brickhammerImage - 
+Obj: brickwrench - BrickItems
+Obj: staticbrickwrench - Bricks
+Obj: brickwrenchImage - 
+Obj: slope2x1 - BrickItems
+Obj: staticslope2x1 - Bricks
+Obj: slope2x1Image - 
+Obj: slope2x2 - BrickItems
+Obj: staticslope2x2 - Bricks
+Obj: slope2x2Image - 
+Obj: slope2x3 - BrickItems
+Obj: staticslope2x3 - Bricks
+Obj: slope2x3Image - 
+Obj: slope2x4 - BrickItems
+Obj: staticslope2x4 - Bricks
+Obj: slope2x4Image - 
+Obj: slope3x1 - BrickItems
+Obj: staticslope3x1 - Bricks
+Obj: slope3x1Image - 
+Obj: slope3x2 - BrickItems
+Obj: staticslope3x2 - Bricks
+Obj: slope3x2Image - 
+Obj: slope3x3 - BrickItems
+Obj: staticslope3x3 - Bricks
+Obj: slope3x3Image - 
+Obj: slope3x4 - BrickItems
+Obj: staticslope3x4 - Bricks
+Obj: slope3x4Image - 
+Obj: slopeC2x2 - BrickItems
+Obj: staticslopeC2x2 - Bricks
+Obj: slopeC2x2Image - 
+Obj: slopeC3x3 - BrickItems
+Obj: staticslopeC3x3 - Bricks
+Obj: slopeC3x3Image - 
+Obj: slopeI2x1 - BrickItems
+Obj: staticslopeI2x1 - Bricks
+Obj: slopeI2x1Image - 
+Obj: slopeI2x2 - BrickItems
+Obj: staticslopeI2x2 - Bricks
+Obj: slopeI2x2Image - 
+Obj: slopeI2x3 - BrickItems
+Obj: staticslopeI2x3 - Bricks
+Obj: slopeI2x3Image - 
+Obj: slopeI2x4 - BrickItems
+Obj: staticslopeI2x4 - Bricks
+Obj: slopeI2x4Image - 
+Obj: slopeI3x1 - BrickItems
+Obj: staticslopeI3x1 - Bricks
+Obj: slopeI3x1Image - 
+Obj: slopeI3x2 - BrickItems
+Obj: staticslopeI3x2 - Bricks
+Obj: slopeI3x2Image - 
+Obj: slopeI3x3 - BrickItems
+Obj: staticslopeI3x3 - Bricks
+Obj: slopeI3x3Image - 
+Obj: slopeI3x4 - BrickItems
+Obj: staticslopeI3x4 - Bricks
+Obj: slopeI3x4Image - 
+Obj: slopeIC2x2 - BrickItems
+Obj: staticslopeIC2x2 - Bricks
+Obj: slopeIC2x2Image - 
+Obj: slopeIC3x3 - BrickItems
+Obj: staticslopeIC3x3 - Bricks
+Obj: slopeIC3x3Image - 
+Obj: slopeT2x1 - BrickItems
+Obj: staticslopeT2x1 - Bricks
+Obj: slopeT2x1Image - 
+Obj: slopeT2x1e - BrickItems
+Obj: staticslopeT2x1e - Bricks
+Obj: slopeT2x1eImage - 
+Obj: slopeT2x2 - BrickItems
+Obj: staticslopeT2x2 - Bricks
+Obj: slopeT2x2Image - 
+Obj: slopeT2x3 - BrickItems
+Obj: staticslopeT2x3 - Bricks
+Obj: slopeT2x3Image - 
+Obj: slopeT2x4 - BrickItems
+Obj: staticslopeT2x4 - Bricks
+Obj: slopeT2x4Image - 
+Obj: slopeCC2x2 - BrickItems
+Obj: staticslopeCC2x2 - Bricks
+Obj: slopeCC2x2Image - 
+Obj: slopeCC3x3 - BrickItems
+Obj: staticslopeCC3x3 - Bricks
+Obj: slopeCC3x3Image - 
+Obj: brick1x3 - BrickItems
+Obj: staticbrick1x3 - Bricks
+Obj: brick1x3Image - 
+Obj: brick2x3 - BrickItems
+Obj: staticbrick2x3 - Bricks
+Obj: brick2x3Image - 
+Obj: brick2x8 - BrickItems
+Obj: staticbrick2x8 - Bricks
+Obj: brick2x8Image - 
+Obj: brick2x10 - BrickItems
+Obj: staticbrick2x10 - Bricks
+Obj: brick2x10Image - 
+Obj: brick1x1x5 - BrickItems
+Obj: staticbrick1x1x5 - Bricks
+Obj: brick1x1x5Image - 
+Obj: brick1x2x5 - BrickItems
+Obj: staticbrick1x2x5 - Bricks
+Obj: brick1x2x5Image - 
+Obj: brick1x3x5 - BrickItems
+Obj: staticbrick1x3x5 - Bricks
+Obj: brick1x3x5Image - 
+Obj: brick1x4x5 - BrickItems
+Obj: staticbrick1x4x5 - Bricks
+Obj: brick1x4x5Image - 
+Obj: brick1x6x5 - BrickItems
+Obj: staticbrick1x6x5 - Bricks
+Obj: brick1x6x5Image - 
+Obj: brick1x8x5 - BrickItems
+Obj: staticbrick1x8x5 - Bricks
+Obj: brick1x8x5Image - 
+Obj: brick1x10x5 - BrickItems
+Obj: staticbrick1x10x5 - Bricks
+Obj: brick1x10x5Image - 
+Obj: brick1x12x5 - BrickItems
+Obj: staticbrick1x12x5 - Bricks
+Obj: brick1x12x5Image - 
+Obj: plate1x3 - BrickItems
+Obj: staticplate1x3 - Bricks
+Obj: plate1x3Image - 
+Obj: plate2x2 - BrickItems
+Obj: staticplate2x2 - Bricks
+Obj: plate2x2Image - 
+Obj: plate2x3 - BrickItems
+Obj: staticplate2x3 - Bricks
+Obj: plate2x3Image - 
+Obj: plate2x6 - BrickItems
+Obj: staticplate2x6 - Bricks
+Obj: plate2x6Image - 
+Obj: plate2x8 - BrickItems
+Obj: staticplate2x8 - Bricks
+Obj: plate2x8Image - 
+Obj: plate2x10 - BrickItems
+Obj: staticplate2x10 - Bricks
+Obj: plate2x10Image - 
+Obj: plate4x6 - BrickItems
+Obj: staticplate4x6 - Bricks
+Obj: plate4x6Image - 
+Obj: plate4x8 - BrickItems
+Obj: staticplate4x8 - Bricks
+Obj: plate4x8Image - 
+Obj: plate6x10 - BrickItems
+Obj: staticplate6x10 - Bricks
+Obj: plate6x10Image - 
+Obj: brick1x2x2window - BrickItems
+Obj: staticbrick1x2x2window - Bricks
+Obj: brick1x2x2windowImage - 
+Obj: brick1x3x2window - BrickItems
+Obj: staticbrick1x3x2window - Bricks
+Obj: brick1x3x2windowImage - 
+Obj: brick1x4x2window - BrickItems
+Obj: staticbrick1x4x2window - Bricks
+Obj: brick1x4x2windowImage - 
+Obj: brick2x4x3window - BrickItems
+Obj: staticbrick2x4x3window - Bricks
+Obj: brick2x4x3windowImage - 
+Obj: cylinder2x2 - BrickItems
+Obj: staticcylinder2x2 - Bricks
+Obj: cylinder2x2Image - 
+Obj: fence1x4x2 - BrickItems
+Obj: staticfence1x4x2 - Bricks
+Obj: fence1x4x2Image - 
+Obj: onewaybrick - BrickItems
+Obj: staticbrickoneway - Bricks
+Obj: onewaybrickImage - 
+Obj: brick1x2handle - BrickItems
+Obj: staticbrick1x2handle - Bricks
+Obj: brick1x2handleImage - 
+Obj: brick1x3arch - BrickItems
+Obj: staticbrick1x3arch - Bricks
+Obj: brick1x3archImage - 
+Obj: brick1x3x2archcurve - BrickItems
+Obj: staticbrick1x3x2archcurve - Bricks
+Obj: brick1x3x2archcurveImage - 
+Obj: brick1x4fence - BrickItems
+Obj: staticbrick1x4fence - Bricks
+Obj: brick1x4fenceImage - 
+Obj: brick1x4x2fencespindled - BrickItems
+Obj: staticbrick1x4x2fencespindled - Bricks
+Obj: brick1x4x2fencespindledImage - 
+Obj: brick1x4x6window - BrickItems
+Obj: staticbrick1x4x6window - Bricks
+Obj: brick1x4x6windowImage - 
+Obj: brick1x5x4arch - BrickItems
+Obj: staticbrick1x5x4arch - Bricks
+Obj: brick1x5x4archImage - 
+Obj: brick1x5x4archinverted - BrickItems
+Obj: staticbrick1x5x4archinverted - Bricks
+Obj: brick1x5x4archinvertedImage - 
+Obj: brick1x12x3arch - BrickItems
+Obj: staticbrick1x12x3arch - Bricks
+Obj: brick1x12x3archImage - 
+Obj: brick2x1x2slope - BrickItems
+Obj: staticbrick2x1x2slope - Bricks
+Obj: brick2x1x2slopeImage - 
+Obj: brick2x1x3slope - BrickItems
+Obj: staticbrick2x1x3slope - Bricks
+Obj: brick2x1x3slopeImage - 
+Obj: brick2x1x3slopeInv - BrickItems
+Obj: staticbrick2x1x3slopeInv - Bricks
+Obj: brick2x1x3slopeInvImage - 
+Obj: brick2x2x2slope - BrickItems
+Obj: staticbrick2x2x2slope - Bricks
+Obj: brick2x2x2slopeImage - 
+Obj: brick2x2x2slopeQC - BrickItems
+Obj: staticbrick2x2x2slopeQC - Bricks
+Obj: brick2x2x2slopeQCImage - 
+Obj: brick2x2x3slope - BrickItems
+Obj: staticbrick2x2x3slope - Bricks
+Obj: brick2x2x3slopeImage - 
+Obj: brick2x2x3slopeDC - BrickItems
+Obj: staticbrick2x2x3slopeDC - Bricks
+Obj: brick2x2x3slopeDCImage - 
+Obj: brick2x2x3slopeInv - BrickItems
+Obj: staticbrick2x2x3slopeInv - Bricks
+Obj: brick2x2x3slopeInvImage - 
+Obj: brick2x2x5Lattice - BrickItems
+Obj: staticbrick2x2x5Lattice - Bricks
+Obj: brick2x2x5LatticeImage - 
+Obj: brick2x8x3arch - BrickItems
+Obj: staticbrick2x8x3arch - Bricks
+Obj: brick2x8x3archImage - 
+Obj: brick3x8x6window - BrickItems
+Obj: staticbrick3x8x6window - Bricks
+Obj: brick3x8x6windowImage - 
+Obj: baseplate32 - BrickItems
+Obj: staticbaseplate32 - Bricks
+Obj: baseplate32Image - 
+Obj: brickAntenna - BrickItems
+Obj: staticbrickAntenna - Bricks
+Obj: brickAntennaImage - 
+Obj: brickbar1 - BrickItems
+Obj: staticbrickbar1 - Bricks
+Obj: brickbar1Image - 
+Obj: brickcub - BrickItems
+Obj: staticbrickcub - Bricks
+Obj: brickcubImage - 
+Obj: brickdoor - BrickItems
+Obj: staticbrickdoor - Bricks
+Obj: brickdoorImage - 
+Obj: brickfauset - BrickItems
+Obj: staticbrickfauset - Bricks
+Obj: brickfausetImage - 
+Obj: brickfence1 - BrickItems
+Obj: staticbrickfence1 - Bricks
+Obj: brickfence1Image - 
+Obj: brickseat - BrickItems
+Obj: staticbrickseat - Bricks
+Obj: brickseatImage - 
+Obj: rearwing - BrickItems
+Obj: staticrearwing - Bricks
+Obj: rearwingImage - 
+Obj: brickGate - BrickItems
+Obj: staticbrickGate - Bricks
+Obj: brickGateImage - 
+Obj: brick2x2FX - BrickItems
+Obj: Staticbrick2x2FX - Bricks
+Obj: brick2x2FXImage - 
+Obj: brick8x8fgrill - BrickItems
+Obj: staticbrick8x8fgrill - Bricks
+Obj: brick8x8fgrillImage - 
+Obj: brick1x8x2arch - BrickItems
+Obj: staticbrick1x8x2arch - Bricks
+Obj: brick1x8x2archImage - 
+Obj: brick1x4arch - BrickItems
+Obj: staticbrick1x4arch - Bricks
+Obj: brick1x4archImage - 
+Obj: brick1x4walk - BrickItems
+Obj: staticbrick1x4walk - Bricks
+Obj: brick1x4walkImage - 
+Obj: brick1x4x2arch - BrickItems
+Obj: staticbrick1x4x2arch - Bricks
+Obj: brick1x4x2archImage - 
+Obj: brick1x6arch - BrickItems
+Obj: staticbrick1x6arch - Bricks
+Obj: brick1x6archImage - 
+Obj: brick1x6x2arch - BrickItems
+Obj: staticbrick1x6x2arch - Bricks
+Obj: brick1x6x2archImage - 
+Obj: brick1x6x2archround - BrickItems
+Obj: staticbrick1x6x2archround - Bricks
+Obj: brick1x6x2archroundImage - 
+Obj: brick1x6x3archcurve - BrickItems
+Obj: staticbrick1x6x3archcurve - Bricks
+Obj: brick1x6x3archcurveImage - 
+Obj: brick1x1t - BrickItems
+Obj: staticBrick1x1t - Bricks
+Obj: brick1x1tImage - 
+Obj: cylinder1x1t - BrickItems
+Obj: staticcylinder1x1t - Bricks
+Obj: cylinder1x1tImage - 
+Obj: cylinder1x1ft - BrickItems
+Obj: staticcylinder1x1ft - Bricks
+Obj: cylinder1x1ftImage - 
+Obj: roadcurve - BrickItems
+Obj: staticroadcurve - Bricks
+Obj: roadcurveImage - 
+Obj: roaddeadend - BrickItems
+Obj: staticroaddeadend - Bricks
+Obj: roaddeadendImage - 
+Obj: roadstraight - BrickItems
+Obj: staticroadstraight - Bricks
+Obj: roadstraightImage - 
+Obj: roadstraightxw - BrickItems
+Obj: staticroadstraightxw - Bricks
+Obj: roadstraightxwImage - 
+Obj: RoadT - BrickItems
+Obj: staticRoadT - Bricks
+Obj: RoadTImage - 
+Obj: roadx - BrickItems
+Obj: staticroadx - Bricks
+Obj: roadxImage - 
+Obj: dynamite - BrickItems
+Obj: StaticDynamite - Bricks
+Obj: dynamiteImage - 
+Obj: plunger - BrickItems
+Obj: StaticPlunger - Bricks
+Obj: plungerImage - 
+Obj: CastleTurretTop4x8x21third - BrickItems
+Obj: staticbrickCastleTurretTop4x8x21third - Bricks
+Obj: CastleTurretTop4x8x21thirdImage - 
+Obj: flag1 - BrickItems
+Obj: staticbrickflag1 - Bricks
+Obj: flag1Image - 
+Obj: CastleWall2x5x6 - BrickItems
+Obj: staticbrickCastleWall2x5x6 - Bricks
+Obj: CastleWall2x5x6Image - 
+Obj: brick1x6 - BrickItems
+Obj: staticbrick1x6 - Bricks
+Obj: brick1x6Image - 
+Obj: brick1x8 - BrickItems
+Obj: staticbrick1x8 - Bricks
+Obj: brick1x8Image - 
+Obj: TireParticle - 
+Obj: tireEmitter - 
+Obj: legoatvEngineSound - 
+Obj: legoatvTire - 
+Obj: legoatvSpring - 
+Obj: legoatv - Vehicles
+Obj: legobaseEngineSound - 
+Obj: legobaseTire - 
+Obj: legobaseSpring - 
+Obj: legobase - Vehicles
+Obj: legobikeEngineSound - 
+Obj: legobikeTire - 
+Obj: legobikeSpring - 
+Obj: legobike - Vehicles
+Obj: legohorseEngineSound - 
+Obj: legohorseTire - 
+Obj: legohorseSpring - 
+Obj: legohorse - Vehicles
+Obj: Legoplane - Vehicles
+Obj: ski - Item
+Obj: leftSkiImage - 
+Obj: rightSkiImage - 
+Obj: deathVehicle - Vehicles
+Obj: NothingTire - 
+Obj: skiSpring - 
+Obj: SkiParticle - 
+Obj: SkiEmitter - 
+Obj: skivehicle - Vehicles
+Obj: screwdriverExplosionParticle - 
+Obj: screwdriverExplosionEmitter - 
+Obj: screwdriverExplosion - 
+Obj: screwdriverProjectile - 
+Obj: screwdriver - Tools
+Obj: screwdriverImage - 
+Obj: bill100 - Item
+Obj: bill100Image - 
+Obj: airTankActivateSound - 
+Obj: airTank - Item
+Obj: airTankImage - 
+Obj: book - Item
+Obj: bookImage - 
+Obj: bucketPack - Item
+Obj: bucketPackImage - 
+Obj: HitSound - 
+Obj: FireSound - 
+Obj: ActivateSound - 
+Obj: cameraflashParticle - 
+Obj: cameraflashEmitter - 
+Obj: cameraProjectile - 
+Obj: SSCamera - Weapon
+Obj: camerassImage - 
+Obj: cape - Item
+Obj: capeImage - 
+Obj: ghost - Item
+Obj: ghostImage - 
+Obj: goblet - Item
+Obj: gobletImage - 
+Obj: helmetActivateSound - 
+Obj: Helmet - Item
+Obj: HelmetImage - 
+Obj: Pack - Item
+Obj: packImage - 
+Obj: plateMail - Item
+Obj: plateMailImage - 
+Obj: pointyHelmet - Item
+Obj: pointyHelmetImage - 
+Obj: quiver - Item
+Obj: quiverImage - 
+Obj: scoutHat - Item
+Obj: scoutHatImage - 
+Obj: shield - Item
+Obj: shieldImage - 
+Obj: triPlume - Item
+Obj: triPlumeImage - 
+Obj: visor - Item
+Obj: visorImage - 
+Obj: lightsabreDrawSound - 
+Obj: lightsabreHitSound - 
+Obj: lightsabreExplosionParticle - 
+Obj: lightsabreExplosionEmitter - 
+Obj: lightsabreExplosion - 
+Obj: lightsabreProjectile - 
+Obj: lightsabre - Weapon
+Obj: lightsabreImage - 
+Obj: katanaDrawSound - 
+Obj: katanaHitSound - 
+Obj: katanaExplosionParticle - 
+Obj: katanaExplosionEmitter - 
+Obj: katanaExplosion - 
+Obj: katanaProjectile - 
+Obj: katana - Weapon
+Obj: katanaImage - 
+Obj: bulletExplosionSound - 
+Obj: revolverFireSound - 
+Obj: bulletTrailParticle - 
+Obj: bulletTrailEmitter - 
+Obj: bulletExplosionParticle - 
+Obj: bulletExplosionEmitter - 
+Obj: bulletExplosion - 
+Obj: bulletProjectile - 
+Obj: revolver - Weapon
+Obj: RevolverImage - 
+Obj: superRevolverImage - 
+Obj: DMHealthPickup - DM
+Obj: FlamethrowerFireSound - 
+Obj: GLFireParticle - 
+Obj: GLFireParticleEmitter - 
+Obj: FlamethrowerTrailParticle - 
+Obj: FlamethrowerTrailEmitter - 
+Obj: FlamethrowerExplosion - 
+Obj: FlamethrowerProjectile - 
+Obj: Flamethrower - Weapon
+Obj: FlamethrowerImage - 
+Obj: axeDrawSound - 
+Obj: axeHitSound - 
+Obj: axeExplosionParticle - 
+Obj: axeExplosionEmitter - 
+Obj: axeExplosion - 
+Obj: axeProjectile - 
+Obj: axe - Weapon
+Obj: axeImage - 
+Obj: blastExplosionSound - 
+Obj: blasterFireSound - 
+Obj: blastTrailParticle - 
+Obj: blastTrailEmitter - 
+Obj: blastExplosionParticle - 
+Obj: blastExplosionEmitter - 
+Obj: blastExplosion - 
+Obj: blastProjectile - 
+Obj: blaster - Weapon
+Obj: blasterImage - 
+Obj: superblasterImage - 
+Obj: arrowExplosionSound - 
+Obj: bowFireSound - 
+Obj: arrowTrailParticle - 
+Obj: arrowTrailEmitter - 
+Obj: arrowExplosionParticle - 
+Obj: arrowExplosionEmitter - 
+Obj: arrowExplosion - 
+Obj: arrowProjectile - 
+Obj: bow - Weapon
+Obj: bowImage - 
+Obj: superBowImage - 
+Obj: crossbowFireSound - 
+Obj: crossbowarrowprojectile - 
+Obj: crossbow - Weapon
+Obj: crossbowimage - 
+Obj: supercrossbowImage - 
+Obj: duallsabreDrawSound - 
+Obj: duallsabreHitSound - 
+Obj: duallsabreExplosionParticle - 
+Obj: duallsabreExplosionEmitter - 
+Obj: duallsabreExplosion - 
+Obj: duallsabreProjectile - 
+Obj: duallsabre - Weapon
+Obj: duallsabreimage - 
+Obj: pickaxeDrawSound - 
+Obj: pickaxeHitSound - 
+Obj: pickaxeExplosionParticle - 
+Obj: pickaxeExplosionEmitter - 
+Obj: pickaxeExplosion - 
+Obj: pickaxeProjectile - 
+Obj: pickaxe - Weapon
+Obj: pickaxeImage - 
+Obj: rifleshotExplosionSound - 
+Obj: rifleshotTrailParticle - 
+Obj: rifleshotTrailEmitter - 
+Obj: rifleshotExplosionParticle - 
+Obj: rifleshotExplosionEmitter - 
+Obj: rifleshotExplosion - 
+Obj: rifleshotProjectile - 
+Obj: rifle - Weapon
+Obj: RifleImage - 
+Obj: superRifleImage - 
+Obj: spearExplosionSound - 
+Obj: spearFireSound - 
+Obj: spearTrailParticle - 
+Obj: spearTrailEmitter - 
+Obj: spearExplosionParticle - 
+Obj: spearExplosionEmitter - 
+Obj: spearExplosionParticle2 - 
+Obj: spearExplosionEmitter2 - 
+Obj: spearExplosion - 
+Obj: spearProjectile - 
+Obj: spear - Weapon
+Obj: spearImage - 
+Obj: boltsgTrailParticle - 
+Obj: boltsgTrailEmitter - 
+Obj: boltsgExplosionParticle - 
+Obj: boltsgExplosionEmitter - 
+Obj: boltsgExplosion - 
+Obj: boltsgProjectile - 
+Obj: speargun - Weapon
+Obj: speargunImage - 
+Obj: superspeargunImage - 
+Obj: swordDrawSound - 
+Obj: swordHitSound - 
+Obj: swordExplosionParticle - 
+Obj: swordExplosionEmitter - 
+Obj: swordExplosion - 
+Obj: swordProjectile - 
+Obj: sword - Weapon
+Obj: swordImage - 
+Obj: sawFireSound - 
+Obj: sawHitSound - 
+Obj: sawIdleSound - 
+Obj: SawSelectSound - 
+Obj: chainsawExplosionParticle - 
+Obj: chainsawExplosionEmitter - 
+Obj: chainsawExplosion - 
+Obj: chainsawProjectile - 
+Obj: chainsaw - Weapon
+Obj: chainsawImage - 
+Obj: smokegrenadeTrailParticle - 
+Obj: smokegrenadeTrailEmitter - 
+Obj: smokegrenadeExplosionParticle - 
+Obj: smokegrenadeExplosionEmitter - 
+Obj: smokegrenadeExplosionParticle2 - 
+Obj: smokegrenadeExplosionEmitter2 - 
+Obj: smokegrenadeExplosion - 
+Obj: smokegrenadeProjectile - 
+Obj: smokegrenade - Weapon
+Obj: smokegrenadeImage - 
+Obj: BubbleParticle - 
+Obj: BubbleParticleEmitter - 
+Obj: FireParticle - 
+Obj: FireParticleEmitter - 
+Obj: FireParticle2 - 
+Obj: FireParticleEmitter2 - 
+Obj: FireParticle3 - 
+Obj: FireParticleEmitter3 - 
+Obj: FireParticle4 - 
+Obj: FireParticleEmitter4 - 
+Obj: FireParticle5 - 
+Obj: FireParticleEmitter5 - 
+Obj: FireParticleEmitterNode - 
+Obj: SmokeParticle - 
+Obj: SmokeParticleEmitter - 
+Obj: SmokeParticleEmitterNode - 
+Obj: bombParticleEmitterNode - 
+Obj: bombExplosionParticle - 
+Obj: bombExplosionEmitter - 
+Obj: bomb2ExplosionParticle - 
+Obj: bomb2ExplosionEmitter - 
+Obj: bomb3ExplosionParticle - 
+Obj: bomb3ExplosionEmitter - 
+Obj: bomb4ExplosionParticle - 
+Obj: bomb4ExplosionEmitter - 
+Obj: bombproofTrigger - 
+Obj: Snow - 
+Obj: LightRain - 
+Obj: oyeImage - 
+Obj: basedecalImage - 
+Obj: facelegoImage - 
+Obj: capShowImage - 
+Obj: binocularsShowImage - 
+Obj: droidbodyShowImage - 
+Obj: lefttdroidarmShowImage - 
+Obj: rightdroidarmShowImage - 
+Obj: droidheadShowImage - 
+Obj: droidfeetShowImage - 
+Obj: skelbodyShowImage - 
+Obj: skelheadShowImage - 
+Obj: skelleftfootShowImage - 
+Obj: skelrightfootShowImage - 
+Obj: skelrightarmShowImage - 
+Obj: skelleftarmShowImage - 
+Obj: helmet2ShowImage - 
+Obj: chefhatShowImage - 
+Obj: camShowImage - 
+Obj: vidcamShowImage - 
+Obj: lifejacketShowImage - 
+Obj: helmet3ShowImage - 
+Obj: conhatShowImage - 
+Obj: hat123ShowImage - 
+Obj: drillShowImage - 
+Obj: radioShowImage - 
+Obj: frypanShowImage - 
+Obj: briefcaseShowImage - 
+Obj: goblet2ShowImage - 
+Obj: MoneyShowImage - 
+Obj: stormShowImage - 
+Obj: Cap2ShowImage - 
+Obj: firehatShowImage - 
+Obj: fighthatShowImage - 
+Obj: beanie1ShowImage - 
+Obj: tophat2ShowImage - 
+Obj: englishwarShowImage - 
+Obj: oldspacehelmetShowImage - 
+Obj: ShovelShowImage - 
+Obj: ScrewdriverShowImage - 
+Obj: FishrodShowImage - 
+Obj: MagglassShowImage - 
+Obj: jetpackoldShowImage - 
+Obj: PithhelmetShowImage - 
+Obj: farmershatShowImage - 
+Obj: hatmidflatShowImage - 
+Obj: helmetchinwideShowImage - 
+Obj: Tricornershowimage - 
+Obj: diversmaskShowImage - 
+Obj: aviatorcapshowimage - 
+Obj: aviatoracShowImage - 
+Obj: Cup1ShowImage - 
+Obj: cavalrycapshowimage - 
+Obj: storm2showimage - 
+Obj: monkeyshowimage - 
+Obj: catshowimage - 
+Obj: VisorwithAntennashowimage - 
+Obj: scubaShowImage - 
+Obj: epauletsShowImage - 
+Obj: crownshowimage - 
+Obj: islanderhatshowimage - 
+Obj: islanderac1showimage - 
+Obj: capeShowImage - 
+Obj: bucketPackShowImage - 
+Obj: quiverShowImage - 
+Obj: plateMailShowImage - 
+Obj: packShowImage - 
+Obj: airTankShowImage - 
+Obj: cloakShowImage - 
+Obj: SamArmShowImage - 
+Obj: helmetShowImage - 
+Obj: scoutHatShowImage - 
+Obj: pointyHelmetShowImage - 
+Obj: HairShowImage - 
+Obj: femHairShowImage - 
+Obj: femHair2ShowImage - 
+Obj: WizhatShowImage - 
+Obj: cowboyShowImage - 
+Obj: PirateShowImage - 
+Obj: NavyShowImage - 
+Obj: darthShowImage - 
+Obj: samhelmShowImage - 
+Obj: triPlumeShowImage - 
+Obj: visorShowImage - 
+Obj: shornShowImage - 
+Obj: shieldShowImage - 
+Obj: gobletShowImage - 
+Obj: BeardShowImage - 
+Obj: staticprinttile2x2 - 
+Obj: staticprinttile1x2 - 
+Obj: staticprinttile1x1 - 
+Obj: staticprinttile2x2round - 
+Obj: staticprinttile2x1 - 
+Obj: staticprintslope2x2 - 
+Obj: staticprintslope2x3 - 
+Obj: staticprintslope2x4 - 
+Obj: staticprintflag1 - 
+Obj: staticprintbrick1x1 - 
+Obj: staticprintbrick1x2 - 
+Obj: staticprintbrick1x3 - 
+Obj: staticprintbrick1x4 - 
+Obj: staticprintbrick1x6 - 
+Obj: staticprintbrick1x8 - 
+Obj: staticprintbrick1x2x5 - 
+Obj: staticprintbrick1x6x5 - 
+Obj: HeavyRainSound - 
+Obj: HeavyRain - 
+Obj: HeavyRain2 - 
+Obj: ThunderCrash1Sound - 
+Obj: ThunderCrash2Sound - 
+Obj: ThunderCrash3Sound - 
+Obj: ThunderCrash4Sound - 
+Obj: LightningStorm - 
+Loading compiled script common/editor/editorRender.cs.
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: rtb/client/ui2/hudfill.png
+Could not locate texture: rtb/client/ui2/hudfill.png
+Could not locate texture: rtb/data/shapes/bricks/Previews/smokegrenade.png
+Could not locate texture: rtb/data/shapes/bricks/Previews/Rifle.png
+Could not locate texture: rtb/data/shapes/bricks/Previews/chainsaw.png
+Mapping string: brown to index: 16
+bow
+bow
+crap collision
+Mapping string: ghost to index: 17
+Mapping string: ModifyShiftSize to index: 19
+Mapping string: MsgEquipInv to index: 18
+bow
+bow
+bow
+Mapping string: MsgDeEquipInv to index: 19
+Mapping string: doAction to index: 20
+No object found
+Mapping string: DismountVehicle to index: 21
+Mapping string: Quiver to index: 20
+bow
+bow
+bow
+blaster
+blaster
+Could not locate texture: rtb/data/shapes/bricks/Previews/smokegrenade.png
+crossbow
+crossbow
+crossbow
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+rifle
+revolver
+revolver
+revolver
+Could not locate texture: rtb/data/shapes/bricks/Previews/chainsaw.png
+Mapping string: suicide to index: 22
+Mapping string: MsgClientScoreChanged to index: 21
+Mapping string: MsgClientKilled to index: 22
+Mapping string: %1 takes the easy way out... to index: 23
+rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
+rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
+rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
+rtb/client/PTTA/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
+rtb/client/PTTA/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
+rtb/client/PTTA/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
+rtb/client/PTTA/radar.cs (318): Unable to find object: '5548' attempting to call function 'schedule'
+Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: fps/data/terrains/grassland/grass
+Could not locate texture: rtb/client/ui2/hudfill.png
+Could not locate texture: rtb/client/ui2/hudfill.png
+rtb/client/PTTA/serverConnection.cs (177): Unable to find object: 'lstTeamPlayerList' attempting to call function 'clear'
+rtb/client/PTTA/serverConnection.cs (178): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'clear'
+rtb/client/PTTA/serverConnection.cs (180): Unable to find object: 'lstTeamList' attempting to call function 'clear'
+rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
+Missing file: rtb/rss/ui/rssguiprofiles.cs!
+Loading compiled script rtb/rss/ui/rssGui.gui.
+Loading compiled script rtb/rss/rssGui.cs.
+XMenu Preferences Updated
+*** ENDING MISSION
+rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
+rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2681' attempting to call function 'delete'
+CDROP: 2650 IPX:6E764D61:705465787475:25970
+Exporting server prefs...
 Exporting client prefs
 Exporting all clients connected to this session's cash ammount for storage.
 Exporting server prefs
 Exporting IP banlist
 Exporting client prefs
 Exporting server prefs
-rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
-rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2681' attempting to call function 'delete'
-CDROP: 2650 IPX:33330070:6172616D7332:12288
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...
 Releasing the device context...
+keyboard0 input device unacquired.
