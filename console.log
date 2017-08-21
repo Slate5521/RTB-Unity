@@ -1,7 +1,7 @@
-//-------------------------- 8/19/2017 -- 21:10:01 -----
+//-------------------------- 8/21/2017 -- 06:32:15 -----
 Processor Init:
    AMD (unknown), ~3.53 Ghz
-     (timed at roughly 3.52 Ghz)
+     (timed at roughly 3.54 Ghz)
    FPU detected
    MMX detected
    SSE detected
@@ -387,6 +387,16 @@ Loading compiled script rtb/rss/ui/rssGui.gui.
 Compiling rtb/rss/rssGui.cs...
 Loading compiled script rtb/rss/rssGui.cs.
 Engine initialized...
+LAN server ping: IP:Broadcast:28005...
+LAN server ping: IPX:FFFFFFFF:FFFFFFFFFFFF:28005...
+No master servers found in this region, trying IP:198.101.240.242:28002.
+Requesting the server list from master server IP:198.101.240.242:28002 (2 tries left)...
+Received server list packet 1 of 1 from the master server (0 servers).
+Server query canceled.
+rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
+Missing file: rtb/rss/ui/rssguiprofiles.cs!
+Loading compiled script rtb/rss/ui/rssGui.gui.
+Loading compiled script rtb/rss/rssGui.cs.
 slopes
 greenhills
 greenhills
@@ -396,14 +406,48 @@ greenhills
 greenhills
 greenhills
 greenhills
-digitaldesigner
-DeepSeas
-deathvalley
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+Could not locate texture: rtb/data/missions/previews/psthemoon.png
+psthemoon
+Could not locate texture: rtb/data/missions/previews/psthemoon.png
+psthemoon
+Could not locate texture: rtb/data/missions/previews/psthemoon.png
+psthemoon
+Could not locate texture: rtb/data/missions/previews/psthemoon.png
+psthemoon
+Could not locate texture: rtb/data/missions/previews/psthemoon.png
+psthemoon
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
+Could not locate texture: rtb/data/missions/previews/mountains.png
+mountains
 celestialdreams
+Could not locate texture: rtb/data/missions/previews/buildbox1.png
+buildbox1
+bridges
+Could not locate texture: rtb/data/missions/previews/BL-Ikea House v2.png
+BL-Ikea House v2
+bedroom
 bedroom
 rtb/client/scripts/startMissionGui.cs (37): Unable to find object: 'OptSitting' attempting to call function 'setValue'
-DeepSeas
-kitchen
+Could not locate texture: rtb/data/missions/previews/BL-Ikea House v2.png
+BL-Ikea House v2
 LavaPit2
 rtb/client/scripts/startMissionGui.cs (69): Unable to find object: 'OptSitting' attempting to call function 'getValue'
 Exporting server prefs...
@@ -1009,11 +1053,11 @@ Loading compiled script rtb/server/scripts/Radar.cs.
 *** Stage 2 load
 Executing rtb/data/missions/LavaPit2.mis.
 *** Mission loaded
------------CONN = 2653
+-----------CONN = 2711
 Connect request from: IPX:2E323536:202D3232312E:14389
 Checking IP Ban Entry Number: 0
-Connection established 2653
-CADD: 2654 local
+Connection established 2711
+CADD: 2712 local
 *** Sending mission load to client: rtb/data/missions/LavaPit2.mis
 Mapping string: updatePrefs to index: 0
 Mapping string: ServerMessage to index: 1
@@ -1213,12 +1257,21 @@ rtb/client/PTTA/radar.cs (318): Unable to find object: '0' attempting to call fu
 Activating DirectInput...
 keyboard0 input device acquired.
 Mapping string: ModifyShiftSize to index: 9
-keyboard0 input device unacquired.
-DirectInput deactivated.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
+Chat line 0: Connected to Server, Blockdude.
+Chat line 1: Admins on this server: 
+Chat line 2: Blockdude
+Chat line 3: XAdmins on this server: 
+Chat line 4: Blockdude
+Chat line 5: Blockdude: 
+Chat line 6: Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
+Chat line 7: *Blockdude is going to spawn in your server
+Chat line 8: 
+Chat line 9: You were automatically put in secure mode
+Chat line 10: Recording to file [rtb/recordings/demo000.rec].
+Mapping string: white to index: 10
+Mapping string: Cool1 to index: 11
+Mapping string: Misc-Blank to index: 12
+Mapping string: Blockdude to index: 13
 keyboard0 input device unacquired.
 DirectInput deactivated.
 Exporting client prefs
@@ -1231,8 +1284,8 @@ rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' att
 rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
 rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
 rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2672' attempting to call function 'delete'
-CDROP: 2654 IPX:2E323536:202D3232312E:14389
+rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2730' attempting to call function 'delete'
+CDROP: 2712 IPX:2E323536:202D3232312E:14389
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...
