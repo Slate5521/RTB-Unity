@@ -1,12 +1,12 @@
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
-      musicTrack = "lush";
       cdTrack = "2";
       CTF_scoreLimit = "5";
+      musicTrack = "lush";
 
    new ScriptObject(MissionInfo) {
          name = "The Land 2";
-         descLines = "3";
+         desclines = "3";
          desc0 = "All Terrains in One, Great for RPG\'s. The Land 2 is an updated version of The land with all new Textures!    Map By Packer";
    };
    new MissionArea(MissionArea) {
@@ -26,9 +26,9 @@ new SimGroup(MissionGroup) {
       cloudSpeed1 = "0.0005";
       cloudSpeed2 = "0.001";
       cloudSpeed3 = "0.0003";
-      visibleDistance = "500";
-      fogDistance = "300";
-      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      visibleDistance = "777";
+      fogDistance = "255";
+      fogColor = "0.800000 0.800000 0.800000 1.000000";
       fogVolume1 = "0 0 0";
       fogVolume2 = "0 0 0";
       fogVolume3 = "0 0 0";
@@ -39,14 +39,14 @@ new SimGroup(MissionGroup) {
       windEffectPrecipitation = "1";
       SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
       useSkyTextures = "1";
-      renderBottomTexture = "0";
+      renderBottomTexture = "1";
       noRenderBans = "0";
          locked = "true";
    };
    new Sun() {
       direction = "0.57735 0.57735 -0.57735";
-      color = "0.600000 0.600000 0.600000 1.000000";
-      ambient = "0.400000 0.400000 0.400000 1.000000";
+      color = "1.000000 1.000000 1.000000 1.000000";
+      ambient = "0.650000 0.670000 0.690000 1.000000";
          position = "0 0 0";
          rotation = "1 0 0 0";
          locked = "true";
@@ -123,15 +123,15 @@ new SimGroup(MissionGroup) {
       MinAlpha = "0.03";
       MaxAlpha = "0.1";
       removeWetEdges = "0";
-         envMapTexture = "fps/data/skies/sky_blue02/resoure.dml";
-         params3 = "1.21 -0.61 0.13 -0.33";
          floodFill = "1";
-         params2 = "0.39 0.39 0.2 0.133";
-         extent = "100 100 10";
-         textureSize = "32 32";
-         seedPoints = "0 0 1 0 1 1 0 1";
          params1 = "0.63 -2.41 0.33 0.21";
          params0 = "0.32 -0.67 0.066 0.5";
+         params2 = "0.39 0.39 0.2 0.133";
+         extent = "100 100 10";
+         envMapTexture = "fps/data/skies/sky_blue02/resoure.dml";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
    };
    new WaterBlock(Lava) {
       position = "496 32 296.119";
@@ -162,15 +162,15 @@ new SimGroup(MissionGroup) {
       MinAlpha = "0.03";
       MaxAlpha = "0.1";
       removeWetEdges = "0";
-         envMapTexture = "fps/data/skies/sunset_0007";
-         params3 = "1.21 -0.61 0.13 -0.33";
          floodFill = "1";
-         params2 = "0.39 0.39 0.2 0.133";
-         extent = "100 100 10";
-         textureSize = "32 32";
-         seedPoints = "0 0 1 0 1 1 0 1";
          params1 = "0.63 -2.41 0.33 0.21";
          params0 = "0.32 -0.67 0.066 0.5";
+         params2 = "0.39 0.39 0.2 0.133";
+         extent = "100 100 10";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
    };
    new Trigger(ASD) {
       position = "491.501 202.835 280.943";
@@ -249,7 +249,7 @@ new SimGroup(MissionGroup) {
       rotate = "0";
    };
    new WheeledVehicle() {
-      position = "0 0 -3.24119e+007";
+      position = "0 0 -3.25438e+007";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";

@@ -14,3 +14,7 @@ Name: Blockdude ip:  Time Exited: 289.142029 bricks placed: 0 Kicked/Banned?: No
 Name: Blockdude ip:  Time Exited: 34.493000 bricks placed: 0 Kicked/Banned?: No
 >>EXIT<<
 Name: Blockdude ip:  Time Exited: 58.390003 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 15.131001 bricks placed: 0 Kicked/Banned?: No
+>>EXIT<<
+Name: Blockdude ip:  Time Exited: 255.063019 bricks placed: 0 Kicked/Banned?: No

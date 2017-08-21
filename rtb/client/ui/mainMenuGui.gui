@@ -4,11 +4,11 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
    horizSizing = "width";
    vertSizing = "height";
    position = "0 0";
-   extent = "640 480";
+   extent = "1024 768";
    minExtent = "8 8";
    visible = "1";
    helpTag = "0";
-   bitmap = "./background.jpg";
+   bitmap = "~/client/ui2/background.jpg";
    useVariable = "0";
    tile = "0";
 
@@ -16,13 +16,13 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 197";
-      extent = "97 20";
+      position = "5 5";
+      extent = "187 25";
       minExtent = "8 8";
       visible = "1";
       command = "Canvas.setContent(startMissionGui);";
       helpTag = "0";
-      text = "Start Server...";
+      text = "START SERVER";
       groupNum = "-1";
       buttonType = "PushButton";
    };
@@ -30,8 +30,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 223";
-      extent = "97 20";
+      position = "5 35";
+      extent = "187 26";
       minExtent = "8 8";
       visible = "1";
       command = "Canvas.setContent(JoinServerGui);";
@@ -44,7 +44,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 353";
+      position = "108 535";
       extent = "97 20";
       minExtent = "8 8";
       visible = "1";
@@ -58,7 +58,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 249";
+      position = "9 535";
       extent = "97 20";
       minExtent = "8 2";
       visible = "1";
@@ -72,7 +72,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "left";
       vertSizing = "top";
-      position = "490 440";
+      position = "874 728";
       extent = "140 30";
       minExtent = "8 2";
       visible = "1";
@@ -86,8 +86,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 275";
-      extent = "97 20";
+      position = "8 557";
+      extent = "196 20";
       minExtent = "8 8";
       visible = "1";
       command = "Canvas.pushDialog(optionsDlg);";
@@ -100,8 +100,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 301";
-      extent = "97 20";
+      position = "8 580";
+      extent = "197 20";
       minExtent = "8 8";
       visible = "1";
       command = "Canvas.pushDialog(recordingsDlg);";
@@ -114,8 +114,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 327";
-      extent = "97 20";
+      position = "161 625";
+      extent = "136 20";
       minExtent = "8 8";
       visible = "1";
       command = "Canvas.pushDialog(aboutDlg);";
@@ -128,8 +128,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 379";
-      extent = "97 20";
+      position = "8 605";
+      extent = "43 157";
       minExtent = "8 8";
       visible = "1";
       command = "quit();";
@@ -142,8 +142,8 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "8 446";
-      extent = "97 20";
+      position = "52 605";
+      extent = "47 156";
       minExtent = "8 8";
       visible = "1";
       command = "canvas.pushDialog(guilobby);";
