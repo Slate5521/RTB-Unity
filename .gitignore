@@ -19,3 +19,4 @@ rtb/server/ServerLog.txt
 rtb/server/ChatLog.txt
 rtb/logs/Chatlog.txt
 rtb/server/SystemServerLog.txt
+*.dropbox
