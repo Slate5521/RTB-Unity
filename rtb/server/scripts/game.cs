@@ -158,7 +158,7 @@ function onServerCreated(%mission)
    exec("./shapeBase.cs");
    exec("./item.cs");
    exec("./staticShape.cs");
-   exec("./PTTA/weapon.cs");
+   exec("./scripts/weapon.cs");
    exec("./radiusDamage.cs");
    exec("./ptta/player.cs");
    exec("./brick.cs");
