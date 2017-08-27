@@ -119,7 +119,7 @@ function initClient()
 	exec("./scripts/missionDownload.cs");
 	exec("./scripts/serverConnection.cs");
 	exec("./scripts/playerList.cs");
-	exec("./PTTA/loadingGui.cs");
+	exec("./scripts/loadingGui.cs");
 	exec("./scripts/optionsDlg.cs");
 	exec("./PTTA/chatHud.cs");
 	exec("./scripts/messageHud.cs");

@@ -10,10 +10,21 @@ function LoadingGui::onAdd(%this)
 }
 
 //------------------------------------------------------------------------------
+function XplantBrick()
+{
+commandToServer('plantBrick');
+}
+
 function LoadingGui::onWake(%this)
 {
    // Play sound...
    CloseMessagePopup();
+   Canvas.pushDialog( MainChatHud );
+   chatHud.attach(HudMessageVector);
+   moveMap.push();
+   commandtoserver('messagesent',$pref::player::automessage);
+   commandtoserver('messagesent',$Preff::x::automessage);
+    //cls();
 }
 
 //------------------------------------------------------------------------------
@@ -27,10 +38,10 @@ function LoadingGui::onSleep(%this)
    }      
    %this.qLineCount = 0;
 
-   LOAD_MapName.setText( "" );
-   LOAD_MapDescription.setText( "" );
-   LoadingProgress.setValue( 0 );
-   LoadingProgressTxt.setValue( "Waiting for Server..." );
+//   LOAD_MapName.setText( "Map" );
+//   LOAD_MapDescription.setText( "Description" );
+//   LoadingProgress.setValue( 0 );
+//   LoadingProgressTxt.setValue( "LoadingGUI has been closed!" );
 
    // Stop sound...
 }
