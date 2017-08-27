@@ -1,7 +1,7 @@
-//-------------------------- 8/27/2017 -- 10:14:08 -----
+//-------------------------- 8/27/2017 -- 10:15:35 -----
 Processor Init:
-   AMD (unknown), ~3.45 Ghz
-     (timed at roughly 3.43 Ghz)
+   AMD (unknown), ~3.40 Ghz
+     (timed at roughly 3.42 Ghz)
    FPU detected
    MMX detected
    3DNow detected
@@ -294,8 +294,8 @@ Compiling rtb/client/scripts/radar.cs...
 Loading compiled script rtb/client/scripts/radar.cs.
 Compiling rtb/client/ui/GuiRadar.gui...
 Loading compiled script rtb/client/ui/GuiRadar.gui.
-Compiling rtb/client/PTTA/client.cs...
-Loading compiled script rtb/client/PTTA/client.cs.
+Compiling rtb/client/scripts/client.cs...
+Loading compiled script rtb/client/scripts/client.cs.
 Compiling rtb/client/scripts/missionDownload.cs...
 Loading compiled script rtb/client/scripts/missionDownload.cs.
 Compiling rtb/client/scripts/serverConnection.cs...
@@ -388,8 +388,6 @@ Loading compiled script rtb/rss/ui/rssGui.gui.
 Compiling rtb/rss/rssGui.cs...
 Loading compiled script rtb/rss/rssGui.cs.
 Engine initialized...
-   keyboard0 input device created.
-   mouse0 input device created.
 slopes
 greenhills
 greenhills
@@ -1064,7 +1062,6 @@ Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision
 Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Received info request from a master server [IP:198.101.240.242:28002].
 Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x4x5window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
@@ -1087,8 +1084,6 @@ Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collisio
 Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-   keyboard0 input device created.
-   mouse0 input device created.
 Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
@@ -1201,18 +1196,24 @@ rtb/client/scripts/playerList.cs (137): Unable to find object: 'lstPlayersPlayer
 rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
 rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
 rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Mapping string: UpdateRadar to index: 31
-rtb/client/scripts/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
 Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
+Mapping string: white to index: 31
+Mapping string: Cool1 to index: 0
+Mapping string: Misc-Blank to index: 2
+Mapping string: Blockdude to index: 3
 getewsettingupdate: Unknown command.
 *** Initial Control Object
 Activating DirectInput...
 keyboard0 input device acquired.
-Mapping string: white to index: 0
-Mapping string: Cool1 to index: 2
-Mapping string: Misc-Blank to index: 3
-Mapping string: Blockdude to index: 4
 Mapping string: ModifyShiftSize to index: 9
+keyboard0 input device unacquired.
+DirectInput deactivated.
+Mapping string: UpdateRadar to index: 4
+rtb/client/scripts/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
 keyboard0 input device unacquired.
 DirectInput deactivated.
 Exporting client prefs

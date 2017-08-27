@@ -29,14 +29,50 @@ function register()
 function applybFX()
 {
 	%selectedFX = $Pref::FX::Selection;
-	if(%selectedFX $= "")
+	if($Pref::FX::Selection $= 1)
 	{
-		return;
+		commandtoserver('DeleteBrickFX1',%selectedFX);
+		commandtoserver('applyBrickFX1',%selectedFX);
 	}
 	else
 	{
-		commandtoserver('applyBrickFX',%selectedFX);
+	if($Pref::FX::Selection $= 2)
+	{
+		commandtoserver('DeleteBrickFX2',%selectedFX);
+		commandtoserver('applyBrickFX2',%selectedFX);
 	}
+	else
+	{
+	if($Pref::FX::Selection $= 5)
+	{
+		commandtoserver('DeleteBrickFX5',%selectedFX);
+		commandtoserver('applyBrickFX5',%selectedFX);
+	}
+          }
+     }
+}
+
+function removeFX()
+{
+	%selectedFX = $Pref::FX::Selection;
+	if($Pref::FX::Selection $= 1)
+	{
+		commandtoserver('DeleteBrickFX1',%selectedFX);
+	}
+	else
+	{
+	if($Pref::FX::Selection $= 2)
+	{
+		commandtoserver('DeleteBrickFX2',%selectedFX);
+	}
+	else
+	{
+	if($Pref::FX::Selection $= 5)
+	{
+		commandtoserver('DeleteBrickFX5',%selectedFX);
+	}
+          }
+     }
 }
 
 function applyRating()

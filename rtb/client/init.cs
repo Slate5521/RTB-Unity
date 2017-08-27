@@ -115,7 +115,7 @@ function initClient()
 
 	// Client scripts
 	exec("./scripts/radar.cs");
-	exec("./PTTA/client.cs");
+	exec("./scripts/client.cs");
 	exec("./scripts/missionDownload.cs");
 	exec("./scripts/serverConnection.cs");
 	exec("./scripts/playerList.cs");
