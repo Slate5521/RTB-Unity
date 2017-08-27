@@ -28,17 +28,21 @@ function onMissionDownloadPhase1(%missionName, %musicTrack)
 
    // Reset the loading progress controls:
    LoadingProgress.setValue(0);
-   LoadingProgressTxt.setValue("Loading Datablocks...");
+   DownloadProgress.setValue(0);
+   LoadingProgressTxt.setValue("Recieved Server Loading Information!");
+   DownloadProgressTxt.setValue("No Download in Progress.");
 }
 
 function onPhase1Progress(%progress)
 {
    LoadingProgress.setValue(%progress);
    Canvas.repaint();
+   LoadingProgressTxt.setValue("Loading Bricks:" @ mFloor(%progress*100) @"%");
 }
 
 function onPhase1Complete()
 {
+   LoadingProgressTxt.setValue("Done Loading Bricks!");
 }
 
 //----------------------------------------------------------------------------
@@ -49,24 +53,36 @@ function onMissionDownloadPhase2()
 {
    // Reset the loading progress controls:
    LoadingProgress.setValue(0);
-   LoadingProgressTxt.setValue("Loading Objects...");
+   LoadingProgressTxt.setValue("Done Loading Bricks!");
    Canvas.repaint();
 }
 
 function onPhase2Progress(%progress)
 {
    LoadingProgress.setValue(%progress);
+   LoadingProgressTxt.setValue("Loading Ghosts:" @ mFloor(%progress*100) @"%");
    Canvas.repaint();
 }
 
 function onPhase2Complete()
 {
+   LoadingProgressTxt.setValue("Done Loading Ghosts!");
 }   
 
 function onFileChunkReceived(%fileName, %ofs, %size)
 {
-   LoadingProgress.setValue(%ofs / %size);
-   LoadingProgressTxt.setValue("Downloading " @ %fileName @ "...");
+   DownloadProgress.setValue(%ofs / %size);
+   %progress = (%ofs / %size);
+   %fileName2 = strreplace(%fileName,"rtb/data/","");
+   DownloadProgressTxt.setValue("Downloading " @ %fileName2 SPC mFloor(%progress*100) @"%");
+   if ( %fileName $=  "*.ter" ) 
+   {
+   MessageBoxOK( "NOTICE", "You are downloading a terrain file!  This may take a while...");
+   }
+   if( %ofs == %size)
+   {
+	DownloadProgressTxt.setValue("Downloads Completed.");
+   }
 }
 
 //----------------------------------------------------------------------------
@@ -76,19 +92,23 @@ function onFileChunkReceived(%fileName, %ofs, %size)
 function onMissionDownloadPhase3()
 {
    LoadingProgress.setValue(0);
-   LoadingProgressTxt.setValue("Lighting Mission...");
+   LoadingProgressTxt.setValue("Done Loading Ghosts!");
    Canvas.repaint();
 }
 
 function onPhase3Progress(%progress)
 {
    LoadingProgress.setValue(%progress);
+   LoadingProgressTxt.setValue("Lighting Mission:" @ mFloor(%progress*100) @"%");
 }
 
 function onPhase3Complete()
 {
    LoadingProgress.setValue( 1 );
+   LoadingProgressTxt.setValue("Waiting for Server...");
    $lightingMission = false;
+commandtoserver('rotcompatibility');
+schedule(100,0,"getewsettingupdate"); 
 }
 
 //----------------------------------------------------------------------------
@@ -97,8 +117,12 @@ function onPhase3Complete()
 
 function onMissionDownloadComplete()
 {
-   // Client will shortly be dropped into the game, so this is
-   // good place for any last minute gui cleanup.
+   LoadingProgress.setValue( 1 );
+   LoadingProgressTxt.setValue("Waiting for Server...");
+   commandToServer('messageSent',$Preff::x::Spawnmsg);
+   //Set status to that in preference
+   %status = $Pref::player::Status;
+   commandtoserver('setstatus',%status);
 }
 
 
@@ -126,12 +150,27 @@ function handleLoadInfoMessage( %msgType, %msgString, %mapName ) {
 	LoadingGui.qLineCount = 0;
 
    //
+	if(%mapName $="The Green Grass Land(RTB)")
+	  %mapname = "The Green Grass Land";
+
 	LOAD_MapName.setText( %mapName );
 
 	if(%mapName $= "Green Hills")
 	  %mapname = "greenhills";
 	if(%mapName $= "The Slopes")
 	  %mapname = "slopes";
+	if(%mapName $= "Celestial Dreams")
+	  %mapname = "celestialdreams";
+	if(%mapName $= "Death Valley")
+	  %mapname = "deathvalley";
+	if(%mapName $= "Lavapit Update")
+	  %mapname = "lavapit2";
+	if(%mapName $= "Pigs Backyard")
+	  %mapname = "pigbackyard";
+	if(%mapName $= "RTB Isles")
+	  %mapname = "rtbisle";
+	if(%mapName $= "The Islands")
+	  %mapname = "theislands";
 	loadingbitmap.setBitmap("rtb/data/missions/previews/"@%mapName@".png");
 }
 
@@ -141,6 +180,20 @@ function handleLoadBitmap( %msgType, %msgString, %mapName ) {
 	  %mapname = "greenhills";
 	if(%mapName $= "The Slopes")
 	  %mapname = "slopes";
+	if(%mapName $= "Celestial Dreams")
+	  %mapname = "celestialdreams";
+	if(%mapName $= "Death Valley")
+	  %mapname = "deathvalley";
+	if(%mapName $= "Lavapit Update")
+	  %mapname = "lavapit2";
+	if(%mapName $= "Pigs Backyard")
+	  %mapname = "pigbackyard";
+	if(%mapName $= "RTB Isles")
+	  %mapname = "rtbisle";
+	if(%mapName $= "The Islands")
+	  %mapname = "theislands";
+	if(%mapName $="The Green Grass Land(RTB)")
+	  %mapname = "The Green Grass Land";
 	loadingbitmap.setBitmap("rtb/data/missions/previews/"@%mapName@".png");
 }
 
