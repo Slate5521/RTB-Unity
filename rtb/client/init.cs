@@ -63,7 +63,7 @@ function initClient()
 
 	// Load up the Game GUIs
 	exec("./ui/defaultGameProfiles.cs");
-	exec("./ui/PlayGui2.gui");
+	exec("./ui/PlayGui.gui");
 	exec("./ui/ChatHud.gui");
 	exec("./ui/playerList.gui");
 
@@ -114,10 +114,10 @@ function initClient()
 	exec("./ui/tgelobby/execall.cs");
 
 	// Client scripts
-	exec("./PTTA/radar.cs");
+	exec("./scripts/radar.cs");
 	exec("./PTTA/client.cs");
 	exec("./PTTA/missionDownload.cs");
-	//exec("./scripts/serverConnection.cs");
+	exec("./scripts/serverConnection.cs");
 	//exec("./scripts/playerList.cs");
 	exec("./PTTA/loadingGui.cs");
 	exec("./PTTA/optionsDlg.cs");

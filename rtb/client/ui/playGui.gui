@@ -16,8 +16,8 @@ new GameTSCtrl(PlayGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "relative";
       vertSizing = "relative";
-      position = "0 0";
-      extent = "640 435";
+      position = "0 6";
+      extent = "640 480";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -119,20 +119,20 @@ new GameTSCtrl(PlayGui) {
       profile = "GuiDefaultProfile";
       horizSizing = "right";
       vertSizing = "top";
-      position = "3 355";
+      position = "3 359";
       extent = "80 60";
       minExtent = "8 8";
       visible = "1";
       helpTag = "0";
-      bitmap = "~/data/shapes/bricks/Previews/Plate1x1.png";
+      bitmap = "./hudfill.png";
       wrap = "0";
    };
    new GuiControl(InventoryControl) {
       profile = "GuiDefaultProfile";
       horizSizing = "center";
       vertSizing = "top";
-      position = "-189 417";
-      extent = "1018 90";
+      position = "66 358";
+      extent = "508 119";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -141,7 +141,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "0 2";
+         position = "0 1";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -178,12 +178,12 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "102 2";
+         position = "102 1";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
-         bitmap = "./GUIBrickSideHilight.png";
+         bitmap = "./GUIbrickSide.png";
          wrap = "1";
 
          new GuiTextCtrl(TxtInvSlot2) {
@@ -215,7 +215,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "204 2";
+         position = "204 1";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -252,7 +252,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "306 2";
+         position = "306 1";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -289,7 +289,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "408 2";
+         position = "408 1";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -326,7 +326,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "510 2";
+         position = "0 31";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -363,7 +363,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "612 2";
+         position = "102 31";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -400,7 +400,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "714 2";
+         position = "204 31";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -437,7 +437,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "816 2";
+         position = "306 31";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -474,7 +474,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "right";
          vertSizing = "top";
-         position = "918 2";
+         position = "408 31";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -511,7 +511,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "0 32";
+         position = "0 61";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -548,7 +548,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "102 32";
+         position = "102 61";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -585,7 +585,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "204 32";
+         position = "204 61";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -622,7 +622,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "306 32";
+         position = "306 61";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -659,7 +659,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "408 32";
+         position = "408 61";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -696,7 +696,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "510 32";
+         position = "0 91";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -733,7 +733,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "612 32";
+         position = "102 91";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -770,7 +770,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "714 32";
+         position = "204 91";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -807,7 +807,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "816 32";
+         position = "306 91";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";
@@ -844,7 +844,7 @@ new GameTSCtrl(PlayGui) {
          profile = "GuiDefaultProfile";
          horizSizing = "left";
          vertSizing = "top";
-         position = "918 32";
+         position = "408 91";
          extent = "100 28";
          minExtent = "8 2";
          visible = "1";

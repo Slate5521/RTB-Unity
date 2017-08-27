@@ -144,6 +144,9 @@ function disconnect()
       ServerConnection.delete();
    disconnectedCleanup();
 
+//Update xpreffs
+xupdateprefs();
+
    // Call destroyServer in case we're hosting
    destroyServer();
 }
@@ -163,6 +166,13 @@ function disconnectedCleanup()
    PlayerListGui.clear();
 
    //badspot: clear admin player list
+   lstPttaPlayerList.clear();
+   lstBACPlayerList.clear();
+
+//Xmenu stuff
+   lstxmenuPlayerList.clear();
+
+//Normal crap
    lstAdminPlayerList.clear();
    lstTeamPlayerList.clear();
    lstPlayersPlayerList.clear();
