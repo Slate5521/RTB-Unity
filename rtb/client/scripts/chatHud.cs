@@ -2,7 +2,36 @@
 // Torque Game Engine 
 // Copyright (C) GarageGames.com, Inc.
 //-----------------------------------------------------------------------------
+//Word Filter stuff.  Its a GG resource
+function cleanString(%string)
+{
+   for(%j=0; %j<256; %j++)
+   {
+   for(%i=0; %i<$numBannedWords; %i++)
+   {
+   if(getword(%string,%j) $= $bannedWords[%i])
+	return false;
+   }
+   }
+   return true;
+}
+function readBannedWords(%bannedWordFile)
+{
+	%file = new FileObject();
+	%file.openForRead(%bannedwordFile);
 
+   %i = 0;
+   while( !%file.isEOF() )
+   {
+      %line = %file.readLine();
+    if(%line !$= "") {
+    $bannedWords[%i] = %line;
+      %i++;
+      }}
+      $numBannedWords = %i;
+   %file.close();
+}
+readBannedWords("rtb/bannedWords.txt");
 //-----------------------------------------------------------------------------
 // Message Hud
 //-----------------------------------------------------------------------------
@@ -74,28 +103,129 @@ $LastHudTarget = 0;
 
 
 //-----------------------------------------------------------------------------
-function onChatMessage(%message, %voice, %pitch)
+//function onChatMessage(%message, %voice, %pitch)
+//{
+//   // XXX Client objects on the server must have voiceTag and voicePitch
+//   // fields for values to be passed in for %voice and %pitch... in
+//   // this example mod, they don't have those fields.
+
+//   // Clients are not allowed to trigger general game sounds with their
+//   // chat messages... a voice directory MUST be specified.
+//   if (%voice $= "") {
+//      %voice = "default";
+//   }
+
+//   // See if there's a sound at the end of the message, and play it.
+//   if ((%wavStart = playMessageSound(%message, %voice, %pitch)) != -1) {
+//      // Remove the sound marker from the end of the message.
+//      %message = getSubStr(%message, 0, %wavStart);
+//   }
+
+//   // Chat goes to the chat HUD.
+//   if (getWordCount(%message)) {
+//   if(cleanString(%text))
+//      ChatHud.addLine(%message);
+//   }
+//}
+
+function onChatMessage(%message)
 {
-   // XXX Client objects on the server must have voiceTag and voicePitch
-   // fields for values to be passed in for %voice and %pitch... in
-   // this example mod, they don't have those fields.
+//After 8 seconds, clear the vars that stop abuse of auto response
+schedule(8000,0,clearspam);
 
-   // Clients are not allowed to trigger general game sounds with their
-   // chat messages... a voice directory MUST be specified.
-   if (%voice $= "") {
-      %voice = "default";
-   }
+//Record chat
+	if($preff::x::recordchat)
+	{
+		%recchat = new FileObject();
+		%recchat.openForAppend("rtb/logs/Chatlog.txt");
+		%recchat.writeLine(%message);
+		%recchat.close();
+	}
+chatHud.addLine(%message);
+%m = stripMLControlChars(%message);
+%isLocal = ( (strStr(%m,":") > strStr(%m,",") && strStr(%m,":") >= 0 && strStr(%m,",") >= 0) || strStr(%m,":") <= 0 );
+	if(%isLocal)
+	{
+		%name = getSubStr(%m, 0, strStr(%m, " says, \""));
+		%msg = getSubStr(%m, strStr(%m,"\"") + 1, strLen(%m) - 16);
+		if( getSubStr(%msg, strLen(%msg) - 1, 1) $= "\"")
+			%msg = getSubStr(%msg, 0, strLen(%msg) - 1);
+	}
+	else
+	{
+		%name=getSubStr(%m, 0, strStr(%m,":"));
+		%msg=getSubStr(%m, strStr(%m,":") + 2, strLen(%m) - 1);
+	}
+//Write chat to console as an error - so you can see what people say when you script xD
+	error(%m);
+	%greet = getsubstr(%msg,0,10);
 
-   // See if there's a sound at the end of the message, and play it.
-   if ((%wavStart = playMessageSound(%message, %voice, %pitch)) != -1) {
-      // Remove the sound marker from the end of the message.
-      %message = getSubStr(%message, 0, %wavStart);
-   }
+//$text2 is so it will work for chat colors - quick fix :P
+$text2 = getSubStr(%msg, 1, strlen(%msg)-0);
 
-   // Chat goes to the chat HUD.
-   if (getWordCount(%message)) {
-      ChatHud.addLine(%message);
-   }
+//Stop people abusing it - check entered message and name against stored values below
+if (%msg !$= $msg && %name !$=$name)
+{
+
+//Reply only if name is not equal to own, the person is not AFK and if they have auto response on.
+if(%name !$= $pref::Player::Name && !$Preff::x::AFK && $Preff::x::RESP)
+{
+
+//Store message and name for abuse provention
+$msg = %msg;
+$name = %name;
+
+if(%msg $= $pref::Player::Name || $text2 $=$pref::Player::Name)
+{
+commandtoserver('messagesent', "Yes, " @ %name @ "? How can I help you?");
+}
+
+if(%msg $= "noob" || $text2 $="noob")
+{
+commandtoserver('messagesent', "/me smells a noob in the server.");
+}
+
+if(%msg $= "beer" || $text2 $="beer")
+{
+commandtoserver('messagesent', "/me gets drunk and throws up everywhere");
+}
+
+if(%msg $= "dance" || $text2 $="dance")
+{
+commandtoserver('messagesent', "EVERYBODY DANCE NOW!! *Music Plays*");
+commandtoserver('messagesent', "/me dances on the nearest pole");
+}
+
+if(%msg $= "party" || $text2 $="party")
+{
+commandtoserver('messagesent', "PARTY!! - Bring some BEER!!");
+commandtoserver('messagesent', "/me throws a party");
+}
+
+if(%msg $= "help" || $text2 $="help")
+{
+commandtoserver('messagesent', "Hah, " @ %name @ " needs mental help.");
+}
+
+if(%msg $= "afk" || $text2 $="afk")
+{
+commandtoserver('messagesent', %name @ "!! Why are you doing that to helpless kittens??");
+}
+
+if(%msg $= "Xmenu?" || $text2 $="XMenu?")
+{
+commandtoserver('messagesent', %name @ ", I am currently running Xmenu " @ $Preff::x::Version @ " - Get it at www.mrx-rtb.co.nr");
+}
+
+}
+
+}
+//Else return
+else
+{
+return;
+}
+
 }
 
 function onServerMessage(%message)

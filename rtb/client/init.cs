@@ -121,7 +121,7 @@ function initClient()
 	exec("./scripts/playerList.cs");
 	exec("./scripts/loadingGui.cs");
 	exec("./scripts/optionsDlg.cs");
-	exec("./PTTA/chatHud.cs");
+	exec("./scripts/chatHud.cs");
 	exec("./scripts/messageHud.cs");
 	exec("./scripts/playGui.cs");
 	exec("./scripts/centerPrint.cs");
