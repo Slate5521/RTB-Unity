@@ -1,7 +1,7 @@
-//-------------------------- 8/27/2017 -- 10:01:15 -----
+//-------------------------- 8/27/2017 -- 10:06:58 -----
 Processor Init:
    AMD (unknown), ~3.40 Ghz
-     (timed at roughly 3.42 Ghz)
+     (timed at roughly 3.40 Ghz)
    FPU detected
    MMX detected
    3DNow detected
@@ -304,8 +304,8 @@ Compiling rtb/client/scripts/playerList.cs...
 Loading compiled script rtb/client/scripts/playerList.cs.
 Compiling rtb/client/PTTA/loadingGui.cs...
 Loading compiled script rtb/client/PTTA/loadingGui.cs.
-Compiling rtb/client/PTTA/optionsDlg.cs...
-Loading compiled script rtb/client/PTTA/optionsDlg.cs.
+Compiling rtb/client/scripts/optionsDlg.cs...
+Loading compiled script rtb/client/scripts/optionsDlg.cs.
 Compiling rtb/client/PTTA/chatHud.cs...
 Loading compiled script rtb/client/PTTA/chatHud.cs.
 Compiling rtb/client/PTTA/messageHud.cs...
@@ -316,8 +316,8 @@ Compiling rtb/client/scripts/centerPrint.cs...
 Loading compiled script rtb/client/scripts/centerPrint.cs.
 Compiling rtb/client/scripts/game.cs...
 Loading compiled script rtb/client/scripts/game.cs.
-Compiling rtb/client/PTTA/msgCallbacks.cs...
-Loading compiled script rtb/client/PTTA/msgCallbacks.cs.
+Compiling rtb/client/scripts/msgCallbacks.cs...
+Loading compiled script rtb/client/scripts/msgCallbacks.cs.
 Compiling rtb/client/scripts/startMissionGui.cs...
 Loading compiled script rtb/client/scripts/startMissionGui.cs.
 Compiling rtb/client/scripts/faceprintselect.cs...
@@ -388,6 +388,50 @@ Loading compiled script rtb/rss/ui/rssGui.gui.
 Compiling rtb/rss/rssGui.cs...
 Loading compiled script rtb/rss/rssGui.cs.
 Engine initialized...
+slopes
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+greenhills
+digitaldesigner
+DeepSeas
+deathvalley
+celestialdreams
+bedroom
+rtb/client/scripts/startMissionGui.cs (37): Unable to find object: 'OptSitting' attempting to call function 'setValue'
+rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
+Missing file: rtb/rss/ui/rssguiprofiles.cs!
+Loading compiled script rtb/rss/ui/rssGui.gui.
+Loading compiled script rtb/rss/rssGui.cs.
+   keyboard0 input device created.
+   mouse0 input device created.
+LAN server ping: IP:Broadcast:28005...
+LAN server ping: IPX:FFFFFFFF:FFFFFFFFFFFF:28005...
+No master servers found in this region, trying IP:198.101.240.242:28002.
+Requesting the server list from master server IP:198.101.240.242:28002 (2 tries left)...
+Received server list packet 1 of 1 from the master server (3 servers).
+Pinging Server IP:70.187.71.68:28000 (3)...
+Pinging Server IP:68.96.197.249:28000 (3)...
+Pinging Server IP:185.120.126.182:11358 (3)...
+Pinging Server IP:70.187.71.68:28000 (2)...
+Pinging Server IP:68.96.197.249:28000 (2)...
+Pinging Server IP:70.187.71.68:28000 (1)...
+Pinging Server IP:68.96.197.249:28000 (1)...
+Pinging Server IP:70.187.71.68:28000 (0)...
+Pinging Server IP:68.96.197.249:28000 (0)...
+Ping to server IP:70.187.71.68:28000 timed out.
+Ping to server IP:68.96.197.249:28000 timed out.
+Querying Server IP:185.120.126.182:11358 (3)...
+Server query canceled.
+rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
+Missing file: rtb/rss/ui/rssguiprofiles.cs!
+Loading compiled script rtb/rss/ui/rssGui.gui.
+Loading compiled script rtb/rss/rssGui.cs.
 slopes
 greenhills
 greenhills
@@ -1011,11 +1055,11 @@ Loading compiled script rtb/server/scripts/Radar.cs.
 *** Stage 2 load
 Executing rtb/data/missions/bedroom.mis.
 *** Mission loaded
------------CONN = 2606
-Connect request from: IPX:67020000:040000000000:0
+-----------CONN = 2682
+Connect request from: IPX:20202020:202020206465:25459
 Checking IP Ban Entry Number: 0
-Connection established 2606
-CADD: 2607 local
+Connection established 2682
+CADD: 2683 local
 *** Sending mission load to client: rtb/data/missions/bedroom.mis
 Mapping string: updatePrefs to index: 0
 Mapping string: ServerMessage to index: 1
@@ -1149,12 +1193,13 @@ addthread empty
 Validation required for shape: rtb/data/shapes/bricks/LegoPlane.dts
 addthread empty
 addthread empty
+Could not locate texture: rtb/data/shapes/wary/neonwhite.brickSide
+Could not locate texture: rtb/data/shapes/wary/neonwhite.2x2Bottom
+Received info request from a master server [IP:198.101.240.242:28002].
 Error: shape rtb/data/shapes/bricks/brickWeapon.dts-collision detail 0 (Collision-2) bounds box invalid!
 Could not locate texture: rtb/data/shapes/player/Decals/base.backdecal.png
 Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
 Error: shape rtb/data/shapes/prints/tile2x2round/print2x2round.dts-collision detail 0 (Collision-1) bounds box invalid!
-   keyboard0 input device created.
-   mouse0 input device created.
 Could not locate texture: 
 Could not locate texture: 
 Could not locate texture: 
@@ -1170,6 +1215,7 @@ fxFoliageReplicator - Client Foliage Replication Startup is complete.
 *** Phase 3: Mission Lighting
  Successfully loaded mission lighting file: 'rtb/data/missions/bedroom_3260303f.ml'
 Mission lighting done
+getewsettingupdate: Unknown command.
 Mapping string: rotcompatibility to index: 4
 Mapping string: messageSent to index: 5
 rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
@@ -1197,33 +1243,34 @@ rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayer
 rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
 rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
 Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
+*** Initial Control Object
 Mapping string: white to index: 31
 Mapping string: Cool1 to index: 0
 Mapping string: Misc-Blank to index: 2
 Mapping string: Blockdude to index: 3
-getewsettingupdate: Unknown command.
-*** Initial Control Object
-Activating DirectInput...
-keyboard0 input device acquired.
 Mapping string: UpdateRadar to index: 4
 rtb/client/scripts/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
-Mapping string: suicide to index: 9
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-Mapping string: MsgClientScoreChanged to index: 5
-Mapping string: MsgClientKilled to index: 7
-Mapping string: %1 takes the easy way out... to index: 10
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/server/scripts/Radar.cs (183): Unable to find object: '0' attempting to call function 'getTransform'
-rtb/client/scripts/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-rtb/client/scripts/radar.cs (318): Unable to find object: '2654' attempting to call function 'schedule'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+Mapping string: useInventory to index: 9
 Mapping string: ModifyShiftSize to index: 10
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+Mapping string: isTalking to index: 11
+Mapping string: addToTypingList to index: 5
+keyboard0 input device acquired.
+Blockdude: «= XMenu =» : t :«= 1.0 =»
+Mapping string: stopTalking to index: 12
+Blockdude: «= XMenu =» : t :«= 1.0 =»
+keyboard0 input device unacquired.
+keyboard0 input device acquired.
 keyboard0 input device unacquired.
 DirectInput deactivated.
 Exporting client prefs
@@ -1236,8 +1283,8 @@ rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' att
 rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
 rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
 rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2623' attempting to call function 'delete'
-CDROP: 2607 IPX:67020000:040000000000:0
+rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2698' attempting to call function 'delete'
+CDROP: 2683 IPX:20202020:202020206465:25459
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...

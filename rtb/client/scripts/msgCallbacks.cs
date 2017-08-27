@@ -21,7 +21,7 @@ function setServerRulestxt(%msgType, %string, %rules)
 
 addMessageCallback('MsgUpdateWrenchB', updateWrenchSettingsB);
 
-function updateWrenchSettingsB(%msgType, %string, %IsImpulseTrigger, %returnDelay, %returnToggle, %password, %DoorType, %TriggerDoorID, %NoCollision, %YesNo)
+function updateWrenchSettingsB(%msgType, %string, %IsImpulseTrigger, %returnDelay, %returnToggle, %password, %DoorType, %TriggerDoorID, %NoCollision, %YesNo, %KeyProtected)
 {
 	if(%YesNo $= 1)
 	{
@@ -32,6 +32,7 @@ function updateWrenchSettingsB(%msgType, %string, %IsImpulseTrigger, %returnDela
 		$Pref::Wrench::MTypeS = %DoorType;
 		$Pref::Wrench::DoorSetID = %TriggerDoorID;
 		$Pref::Wrench::NoCollision = %noCollision;
+		$Pref::Wrench::KeyProtected = %KeyProtected;
 	}
 
 	Password.setValue($Pref::Wrench::Password);
@@ -88,6 +89,7 @@ function updateWrenchSettingsB(%msgType, %string, %IsImpulseTrigger, %returnDela
 		optTrigger.setValue(0);
 		optNormal.setValue(1);
 	}
+	KeyProtected.setValue($Pref::Wrench::KeyProtected);
 
 }
 
@@ -196,6 +198,26 @@ function handleItemPickup(%msgType, %pickupString, %slot, %invName)
 			TxtInvSlot9.setValue(%invName);
 		case (10):
 			TxtInvSlot10.setValue(%invName);
+		case (11):
+			TxtInvSlot11.setValue(%invName);
+		case (12):
+			TxtInvSlot12.setValue(%invName);
+		case (13):
+			TxtInvSlot13.setValue(%invName);
+		case (14):
+			TxtInvSlot14.setValue(%invName);
+		case (15):
+			TxtInvSlot15.setValue(%invName);
+		case (16):
+			TxtInvSlot16.setValue(%invName);
+		case (17):
+			TxtInvSlot17.setValue(%invName);
+		case (18):
+			TxtInvSlot18.setValue(%invName);
+		case (19):
+			TxtInvSlot19.setValue(%invName);
+		case (20):
+			TxtInvSlot20.setValue(%invName);
 
 	}
 	alxPlay(ItemPickup);
@@ -239,6 +261,36 @@ function handleDropItem(%msgType, %string, %slot)
 		case (10):
 			TxtInvSlot10.setValue("");
 			Slot10BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (11):
+			TxtInvSlot11.setValue("");
+			Slot1BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (12):
+			TxtInvSlot12.setValue("");
+			Slot2BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (13):
+			TxtInvSlot13.setValue("");
+			Slot3BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (14):
+			TxtInvSlot14.setValue("");
+			Slot4BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (15):
+			TxtInvSlot15.setValue("");
+			Slot5BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (16):
+			TxtInvSlot16.setValue("");
+			Slot6BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (17):
+			TxtInvSlot17.setValue("");
+			Slot7BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (18):
+			TxtInvSlot18.setValue("");
+			Slot8BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (19):
+			TxtInvSlot19.setValue("");
+			Slot9BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (20):
+			TxtInvSlot20.setValue("");
+			Slot10BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 
 
 	}
@@ -262,6 +314,16 @@ function handleClearInv(%msgType)
 	TxtInvSlot8.setValue("");
 	TxtInvSlot9.setValue("");
 	TxtInvSlot10.setValue("");
+	TxtInvSlot11.setValue("");
+	TxtInvSlot12.setValue("");
+	TxtInvSlot13.setValue("");
+	TxtInvSlot14.setValue("");
+	TxtInvSlot15.setValue("");
+	TxtInvSlot16.setValue("");
+	TxtInvSlot17.setValue("");
+	TxtInvSlot18.setValue("");
+	TxtInvSlot19.setValue("");
+	TxtInvSlot20.setValue("");
 
 	Slot1BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 	Slot2BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
@@ -273,6 +335,16 @@ function handleClearInv(%msgType)
 	Slot8BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 	Slot9BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 	Slot10BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot11BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot12BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot13BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot14BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot15BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot16BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot17BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot18BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot19BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+	Slot20BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 
 }
         
@@ -305,6 +377,26 @@ function handleHilightInv(%msgType, %msgString, %slot)
 			Slot9BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 		case (10):
 			Slot10BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (11):
+			Slot11BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (12):
+			Slot12BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (13):
+			Slot13BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (14):
+			Slot14BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (15):
+			Slot15BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (16):
+			Slot16BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (17):
+			Slot17BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (18):
+			Slot18BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (19):
+			Slot19BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (20):
+			Slot20BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 	}
 
 	switch (%slot)
@@ -329,6 +421,26 @@ function handleHilightInv(%msgType, %msgString, %slot)
 			Slot9BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
 		case (10):
 			Slot10BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (11):
+			Slot11BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (12):
+			Slot12BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (13):
+			Slot13BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (14):
+			Slot14BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (15):
+			Slot15BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (16):
+			Slot16BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (17):
+			Slot17BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (18):
+			Slot18BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (19):
+			Slot19BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
+		case (20):
+			Slot20BG.setBitmap("rtb/client/ui/GUIBrickSideHilight.png");
 	}
 
 	//remember which one we have hilighted
@@ -362,6 +474,26 @@ function handleEquipInv(%msgType, %msgString, %slot)
 			Slot9BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
 		case (10):
 			Slot10BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (11):
+			Slot11BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (12):
+			Slot12BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (13):
+			Slot13BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (14):
+			Slot14BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (15):
+			Slot15BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (16):
+			Slot16BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (17):
+			Slot17BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (18):
+			Slot18BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (19):
+			Slot19BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
+		case (20):
+			Slot20BG.setBitmap("rtb/client/ui/GUIBrickSideEquip.png");
 	}
 }
 
@@ -392,5 +524,25 @@ function handleDeEquipInv(%msgType, %msgString, %slot)
 			Slot9BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 		case (10):
 			Slot10BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (11):
+			Slot11BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (12):
+			Slot12BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (13):
+			Slot13BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (14):
+			Slot14BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (15):
+			Slot15BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (16):
+			Slot16BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (17):
+			Slot17BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (18):
+			Slot18BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (19):
+			Slot19BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
+		case (20):
+			Slot20BG.setBitmap("rtb/client/ui/GUIBrickSide.png");
 	}
 }

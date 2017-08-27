@@ -126,7 +126,7 @@ function initClient()
 	exec("./scripts/playGui.cs");
 	exec("./scripts/centerPrint.cs");
 	exec("./scripts/game.cs");
-	exec("./PTTA/msgCallbacks.cs");
+	exec("./scripts/msgCallbacks.cs");
 	exec("./scripts/startMissionGui.cs");
 	exec("./scripts/faceprintselect.cs");
 	exec("./scripts/printselect.cs");
