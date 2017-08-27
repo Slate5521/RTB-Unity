@@ -7,5 +7,3 @@ exec("./pttaGuipersonal.gui");
 exec("./pttaGui.gui");
 exec("./Changemap.gui");
 exec("./pttaGui.cs");
-exec("./playerList.cs");
-exec("./serverConnection.cs");

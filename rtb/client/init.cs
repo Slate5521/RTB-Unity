@@ -118,7 +118,7 @@ function initClient()
 	exec("./PTTA/client.cs");
 	exec("./PTTA/missionDownload.cs");
 	exec("./scripts/serverConnection.cs");
-	//exec("./scripts/playerList.cs");
+	exec("./scripts/playerList.cs");
 	exec("./PTTA/loadingGui.cs");
 	exec("./PTTA/optionsDlg.cs");
 	exec("./PTTA/chatHud.cs");

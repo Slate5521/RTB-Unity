@@ -88,7 +88,7 @@ function handleTeamAdd(%msgType, %msgString, %teamName, %teamID)
 }
 
 function handleClientJoin(%msgType, %msgString, %clientName, %clientId,
-   %guid, %score, %isAI, %isAdmin, %isSuperAdmin )
+   %guid, %score, %isAI, %isAdmin, %isSuperAdmin)
 {
    PlayerListGui.update(%clientId,detag(%clientName),%isSuperAdmin,
       %isAdmin,%isAI,%score);
@@ -103,6 +103,36 @@ function handleClientJoin(%msgType, %msgString, %clientName, %clientId,
 	{
 		lstAdminPlayerList.setRowById(%clientId, %name);
 	}
+
+	if (lstPttaPlayerList.getRowNumById(%clientId) == -1)
+	{
+		lstPttaPlayerList.addRow(%clientId, %name);
+	}
+	else
+	{
+		lstPttaPlayerList.setRowById(%clientId, %name);
+	}
+
+	if (lstBACPlayerList.getRowNumById(%clientId) == -1)
+	{
+		lstBACPlayerList.addRow(%clientId, %name);
+	}
+	else
+	{
+		lstBACPlayerList.setRowById(%clientId, %name);
+	}
+
+//Xmenu stuff
+if (lstxmenuPlayerList.getRowNumById(%clientId) == -1)
+	{
+		lstxmenuPlayerList.addRow(%clientId, %name);
+	}
+	else
+	{
+		lstxmenuPlayerList.setRowById(%clientId, %name);
+	}
+
+//Normal crap
 
 	if (lstPlayersPlayerList.getRowNumById(%clientId) == -1)
 	{
@@ -144,6 +174,13 @@ function handleClientDrop(%msgType, %msgString, %clientName, %clientId)
 {
    PlayerListGui.remove(%clientId);
    lstAdminPlayerList.removeRowByID(%clientId);
+   lstPttaPlayerList.removeRowByID(%clientId);
+   lstBACPlayerList.removeRowByID(%clientId);
+   
+   //Xmenu stuff
+   lstxmenuPlayerList.removeRowByID(%clientId);
+   //Normal crap
+
    lstPlayersPlayerList.removeRowByID(%clientId);
    lstMessagePlayerList.removeRowByID(%clientId);
    lstTeamPlayerList.removeRowByID(%clientId);
