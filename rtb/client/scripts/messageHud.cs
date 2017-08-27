@@ -79,27 +79,65 @@ function MessageHud_Edit::onEscape(%this)
 }
 
 //------------------------------------------------------------------------------
-
 function MessageHud_Edit::eval(%this)
 {
    %text = trim(%this.getValue());
-   if(%text !$= "")
-   {
-      if(MessageHud.isTeamMsg)
-         commandToServer('teamMessageSent', %text);
-      else if(MessageHud.isLocalMsg)
-         commandToServer('localMessageSent', %text);
-      else
-         commandToServer('messageSent', %text);
-   }
 
-   MessageHud.close();
+if(%text !$= "")
+{
+
+if ($Preff::x::XChatRandom)
+{
+xrandomchatcolor();
+}
+else
+{
+xchatcolor();
 }
 
+if($Preff::x::tags)
+{
+%text2 = $Preff::x::tagval1 @ $Pref::player::chatcolor @ %text @ $Preff::x::tagval2;
+}
+else
+{
+%text2 = %text;
+}
+if($Preff::x::XChatReversed)
+{
+xreversed(%text);
+%text2=$xreversed;
+}
+
+     if(MessageHud.isTeamMsg)
+
+         commandToServer('teamMessageSent', %text2);
+         //return;
+else if(MessageHud.isLocalMsg)
+         commandToServer('localMessageSent', %text2);
+         //return;
+else if($Preff::x::tags)
+    if(getSubStr(%text, 0, 1) $= "/" && $Preff::x::commands)
+         slashcommandcheck(%text);
+else
+    commandToServer('messageSent',%text2);
+
+else if($Preff::x::commands)
+         slashcommandcheck(%text);
+
+else if(getSubStr(%text, 0, 1) $= "/") 
+            commandtoserver('MessageSent', %text2); 
+
+else 
+commandtoserver('MessageSent', %text2); 
+
+}
+
+MessageHud.close();
+}
    
 //----------------------------------------------------------------------------
 // MessageHud key handlers
-
 function toggleMessageHud(%make)
 {
    if(%make)

@@ -1,7 +1,7 @@
-//-------------------------- 8/27/2017 -- 10:09:16 -----
+//-------------------------- 8/27/2017 -- 10:12:50 -----
 Processor Init:
-   AMD (unknown), ~3.45 Ghz
-     (timed at roughly 3.44 Ghz)
+   AMD (unknown), ~3.40 Ghz
+     (timed at roughly 3.41 Ghz)
    FPU detected
    MMX detected
    3DNow detected
@@ -308,8 +308,8 @@ Compiling rtb/client/scripts/optionsDlg.cs...
 Loading compiled script rtb/client/scripts/optionsDlg.cs.
 Compiling rtb/client/PTTA/chatHud.cs...
 Loading compiled script rtb/client/PTTA/chatHud.cs.
-Compiling rtb/client/PTTA/messageHud.cs...
-Loading compiled script rtb/client/PTTA/messageHud.cs.
+Compiling rtb/client/scripts/messageHud.cs...
+Loading compiled script rtb/client/scripts/messageHud.cs.
 Compiling rtb/client/scripts/playGui.cs...
 Loading compiled script rtb/client/scripts/playGui.cs.
 Compiling rtb/client/scripts/centerPrint.cs...
@@ -1012,7 +1012,7 @@ Loading compiled script rtb/server/scripts/Radar.cs.
 Executing rtb/data/missions/bedroom.mis.
 *** Mission loaded
 -----------CONN = 2606
-Connect request from: IPX:67020000:040000000000:0
+Connect request from: IPX:20202020:202020206465:25459
 Checking IP Ban Entry Number: 0
 Connection established 2606
 CADD: 2607 local
@@ -1084,6 +1084,14 @@ Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collisio
 Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Mapping string: isTalking to index: 3
+Mapping string: addToTypingList to index: 17
+Mapping string: messageSent to index: 4
+rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
+Blockdude: «= XMenu =» : test :«= 1.0 =»
+Mapping string: stopTalking to index: 5
+Blockdude: «= XMenu =» : test :«= 1.0 =»
 Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
@@ -1142,6 +1150,10 @@ Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision
 Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/legoatv.dts collision detail 0 (Collision-2) bounds exceed that of shape.
 addthread empty
+Mapping string: teamMessageSent to index: 6
+rtb/server/scripts/PTTA/message.cs (617): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/PTTA/message.cs (618): Unable to find object: '' attempting to call function 'schedule'
+(T)Blockdude: «= XMenu =» : this works :«= 1.0 =»
 addthread empty
 Warning: shape rtb/data/shapes/bricks/legobike.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 addthread empty
@@ -1160,580 +1172,56 @@ Could not locate texture:
 Could not locate texture: 
 Could not locate texture: 
 Could not locate texture: 
-Mapping string: MissionStartPhase2 to index: 17
+Mapping string: MissionStartPhase2 to index: 18
 *** Phase 2: Download Ghost Objects
-Mapping string: MissionStartPhase2Ack to index: 3
+Mapping string: MissionStartPhase2Ack to index: 7
 Ghost Always objects received.
-Mapping string: MissionStartPhase3 to index: 18
+Mapping string: MissionStartPhase3 to index: 19
 Client Replication Startup has Happened!
 fxFoliageReplicator - Client Foliage Replication Startup is complete.
 *** Phase 3: Mission Lighting
  Successfully loaded mission lighting file: 'rtb/data/missions/bedroom_3260303f.ml'
 Mission lighting done
-Mapping string: rotcompatibility to index: 4
-Mapping string: messageSent to index: 5
+Mapping string: rotcompatibility to index: 8
 rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
 rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
 Blockdude: /me is going to spawn in your server
-Mapping string: setstatus to index: 6
+Mapping string: setstatus to index: 9
 rtb/server/scripts/PTTA/serverCmd.cs (2798): Unable to find object: '' attempting to call function 'setShapeName'
-Mapping string: MissionStartPhase3Ack to index: 7
+Mapping string: MissionStartPhase3Ack to index: 10
 Set::getObject index out of range.
-Mapping string: rotiscompatible to index: 19
-Mapping string: name to index: 20
-Mapping string: *%1 %2 to index: 21
-Mapping string: MissionStart to index: 22
-Mapping string: SyncClock to index: 23
-Mapping string: MsgUpdateMoney to index: 24
-Mapping string: updateprefs to index: 25
-Mapping string: MsgClearInv to index: 26
-Mapping string: MsgHilightInv to index: 27
-Mapping string: MsgItemPickup to index: 28
-Mapping string: showBrickImage to index: 29
-Mapping string: storeCash to index: 8
-Mapping string: ShowBrickImage to index: 30
-rtb/client/scripts/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-getewsettingupdate: Unknown command.
-*** Initial Control Object
-Activating DirectInput...
-keyboard0 input device acquired.
-Mapping string: white to index: 31
-Mapping string: Cool1 to index: 0
-Mapping string: Misc-Blank to index: 2
-Mapping string: Blockdude to index: 3
-rtb/client/scripts/serverConnection.cs (177): Unable to find object: 'lstTeamPlayerList' attempting to call function 'clear'
-rtb/client/scripts/serverConnection.cs (178): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'clear'
-rtb/client/scripts/serverConnection.cs (180): Unable to find object: 'lstTeamList' attempting to call function 'clear'
-rtb/client/PTTA/adminGui.cs (181): Unable to find function getLatestVers
-Missing file: rtb/rss/ui/rssguiprofiles.cs!
-Loading compiled script rtb/rss/ui/rssGui.gui.
-Loading compiled script rtb/rss/rssGui.cs.
-XMenu Preferences Updated
-*** ENDING MISSION
-rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
-rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
-rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2622' attempting to call function 'delete'
-CDROP: 2607 IPX:67020000:040000000000:0
-Exporting server prefs...
-keyboard0 input device unacquired.
-DirectInput deactivated.
-Set::getObject index out of range.
-   keyboard0 input device created.
-   mouse0 input device created.
-Activating DirectInput...
-keyboard0 input device acquired.
-Set::getObject index out of range.
-LAN server ping: IP:Broadcast:28005...
-LAN server ping: IPX:FFFFFFFF:FFFFFFFFFFFF:28005...
-No master servers found in this region, trying IP:198.101.240.242:28002.
-Requesting the server list from master server IP:198.101.240.242:28002 (2 tries left)...
-Received server list packet 1 of 1 from the master server (3 servers).
-Pinging Server IP:70.187.71.68:28000 (3)...
-Pinging Server IP:68.96.197.249:28000 (3)...
-Pinging Server IP:185.120.126.182:11358 (3)...
-Set::getObject index out of range.
-Pinging Server IP:70.187.71.68:28000 (2)...
-Pinging Server IP:68.96.197.249:28000 (2)...
-Server query canceled.
-Set::getObject index out of range.
-rtb/client/ui/joinServerGui.gui (97): Unable to find function defapp2
-Adding a pending connection
-Sending Connect challenge Request
-Set::getObject index out of range.
-Got Connect challenge Response
-Sending Connect Request
-Connection established 2666
-Mapping string: updatePrefs to index: 0
-Mapping string: ServerMessage to index: 1
-Mapping string: MsgConnectionError to index: 2
-Mapping string: MsgLoadInfo to index: 3
-Could not locate texture: rtb/data/missions/previews/.png
-Mapping string: MsgLoadInfoDone to index: 4
-Mapping string: MsgClientJoin to index: 5
-Mapping string: Connected to Server, %1. to index: 6
-Mapping string: Blockdude to index: 7
-rtb/client/scripts/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Mapping string:  to index: 8
-Mapping string: Admins on this server:  to index: 9
-Mapping string: No Super Admins present. to index: 10
-Mapping string: XAdmins on this server:  to index: 11
-Mapping string: No XAdmins present. to index: 12
-Mapping string: MissionStartPhase1 to index: 13
-*** New Mission: RTB/data/missions/bluesky.mis
-*** Phase 1: Download Datablocks & Targets
-Mapping string: Thanks for coming back to this server! you've been here %1 times before! to index: 14
-rtb/client/scripts/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
-rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
-rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Mapping string: ChatMessage to index: 15
-Mapping string: %1: %2 to index: 16
-Blockdude: 
-Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
-Set::getObject index out of range.
-Sending request for file rtb/data/sound/takeme.wav
-Set::getObject index out of range.
-Could not locate texture: 
-Set::getObject index out of range.
-Saving file rtb/data/sound/takeme.wav.
-... Shape with old version.
-Warning: shape rtb/data/shapes/bricks/brick2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x4x5window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x4x5window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x2.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x8.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x8.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x10.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate1x10.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate2x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/plate6x12.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/tile2x2round.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Sending request for file rtb/data/sound/stickDraw.wav
-Sending request for file rtb/data/sound/stickHit.wav
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
-Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
-Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Set::getObject index out of range.
-Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x1x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x1x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-keyboard0 input device unacquired.
-DirectInput deactivated.
-Warning: shape rtb/data/shapes/bricks/brick2x2x2slopeQC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x2slopeQC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x3slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x3slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeDC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeDC.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x5Lattice.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick2x2x5Lattice.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Set::getObject index out of range.
-Warning: shape rtb/data/shapes/bricks/brickbar1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickbar1.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickcub.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickcub.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickdoor.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickfauset.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickfauset.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickfence.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brickfence.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/rearwing.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/rearwing.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick8x8fgrill.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick8x8fgrill.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Set::getObject index out of range.
-Warning: shape rtb/data/shapes/bricks/roadcurve.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/roadcurve.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/roaddeadend.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/roaddeadend.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/roadstraight.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/roadstraight.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/roadstraightxw.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/roadstraightxw.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Set::getObject index out of range.
-Warning: shape rtb/data/shapes/bricks/RoadT.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/RoadT.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/dynamitebrick.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/dynamitebrick.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape rtb/data/shapes/bricks/brick1x6.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Sending request for file rtb/data/sound/vehicles/legoatv/engine_idle.wav
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Saving file rtb/data/sound/vehicles/legoatv/engine_idle.wav.
-Warning: shape rtb/data/shapes/bricks/legoatv.dts collision detail 0 (Collision-2) bounds exceed that of shape.
-addthread empty
-Sending request for file rtb/data/sound/vehicles/legobase/engine_idle.wav
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Saving file rtb/data/sound/vehicles/legobase/engine_idle.wav.
-addthread empty
-Sending request for file rtb/data/sound/vehicles/buggy/engine_idle.wav
-Warning: shape rtb/data/shapes/bricks/legobike.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-addthread empty
-Sending request for file rtb/data/sound/vehicles/legohorse/engine_idle.wav
-Set::getObject index out of range.
-addthread empty
-Validation required for shape: rtb/data/shapes/bricks/LegoPlane.dts
-addthread empty
-addthread empty
-Could not locate texture: rtb/data/shapes/wary/neonwhite.brickSide
-Could not locate texture: rtb/data/shapes/wary/neonwhite.2x2Bottom
-Sending request for file rtb/data/shapes/wary/aidpack
-Sending request for file rtb/data/shapes/wary/aidpack.jpg
-Sending request for file rtb/data/shapes/wary/neonwhite.brickSide
-Sending request for file rtb/data/shapes/wary/neonwhite.brickSide.jpg
-Sending request for file rtb/data/shapes/wary/neonwhite.brickSide.png
-Sending request for file rtb/data/shapes/wary/neonwhite.brickSide.gif
-Sending request for file rtb/data/shapes/wary/neonwhite.brickSide.bmp
-Sending request for file rtb/data/shapes/neonwhite.brickSide
-Sending request for file rtb/data/shapes/neonwhite.brickSide.jpg
-Sending request for file rtb/data/shapes/neonwhite.brickSide.png
-Sending request for file rtb/data/shapes/neonwhite.brickSide.gif
-Sending request for file rtb/data/shapes/neonwhite.brickSide.bmp
-Sending request for file rtb/data/neonwhite.brickSide
-Sending request for file rtb/data/neonwhite.brickSide.jpg
-Sending request for file rtb/data/neonwhite.brickSide.png
-Sending request for file rtb/data/neonwhite.brickSide.gif
-Sending request for file rtb/data/neonwhite.brickSide.bmp
-Sending request for file rtb/neonwhite.brickSide
-Sending request for file rtb/neonwhite.brickSide.jpg
-Sending request for file rtb/neonwhite.brickSide.png
-Sending request for file rtb/neonwhite.brickSide.gif
-Sending request for file rtb/neonwhite.brickSide.bmp
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.gif
-Set::getObject index out of range.
-Set::getObject index out of range.
-Saving file rtb/data/shapes/neonwhite.brickSide.bmp.
-Sending request for file rtb/data/neonwhite.brickSide
-Sending request for file rtb/data/neonwhite.brickSide.jpg
-Sending request for file rtb/data/neonwhite.brickSide.png
-Sending request for file rtb/data/neonwhite.brickSide.gif
-Sending request for file rtb/data/neonwhite.brickSide.bmp
-Sending request for file rtb/neonwhite.brickSide
-Sending request for file rtb/neonwhite.brickSide.jpg
-Sending request for file rtb/neonwhite.brickSide.png
-Sending request for file rtb/neonwhite.brickSide.gif
-Sending request for file rtb/neonwhite.brickSide.bmp
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/neonwhite.2x2Bottom
-Sending request for file rtb/data/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/neonwhite.2x2Bottom
-Sending request for file rtb/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/neonwhite.2x2Bottom.png
-Sending request for file rtb/neonwhite.2x2Bottom.gif
-Sending request for file rtb/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/shapes/wary/Material01
-Set::getObject index out of range.
-Saving file rtb/data/shapes/wary/neonwhite.2x2Bottom.png.
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/shapes/wary/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/neonwhite.2x2Bottom
-Sending request for file rtb/data/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/neonwhite.2x2Bottom
-Sending request for file rtb/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/neonwhite.2x2Bottom.png
-Sending request for file rtb/neonwhite.2x2Bottom.gif
-Sending request for file rtb/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/shapes/wary/Material01
-Sending request for file rtb/data/shapes/wary/Material01.jpg
-Sending request for file rtb/data/shapes/wary/Material01.png
-Sending request for file rtb/data/shapes/wary/Material01.gif
-Sending request for file rtb/data/shapes/wary/Material01.bmp
-Sending request for file rtb/data/shapes/Material01
-Sending request for file rtb/data/shapes/Material01.jpg
-Sending request for file rtb/data/shapes/Material01.png
-Sending request for file rtb/data/shapes/Material01.gif
-Sending request for file rtb/data/shapes/Material01.bmp
-Sending request for file rtb/data/Material01
-Sending request for file rtb/data/Material01.jpg
-Set::getObject index out of range.
-Saving file rtb/data/shapes/neonwhite.2x2Bottom.png.
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/shapes/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/neonwhite.2x2Bottom
-Sending request for file rtb/data/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/data/neonwhite.2x2Bottom.png
-Sending request for file rtb/data/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/neonwhite.2x2Bottom
-Sending request for file rtb/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/neonwhite.2x2Bottom.png
-Sending request for file rtb/neonwhite.2x2Bottom.gif
-Sending request for file rtb/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/shapes/wary/Material01
-Sending request for file rtb/data/shapes/wary/Material01.jpg
-Sending request for file rtb/data/shapes/wary/Material01.png
-Sending request for file rtb/data/shapes/wary/Material01.gif
-Sending request for file rtb/data/shapes/wary/Material01.bmp
-Sending request for file rtb/data/shapes/Material01
-Sending request for file rtb/data/shapes/Material01.jpg
-Sending request for file rtb/data/shapes/Material01.png
-Sending request for file rtb/data/shapes/Material01.gif
-Sending request for file rtb/data/shapes/Material01.bmp
-Sending request for file rtb/data/Material01
-Sending request for file rtb/data/Material01.jpg
-Saving file rtb/data/neonwhite.2x2Bottom.png.
-Sending request for file rtb/data/neonwhite.2x2Bottom.gif
-Sending request for file rtb/data/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/neonwhite.2x2Bottom
-Sending request for file rtb/neonwhite.2x2Bottom.jpg
-Sending request for file rtb/neonwhite.2x2Bottom.png
-Sending request for file rtb/neonwhite.2x2Bottom.gif
-Sending request for file rtb/neonwhite.2x2Bottom.bmp
-Sending request for file rtb/data/shapes/wary/Material01
-Sending request for file rtb/data/shapes/wary/Material01.jpg
-Sending request for file rtb/data/shapes/wary/Material01.png
-Sending request for file rtb/data/shapes/wary/Material01.gif
-Sending request for file rtb/data/shapes/wary/Material01.bmp
-Sending request for file rtb/data/shapes/Material01
-Sending request for file rtb/data/shapes/Material01.jpg
-Sending request for file rtb/data/shapes/Material01.png
-Sending request for file rtb/data/shapes/Material01.gif
-Sending request for file rtb/data/shapes/Material01.bmp
-Sending request for file rtb/data/Material01
-Sending request for file rtb/data/Material01.jpg
-Set::getObject index out of range.
-Saving file rtb/data/shapes/wary/Material01.png.
-Sending request for file rtb/data/shapes/wary/Material01.gif
-Sending request for file rtb/data/shapes/wary/Material01.bmp
-Sending request for file rtb/data/shapes/Material01
-Sending request for file rtb/data/shapes/Material01.jpg
-Sending request for file rtb/data/shapes/Material01.png
-Sending request for file rtb/data/shapes/Material01.gif
-Sending request for file rtb/data/shapes/Material01.bmp
-Sending request for file rtb/data/Material01
-Sending request for file rtb/data/Material01.jpg
-Set::getObject index out of range.
-Error: shape rtb/data/shapes/bricks/brickWeapon.dts-collision detail 0 (Collision-2) bounds box invalid!
-Could not locate texture: rtb/data/shapes/player/Decals/base.backdecal.png
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-Error: shape rtb/data/shapes/prints/tile2x2round/print2x2round.dts-collision detail 0 (Collision-1) bounds box invalid!
-Sending request for file rtb/data/sound/environment/ambient/rain.ogg.wav
-Sending request for file rtb/data/sound/environment/ambient/thunder1.ogg.wav
-Sending request for file rtb/data/sound/environment/ambient/thunder2.ogg.wav
-Set::getObject index out of range.
-Sending request for file rtb/data/sound/environment/ambient/thunder3.ogg.wav
-Sending request for file rtb/data/sound/environment/ambient/thunder4.ogg.wav
-Set::getObject index out of range.
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Could not locate texture: 
-Mapping string: MissionStartPhase2 to index: 17
-*** Phase 2: Download Ghost Objects
-Set::getObject index out of range.
-Mapping string: MissionStartPhase3 to index: 18
-Client Replication Startup has Happened!
-fxFoliageReplicator - Client Foliage Replication Startup is complete.
-*** Phase 3: Mission Lighting
-Mission lighting done
-getewsettingupdate: Unknown command.
-Mapping string: rotiscompatible to index: 19
-Mapping string: name to index: 20
-Mapping string: *%1 %2 to index: 21
-Mapping string: MissionStart to index: 22
-Mapping string: SyncClock to index: 23
-Mapping string: MsgUpdateMoney to index: 24
-Mapping string: %1 to index: 25
+Mapping string: rotiscompatible to index: 20
+Mapping string: name to index: 21
+Mapping string: *%1 %2 to index: 22
+Mapping string: MissionStart to index: 23
+Mapping string: SyncClock to index: 24
+Mapping string: MsgUpdateMoney to index: 25
 Mapping string: updateprefs to index: 26
 Mapping string: MsgClearInv to index: 27
 Mapping string: MsgHilightInv to index: 28
 Mapping string: MsgItemPickup to index: 29
 Mapping string: showBrickImage to index: 30
+Mapping string: storeCash to index: 11
 Mapping string: ShowBrickImage to index: 31
-Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-Mapping string: white to index: 0
-Mapping string: Misc-Blank to index: 2
-Mapping string: black to index: 3
-Mapping string: Noob jail to index: 4
-Set::getObject index out of range.
-Mapping string: Do whatever you want! to index: 6
-Mapping string: greenlight to index: 9
-Mapping string: Admin pass: sex to index: 10
-Mapping string: base to index: 11
-Mapping string: red to index: 12
-Mapping string: redlight to index: 13
-Mapping string: redhairline to index: 14
-Mapping string: redDark to index: 5
-Mapping string: tandark to index: 15
-*** Initial Control Object
-Mapping string: tan to index: 16
-Mapping string: RedNinja to index: 17
-Mapping string: a work of art (not a really elaborate minging) to index: 18
-Mapping string: MsgClientJoin to index: 19
 rtb/client/scripts/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
 rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
 rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
 rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
-Mapping string: Cool1 to index: 20
-Mapping string: Blockdude to index: 21
-Mapping string: blackglitter to index: 22
-Mapping string: blue to index: 23
-Mapping string: orange to index: 24
-Mapping string: brownlight to index: 25
-Mapping string: greenhairline to index: 26
-Mapping string: purple to index: 27
-Mapping string: yellow to index: 31
-Mapping string: yellowlight to index: 28
-Mapping string: Jews to index: 30
-Mapping string: base2 to index: 29
-Mapping string: brown to index: 3
-Mapping string: black to index: 6
-Mapping string: yellowDark to index: 4
-Mapping string: purplelight to index: 11
-Mapping string: "Modern Art" - on sale for $400,000 to index: 10
-Mapping string: bluehairline to index: 14
-Set::getObject index out of range.
-Mapping string: yellowhairline to index: 16
-   keyboard0 input device created.
-   mouse0 input device created.
+Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
+*** Initial Control Object
 Activating DirectInput...
 keyboard0 input device acquired.
-Mapping string: gas pumps to index: 17
-Mapping string: parking lot to index: 18
-Mapping string: graydark to index: 1
-Mapping string: dynamite.1x2 to index: 19
-Mapping string: store to index: 8
-Mapping string: freezer to index: 7
-Mapping string: car wash to index: 20
-Mapping string: tan to index: 2
-Set::getObject index out of range.
-Mapping string: green to index: 21
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-rtb/client/ui/joinServerGui.gui (226): Unknown command query.
-  Object PlayGui(1321) PlayGui -> GameTSCtrl -> GuiTSCtrl -> GuiControl -> SimGroup -> SimSet -> SimObject
-Set::getObject index out of range.
-rtb/client/ui/joinServerGui.gui (226): Unknown command query.
-  Object PlayGui(1321) PlayGui -> GameTSCtrl -> GuiTSCtrl -> GuiControl -> SimGroup -> SimSet -> SimObject
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Set::getObject index out of range.
-Chat line 0: Connected to Server, Blockdude.
-Chat line 1: Admins on this server: 
-Chat line 2: No Super Admins present.
-Chat line 3: XAdmins on this server: 
-Chat line 4: No XAdmins present.
-Chat line 5: Thanks for coming back to this server! you've been here 2 times before!
-Chat line 6: Blockdude: 
-Chat line 7: Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
-Chat line 8: *Blockdude is going to spawn in your server
-Chat line 9: 
-Chat line 10: You were automatically put in secure mode
-Chat line 11: There are still brick from your previous visit here
-Chat line 12: Recording to file [rtb/recordings/demo000.rec].
+Mapping string: white to index: 0
+Mapping string: Cool1 to index: 2
+Mapping string: Misc-Blank to index: 3
+Mapping string: Blockdude to index: 4
+getewsettingupdate: Unknown command.
+Mapping string: undoLast to index: 12
+rtb/server/scripts/PTTA/serverCmd.cs (2172): Unable to find object: '' attempting to call function 'schedule'
+Mapping string: UpdateRadar to index: 5
+rtb/client/scripts/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
+rtb/server/scripts/PTTA/serverCmd.cs (2172): Unable to find object: '0' attempting to call function 'schedule'
+Mapping string: ModifyShiftSize to index: 13
 keyboard0 input device unacquired.
 DirectInput deactivated.
 Exporting client prefs
@@ -1742,7 +1230,12 @@ Exporting server prefs
 Exporting IP banlist
 Exporting client prefs
 Exporting server prefs
-Issuing Disconnect packet.
+rtb/server/scripts/PTTAgame.cs (46): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' attempting to call function 'getObject'
+rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
+rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2625' attempting to call function 'delete'
+CDROP: 2607 IPX:20202020:202020206465:25459
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...
