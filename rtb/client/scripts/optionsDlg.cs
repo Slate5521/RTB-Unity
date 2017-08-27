@@ -67,7 +67,7 @@ function OptionsDlg::onWake(%this)
 function OptionsDlg::onSleep(%this)
 {
    // write out the control config into the fps/config.cs file
-   moveMap.save( "~/client/config.cs" );
+   moveMap.save( "~/client/config2.cs" );
 
 	//save player prefs
 	$pref::Input::MouseSensitivity = SliderControlsMouseSensitivity.getValue();
@@ -314,6 +314,9 @@ $RemapCount++;
 $RemapName[$RemapCount] = "Toggle Wrench Mode";
 $RemapCmd[$RemapCount] = "toggleWrenchMode";
 $RemapCount++;
+$RemapName[$RemapCount] = "Toggle Magic Wand Mode";
+$RemapCmd[$RemapCount] = "toggleWandMode";
+$RemapCount++;
 
 $RemapName[$RemapCount] = "Undo Last Brick";
 $RemapCmd[$RemapCount] = "UndoLast";
@@ -327,6 +330,9 @@ $RemapCount++;
 
 $RemapName[$RemapCount] = "Free Look";
 $RemapCmd[$RemapCount] = "toggleFreeLook";
+$RemapCount++;
+$RemapName[$RemapCount] = "Free Zoom";
+$RemapCmd[$RemapCount] = "zoomin";
 $RemapCount++;
 
 $RemapName[$RemapCount] = "Shift Brick Away";
@@ -425,6 +431,36 @@ $RemapCount++;
 $RemapName[$RemapCount] = "Use 10th Slot";
 $RemapCmd[$RemapCount] = "useTenthSlot";
 $RemapCount++;
+$RemapName[$RemapCount] = "Use 11th Slot";
+$RemapCmd[$RemapCount] = "useSlot11";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 12th Slot";
+$RemapCmd[$RemapCount] = "useSlot12";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 13th Slot";
+$RemapCmd[$RemapCount] = "useSlot13";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 14th Slot";
+$RemapCmd[$RemapCount] = "useSlot14";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 15th Slot";
+$RemapCmd[$RemapCount] = "useSlot15";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 16th Slot";
+$RemapCmd[$RemapCount] = "useSlot16";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 17th Slot";
+$RemapCmd[$RemapCount] = "useSlot17";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 18th Slot";
+$RemapCmd[$RemapCount] = "useSlot18";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 19th Slot";
+$RemapCmd[$RemapCount] = "useSlot19";
+$RemapCount++;
+$RemapName[$RemapCount] = "Use 20th Slot";
+$RemapCmd[$RemapCount] = "useSlot20";
+$RemapCount++;
 
 $RemapName[$RemapCount] = "Drop 1st Slot";
 $RemapCmd[$RemapCount] = "dropFirstSlot";
@@ -456,6 +492,36 @@ $RemapCount++;
 $RemapName[$RemapCount] = "Drop 10th Slot";
 $RemapCmd[$RemapCount] = "dropTenthSlot";
 $RemapCount++;
+$RemapName[$RemapCount] = "Drop 11th Slot";
+$RemapCmd[$RemapCount] = "dropSlot11";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 12th Slot";
+$RemapCmd[$RemapCount] = "dropSlot12";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 13th Slot";
+$RemapCmd[$RemapCount] = "dropSlot13";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 14th Slot";
+$RemapCmd[$RemapCount] = "dropSlot14";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 15th Slot";
+$RemapCmd[$RemapCount] = "dropSlot15";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 16th Slot";
+$RemapCmd[$RemapCount] = "dropSlot16";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 17th Slot";
+$RemapCmd[$RemapCount] = "dropSlot17";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 18th Slot";
+$RemapCmd[$RemapCount] = "dropSlot18";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 19th Slot";
+$RemapCmd[$RemapCount] = "dropSlot19";
+$RemapCount++;
+$RemapName[$RemapCount] = "Drop 20th Slot";
+$RemapCmd[$RemapCount] = "dropSlot20";
+$RemapCount++;
 
 $RemapName[$RemapCount] = "Scale Brick Up";
 $RemapCmd[$RemapCount] = "ScaleZPlus";
@@ -463,11 +529,9 @@ $RemapCount++;
 $RemapName[$RemapCount] = "Scale Brick Down";
 $RemapCmd[$RemapCount] = "ScaleZMinus";
 $RemapCount++;
-
 $RemapName[$RemapCount] = "Plant Brick";
 $RemapCmd[$RemapCount] = "plantBrick";
 $RemapCount++;
-
 $RemapName[$RemapCount] = "Cancel Brick";
 $RemapCmd[$RemapCount] = "cancelBrick";
 $RemapCount++;
@@ -475,33 +539,129 @@ $RemapCount++;
 $RemapName[$RemapCount] = "Open Admin Window";
 $RemapCmd[$RemapCount] = "openAdminWindow";
 $RemapCount++;
-
 $RemapName[$RemapCount] = "Open Options Window";
 $RemapCmd[$RemapCount] = "openOptionsWindow";
 $RemapCount++;
-
 $RemapName[$RemapCount] = "Open Player Window";
 $RemapCmd[$RemapCount] = "openPlayerWindow";
 $RemapCount++;
-
 $RemapName[$RemapCount] = "Open Team Window";
 $RemapCmd[$RemapCount] = "openTeamWindow";
 $RemapCount++;
-
 $RemapName[$RemapCount] = "Open Deathmatch Window";
 $RemapCmd[$RemapCount] = "openDeathmatchWindow";
 $RemapCount++;
-
 $RemapName[$RemapCount] = "Open Messaging Window";
 $RemapCmd[$RemapCount] = "openMessageWindow";
 $RemapCount++;
 
+$RemapName[$RemapCount] = "CustomMove Forward";
+$RemapCmd[$RemapCount] = "custommoveforward";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomMove Backward";
+$RemapCmd[$RemapCount] = "custommovebackward";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomMove Left";
+$RemapCmd[$RemapCount] = "custommoveleft";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomMove Right";
+$RemapCmd[$RemapCount] = "custommoveright";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomMove Up";
+$RemapCmd[$RemapCount] = "custommoveup";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomMove Small Up";
+$RemapCmd[$RemapCount] = "custommoveupsmall";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomMove Down";
+$RemapCmd[$RemapCount] = "custommovedown";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomMove Small Down";
+$RemapCmd[$RemapCount] = "custommovedownsmall";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomRotate Z CW";
+$RemapCmd[$RemapCount] = "customrotzcw";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomRotate Z CCW";
+$RemapCmd[$RemapCount] = "customrotzccw";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomRotate X CW";
+$RemapCmd[$RemapCount] = "customrotxcw";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomRotate X CCW";
+$RemapCmd[$RemapCount] = "customrotxccw";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomRotate Y CW";
+$RemapCmd[$RemapCount] = "customrotycw";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomRotate Y CCW";
+$RemapCmd[$RemapCount] = "customrotyccw";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomScale Z Plus";
+$RemapCmd[$RemapCount] = "customscalezplus";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomScale Z Minus";
+$RemapCmd[$RemapCount] = "customscalezminus";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomScale X Plus";
+$RemapCmd[$RemapCount] = "customscalexplus";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomScale X Minus";
+$RemapCmd[$RemapCount] = "customscalexminus";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomScale Y Plus";
+$RemapCmd[$RemapCount] = "customscaleyplus";
+$RemapCount++;
+$RemapName[$RemapCount] = "CustomScale Y Minus";
+$RemapCmd[$RemapCount] = "customscaleyminus";
+$RemapCount++;
+$RemapName[$RemapCount] = "Open/Close CustomMoverGui";
+$RemapCmd[$RemapCount] = "openfactorset";
+$RemapCount++;
+$RemapName[$RemapCount] = "ShiftFavorite Toggle";
+$RemapCmd[$RemapCount] = "shiftfavtog";
+$RemapCount++;
+$RemapName[$RemapCount] = "ShiftFavorite ReverseToggle";
+$RemapCmd[$RemapCount] = "shiftfavrevtog";
+$RemapCount++;
+$RemapName[$RemapCount] = "RotateFavorite Toggle";
+$RemapCmd[$RemapCount] = "rotfavtog";
+$RemapCount++;
+$RemapName[$RemapCount] = "RotateFavorite ReverseToggle";
+$RemapCmd[$RemapCount] = "rotfavrevtog";
+$RemapCount++;
+$RemapName[$RemapCount] = "ScaleFavorite Toggle";
+$RemapCmd[$RemapCount] = "scalefavtog";
+$RemapCount++;
+$RemapName[$RemapCount] = "ScaleFavorite ReverseToggle";
+$RemapCmd[$RemapCount] = "scalefavrevtog";
+$RemapCount++;
+
+$RemapName[$RemapCount] = "Open BAC's MENU";
+$RemapCmd[$RemapCount] = "openBACsM";
+$RemapCount++;
+$RemapName[$RemapCount] = "Open Wrench Menu";
+$RemapCmd[$RemapCount] = "WrenchM";
+$RemapCount++;
+$RemapName[$RemapCount] = "Open Wand Menu";
+$RemapCmd[$RemapCount] = "WandM";
+$RemapCount++;
+
+$RemapName[$RemapCount] = "Open Radar Menu";
+$RemapCmd[$RemapCount] = "RadarM";
+$RemapCount++;
+//$RemapName[$RemapCount] = "Start/Stop Timescale";
+//$RemapCmd[$RemapCount] = "timescale";
+//$RemapCount++;
+$RemapName[$RemapCount] = "Toggle Brickscrolling";
+$RemapCmd[$RemapCount] = "isbrickscroll";
+$RemapCount++;
 
 
 function restoreDefaultMappings()
 {
    moveMap.delete();
-   exec( "~/client/scripts/default.bind.cs" );
+   exec( "~/client/PTTA/default.bind.cs" );
    OptRemapList.fillList();
 }
 
@@ -802,16 +962,42 @@ function OptAudioDriverList::onSelect( %this, %id, %text )
 //New functions
 function ScaleZPlus( %val )
 {
-	if ( %val )
-	{
-		commandToServer('ScaleZup', 0);	 
+	if ( %val ){
+		commandToServer('ScaleZup', 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatScaleZPlus);
+			$ScaleBrickZPlus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ScaleBrickZPlus = 0;
+}
+function repeatScaleZPlus()
+{
+	if( $ScaleBrickZPlus == 1 ){
+		commandToServer('ScaleZup', 0);
+		schedule( 75, 0, repeatScaleZPlus);
 	}
 }
 function ScaleZMinus( %val )
 {
-	if ( %val )
-	{
+	if ( %val ){
 		commandToServer('ScaleZdown', 0);	 
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatScaleZMinus);
+			$ScaleBrickZMinus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ScaleBrickZMinus = 0;
+}
+function repeatScaleZMinus()
+{
+	if( $ScaleBrickZMinus == 1 ){
+		commandToServer('ScaleZdown', 0);
+		schedule( 75, 0, repeatScaleZMinus);
 	}
 }
 function cancelauto( %val )
@@ -821,6 +1007,47 @@ function cancelauto( %val )
 		commandToServer('cancelautosettings', 0);	 
 	}
 }
+function openBACsM( %val )
+{
+	if ( %val )
+	{
+		BACsM.toggle();
+	}
+}
+function WrenchM( %val )
+{
+	if ( %val )
+	{
+		WrenchM.toggle();
+	}
+}
+function WandM( %val )
+{
+	if ( %val )
+	{
+		WandM.toggle();
+	}
+}
+
+function RadarM( %val )
+{
+	if ( %val )
+	{
+		GuiRadar.toggle();
+	}
+}
+//function timescale( %val )
+//{
+//	if ( %val )
+//	{
+//		$timescale = 0.25;
+//	}
+//	if ( !%val )
+//	{
+//		$timescale = 1;
+//	}
+//}
+
 //////////////////////
 //Use slot functions//
 //////////////////////
@@ -884,6 +1111,76 @@ function useTenthSlot( %val )
 	if ( %val )
 		commandToServer('useInventory', 9);	   
 }
+function useSlot11( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 10);	  
+	}
+}
+function useSlot12( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 11);	  
+	}
+}
+function useSlot13( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 12);	  
+	}
+}
+function useSlot14( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 13);	  
+	}
+}
+function useSlot15( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 14);	  
+	}
+}
+function useSlot16( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 15);	  
+	}
+}
+function useSlot17( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 16);	  
+	}
+}
+function useSlot18( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 17);	  
+	}
+}
+function useSlot19( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 18);	  
+	}
+}
+function useSlot20( %val )
+{
+	if ( %val )
+	{
+		commandToServer('useInventory', 19);	  
+	}
+}
 
 //////////////////////
 //Drop slot functions//
@@ -938,53 +1235,252 @@ function dropTenthSlot( %val )
 	if ( %val )
 		commandToServer('dropInventory', 9);	   
 }
+function dropSlot11( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 10);
+	}	   
+}
+function dropSlot12( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 11);
+	}	   
+}
+function dropSlot13( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 12);
+	}	   
+}
+function dropSlot14( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 13);
+	}	   
+}
+function dropSlot15( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 14);
+	}	   
+}
+function dropSlot16( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 15);
+	}	   
+}
+function dropSlot17( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 16);
+	}	   
+}
+function dropSlot18( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 17);
+	}	   
+}
+function dropSlot19( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 18);
+	}	   
+}
+function dropSlot20( %val )
+{
+	if ( %val )
+	{
+		commandToServer('dropInventory', 19);
+	}	   
+}
 
 //###############
 //Shift Functions
 //###############
-function shiftBrickAway( %val )
+function isbrickscroll( %val )
 {
 	if ( %val )
-		commandToServer('shiftBrick', 1, 0, 0);	   
+	{
+	$isBrickScroll = 1;	
+	}
+	if ( !%val )
+	{
+	$isBrickScroll = 0;		
+	}
+}
+function shiftBrickAway( %val )
+{
+	if ( %val ){
+		commandToServer('shiftBrick', 1, 0, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshiftaway);
+			$ShiftBrickAway = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBrickAway = 0;
+}
+function repeatshiftaway()
+{
+	if( $ShiftBrickAway == 1 ){
+		commandToServer('shiftBrick', 1, 0, 0);
+		schedule( 75, 0, repeatshiftaway);
+	}
 }
 function shiftBrickTowards( %val )
 {
-	if ( %val )
-		commandToServer('shiftBrick', -1, 0, 0);	   
+	if ( %val ){
+		commandToServer('shiftBrick', -1, 0, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshifttowards);
+			$ShiftBricktowards = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBricktowards = 0;
 }
-function shiftBrickLeft( %val )
+function repeatshifttowards()
 {
-	if ( %val )
-		commandToServer('shiftBrick', 0, 1, 0);	   
+	if( $ShiftBricktowards == 1 ){
+		commandToServer('shiftBrick', -1, 0, 0);
+		schedule( 75, 0, repeatshifttowards);
+	}
 }
-function shiftBrickRight( %val )
+function shiftBrickleft( %val )
 {
-	if ( %val )
-		commandToServer('shiftBrick', 0, -1, 0);	   
+	if ( %val ){
+		commandToServer('shiftBrick', 0, 1, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshiftleft);
+			$ShiftBrickleft = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBrickleft = 0;
+}
+function repeatshiftleft()
+{
+	if( $ShiftBrickleft == 1 ){
+		commandToServer('shiftBrick', 0, 1, 0);
+		schedule( 75, 0, repeatshiftleft);
+	}
+}
+function shiftBrickright( %val )
+{
+	if ( %val ){
+		commandToServer('shiftBrick', 0, -1, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshiftright);
+			$ShiftBrickright = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBrickright = 0;
+}
+function repeatshiftright()
+{
+	if( $ShiftBrickright == 1 ){
+		commandToServer('shiftBrick', 0, -1, 0);
+		schedule( 75, 0, repeatshiftright);
+	}
+}
+function shiftBrickup( %val )
+{
+	if ( %val ){
+		commandToServer('shiftBrick', 0, 0, 3);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshiftup);
+			$ShiftBrickup = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBrickup = 0;
+}
+function repeatshiftup()
+{
+	if( $ShiftBrickup == 1 ){
+		commandToServer('shiftBrick', 0, 0, 3);
+		schedule( 75, 0, repeatshiftup);
+	}
+}
+function shiftBrickdown( %val )
+{
+	if ( %val ){
+		commandToServer('shiftBrick', 0, 0, -3);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshiftdown);
+			$ShiftBrickdown = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBrickdown = 0;
+}
+function repeatshiftdown()
+{
+	if( $ShiftBrickdown == 1 ){
+		commandToServer('shiftBrick', 0, 0, -3);
+		schedule( 75, 0, repeatshiftdown);
+	}
 }
 
-
-function shiftBrickUp( %val )
-{
-	if ( %val )
-		commandToServer('shiftBrick', 0, 0, 3);	   
-}
-function shiftBrickDown( %val )
-{
-	if ( %val )
-		commandToServer('shiftBrick', 0, 0, -3);	   
-}
 function rotateBrickCW( %val )
 {
-	if ( %val )
+	if ( %val ){
 		commandToServer('rotateBrick', 1);	   
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatrotateCW);
+			$rotateBrickCW = 1;
+			}
+		}
+	if ( %val == 0 )
+		$rotateBrickCW = 0;
+}
+function repeatrotateCW()
+{
+	if( $rotateBrickCW == 1 ){
+		commandToServer('rotateBrick', 1);
+		schedule( 75, 0, repeatrotateCW);
+	}
 }
 function rotateBrickCCW( %val )
 {
-	if ( %val )
+	if ( %val ){
 		commandToServer('rotateBrick', -1);	   
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatrotateCCW);
+			$rotateBrickCCW = 1;
+			}
+		}
+	if ( %val == 0 )
+		$rotateBrickCCW = 0;
 }
-
+function repeatrotateCCW()
+{
+	if( $rotateBrickCCW == 1 ){
+		commandToServer('rotateBrick', -1);
+		schedule( 75, 0, repeatrotateCCW);
+	}
+}
 function plantBrick( %val )
 {
 	if ( %val )
@@ -1056,8 +1552,7 @@ function openOptionsWindow (%val)
 
 function jet(%val)
 {
-	if(%val)
-		$mvTriggerCount3++;
+		$mvTriggerCount4++;
 }
 
 function undoLast(%val)
@@ -1070,6 +1565,12 @@ function toggleWrenchMode(%val)
 {
 	if(%val)
 		commandtoServer('toggleWrenchMode');
+}
+
+function toggleWandMode(%val)
+{
+	if(%val)
+		commandtoServer('toggleWandMode');
 }
 
 function handleMouseWheel(%val)
@@ -1189,11 +1690,11 @@ function fixScreen()
 	OuterChatHud.visible = 1;
 	ChatHud.visible = 1;
 }
-function openIngameEditor(%val)
+function openInGameEditor(%val)
 {
 	if(%val)
 	{
-		commandtoserver('openIGEditor', $IngameEditorOpen);
+		canvas.pushdialog(InGameEditorGui);
 	}
 }
 
@@ -1227,14 +1728,1216 @@ function IRCToggle(%val)
 	}
 }
 
-function shiftBrickThirdUp( %val )
+function shiftBrickthirdup( %val )
 {
-	if ( %val )
-		commandToServer('shiftBrick', 0, 0, 1);	   
+	if ( %val ){
+		commandToServer('shiftBrick', 0, 0, 1);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshiftthirdup);
+			$ShiftBrickthirdup = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBrickthirdup = 0;
+}
+function repeatshiftthirdup()
+{
+	if( $ShiftBrickthirdup == 1 ){
+		commandToServer('shiftBrick', 0, 0, 1);
+		schedule( 75, 0, repeatshiftthirdup);
+	}
+}
+function shiftBrickthirddown( %val )
+{
+	if ( %val ){
+		commandToServer('shiftBrick', 0, 0, -1);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatshiftthirddown);
+			$ShiftBrickthirddown = 1;
+			}
+		}
+	if ( %val == 0 )
+		$ShiftBrickthirddown = 0;
+}
+function repeatshiftthirddown()
+{
+	if( $ShiftBrickthirddown == 1 ){
+		commandToServer('shiftBrick', 0, 0, -1);
+		schedule( 75, 0, repeatshiftthirddown);
+	}
 }
 
-function shiftBrickThirdDown( %val )
+/////////////////////////////
+//Bleh's Custom Brick Shift//
+/////////////////////////////
+//The Gui is in here because I was too lazy to exec the gui file.
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(factorsetgui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(factorwindow) {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "200 175";
+      extent = "250 225";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Custom Movement Factor Settings";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(factorsetgui);";
+
+      new GuiTextEditCtrl(txtshiftfactor) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 30";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 30";
+         extent = "86 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Movement Factor:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(txtscalefactor) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "80 50";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 50";
+         extent = "64 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Scale Factor:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(txtrotdegrees) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "220 30";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "130 30";
+         extent = "86 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Rotation Degrees:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 65";
+         extent = "227 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Factors are autosaved.  \'NumpadDecimal\' closes window.";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(txtCompatibility) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 80";
+         extent = "208 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(AdvancedToggle) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 100";
+         extent = "230 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "toggleadvanced();";
+         helpTag = "0";
+         text = "Advanced...";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(TogCustoms) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "90 125";
+         extent = "80 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'admintogglecustoms\');";
+         helpTag = "0";
+         text = "Toggle Customs";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 125";
+         extent = "73 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Admin Options:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 185";
+         extent = "78 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Scale Favorites:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 165";
+         extent = "82 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Rotate Favorites:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 145";
+         extent = "73 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Shift Favorites:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(txtshiftfav1) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "90 145";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtshiftfav2) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "110 145";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtshiftfav3) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "130 145";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtshiftfav4) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "150 145";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtrotfav1) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "90 165";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtrotfav2) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "110 165";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtrotfav3) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "130 165";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtrotfav4) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "150 165";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtscalefav1) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "90 185";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtscalefav2) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "110 185";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtscalefav3) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "130 185";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtscalefav4) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "150 185";
+         extent = "20 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "10";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function shiftfavtog( %val )
 {
 	if ( %val )
-		commandToServer('shiftBrick', 0, 0, -1);	   
+	{
+		if($CurrentShiftFavPos $= "")
+			$CurrentShiftFavPos = 0;
+		
+		$ShiftFavPos1 = $pref::player::customshiftshiftfav1;
+		$ShiftFavPos2 = $pref::player::customshiftshiftfav2;
+		$ShiftFavPos3 = $pref::player::customshiftshiftfav3;
+		$ShiftFavPos4 = $pref::player::customshiftshiftfav4;
+
+		if($CurrentShiftFavPos == 0){
+			$CurrentShiftFavPos = 1;
+			$Pref::player::customshiftfactor = $ShiftFavPos1;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos1);
+			return;	
+		}
+		if($CurrentShiftFavPos == 1){
+			$CurrentShiftFavPos = 2;
+			$Pref::player::customshiftfactor = $ShiftFavPos2;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos2);
+			return;
+		}
+		if($CurrentShiftFavPos == 2){
+			$CurrentShiftFavPos = 3;
+			$Pref::player::customshiftfactor = $ShiftFavPos3;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos3);
+			return;
+		}
+		if($CurrentShiftFavPos == 3){
+			$CurrentShiftFavPos = 0;
+			$Pref::player::customshiftfactor = $ShiftFavPos4;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos4);
+			return;
+		}
+	}
 }
+function shiftfavrevtog( %val )
+{
+	if ( %val )
+	{
+		if($CurrentShiftFavPos $= "")
+			$CurrentShiftFavPos = 0;
+		
+		$ShiftFavPos1 = $pref::player::customshiftshiftfav1;
+		$ShiftFavPos2 = $pref::player::customshiftshiftfav2;
+		$ShiftFavPos3 = $pref::player::customshiftshiftfav3;
+		$ShiftFavPos4 = $pref::player::customshiftshiftfav4;
+
+		if($CurrentShiftFavPos == 0){
+			$CurrentShiftFavPos = 3;
+			$Pref::player::customshiftfactor = $ShiftFavPos1;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos1);
+			return;	
+		}
+		if($CurrentShiftFavPos == 1){
+			$CurrentShiftFavPos = 0;
+			$Pref::player::customshiftfactor = $ShiftFavPos2;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos2);
+			return;
+		}
+		if($CurrentShiftFavPos == 2){
+			$CurrentShiftFavPos = 1;
+			$Pref::player::customshiftfactor = $ShiftFavPos3;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos3);
+			return;
+		}
+		if($CurrentShiftFavPos == 3){
+			$CurrentShiftFavPos = 2;
+			$Pref::player::customshiftfactor = $ShiftFavPos4;
+			ChatHud.addLine("Your Custom Shift Factor is now " @ $ShiftFavPos4);
+			return;
+		}
+	}
+}
+function rotfavtog( %val )
+{
+	if ( %val )
+	{
+		if($CurrentRotFavPos $= "")
+			$CurrentRotFavPos = 0;
+		
+		$RotFavPos1 = $pref::player::customshiftrotfav1;
+		$RotFavPos2 = $pref::player::customshiftrotfav2;
+		$RotFavPos3 = $pref::player::customshiftrotfav3;
+		$RotFavPos4 = $pref::player::customshiftrotfav4;
+
+		if($CurrentrotFavPos == 0){
+			$CurrentrotFavPos = 1;
+			$Pref::player::customrotatedegrees = $rotFavPos1;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos1);
+			return;
+		}
+		if($CurrentrotFavPos == 1){
+			$CurrentrotFavPos = 2;
+			$Pref::player::customrotatedegrees = $rotFavPos2;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos2);
+			return;
+		}
+		if($CurrentrotFavPos == 2){
+			$CurrentrotFavPos = 3;
+			$Pref::player::customrotatedegrees = $rotFavPos3;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos3);
+			return;
+		}
+		if($CurrentrotFavPos == 3){
+			$CurrentrotFavPos = 0;
+			$Pref::player::customrotatedegrees = $rotFavPos4;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos4);
+			return;
+		}
+	}
+}
+
+function rotfavrevtog( %val )
+{
+	if ( %val )
+	{
+		if($CurrentRotFavPos $= "")
+			$CurrentRotFavPos = 0;
+		
+		$RotFavPos1 = $pref::player::customshiftrotfav1;
+		$RotFavPos2 = $pref::player::customshiftrotfav2;
+		$RotFavPos3 = $pref::player::customshiftrotfav3;
+		$RotFavPos4 = $pref::player::customshiftrotfav4;
+
+		if($CurrentrotFavPos == 0){
+			$CurrentrotFavPos = 3;
+			$Pref::player::customrotatedegrees = $rotFavPos1;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos1);
+			return;
+		}
+		if($CurrentrotFavPos == 1){
+			$CurrentrotFavPos = 0;
+			$Pref::player::customrotatedegrees = $rotFavPos2;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos2);
+			return;
+		}
+		if($CurrentrotFavPos == 2){
+			$CurrentrotFavPos = 1;
+			$Pref::player::customrotatedegrees = $rotFavPos3;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos3);
+			return;
+		}
+		if($CurrentrotFavPos == 3){
+			$CurrentrotFavPos = 2;
+			$Pref::player::customrotatedegrees = $rotFavPos4;
+			ChatHud.addLine("Your Custom Rotate Factor is now " @ $RotFavPos4);
+			return;
+		}
+	}
+}
+function scalefavtog( %val )
+{
+	if ( %val )
+	{
+		if($CurrentscaleFavPos $= "")
+			$CurrentscaleFavPos = 0;
+		
+		$scaleFavPos1 = $pref::player::customshiftscalefav1;
+		$scaleFavPos2 = $pref::player::customshiftscalefav2;
+		$scaleFavPos3 = $pref::player::customshiftscalefav3;
+		$scaleFavPos4 = $pref::player::customshiftscalefav4;
+
+		if($CurrentscaleFavPos == 0){
+			$CurrentscaleFavPos = 1;
+			$Pref::player::customscalefactor = $scaleFavPos1;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos1);
+			return;
+		}
+		if($CurrentscaleFavPos == 1){
+			$CurrentscaleFavPos = 2;
+			$Pref::player::customscalefactor = $scaleFavPos2;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos2);
+			return;
+		}
+		if($CurrentscaleFavPos == 2){
+			$CurrentscaleFavPos = 3;
+			$Pref::player::customscalefactor = $scaleFavPos3;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos3);
+			return;
+		}
+		if($CurrentscaleFavPos == 3){
+			$CurrentscaleFavPos = 0;
+			$Pref::player::customscalefactor = $scaleFavPos4;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos4);
+			return;
+		}
+	}
+}
+
+function scalefavrevtog( %val )
+{
+	if ( %val )
+	{
+		if($CurrentscaleFavPos $= "")
+			$CurrentscaleFavPos = 0;
+		
+		$scaleFavPos1 = $pref::player::customshiftscalefav1;
+		$scaleFavPos2 = $pref::player::customshiftscalefav2;
+		$scaleFavPos3 = $pref::player::customshiftscalefav3;
+		$scaleFavPos4 = $pref::player::customshiftscalefav4;
+
+		if($CurrentscaleFavPos == 0){
+			$CurrentscaleFavPos = 3;
+			$Pref::player::customscalefactor = $scaleFavPos1;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos1);
+			return;
+		}
+		if($CurrentscaleFavPos == 1){
+			$CurrentscaleFavPos = 0;
+			$Pref::player::customscalefactor = $scaleFavPos2;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos2);
+			return;
+		}
+		if($CurrentscaleFavPos == 2){
+			$CurrentscaleFavPos = 1;
+			$Pref::player::customscalefactor = $scaleFavPos3;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos3);
+			return;
+		}
+		if($CurrentscaleFavPos == 3){
+			$CurrentscaleFavPos = 2;
+			$Pref::player::customscalefactor = $scaleFavPos4;
+			ChatHud.addLine("Your Custom Scale Factor is now " @ $ScaleFavPos4);
+			return;
+		}
+	}
+}
+function customscalezplus( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, 0, %factor);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcszplus);
+			$csBrickzplus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$csBrickzplus = 0;
+}
+function repeatcszplus()
+{
+	if( $csBrickzplus == 1 ){
+		%factor = $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, 0, %factor);
+		schedule( 75, 0, repeatcszplus);
+	}
+}
+function customscalezminus( %val )
+{
+	if ( %val ){
+		%factor = 0 - $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, 0, %factor);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcszminus);
+			$csBrickzminus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$csBrickzminus = 0;
+}
+function repeatcszminus()
+{
+	if( $csBrickzminus == 1 ){
+		%factor = 0 - $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, 0, %factor);
+		schedule( 75, 0, repeatcszminus);
+	}
+}
+function customscalexplus( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', %factor, 0, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcsxplus);
+			$csBrickxplus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$csBrickxplus = 0;
+}
+function repeatcsxplus()
+{
+	if( $csBrickxplus == 1 ){
+		%factor = $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', %factor, 0, 0);
+		schedule( 75, 0, repeatcsxplus);
+	}
+}
+function customscalexminus( %val )
+{
+	if ( %val ){
+		%factor = 0 - $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', %factor, 0, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcsxminus);
+			$csBrickxminus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$csBrickxminus = 0;
+}
+function repeatcsxminus()
+{
+	if( $csBrickxminus == 1 ){
+		%factor = 0 - $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', %factor, 0, 0);
+		schedule( 75, 0, repeatcsxminus);
+	}
+}
+function customscaleyplus( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, %factor, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcsyplus);
+			$csBrickyplus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$csBrickyplus = 0;
+}
+function repeatcsyplus()
+{
+	if( $csBrickyplus == 1 ){
+		%factor = $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, %factor, 0);
+		schedule( 75, 0, repeatcsyplus);
+	}
+}
+function customscaleyminus( %val )
+{
+	if ( %val ){
+		%factor = 0 - $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, %factor, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcsyminus);
+			$csBrickyminus = 1;
+			}
+		}
+	if ( %val == 0 )
+		$csBrickyminus = 0;
+}
+function repeatcsyminus()
+{
+	if( $csBrickyminus == 1 ){
+		%factor = 0 - $Pref::player::customscalefactor;
+		commandToServer('customscaleBrick', 0, %factor, 0);
+		schedule( 75, 0, repeatcsyminus);
+	}
+}
+function customrotzccw( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, 0, %factor);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcrzccw);
+			$crBrickzccw = 1;
+			}
+		}
+	if ( %val == 0 )
+		$crBrickzccw = 0;
+}
+function repeatcrzccw()
+{
+	if( $crBrickzccw == 1 ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, 0, %factor);
+		schedule( 75, 0, repeatcrzccw);
+	}
+}
+function customrotzcw( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, 0, -%factor);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcrzcw);
+			$crBrickzcw = 1;
+			}
+		}
+	if ( %val == 0 )
+		$crBrickzcw = 0;
+}
+function repeatcrzcw()
+{
+	if( $crBrickzcw == 1 ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, 0, -%factor);
+		schedule( 75, 0, repeatcrzcw);
+	}
+}
+function customrotxccw( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', %factor, 0, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcrxccw);
+			$crBrickxccw = 1;
+			}
+		}
+	if ( %val == 0 )
+		$crBrickxccw = 0;
+}
+function repeatcrxccw()
+{
+	if( $crBrickxccw == 1 ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', %factor, 0, 0);
+		schedule( 75, 0, repeatcrxccw);
+	}
+}
+function customrotxcw( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', -%factor, 0, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcrxcw);
+			$crBrickxcw = 1;
+			}
+		}
+	if ( %val == 0 )
+		$crBrickxcw = 0;
+}
+function repeatcrxcw()
+{
+	if( $crBrickxcw == 1 ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', -%factor, 0, 0);
+		schedule( 75, 0, repeatcrxcw);
+	}
+}
+function customrotyccw( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, %factor, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcryccw);
+			$crBrickyccw = 1;
+			}
+		}
+	if ( %val == 0 )
+		$crBrickyccw = 0;
+}
+function repeatcryccw()
+{
+	if( $crBrickyccw == 1 ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, %factor, 0);
+		schedule( 75, 0, repeatcryccw);
+	}
+}
+function customrotycw( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, -%factor, 0);
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcrycw);
+			$crBrickycw = 1;
+			}
+		}
+	if ( %val == 0 )
+		$crBrickycw = 0;
+}
+function repeatcrycw()
+{
+	if( $crBrickycw == 1 ){
+		%factor = $Pref::player::customrotatedegrees;
+		commandToServer('customrotateBrick', 0, -%factor, 0);
+		schedule( 75, 0, repeatcrycw);
+	}
+}
+function custommoveforward( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', %factor , 0, 0 );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmforward);
+			$cmBrickforward = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickforward = 0;
+}
+function repeatcmforward()
+{
+	if( $cmBrickforward == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', %factor , 0, 0 );
+		schedule( 75, 0, repeatcmforward);
+	}
+}
+function custommovebackward( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', -1 * %factor , 0, 0 );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmbackward);
+			$cmBrickbackward = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickbackward = 0;
+}
+function repeatcmbackward()
+{
+	if( $cmBrickbackward == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', -1 * %factor , 0, 0 );
+		schedule( 75, 0, repeatcmbackward);
+	}
+}
+function custommoveleft( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, %factor , 0 );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmleft);
+			$cmBrickleft = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickleft = 0;
+}
+function repeatcmleft()
+{
+	if( $cmBrickleft == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, %factor , 0 );
+		schedule( 75, 0, repeatcmleft);
+	}
+}
+function custommoveright( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, -1 * %factor , 0 );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmright);
+			$cmBrickright = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickright = 0;
+}
+function repeatcmright()
+{
+	if( $cmBrickright == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, -1 * %factor , 0 );
+		schedule( 75, 0, repeatcmright);
+	}
+}
+function custommoveup( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, 3 * %factor );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmup);
+			$cmBrickup = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickup = 0;
+}
+function repeatcmup()
+{
+	if( $cmBrickup == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, 3 * %factor );
+		schedule( 75, 0, repeatcmup);
+	}
+}
+function custommovedown( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, -3 * %factor );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmdown);
+			$cmBrickdown = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickdown = 0;
+}
+function repeatcmdown()
+{
+	if( $cmBrickdown == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, -3 * %factor );
+		schedule( 75, 0, repeatcmdown);
+	}
+}
+function custommoveupsmall( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, %factor );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmupsmall);
+			$cmBrickupsmall = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickupsmall = 0;
+}
+function repeatcmupsmall()
+{
+	if( $cmBrickupsmall == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, %factor );
+		schedule( 75, 0, repeatcmupsmall);
+	}
+}
+function custommovedownsmall( %val )
+{
+	if ( %val ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, -%factor );
+		if ($isBrickScroll == 1)
+			{
+			schedule( 75, 0, repeatcmdownsmall);
+			$cmBrickdownsmall = 1;
+			}
+		}
+	if ( %val == 0 )
+		$cmBrickdownsmall = 0;
+}
+function repeatcmdownsmall()
+{
+	if( $cmBrickdownsmall == 1 ){
+		%factor = $Pref::player::customshiftfactor;
+		commandToServer( 'shiftBrick', 0, 0, -%factor );
+		schedule( 75, 0, repeatcmdownsmall);
+	}
+}
+function openfactorset( %val )
+{
+	if ( %val ){
+		if($factorsetguiOpen $= 1)
+		   canvas.popDialog(factorsetgui);
+		else
+		   canvas.pushDialog(factorsetgui);
+	}
+}
+//What TBM calls noob protect
+$factorsetguiOpen = 0;
+function factorsetgui::onWake(%this)
+{
+	$factorsetguiOpen = 1;
+	commandtoserver('rotcompatibility');
+	txtshiftfactor.setvalue($pref::player::customshiftfactor);
+	txtrotdegrees.setvalue($pref::player::customrotatedegrees);
+	txtscalefactor.setvalue($pref::player::customscalefactor);
+	txtshiftfav1.setvalue($pref::player::customshiftshiftfav1);
+	txtshiftfav2.setvalue($pref::player::customshiftshiftfav2);
+	txtshiftfav3.setvalue($pref::player::customshiftshiftfav3);
+	txtshiftfav4.setvalue($pref::player::customshiftshiftfav4);
+	txtrotfav1.setvalue($pref::player::customshiftrotfav1);
+	txtrotfav2.setvalue($pref::player::customshiftrotfav2);
+	txtrotfav3.setvalue($pref::player::customshiftrotfav3);
+	txtrotfav4.setvalue($pref::player::customshiftrotfav4);
+	txtscalefav1.setvalue($pref::player::customshiftscalefav1);
+	txtscalefav2.setvalue($pref::player::customshiftscalefav2);
+	txtscalefav3.setvalue($pref::player::customshiftscalefav3);
+	txtscalefav4.setvalue($pref::player::customshiftscalefav4);
+	txtcompatibility.setvalue("This server is only compatible with shifting.");
+}
+function factorsetgui::onSleep(%this)
+{
+	$factorsetguiOpen = 0;
+	$pref::player::customshiftshiftfav1 = txtshiftfav1.getvalue();
+	$pref::player::customshiftshiftfav2 = txtshiftfav2.getvalue();
+	$pref::player::customshiftshiftfav3 = txtshiftfav3.getvalue();
+	$pref::player::customshiftshiftfav4 = txtshiftfav4.getvalue();
+	$pref::player::customshiftrotfav1 = txtrotfav1.getvalue();
+	$pref::player::customshiftrotfav2 = txtrotfav2.getvalue();
+	$pref::player::customshiftrotfav3 = txtrotfav3.getvalue();
+	$pref::player::customshiftrotfav4 = txtrotfav4.getvalue();
+	$pref::player::customshiftscalefav1 = txtscalefav1.getvalue();
+	$pref::player::customshiftscalefav2 = txtscalefav2.getvalue();
+	$pref::player::customshiftscalefav3 = txtscalefav3.getvalue();
+	$pref::player::customshiftscalefav4 = txtscalefav4.getvalue();
+	%txtshiftfactor = txtshiftfactor.getvalue();
+	if( %txtshiftfactor < 0 ){
+		MessageBoxOK( "ERROR!", "Your shifting factor is less than 0.  It has not been saved." );
+	}
+	if( %txtshiftfactor > 0 ){
+		$pref::player::customshiftfactor = txtshiftfactor.getvalue();
+	}
+	%txtrotfactor = txtrotdegrees.getvalue();
+	if( %txtrotfactor < 0 ){
+		MessageBoxOK( "ERROR!", "Your rotating factor is less than 0.  It has not been saved." );
+	}
+	if( %txtrotfactor > 0 ){
+		$pref::player::customrotatedegrees = txtrotdegrees.getvalue();
+	}
+	%txtscalefactor = txtscalefactor.getvalue();
+	if( %txtscalefactor >= 250.001 ){
+		MessageBoxOK( "ERROR!", "Your scale factor is greater than 250.  It has not been saved." );
+	}
+	if( %txtscalefactor < 0 ){
+		MessageBoxOK( "ERROR!", "Your scale factor is less than 0.  It has not been saved." );
+	}
+	if( %txtscalefactor <= 250.001 && %txtscalefactor > 0){
+		$pref::player::customscalefactor = txtscalefactor.getvalue();
+	}
+}
+function clientcmdrotiscompatible(%really)
+{
+	if(%really == 1)
+	{
+	txtcompatibility.setvalue("This server is incompatible with scaling.");
+	}
+	if(%really == 0)
+	{
+	txtcompatibility.setvalue("This server has only shifting enabled.");
+	}
+	if(%really == 2)
+	{
+	txtcompatibility.setvalue("This server is compatible with everything.");
+	}
+}
+//Now for the server stuff.
+$customadvanced = 0;
+function toggleadvanced()
+{
+	if( $customadvanced == 1 )
+	{
+	$customadvanced = 0;
+	factorwindow.resize(200, 175, 250, 125);
+	}
+	else
+	{
+	$customadvanced = 1;
+	factorwindow.resize(200, 175, 250, 225);
+	}
+}
+//END!

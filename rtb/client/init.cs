@@ -120,7 +120,7 @@ function initClient()
 	exec("./scripts/serverConnection.cs");
 	exec("./scripts/playerList.cs");
 	exec("./PTTA/loadingGui.cs");
-	exec("./PTTA/optionsDlg.cs");
+	exec("./scripts/optionsDlg.cs");
 	exec("./PTTA/chatHud.cs");
 	exec("./PTTA/messageHud.cs");
 	exec("./scripts/playGui.cs");
