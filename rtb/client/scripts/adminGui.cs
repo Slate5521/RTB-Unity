@@ -165,8 +165,14 @@ function ApplyImpulseSettings()
 	$Pref::Player::ImpulseY = sliYimpulse.getValue();
 	$Pref::Player::ImpulseZ = sliZimpulse.getValue();
 	$Pref::Player::ImpulseT = isTriggeredJumper.getValue();
-	$Pref::Player::ImpulseTID = JumpSetId.getValue();
+	$Pref::Player::ImpulseTID = jsid.getValue();
 	commandtoserver('applyImpulse', $Pref::Player::ImpulseX, $Pref::Player::ImpulseY, $Pref::Player::ImpulseZ, $Pref::Player::ImpulseT, $Pref::Player::ImpulseTID);
+	canvas.popDialog(impulseGui);
+}
+
+function RemoveImpulseSettings()
+{
+	commandtoserver('removeImpulse');
 	canvas.popDialog(impulseGui);
 }
 
@@ -333,8 +339,9 @@ function ApplyTriggerMover()
 		$Pref::Wrench::NoCollision = noCollision.getValue();
 		$Pref::Wrench::TriggerImp = 0;
 	}
+	$Pref::Wrench::KeyProtected = KeyProtected.getValue();
 
-	commandtoserver('ApplyDoorSettings',$Pref::Wrench::MoveXYZ, $Pref::Wrench::RotateXYZ, $Pref::Wrench::Steps, $Pref::Wrench::StepTime, $Pref::Wrench::Elevator, $Pref::Wrench::TriggerCloak, $Pref::Wrench::Private, $Pref::Wrench::Team, $Pref::Wrench::Group, $Pref::Wrench::TriggerImp, $Pref::Wrench::ReturnDelay, $Pref::Wrench::ReturnToggle, $Pref::Wrench::Password, $Pref::Wrench::MTypeS, $Pref::Wrench::DoorSetID, $Pref::Wrench::NoCollision);
+	commandtoserver('ApplyDoorSettings',$Pref::Wrench::MoveXYZ, $Pref::Wrench::RotateXYZ, $Pref::Wrench::Steps, $Pref::Wrench::StepTime, $Pref::Wrench::Elevator, $Pref::Wrench::TriggerCloak, $Pref::Wrench::Private, $Pref::Wrench::Team, $Pref::Wrench::Group, $Pref::Wrench::TriggerImp, $Pref::Wrench::ReturnDelay, $Pref::Wrench::ReturnToggle, $Pref::Wrench::Password, $Pref::Wrench::MTypeS, $Pref::Wrench::DoorSetID, $Pref::Wrench::NoCollision, $Pref::Wrench::KeyProtected);
 
 }
 //###################################

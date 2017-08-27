@@ -132,13 +132,14 @@ function initClient()
 	exec("./scripts/printselect.cs");
 	exec("./scripts/EditorGUI.cs");
 	exec("./scripts/botOpGUI.cs");
+	exec("./scripts/adminGui.cs");
+	
 	// Default player key bindings
 	exec("./default.bind.cs");
 	exec("./config.cs");
 	exec("./version.cs");
 	
 	//administrator gui
-	exec("./PTTA/adminGui.cs");
 	
 	//Load X's Scripts
 	error("\n--------- Initializing MOD: Mrx's Menu ---------\n");
