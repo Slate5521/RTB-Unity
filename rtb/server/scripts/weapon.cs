@@ -349,7 +349,7 @@ function weaponDamage(%obj,%col,%this,%pos,%type)
 		{
 			return;
 		}
-		if(%col.client.safe == 0)
+		if(%col.client.safe == 0 && !%col.client.isGod)
 		{
 			if (%col.getClassName() $= "Player" || %col.getClassName() $= "AIPlayer")
 			{
@@ -381,4 +381,121 @@ function weaponDamage(%obj,%col,%this,%pos,%type)
 		}
 	}
 
+}
+
+//-----------------------------------------------------------------------------
+// Custom Shifting Here:
+//-----------------------------------------------------------------------------
+
+function servercmdadmintogglecustoms(%client)
+{
+	if(%client.isAdmin || %client.isSuperAdmin || %client.isTempAdmin)
+	{
+		if($Pref::Server::CustomShifting $= 1)
+		{
+			$Pref::Server::CustomShifting = 0;
+			messageAll('name', '\c3Custom Rotation and Scaling is now \c0OFF\c3.');
+			commandtoclient(%client,'rotiscompatible',0);
+		}
+		else
+		{
+			$Pref::Server::CustomShifting = 1;
+			messageAll('name', '\c3Custom Rotation and Scaling is now \c0ON\c3.');
+			commandtoclient(%client,'rotiscompatible',2);
+		}
+	}
+}
+function ServerCmdRotCompatibility( %client )
+{
+	if($Pref::server::CustomShifting $= 1)
+	{
+	commandtoclient(%client,'rotiscompatible',2);
+	}
+	else
+	{
+	commandtoclient(%client,'rotiscompatible',0);
+	}
+}
+
+function ServerCmdcustomscalebrick(%client, %x, %y, %z)
+{
+	if(%x >= "-250" && %x <= "250")
+	{
+	if(%y >= "-250" && %y <= "250")
+	{
+	if(%z >= "-250" && %z <= "250")
+	{
+	if($Pref::Server::CustomShifting $= 1)
+	{
+	%player = %client.player;
+	if(%player.tempBrick)
+	{
+	%tempBrick = %player.tempBrick;
+	%scale = %tempBrick.getScale();
+	%scaleX = getWord(%scale,0);
+	%scaleY = getWord(%scale,1);
+	%scaleZ = getWord(%scale,2);
+	%finalzscale = %scaleZ + %z;
+	%finalyscale = %scaley + %y;
+	%finalxscale = %scalex + %x;
+	if(%finalzscale <= "0")
+		%finalzscale = "1";
+	if(%finalzscale > "1000")
+		%finalzscale = "1000";
+	if(%finalxscale <= "0")
+		%finalxscale = "1";
+	if(%finalxscale > "1000")
+		%finalxscale = "1000";
+	if(%finalyscale <= "0")
+		%finalyscale = "1";
+	if(%finalyscale > "1000")
+		%finalyscale = "1000";
+	%tempBrick.customscale = %finalxscale SPC %finalyscale SPC %finalzscale;
+	%tempBrick.setScale(%finalxscale SPC %finalyscale SPC %finalzscale);
+	}
+	}
+	}
+	}
+	}
+}
+
+function ServerCmdCustomRotateBrick( %client, %RotX, %RotY, %RotZ)
+{
+	if($Pref::Server::CustomShifting $= 1)
+	{
+	if(%client.player.tempBrick.FXMode >= 1 || %client.player.tempBrick.isMoverGhost $= 1)
+	   return;
+	%player = %client.player;
+	%tempBrick = %player.tempBrick;
+	if(!isObject(%tempBrick))
+	{
+	return;
+	}
+	if(%tempBrick.Datablock $= Staticbrick2x2FX)
+	{
+	return;
+	}
+
+	%tempbrick.setSkinName('construction');
+
+
+	if(%tempBrick)
+	{
+		%OldRot = %tempBrick.EulerRot;
+		if(%OldRot $= "")
+		{
+		%OldRot = "0 0 0";
+		}
+		%OldRotX = getWord(%OldRot, 0);
+		%OldRotY = getWord(%OldRot, 1);
+		%OldRotZ = getWord(%OldRot, 2);
+
+		%NewRotX = %OldRotX + %RotX;
+		%NewRotY = %OldRotY + %RotY;
+		%NewRotZ = %OldRotZ + %RotZ;
+
+		%tempBrick.settransform(getwords(%tempBrick.gettransform(),0,2) SPC eulertoquat(%NewRotX SPC %NewRotY SPC %NewRotZ));
+		%tempBrick.EulerRot = %NewRotX SPC %NewRotY SPC %NewRotZ;
+		}
+	}
 }

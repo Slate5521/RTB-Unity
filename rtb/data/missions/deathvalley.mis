@@ -5,10 +5,10 @@ new SimGroup(MissionGroup) {
       musicTrack = "lush";
 
    new ScriptObject(MissionInfo) {
-         bitmap = "deathvalley";
          desc0 = "This is an edited version of Happy Valley. The safe zones are marked off. Use the world editor to learn how to place them. Map By Wedge";
          name = "Death Valley";
          desclines = "3";
+         bitmap = "deathvalley";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -49,9 +49,9 @@ new SimGroup(MissionGroup) {
       color = "1.000000 0.730000 0.660000 1.000000";
       ambient = "0.600000 0.450000 0.460000 1.000000";
          position = "0 0 0";
-         locked = "true";
          rotation = "1 0 0 0";
          scale = "1 1 1";
+         locked = "true";
    };
    new TerrainBlock(Terrain) {
       rotation = "1 0 0 0";
@@ -115,18 +115,18 @@ new SimGroup(MissionGroup) {
       MinAlpha = "0.25";
       MaxAlpha = "0.7";
       removeWetEdges = "0";
-         params0 = "0.32 -0.67 0.066 0.5";
-         floodFill = "1";
-         params1 = "0.63 -2.41 0.33 0.21";
-         extent = "100 100 10";
-         textureSize = "32 32";
          params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
          params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
          envMapTexture = "fps/data/skies/sunset_0007";
+         params1 = "0.63 -2.41 0.33 0.21";
+         textureSize = "32 32";
          seedPoints = "0 0 1 0 1 1 0 1";
    };
    new WheeledVehicle() {
-      position = "0 0 -7.61017e+007";
+      position = "0 0 -7.92903e+007";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";
@@ -274,7 +274,7 @@ new SimGroup(MissionGroup) {
       rotate = "0";
    };
    new WheeledVehicle() {
-      position = "0 0 -2.68816e+006";
+      position = "0 0 -6.08245e+006";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "deathVehicle";
@@ -356,12 +356,12 @@ new SimGroup(MissionGroup) {
       LocalFlareBitmap = "common/lighting/lightFalloffMono";
       RemoteFlareBitmap = "common/lighting/TehMoon";
       SunAzimuth = "90";
-      SunElevation = "30";
+      SunElevation = "33";
       FlareTP = "1";
       Colour = "0.860000 0.450000 0.450000 1.000000";
-      Brightness = "0.32";
-      FlareSize = "1";
-      FadeTime = "0.1";
+      Brightness = "1";
+      FlareSize = "1.66";
+      FadeTime = "0";
       BlendMode = "0";
       AnimColour = "0";
       AnimBrightness = "0";

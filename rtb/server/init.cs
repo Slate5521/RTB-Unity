@@ -37,38 +37,38 @@
 
 //-----------------------------------------------------------------------------
 
-function initServer(%PTTA)
+function initServer()
 {
-   echo("\n--------- Initializing FPS: Server ---------");
+	echo("\n--------- Initializing FPS: Server ---------");
+	
+	// Server::Status is returned in the Game Info Query and represents the
+	// current status of the server. This string sould be very short.
+	$Server::Status = "Unknown";
+	
+	// Turn on testing/debug script functions
+	$Server::TestCheats = true;
+	
+	// Specify where the mission files are.
+	$Server::MissionFileSpec = "*/missions/*.mis";
+	
+	// The common module provides the basic server functionality
+	initBaseServer();
+	
+	// Load up game server support scripts
+	exec("./scripts/commands.cs");
+	exec("./scripts/centerPrint.cs");
+	exec("./scripts/game.cs");
+	exec("./rBans.cs");
+	exec("./serverRules.cs");
+	exec("./clientCash.cs");
+	exec("./clientRecords.cs");
 
-   // Server::Status is returned in the Game Info Query and represents the
-   // current status of the server. This string sould be very short.
-   $Server::Status = "Unknown";
-
-   // Turn on testing/debug script functions
-   $Server::TestCheats = true;
-
-   // Specify where the mission files are.
-   $Server::MissionFileSpec = "*/missions/*.mis";
-
-   // The common module provides the basic server functionality
-   initBaseServer();
-
-   // Load up game server support scripts
-   exec("./scripts/commands.cs");
-   exec("./scripts/centerPrint.cs");
-   exec("./scripts/PTTAgame.cs");
-   exec("./rBans.cs");
-   exec("./serverRules.cs");
-   exec("./clientCash.cs");
-   exec("./clientRecords.cs");
-
-//Load X's Scripts
-error("\n--------- Initializing MOD: Mrx's Menu ---------\n");
-//echo("\n--------- Initializing MOD: Mrx's Menu ---------");
-exec("rtb/server/xinit.cs");
-error("\n--------- Completed Initializing MOD: Mrx's Menu ---------\n");
-//echo("\n--------- Completed Initializing MOD: Mrx's Menu ---------\n");
+	//Load X's Scripts
+	error("\n--------- Initializing MOD: Mrx's Menu ---------\n");
+	//echo("\n--------- Initializing MOD: Mrx's Menu ---------");
+	exec("rtb/server/xinit.cs");
+	error("\n--------- Completed Initializing MOD: Mrx's Menu ---------\n");
+	//echo("\n--------- Completed Initializing MOD: Mrx's Menu ---------\n");
 }
 
 

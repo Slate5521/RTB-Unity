@@ -18,9 +18,6 @@ $Game::EndGamePause = 2;
 //  Functions that implement game-play
 //-----------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------
-
-
 
 //----------------------------------------
 //# 04 STUFF
@@ -28,8 +25,23 @@ $Game::EndGamePause = 2;
 
 function GameConnection::onClientLeaveGame(%this)
 {
+        //----------------------------------------PTTA LOG FILES-------------------------------------------
+	if($Pref::Server::Log)
+	{
+	$Logfile = new FileObject();
+	$Logfile.openForAppend("rtb/server/ServerLog.txt");
+	$Logfile.writeLine(">>EXIT<<");
+	$Logfile.writeLine("Name: "@%this.namebase @ " ip: "@getrawip(%this)@" Time Exited: " @ $Sim::Time@ " bricks placed: "@%this.TotalBricksPlaced@ " Kicked/Banned?: "@%this.KickBan);
+	$Logfile.close();
+	}
+	//--------------------------------------------------------------------------------------------------
+	//PTTA VOTING
+	if(%client.hasVotedNo)$Pref::Server::VoteNo--;
+	if(%client.hasVotedYes)$Pref::Server::VoteYes--;
 
-	if($Pref::Server::SaveBrickOwnersOnExit == 1)
+	
+
+        if($Pref::Server::SaveBrickOwnersOnExit == 1)
 	{
 		for(%t = 0; %t < MissionCleanup.getCount()+1; %t++)
 		{
@@ -107,7 +119,7 @@ function listClients()
 	}
 }
 
-function onServerCreated()
+function onServerCreated(%mission)
 {
    // Server::GameType is sent to the master server.
    // This variable should uniquely identify your game and/or mod.
@@ -124,10 +136,20 @@ function onServerCreated()
    // Load up all datablocks, objects etc.  This function is called when
    // a server is constructed.
 
+   //***PTTA Stuff***
+   serverstats();
+   AutoSave();
+   Adverts();
+   $Pref::Server::LastVoteTime = 0;
+   $Pref::Server::OverWriteVote = false;
+   $Pref::Server::VoteInProgress = false;
+
+   //***PTTA COMMANDS EXECUTION***
+   exec("./PTTA/PTTAexec.cs");
 
    exec("./constants.cs");
-   exec("./serverCmd.cs");
-   exec("./adminCommands.cs");
+   exec("./PTTA/serverCmd.cs");
+   exec("./PTTA/adminCommands.cs");
    exec("./audioProfiles.cs");
    exec("./camera.cs");
    exec("./markers.cs"); 
@@ -136,17 +158,25 @@ function onServerCreated()
    exec("./shapeBase.cs");
    exec("./item.cs");
    exec("./staticShape.cs");
-   exec("./weapon.cs");
+   exec("./PTTA/weapon.cs");
    exec("./radiusDamage.cs");
-   exec("./player.cs");
+   exec("./ptta/player.cs");
    exec("./brick.cs");
+   
+    // Check to see if the mission has custom datablocks
+	%missionDBFile = filePath(%mission) @ "/" @ fileBase(%mission) @ ".datablocks.cs";
+	if(isFile(%missionDBFile)) {
+		echo("Executing map-specific datablocks:" SPC %missionDBFile);
+		exec(%missionDBFile);
+	}
 
    //###################################
    //# Indiv. File Execs.
    //###################################
    exec("./Bricks/Brickexec.cs");
    exec("./Vehicles/Vehicleexec.cs");
-   exec("./Tools/Toolexec.cs");
+   exec("./Tools/screwdriver.cs");
+   exec("./PTTA/PTTAexec.cs");
    exec("./Items/Itemexec.cs");
    exec("./AI/AIexec.cs");
    exec("./Weapons/Weaponexec.cs");
@@ -154,19 +184,23 @@ function onServerCreated()
    //# End.
    //###################################
 
-   exec("./movers.cs");
+   exec("./PTTA/movers.cs");
    exec("./particles.cs");
    exec("./bombexplosions.cs");
    exec("./bombradiusdamage.cs");
-   exec("./message.cs");
+   exec("./PTTA/message.cs");
    exec("./precipitation.cs");
-   exec("./persistence.cs");
+   exec("./PTTA/persistence.cs");
    exec("./showImages.cs");
-   exec("./invSelect.cs");
+   //exec("./invSelect.cs");
+   exec("./inventorycommands.cs");
    exec("./Brickprints.cs");
    exec("./environment.cs");
+   exec("./Radar.cs");
+   
 
-
+   //PTTA COMMANDS
+   //exec("./pttaCommands.cs");
 
    // Keep track of when the game started
    $Game::StartTime = $Sim::Time;
@@ -261,7 +295,7 @@ function startGame()
 		%obj = MissionGroup.getObject(%i);
 		if (%obj.dataBlock $= "gray32")
 		{
-			%obj.setSkinName(%obj.color);
+			%obj.setSkinName(%obj.skinname);
 		}
 		if($Pref::Server::Weapons == 0)
 		{
@@ -371,33 +405,43 @@ function onCyclePauseEnd()
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
-
 function GameConnection::onConnectRequest( %client, %netAddress, %name )
 {
-	echo("Connect request from: " @ %netAddress);
+	
 
+	echo("Connect request from: " @ %netAddress);
 	%client.name = %name;
 	%client.HBR = 1;
+	%client.inventrights = false;
+
+	if(%name $= "% %")%client.delete("Please change your name");
+
 	//check ban list
 	%ip = getRawIP(%client);
 	%i = 0;
-	for(%i = 0; %i <= $Ban::numBans; %i++)
+	if($Pref::Server::Lock == 0)
 	{
-		echo("Checking IP Ban Entry Number: ", %i);
-		if(%ip $= $Ban::ip[%i])
+		for(%i = 0; %i <= $Ban::numBans; %i++)
 		{
+			echo("Checking IP Ban Entry Number: ", %i);
+			if(%ip $= $Ban::ip[%i])
+			{
 			return "You are banned.";
+			messageall('','%1 tried to enter the server but is banned',%client.namebase);
+			}
+
 		}
-
 	}
-
+	//moded script by ©YTUD FO LLAC - function GameConnection::onConnectRequest
+	if($Pref::Server::Lock == 1 && %ip !$= $Pref::Server::IP)
+	{
+	return "This server is LOCKED please come back later!";
+	}
 	
-	if($Server::PlayerCount >= $pref::Server::MaxPlayers)
+	if($Server::PlayerCount >= $pref::Server::MaxPlayers && %ip !$= $Pref::Server::IP)
 	{
 	return "CR_SERVERFULL";
 	}
-
-
 	return "";
 }
 
@@ -428,12 +472,53 @@ function GameConnection::onConnect( %client, %name )
    if (%client.getAddress() $= "local") {
       %client.isAdmin = true;
       %client.isSuperAdmin = true;
+      %client.isXAdmin = true;
    }
    else {
       %client.isAdmin = false;
       %client.isSuperAdmin = false;
+      %client.isXAdmin = false;
+      //Set all options to false < They were set to true automatically...
+      %client.XadminNoob = false;
+      %client.XAdminBurn = false;
+      %client.XAdminSlap = false;
+      %client.XAdminChgname = false;
+      %client.XAdminRights = false;
+      %client.XAdminSvrmsg = false;
+      %client.XAdminAdmmsg = false;
+      %client.XAdminKickAll = false;
+      %client.XAdminMuteAll = false;
+      %client.XAdminBanAll = false;
+      %client.XAdminCop = false;
+      %client.XAdminRob = false;
+      %client.XAdminGoto = false;
+      %client.XAdminBring = false;
    }
 
+ //-------------------------------------------PTTA CLIENT VARIABLES---------------------------------------------
+   //set the status of the client being: Inventory Rights/GOD MODE/unadmin/muted/cloaked/Banning Rights!
+   %client.inventrights = false;
+   %client.isGod = false;
+   %client.isUnAdmined = false;
+   %client.isTotalMuted = false;
+   %client.isAdminCloaked = false;
+   %client.isInventoryRights = false;
+   %client.isDeInvent = false;
+   %client.BanningRights = false;
+   %client.isEditProtected = false;
+   %client.isPMM = false;
+   %client.isJetUser = false;
+   %client.isAlreadyHere = false;
+   %client.hasVotedNo = flase;
+   %client.hasVotedYes = false;
+   %client.BrickSpam = 0;
+   %client.BricksPlaced = 0;
+   %client.TotalBricksPlaced = 0;
+   %client.KickBan = "No";
+   
+  //----------------------------------------------------------------------------------------
+
+   
    // Save client preferences on the connection object for later use.
    %client.gender = "Male";
    %client.armor = "Light";
@@ -485,6 +570,47 @@ function GameConnection::onConnect( %client, %name )
       %client.isAdmin, 
       %client.isSuperAdmin);
 
+//-----------------------PTTA COMMANDS-----------------------------
+
+   messageClient(%client,'','\c2Admins on this server: ');
+   %admins=0; 
+   %count = ClientGroup.getCount();
+   for(%cl = 0; %cl < %count; %cl++)
+   {
+	
+      %client2 = ClientGroup.getObject(%cl);
+	if(%client2.isAdmin || %client2.isSuperAdmin)
+	{
+	messageClient(%client,'','\c2%1',%client2.name);
+	%admins++;
+	}
+   }
+   if(%admins == 0)
+   {
+   messageClient(%client,'','\c2No Super Admins present.');
+   }
+
+//-----------------------XAdmin COMMANDS-----------------------------
+
+   messageClient(%client,'','\c5XAdmins on this server: ');
+   %xadmins=0; 
+   %xcount = ClientGroup.getCount();
+   for(%xcl = 0; %xcl < %xcount; %xcl++)
+   {
+	
+      %client2 = ClientGroup.getObject(%xcl);
+	if(%client2.isXAdmin)
+	{
+	messageClient(%client,'','\c5%1',%client2.name);
+	%xadmins++;
+	}
+   }
+   if(%xadmins == 0)
+   {
+   messageClient(%client,'','\c5No XAdmins present.');
+   }
+
+//----------------------------------------------------------------------
 
 	%ip = getRawIP(%client);
 	if(%ip !$= "local")
@@ -507,7 +633,187 @@ function GameConnection::onConnect( %client, %name )
    if ($missionRunning)
       %client.loadMission();
    $Server::PlayerCount++;
+
+//---------------------------->>PTTA COMMANDS FOR SERVER LOG<<-------------------------------
+
+%cip = getRawIP(%client);
+	
+	if($Pref::Server::Log)
+	{
+	$Logfile = new FileObject();
+	$Logfile.openForRead("rtb/server/SystemServerLog.txt");
+	%client.isBack = 0;
+	
+	for(%i = 0; %i < 6000; %i++)
+	{
+	%LogRead = $Logfile.readLine();
+	if(%LogRead $= " ")return;
+	if(%LogRead $= %cip)%client.isBack++;
+	}
+	
+	$Logfile.close();
+	if(%client.isBack > 0)messageClient(%client, '', 'Thanks for coming back to this server! you\'ve been here %1 times before!',%client.isBack);
+	}
+
+	
+
+	%cip = getRawIP(%client);
+
+	if($Pref::Server::NameChangeWarning)
+	{
+		$Logfile2 = new FileObject();
+		$Logfile2.openForRead("rtb/server/SystemServerLog.txt");
+		//%ToldAdmin = true;
+		$PreviousName = "";
+		$LineAt = 0;
+	
+		for(%i = 0; %i < 6000; %i++)
+		{
+			$LineAt++;
+			%LogRead = $Logfile2.readLine();
+			//if(%LogRead $= " ")return;
+			if(%LogRead $= %cip)
+				{
+				//messageall('','Found your ip');
+				$Logfile3 = new FileObject();
+				$Logfile3.openForRead("rtb/server/SystemServerLog.txt");
+				for(%i = 0; %i <= ($LineAt+1); %i++)
+					{	
+					%LoggedName = $Logfile3.readLine();
+					if(%i $= ($LineAt))
+						{
+						//messageall('','Ok we found your name');
+						//%LoggedName = $Logfile3.readLine();
+						if($PreviousName !$= %LoggedName)
+							{
+							if(%LoggedName !$= %client.namebase)
+								{
+								//messageall('','Your names arent the same');
+								$Logfile = new FileObject();
+								$Logfile.openForAppend("rtb/server/ServerLog.txt");
+								$Logfile.writeLine(">>*NAME CHANGE*<<");
+								$Logfile.writeLine("Name: "@%client.namebase @ " ip: "@getrawip(%client)@" Previous Name: " @ %LoggedName);
+								$Logfile.close();
+
+								messageadmin('','\c3NOTE: %1 (%2) has returned to this server with a different name (prev: %3)',%client.namebase, %cip, %LoggedName);
+								$PreviousName = %LoggedName;	
+								}
+							}
+						}
+					}
+				$Logfile3.close();
+				}
+		}
+	$Logfile2.close();
+	}
+
+
+
+
+	if($Pref::Server::ImposterWarning)
+	{
+	%cip = getRawIP(%client);
+	if(%cip $= "local")return;
+	$Logfile2 = new FileObject();
+	$Logfile2.openForRead("rtb/server/SystemServerLog.txt");
+	$LineAt = 0;
+	$LastLogRead = "";
+	%MessageCount = 0;
+	%ToldAdmin = false;
+
+	for(%i = 0; %i < 6000; %i++)
+	{
+		$LineAt++;
+		%LogRead = $Logfile2.readLine();
+		//if(%LogRead $= " ")return;
+		if(%LogRead $= %client.namebase)
+		{
+			//messageall('','Found your client name');
+						
+			$Logfile3 = new FileObject();
+			$Logfile3.openForRead("rtb/server/SystemServerLog.txt");
+			for(%i = 0; %i <= ($LineAt - 1); %i++)
+			{
+				
+				%LogRead = $Logfile3.readLine();
+				if(%i $= ($LineAt - 2))
+				{
+					//messageall('','found your ip');
+					//%LogRead = $Logfile3.readLine();
+					%cip = getRawIP(%client);
+					if(%LogRead != %cip && %LogRead != $LastLogRead && %LogRead !$="")
+					{	
+						//messageall('','THe ips dont match!');
+						if(%MessageCount < 1)
+						{
+							//messageall('','\c3WARNING: %1 (%2) has a different IP from his last visit (%3). He may be an imposter.',%client.namebase, %cip, %LogRead);
+							%MessageCount++;
+							messageadmin('','\c3WARNING: %1 (%2) has a different IP from his last visit (%3). He may be an imposter.',%client.namebase, %cip, %LogRead);
+							$Logfile = new FileObject();
+							$Logfile.openForAppend("rtb/server/ServerLog.txt");
+							$Logfile.writeLine(">>*IMPOSTER WARNING*<<");
+							$Logfile.writeLine("Name: "@%client.namebase @ " ip: "@getrawip(%client)@" Previous ip: " @ %LogRead);
+							$Logfile.close();
+							$LastLogRead = %LogRead;
+						}
+						else 
+						{
+							if(!%ToldAdmin)
+							{
+							messageadmin('','\c3If you\'d like to see the rest of the log, please type \c0\"Yes\"\c3 in the chat hud');
+							%count = ClientGroup.getCount();
+ 							for(%cl = 0; %cl < %count; %cl++)
+ 								{
+   									%admin = ClientGroup.getObject(%cl);
+									if(%admin.isSuperAdmin)
+									{		
+										%admin.CheckClient = %client;					
+										%admin.WantExpandLog = 0;
+										%admin.WaitingforMessage = 1;
+										%admin.schedule(5000, cancelexpandlog, %admin);
+										%ToldAdmin = true;
+									}
+								}
+							$Logfile2.close();
+							$Logfile3.close();
+							break;
+							}
+							
+						}
+					}
+				}
+			}
+			$Logfile3.close();
+		}
+	}
+	$Logfile2.close();
+	}
+		
+
+	if($Pref::Server::Log)
+	{
+	$Logfile = new FileObject();
+	$Logfile.openForAppend("rtb/server/ServerLog.txt");
+	$Logfile.writeLine(">>ENTER<<");
+	$Logfile.writeLine("Name: "@%client.namebase @ " ip: "@getrawip(%client)@" Time Entered: " @ $Sim::Time);
+	$Logfile.openForAppend("rtb/server/SystemServerLog.txt");
+	$Logfile.writeLine(getrawip(%client)); 
+	$Logfile.writeLine(%client.namebase);
+	$Logfile.close();
+	}		
+
+//---------------------------->>*END* PTTA COMMANDS FOR SERVER LOG<<-------------------------------
+
 }
+
+function cancelexpandlog(%client)
+{
+%client.WantExpandLog = 1;
+%client.WaitingforMessage = 0;
+}
+
+
+
 
 function GameConnection::onClientEnterGame(%this)
 {
@@ -715,6 +1021,7 @@ function GameConnection::onDeath(%this, %sourceObject, %sourceClient, %damageTyp
    }
    else if(isObject(%sourceClient)) {
       %sourceClient.incScore(1);
+      commandtoserver('givemoneyforkill',%sourceClient,%player);
       switch$ (%damageType)
       {
         case axe:
@@ -728,13 +1035,13 @@ function GameConnection::onDeath(%this, %sourceObject, %sourceClient, %damageTyp
 	case crossbow:
         messageAll('MsgClientKilled','%2 bolted an arrow through %1\'s head!',%this.name,%sourceClient.name);
 	case duallightsabre:
-        messageAll('MsgClientKilled','%1 got mutilated by %2!',%this.name,%sourceClient.name);
+        messageAll('MsgClientKilled','%1 got sliced by %2!',%this.name,%sourceClient.name);
         case pickaxe:
         messageAll('MsgClientKilled','%1 got axed in the back by %2!',%this.name,%sourceClient.name);
 	case pistol:
         messageAll('MsgClientKilled','%1 got shot by %2!',%this.name,%sourceClient.name);
 	case rifle:
-        messageAll('MsgClientKilled','%1 got rifled in the crotch by %2!',%this.name,%sourceClient.name);
+        messageAll('MsgClientKilled','%1 got rifled by %2!',%this.name,%sourceClient.name);
 	case spear:
         messageAll('MsgClientKilled','%1 got speared by %2!',%this.name,%sourceClient.name);
 	case speargun:
@@ -968,8 +1275,29 @@ if($Pref::Server::CopsAndRobbers)
 	%z = getWord(%trans,2);
 	
 	%player.setTransform(%x SPC %y SPC %z);
-}
-else
+//neu
+	}
+	else if(%this.team !$= "")
+	{
+    		if($TeamSpawn[%this.team] !$= ""){
+    		%TeamSpawn = $TeamSpawn[%this.team];
+        	if(%TeamSpawn.IsTeamSpawn != 0){
+        	%trans = %TeamSpawn.getWorldBoxCenter();
+        	%x = getWord(%trans,0);
+        	%y = getWord(%trans,1);
+        	%z = getWord(%trans,2) + 1;
+        	%player.setTransform(%x SPC %y SPC %z);
+        	schedule(1000,0,colorplayer,%this,%player);
+        	}
+        	else
+        	%player.setTransform(%spawnPoint);
+    	}
+    	else
+    	%player.setTransform(%spawnPoint);
+	}
+
+
+	else
 {
 %player.setTransform(%spawnPoint);
 }
@@ -987,6 +1315,21 @@ else
    %this.setControlObject(%player);
 }
 
+//Color player
+function colorplayer(%this,%player){
+%teamname = %this.team;
+for(%i = 0;%i <= $TotalColors;%i++){
+    %color = strreplace($ColorPreview[%i],"rtb/data/shapes/bricks/","");
+    %color = strreplace(%color,".brickside.bmp","");
+    if(%teamname $= %color){
+        %player.setSkinName(%teamname);
+        %player.unmountImage($headSlot);
+        %player.unmountImage($visorSlot);
+        %player.unmountImage($backSlot);
+        %player.unmountImage($leftHandSlot);
+    }
+}
+}
 
 //-----------------------------------------------------------------------------
 // Support functions
@@ -1038,6 +1381,5 @@ function pickSpawnPoint()
    // player at the center of the world.
    return "0 0 300 1 0 0 0";
 }
-
 
 
