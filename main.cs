@@ -7,6 +7,7 @@ $baseMods   = "common";
 $userMods   = "fps";
 $displayHelp = false;
 
+exec("rtb/dev.cs");
 
 //-----------------------------------------------------------------------------
 // Support functions used to manage the mod string
