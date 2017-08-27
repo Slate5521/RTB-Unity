@@ -112,6 +112,14 @@ function initClient()
 	exec("./ui/login.gui");
 	exec("./ui/impulseGUI.gui");
 	exec("./ui/tgelobby/execall.cs");
+	
+	// Load up PTTA UI
+	exec("./ui/voting.gui");
+	exec("./ui/pttaGuiserver.gui");
+	exec("./ui/pttaGuipersonal.gui");
+	exec("./ui/pttaGui.gui");
+	exec("./ui/Changemap.gui");
+
 
 	// Client scripts
 	exec("./scripts/radar.cs");
@@ -133,6 +141,10 @@ function initClient()
 	exec("./scripts/EditorGUI.cs");
 	exec("./scripts/botOpGUI.cs");
 	exec("./scripts/adminGui.cs");
+	
+	// PTTA scripts
+	exec("./scripts/voting.cs");
+	exec("./scripts/pttaGui.cs");	
 	
 	// Default player key bindings
 	exec("./default.bind.cs");

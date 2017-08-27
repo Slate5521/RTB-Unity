@@ -180,7 +180,7 @@ new GuiControl(pttagui) {
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
-         bitmap = "~/client/PTTA/pttaguilogo.PNG";
+         bitmap = "./pttaguilogo.PNG";
          wrap = "0";
       };
       new GuiTextCtrl() {

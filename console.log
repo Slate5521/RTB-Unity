@@ -1,7 +1,7 @@
-//-------------------------- 8/27/2017 -- 10:19:27 -----
+//-------------------------- 8/27/2017 -- 10:23:54 -----
 Processor Init:
-   AMD (unknown), ~3.40 Ghz
-     (timed at roughly 3.43 Ghz)
+   AMD (unknown), ~3.45 Ghz
+     (timed at roughly 3.44 Ghz)
    FPU detected
    MMX detected
    3DNow detected
@@ -168,22 +168,7 @@ OpenAL
 
 Compiling rtb/client/scripts/audioProfiles.cs...
 Loading compiled script rtb/client/scripts/audioProfiles.cs.
-Compiling rtb/client/PTTA/PTTAexec.cs...
-Loading compiled script rtb/client/PTTA/PTTAexec.cs.
-Compiling rtb/client/PTTA/voting.gui...
-Loading compiled script rtb/client/PTTA/voting.gui.
-Compiling rtb/client/PTTA/voting.cs...
-Loading compiled script rtb/client/PTTA/voting.cs.
-Compiling rtb/client/PTTA/pttaGuiserver.gui...
-Loading compiled script rtb/client/PTTA/pttaGuiserver.gui.
-Compiling rtb/client/PTTA/pttaGuipersonal.gui...
-Loading compiled script rtb/client/PTTA/pttaGuipersonal.gui.
-Compiling rtb/client/PTTA/pttaGui.gui...
-Loading compiled script rtb/client/PTTA/pttaGui.gui.
-Compiling rtb/client/PTTA/Changemap.gui...
-Loading compiled script rtb/client/PTTA/Changemap.gui.
-Compiling rtb/client/PTTA/pttaGui.cs...
-Loading compiled script rtb/client/PTTA/pttaGui.cs.
+Missing file: rtb/client/PTTA/PTTAexec.cs!
 Compiling rtb/client/ui/defaultGameProfiles.cs...
 Loading compiled script rtb/client/ui/defaultGameProfiles.cs.
 Compiling rtb/client/ui/PlayGui.gui...
@@ -290,6 +275,16 @@ Compiling rtb/client/ui/tgelobby/GuiLogonDlg.gui...
 Loading compiled script rtb/client/ui/tgelobby/GuiLogonDlg.gui.
 Compiling rtb/client/ui/tgelobby/CreateRoom_Dlg.gui...
 Loading compiled script rtb/client/ui/tgelobby/CreateRoom_Dlg.gui.
+Compiling rtb/client/ui/voting.gui...
+Loading compiled script rtb/client/ui/voting.gui.
+Compiling rtb/client/ui/pttaGuiserver.gui...
+Loading compiled script rtb/client/ui/pttaGuiserver.gui.
+Compiling rtb/client/ui/pttaGuipersonal.gui...
+Loading compiled script rtb/client/ui/pttaGuipersonal.gui.
+Compiling rtb/client/ui/pttaGui.gui...
+Loading compiled script rtb/client/ui/pttaGui.gui.
+Compiling rtb/client/ui/Changemap.gui...
+Loading compiled script rtb/client/ui/Changemap.gui.
 Compiling rtb/client/scripts/radar.cs...
 Loading compiled script rtb/client/scripts/radar.cs.
 Compiling rtb/client/ui/GuiRadar.gui...
@@ -331,6 +326,10 @@ Loading compiled script rtb/client/scripts/botOpGUI.cs.
 rtb/client/scripts/botOpGUI.cs (0): Unable to find object: 'moveMap' attempting to call function 'bindCmd'
 Compiling rtb/client/scripts/adminGui.cs...
 Loading compiled script rtb/client/scripts/adminGui.cs.
+Compiling rtb/client/scripts/voting.cs...
+Loading compiled script rtb/client/scripts/voting.cs.
+Compiling rtb/client/scripts/pttaGui.cs...
+Loading compiled script rtb/client/scripts/pttaGui.cs.
 Compiling rtb/client/default.bind.cs...
 Loading compiled script rtb/client/default.bind.cs.
 Compiling rtb/client/config.cs...
@@ -388,8 +387,6 @@ Loading compiled script rtb/rss/ui/rssGui.gui.
 Compiling rtb/rss/rssGui.cs...
 Loading compiled script rtb/rss/rssGui.cs.
 Engine initialized...
-   keyboard0 input device created.
-   mouse0 input device created.
 slopes
 greenhills
 greenhills
@@ -1014,7 +1011,7 @@ Loading compiled script rtb/server/scripts/Radar.cs.
 Executing rtb/data/missions/bedroom.mis.
 *** Mission loaded
 -----------CONN = 2606
-Connect request from: IPX:20202020:202020206465:25459
+Connect request from: IPX:4E000000:370000003A00:0
 Checking IP Ban Entry Number: 0
 Connection established 2606
 CADD: 2607 local
@@ -1091,10 +1088,6 @@ Warning: shape rtb/data/shapes/bricks/brick1x2handle.dts collision detail 0 (Col
 Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x3arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
-Mapping string: getBanList to index: 3
-Mapping string: getPLayerList to index: 4
-Mapping string: getPLayerTeamList to index: 5
-Mapping string: getTeamList to index: 6
 Error: shape rtb/data/shapes/bricks/brick1x3x2archcurve.dts-collision detail 1 (Collision-2) bounds box invalid!
 Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/fence1x4.dts collision detail 0 (Collision-1) bounds exceed that of shape.
@@ -1102,7 +1095,6 @@ Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision deta
 Warning: shape rtb/data/shapes/bricks/brick1x4x2fencespindled.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick1x4x6window.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Mapping string: MsgSendPlayerTeamList to index: 17
 Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick2x1x2slope.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape rtb/data/shapes/bricks/brick2x1x3slopeInv.dts collision detail 0 (Collision-1) bounds exceed that of shape.
@@ -1156,10 +1148,8 @@ addthread empty
 Validation required for shape: rtb/data/shapes/bricks/LegoPlane.dts
 addthread empty
 addthread empty
-Mapping string: JailPlayer to index: 7
 Could not locate texture: rtb/data/shapes/wary/neonwhite.brickSide
 Could not locate texture: rtb/data/shapes/wary/neonwhite.2x2Bottom
-Mapping string: It appears no jails brick has been specified! to index: 18
 Error: shape rtb/data/shapes/bricks/brickWeapon.dts-collision detail 0 (Collision-2) bounds box invalid!
 Could not locate texture: rtb/data/shapes/player/Decals/base.backdecal.png
 Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
@@ -1169,56 +1159,55 @@ Could not locate texture:
 Could not locate texture: 
 Could not locate texture: 
 Could not locate texture: 
-Mapping string: MissionStartPhase2 to index: 19
+Mapping string: MissionStartPhase2 to index: 17
 *** Phase 2: Download Ghost Objects
-Mapping string: MissionStartPhase2Ack to index: 8
+Mapping string: MissionStartPhase2Ack to index: 3
 Ghost Always objects received.
-Mapping string: MissionStartPhase3 to index: 20
+Mapping string: MissionStartPhase3 to index: 18
 Client Replication Startup has Happened!
 fxFoliageReplicator - Client Foliage Replication Startup is complete.
 *** Phase 3: Mission Lighting
  Successfully loaded mission lighting file: 'rtb/data/missions/bedroom_3260303f.ml'
 Mission lighting done
-Mapping string: rotcompatibility to index: 9
-Mapping string: messageSent to index: 10
+Mapping string: rotcompatibility to index: 4
+Mapping string: messageSent to index: 5
 rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
 rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
 Blockdude: /me is going to spawn in your server
-Mapping string: setstatus to index: 11
+Mapping string: setstatus to index: 6
 rtb/server/scripts/PTTA/serverCmd.cs (2798): Unable to find object: '' attempting to call function 'setShapeName'
-Mapping string: MissionStartPhase3Ack to index: 12
+Mapping string: MissionStartPhase3Ack to index: 7
 Set::getObject index out of range.
-Mapping string: rotiscompatible to index: 21
-Mapping string: name to index: 22
-Mapping string: *%1 %2 to index: 23
-Mapping string: MissionStart to index: 24
-Mapping string: SyncClock to index: 25
-Mapping string: MsgUpdateMoney to index: 26
-Mapping string: updateprefs to index: 27
-Mapping string: MsgClearInv to index: 28
-Mapping string: MsgHilightInv to index: 29
-Mapping string: MsgItemPickup to index: 30
-Mapping string: showBrickImage to index: 31
-Mapping string: storeCash to index: 13
-Mapping string: ShowBrickImage to index: 0
+Mapping string: rotiscompatible to index: 19
+Mapping string: name to index: 20
+Mapping string: *%1 %2 to index: 21
+Mapping string: MissionStart to index: 22
+Mapping string: SyncClock to index: 23
+Mapping string: MsgUpdateMoney to index: 24
+Mapping string: updateprefs to index: 25
+Mapping string: MsgClearInv to index: 26
+Mapping string: MsgHilightInv to index: 27
+Mapping string: MsgItemPickup to index: 28
+Mapping string: showBrickImage to index: 29
+Mapping string: storeCash to index: 8
+Mapping string: ShowBrickImage to index: 30
 rtb/client/scripts/playerList.cs (137): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'getRowNumById'
 rtb/client/scripts/playerList.cs (143): Unable to find object: 'lstPlayersPlayerList' attempting to call function 'setRowById'
 rtb/client/scripts/playerList.cs (155): Unable to find object: 'lstTeamPlayerList' attempting to call function 'getRowNumById'
 rtb/client/scripts/playerList.cs (161): Unable to find object: 'lstTeamPlayerList' attempting to call function 'setRowById'
 Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
-Mapping string: white to index: 2
-Mapping string: Cool1 to index: 3
-Mapping string: Misc-Blank to index: 4
-Mapping string: Blockdude to index: 5
-getewsettingupdate: Unknown command.
 *** Initial Control Object
 Activating DirectInput...
 keyboard0 input device acquired.
-Mapping string: UpdateRadar to index: 7
+Mapping string: white to index: 31
+Mapping string: Cool1 to index: 0
+Mapping string: Misc-Blank to index: 2
+Mapping string: Blockdude to index: 3
+getewsettingupdate: Unknown command.
+popDialog(): Invalid control: 
+Mapping string: UpdateRadar to index: 4
 rtb/client/scripts/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
-Mapping string: saveBricks to index: 14
-Save finished.
-Mapping string: ModifyShiftSize to index: 15
+Mapping string: ModifyShiftSize to index: 9
 keyboard0 input device unacquired.
 DirectInput deactivated.
 Exporting client prefs
@@ -1232,7 +1221,7 @@ rtb/server/scripts/PTTAgame.cs (48): Unable to find object: 'MissionCleanup' att
 rtb/server/scripts/PTTAgame.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
 rtb/server/scripts/PTTAgame.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
 rtb/server/scripts/PTTAgame.cs (81): Unable to find object: '2622' attempting to call function 'delete'
-CDROP: 2607 IPX:20202020:202020206465:25459
+CDROP: 2607 IPX:4E000000:370000003A00:0
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...
