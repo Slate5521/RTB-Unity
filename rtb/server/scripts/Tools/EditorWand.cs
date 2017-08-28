@@ -70,11 +70,11 @@ datablock ProjectileData(editorWandProjectile)
    explosion           = editorWandExplosion;
    //particleEmitter     = as;
 
-   muzzleVelocity      = 50;
+   muzzleVelocity      = 2000;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
-   lifetime            = 100;
+   lifetime            = 10000;
    fadeDelay           = 70;
    bounceElasticity    = 0;
    bounceFriction      = 0;
@@ -244,7 +244,7 @@ function editorWandImage::onStopFire(%this, %obj, %slot)
 
 function editorWandProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 {
-	if(%obj.client.isAdmin || %obj.client.isSuperAdmin || %obj.client.isEWandUser)
+	if((%obj.client.isAdmin || %obj.client.isSuperAdmin || %obj.client.isEWandUser) && !%col.client.isEditProtected)
 	{ 
 		%player = %obj.client.player;
 
@@ -514,12 +514,6 @@ function servercmdEditorScale(%client,%pos)
 					messageClient(%client,'',"\c4You cannot have any Scale value as 0");
 					return;
 	}
-
-	if((%scalex < 0.1 && %scalex > -0.1) || (%scaley < 0.1 && %scaley > -0.1) || (%scalez < 0.1 && %scalez > -0.1))
-	{
-					messageClient(%client,'',"\c4You cannot have any Scale value with magnitude less than 0.1");
-					return;
-	}
 	
 	if((%client.isAdmin && $Pref::Server::AdminEditor) || %client.isSuperAdmin || %client.isEWandUser)
 	{
@@ -557,9 +551,18 @@ function servercmdApplyEditorSettings(%client,%pos,%rot,%scale)
 	{
 		if(%client.SelectedObject)
 		{
+			%scalex = getword(%scale,0);
+			%scaley = getword(%scale,1);
+			%scalez = getword(%scale,2);
+
+			if(%scalex $= "" || %scalex $= "0" || %scaley $= "" || %scaley $= "0" || %scalez $= "" || %scalez $= "0")
+			{
+					messageClient(%client,'',"\c4You cannot have any Scale value as 0");
+					return;
+			}
 			%client.selectedObject.setTransform(%pos @ " " @ eulerToQuat(%rot));
 			%client.selectedObject.eulerrot = %rot;
-			servercmdEditorScale(%client, %scale);
+			%client.selectedObject.setScale(%scale);
 		}
 	}
 }

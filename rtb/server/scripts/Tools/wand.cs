@@ -96,7 +96,8 @@ datablock ItemData(wand)
 	className = "Tool"; // For inventory system
 
 	 // Basic Item Properties
-	shapeFile = "~/data/shapes/wand.dts";
+	shapeFile = "~/data/shapes/wand2.dts";
+	skinName = 'rainbow';
 	mass = 1;
 	density = 0.2;
 	elasticity = 0.2;
@@ -121,7 +122,8 @@ datablock ItemData(wand)
 datablock ShapeBaseImageData(wandImage)
 {
    // Basic Item properties
-   shapeFile = "~/data/shapes/wand.dts";
+   shapeFile = "~/data/shapes/wand2.dts";
+   skinName = 'rainbow';
    emap = true;
 	cloakable = false;
    // Specify mount point & offset for 3rd person, and eye offset
@@ -229,11 +231,11 @@ function wandProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 		
 		if(%colDataClass $= "brick")
 		{
-			if(%obj.client.WandMode == 0)
+			if(%obj.client.WandMode == 6)
 			{
 				killBrick(%col);
 			}
-			if(%obj.client.WandMode == 1)
+			if(%obj.client.WandMode == 7)
 			{
 				if(%col.teleportObj == 0)
 				{
@@ -258,7 +260,35 @@ function wandProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 					messageClient(%obj.client,"","\c4Removed teleport link");
 				}
 			}
-			if(%obj.client.WandMode == 2)
+			if(%obj.client.WandMode == 8)
+			{
+				if(%col.teleportObjByID == 0)
+				{
+					%obj.client.isMakingLinkByID = 1;
+					%obj.client.RequestedLink = %col;
+					messageClient(%obj.client,"","\c4Enter a requested ID number.");
+					commandtoclient(%obj.client,'OpenPWBox');
+				}
+				else
+				{
+					%col.teleportObj = 0;
+					messageClient(%obj.client,"","\c4Removed teleport by ID");
+				}
+			}
+			if(%obj.client.WandMode == 9)
+			{
+				if(%col.teleportObjGateway == 0)
+				{
+					%col.isteleportObjGateway = 1;
+					messageClient(%obj.client,"","\c4Created a teleport by ID Gateway.");
+				}
+				else
+				{
+					%col.teleportObjGateway = 0;
+					messageClient(%obj.client,"","\c4Removed a teleport by ID Gateway.");
+				}
+			}
+			if(%obj.client.WandMode == 10)
 			{
 				if(%col.NoDestroy == 0)
 				{
@@ -273,7 +303,7 @@ function wandProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 
 			}
 		}
-		if(%obj.client.WandMode == 3)
+		if(%obj.client.WandMode == 0)
 		{
 			if(%col.iswcloaked != 0 && %col.iswcloaked != 1)
 			{
@@ -291,7 +321,7 @@ function wandProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 				%col.iswcloaked = 0;
 			}
 		}
-		if(%obj.client.WandMode == 4)
+		if(%obj.client.WandMode == 1)
 		{
 			if(%col.isDetBrick $= 1)
 			{
@@ -306,15 +336,88 @@ function wandProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 		}
 
 
-		if(%obj.client.WandMode == 5)
+		if(%obj.client.WandMode == 2)
 		{
 			%owner = %col.ownername;
 			%ownerip = %col.ownerip;
 			commandtoclient(%obj.client,'openBP',%owner,%ownerip);
+			}
 		}
-		
-	}
 
+		if(%obj.client.WandMode == 3)
+		{
+			if(%col.iskiller $= 1)
+			{
+				%col.iskiller = 0;
+				messageClient(%obj.client,"","\c4KillerBrick OFF");
+			}
+			else
+			{
+				%col.iskiller = 1;
+				messageClient(%obj.client,"","\c3KillerBrick ON");
+			}
+		}
+
+		if(%obj.client.WandMode == 4)
+		{
+			if(%col.isscale $= 1)
+			{
+				%col.isscale = 0;
+				messageClient(%obj.client,"","\c4ScaleBrick OFF");
+			}
+			else
+			{
+				%col.isscale = 1;
+				messageClient(%obj.client,"","\c5ScaleBrick ON");
+			}
+		}
+
+		if(%obj.client.WandMode == 5)
+		{
+			if(%col.ispaint $= 1)
+			{
+				%col.ispaint = 0;
+				messageClient(%obj.client,"","\c4PaintBrick OFF");
+			}
+			else
+			{
+				%col.ispaint = 1;
+				messageClient(%obj.client,"","\c5PaintBrick ON");
+			}
+	}
+}
+
+function serverCmdCheckDoorPassword(%client,%password)
+{
+	%col = %client.PWDoor;
+	if(%client.isMakingLinkByID){
+		%client.RequestedLink.LinkedByID = 1;
+		%client.RequestedLink.LinkNum = %password;
+		%client.isMakingLinkByID = 0;
+		centerprint(%client,"ID set to " @ %password @ ".",5,1);
+		return;
+	}
+	if(%client.isRequestingTeletoID){
+		for(%t = 0; %t < MissionCleanup.getCount(); %t++){
+		%teleObj = MissionCleanup.getObject(%t);
+		if(%teleObj.LinkedByID == 1 && %teleObj.LinkNum $= %password){
+			Schedule(200,0,"ServerCmdTeleportToObj",%client,%teleObj,500);
+			%client.isRequestingTeletoID = 0;
+			centerprint(%client,"Teleporting to ID " @ %password @ "...",5,1);
+			return;
+		}}
+		messageClient(%client,"",'\c4Invalid ID!',%password);
+		return;
+	}
+	if(%col.password $= %password || (%client.isSuperAdmin && $Pref::Server::CopsAndRobbers !$= 1))
+	{
+		centerprint(%client,"Password Accepted!",5,1);
+		executemoverinstructions(%client, %col);
+	}
+	else
+	{
+		centerprint(%client,"Password Rejected!",5,1);
+	}
 }
 
 function chainColourBrick(%brick, %checkVal, %iteration, %colour)

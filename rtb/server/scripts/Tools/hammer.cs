@@ -305,6 +305,7 @@ function hammerProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 					%col.mounteddecal.delete();
 				}
 			}
+			%obj.client.BricksPlaced--;
 			
 		}
 		else

@@ -187,6 +187,16 @@ function sprayCanProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 	{
 		if(%col.getClassName() $= "WheeledVehicle"|| %col.getClassName() $= "StaticShape" || %col.getClassName() $= "Player")
 		{
+			//-----------------------PTTA-------------------------
+			if (%col.getClassName() $= "Player")
+			{
+			if (%col.client.isAdmin || %col.client.isSuperAdmin)
+			{
+			messageClient(%obj.client,'','\c2You can\'t paint Admins!');
+			return;
+			}
+			}
+			//-----------------------------------------------------
 			if(%col.getSkinName() !$= $legoColor[%obj.client.colorIndex])
 			{	
 				%obj.client.Undo[0] = 1;

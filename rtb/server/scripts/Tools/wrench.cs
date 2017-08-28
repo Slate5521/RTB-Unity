@@ -403,8 +403,7 @@ function wrenchProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 			//Wrench in Brick-Message-Mode
 			if(%obj.client.WrenchMode == 3)
 			{
-				%isSafe = checkSafe(%col,%obj.client);
-				if(%col.Owner $= %obj.client || %obj.client.isAdmin || %obj.client.isSuperAdmin || %isSafe)
+				if(%col.Owner == %obj.client)
 				{
 					%col.setShapeName(%obj.client.BrickMessage);
 				}
@@ -430,11 +429,53 @@ function wrenchProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 			   commandtoclient(%client,'push',impulseGUI);
 				}
 			}
+//Wrench in camera place mode
+if(%obj.client.WrenchMode == 7)
+{
+	if(%col.Owner == %obj.client)
+	{
+				
+		if (!%col.iscam)
+		{
+			%client = %obj.client;
+			%client.ncn++;
+			%client.cam[%client.ncn] = %col;
+			%col.iscam = 1;
+			%col.camclient = %client;
+			messageClient(%obj.client,'',"\c4Camera placed");
+		}
+	}
+}
+			
+//Wrench in camera view mode			
+if(%obj.client.WrenchMode == 8)
+{
+	if(%col.Owner == %obj.client)
+	{
+		
+		echo("checkpoint1");
+		echo(%obj.curCamRoom);
+		if (%obj.curCamRoom)
+		{
+			echo("checkpoint2");
+		}
+		if (!%col.isRoomCam && %player.curCamRoom)
+		{
+			%client = %obj.client;
+			%camRoom = %player.curCamRoom;
+			%camRoom.ncn++;
+			%camRoom.cam[%camRoom.ncn] = %col;
+			%col.isRoomCam = 1;
+			%col.camRoom = %camRoom;
+			messageClient(%obj.client,'',"\c4Camera placed for the camera Room");
+		}
+	}
+}
 			//Wrench in Doorbell-Mode
 			if(%obj.client.WrenchMode == 6 && (%col.FXMode $= "" || %col.FXMode $= 0))
 			{
-				%isSafe = checkSafe(%col,%obj.client);
-				if(%col.Owner $= %obj.client || %obj.client.isAdmin || %obj.client.isSuperAdmin || %isSafe)
+				%isTrusted = checkSafe(%col,%obj.client);
+				if(%obj.client $= %col.owner || %isTrusted $= 1)
 					if(%col.isDoorbell $= 1)
 					{
 						%col.isDoorbell = 0;
@@ -447,9 +488,12 @@ function wrenchProjectile::onCollision(%this,%obj,%col,%fade,%pos,%normal)
 					}
 			}
 		}
+
+
+
 		if(%col.getClassName() $= "Player")
 		{
-			if(%obj.client.WrenchMode == 3)
+			if(%obj.client.WrenchMode == 2)
 			{
 				%col.applyRepair(10);
 			}
@@ -642,6 +686,7 @@ function serverCmdsetBricktoNorm(%client)
 	%col.TriggerCloak = "";
 	%col.Elevator = "";
 	%col.isImpulseTrigger = "";
+	%col.KeyProtected = "";
 	messageClient(%client,"","\c4You Removed the Brick Properties!");
 }
 
@@ -668,19 +713,7 @@ function setBricktoMover(%client)
 			%X = getWord(%XYZ, 0);
 			%Y = getWord(%XYZ, 1);
 			%Z = getWord(%XYZ, 2);
-			%client.stepTime = mFloor(%client.stepTime);
-			if(%client.StepTime >= 1000 || %client.StepTime < 0)
-			{
-				messageClient(%client,"","\c4You cannot have more than 1000 Steps, or less than 0.");
-				return;				
-			}
-			if(%client.WrenchSteps >= 1000 || %client.WrenchSteps < 0)
-			{
-				messageClient(%client,"","\c4You cannot have more than 1000 Steps, or less than 0.");
-				return;				
-			}
-			
-			if(%X >= 500 || %Y >= 500 || %Z >= 500 || %X <= -500 || %Y <= -500 || %Z <= -500)
+			if(%X >= 500 || %Y >= 500 || %Z >= 500)
 			{
 				messageClient(%client,"","\c4You cannot have any Move Value as more than 500.");
 				return;
@@ -711,7 +744,7 @@ function setBricktoMover(%client)
 		{
 			%col.DoorType = 3;
 		}
-	
+
 		if(%client.WrenchReturnToggle $= 1)
 		{
 			%col.ReturnToggle = 1;
@@ -726,17 +759,17 @@ function setBricktoMover(%client)
 			%col.TriggerDoorID = %client.WrenchDoorSetID;
 			%col.isImpulseTrigger = 1;
 		}
-		
+
 		if(%client.WrenchTriggerCloak)
 		{
 			%col.TriggerCloak = %client.WrenchTriggerCloak;
 		}
-		
+
 		if(%client.WrenchPrivate !$= "")
 		{
 			%col.Private = %client.WrenchPrivate;
 		}
-		
+
 		if(%client.WrenchPassword !$= "")
 		{
 			%col.Password = %client.WrenchPassword;
@@ -751,7 +784,16 @@ function setBricktoMover(%client)
 		{
 			%col.Group = %client.WrenchGroup;
 		}
-	 
+
+		if(%client.WrenchKeyProtected $= 1)
+		{
+			%col.KeyProtected = 1;
+		}
+		else
+		{
+			%col.KeyProtected = 0;
+		}
+
 		$Movers[$TotalMoversPlaced++] = %col;
 		%client.TotalMovers++;
 		commandtoclient(%client,'CloseMoverGUI');
@@ -771,20 +813,40 @@ function setBricktoMover(%client)
 	}
 }
 
-
 function serverCmdapplyImpulse(%client, %X, %Y, %Z, %Trigger, %TriggerID)
 {
 	%col = %client.WrenchObject;
+	%col.isTriggerImp = "";
+	%col.TriggerDoorID = "";
 	%col.isImp = 1;
 	if(%Trigger $= 1)
 	{
-	%col.isTriggerImp = 1;
-	%col.TriggerDoorID = %TriggerID;
+		%col.isTriggerImp = 1;
+		%col.TriggerDoorID = %TriggerID;
+		if(%col.isDoor $= "")
+		{
+			%col.DoorType = 2;
+			%col.isDoor = 1;
+			%col.MoveXYZ = "0 0 0";
+			%col.RotateXYZ = "0 0 0";
+			%col.Steps = 100;
+			%col.StepTime = 10;
+			%col.ReturnDelay = 2000;
+		}
 	}
 	%col.Imp = %X * 100 SPC %Y * 100 SPC %Z * 100;
 	messageClient(%client,"","\c4You have given the Brick Impulse Properties.");
 }
 
+function serverCmdremoveImpulse(%client)
+{
+	%col = %client.WrenchObject;
+	%col.isImp = "";
+	%col.isTriggerImp = "";
+	%col.TriggerDoorID = "";
+	%col.Imp = "";
+	messageClient(%client,"","\c4You have remove the Brick Impulse Properties.");
+}
 
 function serverCmdgetWrenchSettings(%client)
 {
@@ -796,7 +858,7 @@ function serverCmdgetWrenchSettings(%client)
 	   %yesno = 0;
 
 	messageClient(%client,'MsgUpdateWrenchA',"",%col.MoveXYZ,%col.RotateXYZ,%col.Steps,%col.StepTime,%col.Elevator,%col.TriggerCloak,%col.Private,%col.Team,%col.Group,%yesno);
-	messageClient(%client,'MsgUpdateWrenchB',"",%col.isImpulseTrigger,%col.returnDelay,%col.returnToggle,%col.password,%col.DoorType,%col.TriggerDoorID,%col.NoCollision,%yesno);
+	messageClient(%client,'MsgUpdateWrenchB',"",%col.isImpulseTrigger,%col.returnDelay,%col.returnToggle,%col.password,%col.DoorType,%col.TriggerDoorID,%col.NoCollision,%yesno,%col.KeyProtected);
 }
 
 function serverCmdgetImpulseSettings(%client)
@@ -845,7 +907,7 @@ function addBBCMarker(%col)
 function serverCmdToggleWrenchMode(%client)
 {
 	%client.WrenchMode++;
-	if(%client.WrenchMode > 6)
+	if(%client.WrenchMode > 8)
 	{
 		%client.WrenchMode = 0;
 	}
@@ -877,4 +939,111 @@ function serverCmdToggleWrenchMode(%client)
 	{
 		messageClient(%client,"","\c2Wrench in Doorbell-Mode");
 	}
+	if(%client.WrenchMode == 7)
+	{
+		messageClient(%client,"","\c2Wrench in Camera Place Mode");
+	}
+	if(%client.WrenchMode == 8)
+	{
+		messageClient(%client,"","\c2Wrench in Camera View Mode");
+	}
 }
+	
+function serverCmdToggleWrenchMode2(%client)
+{
+	%client.WrenchMode--;
+	if(%client.WrenchMode < 0)
+	{
+		%client.WrenchMode = 8;
+	}
+	if(%client.WrenchMode == 0)
+	{
+		messageClient(%client,"","\c2Wrench in Mover-Mode");
+	}
+	if(%client.WrenchMode == 1)
+	{
+		messageClient(%client,"","\c2Wrench in Ezy-Mover-Mode");
+	}
+	if(%client.WrenchMode == 2)
+	{
+		messageClient(%client,"","\c2Wrench in Repair-Mode");
+	}
+	if(%client.WrenchMode == 3)
+	{
+		messageClient(%client,"","\c2Wrench in Brick-Message-Mode");
+	}
+	if(%client.WrenchMode == 4)
+	{
+		messageClient(%client,"","\c2Wrench in Brick-Decal-Mode");
+	}
+	if(%client.WrenchMode == 5)
+	{
+		messageClient(%client,"","\c2Wrench in Impulse-Mode");
+	}
+	if(%client.WrenchMode == 6)
+	{
+		messageClient(%client,"","\c2Wrench in Doorbell-Mode");
+	}
+	if(%client.WrenchMode == 7)
+	{
+		messageClient(%client,"","\c2Wrench in Camera Place Mode");
+	}
+	if(%client.WrenchMode == 8)
+	{
+		messageClient(%client,"","\c2Wrench in Camera View Mode");
+	}
+}	
+
+function serverCmdToggleWrenchModeSet0(%client)
+{
+	%client.WrenchMode=0;
+	messageClient(%client,"","\c2Wrench in Mover-Mode");
+}	
+
+function serverCmdToggleWrenchModeSet1(%client)
+{
+	%client.WrenchMode=1;
+	messageClient(%client,"","\c2Wrench in Ezy-Mover-Mode");
+}	
+
+function serverCmdToggleWrenchModeSet2(%client)
+{
+	%client.WrenchMode=2;
+	messageClient(%client,"","\c2Wrench in Repair-Mode");
+}	
+
+function serverCmdToggleWrenchModeSet3(%client)
+{
+	%client.WrenchMode=3;
+	messageClient(%client,"","\c2Wrench in Brick-Message-Mode");
+}	
+
+function serverCmdToggleWrenchModeSet4(%client)
+{
+	%client.WrenchMode=4;
+	messageClient(%client,"","\c2Wrench in Brick-Decal-Mode");
+}	
+
+function serverCmdToggleWrenchModeSet5(%client)
+{
+	%client.WrenchMode=5;
+	messageClient(%client,"","\c2Wrench in Impulse-Mode");
+}	
+
+function serverCmdToggleWrenchModeSet6(%client)
+{
+	%client.WrenchMode=6;
+	messageClient(%client,"","\c2Wrench in Doorbell-Mode");
+}	
+
+function serverCmdToggleWrenchModeSet7(%client)
+{
+	%client.WrenchMode=7;
+	messageClient(%client,"","\c2Wrench in Camera Place Mode");
+}	
+
+function serverCmdToggleWrenchModeSet8(%client)
+{
+	%client.WrenchMode=8;
+	messageClient(%client,"","\c2Wrench in Camera View Mode");
+}	

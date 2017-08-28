@@ -137,7 +137,7 @@ datablock ShapeBaseImageData(keyImage)
 {
    // Basic Item properties
    shapeFile = "~/data/shapes/key.dts";
-   PreviewFileName = "rtb/data/shapes/bricks/Previews/wrench.png";
+   PreviewFileName = "rtb/data/shapes/bricks/Previews/key.png";
    emap = true;
 	cloakable = false;
    // Specify mount point & offset for 3rd person, and eye offset
@@ -285,10 +285,24 @@ messageClient(%obj.client,"","\c4You \c0Unlocked\c4 the Door.");
 }
 else
 {
-%col.oldShapeNameL = %col.getShapeName();
-%col.isLocked = 1;
-messageClient(%obj.client,"","\c4You \c0Locked\c4 the Door.");
-%col.setShapeName("Locked");
+if(%col.KeyProtected $= 1)
+{
+	messageClient(%obj.client,"","\c4This Door is Key Protected.");
+}
+if(%col.KeyProtected $= 0)
+{
+	%col.oldShapeNameL = %col.getShapeName();
+	%col.isLocked = 1;
+	messageClient(%obj.client,"","\c4You \c0Locked\c4 the Door.");
+	%col.setShapeName("Locked");
+}
+if(%col.KeyProtected $= "")
+{
+	%col.oldShapeNameL = %col.getShapeName();
+	%col.isLocked = 1;
+	messageClient(%obj.client,"","\c4You \c0Locked\c4 the Door.");
+	%col.setShapeName("Locked");
+}
 }
 }
 }

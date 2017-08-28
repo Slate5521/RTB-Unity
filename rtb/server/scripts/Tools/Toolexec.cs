@@ -6,6 +6,7 @@
 
 exec("./BlackLetterCan.cs");
 exec("./LetterCan.cs");
+exec("./TextureCan.cs");
 exec("./EditorWand.cs");
 exec("./hammer.cs");
 exec("./screwdriver.cs");

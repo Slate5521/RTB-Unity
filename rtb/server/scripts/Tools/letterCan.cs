@@ -183,6 +183,15 @@ if(%obj.client.isImprisoned)
 		return;
 	}
 
+	if (%col.getClassName() $= "Player")
+			{
+			if (%col.client.isAdmin || %col.client.isSuperAdmin)
+			{
+			messageClient(%obj.client,'','\c2You can\'t paint Admins!');
+			return;
+			}
+			}
+
 	if(%col.owner == %obj.client || (%col.owner.secure == 0 && %col.OwnerAway == 0)|| %isTrusted || %obj.client.isAdmin || %obj.client.isSuperAdmin)
 	{
 		if(%col.getClassName() $= "StaticShape" || %col.getClassName() $= "Player")
