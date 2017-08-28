@@ -1,0 +1,358 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         descLines = "2";
+         desc0 = "A volcano that hasn't erupted for 156 years... let's hope it doesn’t erupt on our happy builders!                                        By: Djy1991 (1.0)";
+         name = "Volcano";
+   };
+   new MissionArea(MissionArea) {
+      area = "-1024 -992 2112 2080";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/david/volcano/EsopRange1.dml";
+      cloudHeightPer[0] = "0.5";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.0005";
+      cloudSpeed3 = "0.003";
+      visibleDistance = "1100";
+      fogDistance = "900";
+      fogColor = "0.350000 0.450000 0.650000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "5000 5000 5000";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.807326 0.417268 -0.417268";
+      color = "0.900000 0.900000 0.800000 1.000000";
+      ambient = "0.900000 0.800000 0.800000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./volcano.ter";
+      squareSize = "8";
+      emptySquares = "95154 95161";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-344.79 -481.313 313.887";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-162.784 -287.036 356.343 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.10557e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "-40.6963 -208.302 340.466 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new FileObject() {
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.32184e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1457";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.2816e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1463";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.28721e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1460";
+   };
+   new WaterBlock(water) {
+      position = "16 -136 142.954";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 50";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/david/lava2";
+      ShoreTexture = "~/data/water/david/lava2";
+      envMapOverTexture = "~/data/water/david/lava";
+      liquidType = "Lava";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "8";
+      surfaceOpacity = "0.7";
+      envMapIntensity = "0.2";
+      TessSurface = "150";
+      TessShore = "160";
+      SurfaceParallax = "0.5";
+      FlowAngle = "1";
+      FlowRate = "0.05";
+      DistortGridScale = "0.5";
+      DistortMag = "0.05";
+      DistortTime = "1.3";
+      ShoreDepth = "10";
+      DepthGradient = "2";
+      MinAlpha = "0.3";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         extent = "100 100 10";
+         params1 = "0.63 -2.41 0.33 0.21";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         textureSize = "32 32";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "0.32 -0.67 0.066 0.5";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
+   };
+   new fxShapeReplicator(trees) {
+      position = "-280.734 -270.237 294.391";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      HideReplications = "0";
+      ShowPlacementArea = "1";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      shapeFile = "~/data/shapes/david/trees/tree1.dts";
+      Seed = "1376312589";
+      ShapeCount = "100";
+      ShapeRetries = "100";
+      InnerRadiusX = "0";
+      InnerRadiusY = "0";
+      OuterRadiusX = "800";
+      OuterRadiusY = "800";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "1";
+      AllowOnStatics = "1";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AlignToTerrain = "0";
+      Interactions = "1";
+      AllowedTerrainSlope = "30";
+      TerrainAlignment = "1 1 1";
+      ShapeScaleMin = "1 1 1";
+      ShapeScaleMax = "1 1 1";
+      ShapeRotateMin = "0 0 0";
+      ShapeRotateMax = "0 0 0";
+      OffsetZ = "-2";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.70658e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new fxShapeReplicator(trees) {
+      position = "-251.802 -261.232 293.015";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      HideReplications = "0";
+      ShowPlacementArea = "1";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      shapeFile = "~/data/shapes/david/trees/tree4.dts";
+      Seed = "1376312589";
+      ShapeCount = "100";
+      ShapeRetries = "100";
+      InnerRadiusX = "0";
+      InnerRadiusY = "0";
+      OuterRadiusX = "800";
+      OuterRadiusY = "800";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "1";
+      AllowOnStatics = "1";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AlignToTerrain = "0";
+      Interactions = "1";
+      AllowedTerrainSlope = "30";
+      TerrainAlignment = "1 1 1";
+      ShapeScaleMin = "1 1 1";
+      ShapeScaleMax = "1 1 1";
+      ShapeRotateMin = "0 0 0";
+      ShapeRotateMax = "0 0 0";
+      OffsetZ = "-2";
+   };
+   new fxFoliageReplicator(grass) {
+      position = "-278.332 -348.974 303.676";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      UseDebugInfo = "0";
+      DebugBoxHeight = "1";
+      HideFoliage = "0";
+      ShowPlacementArea = "1";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      Seed = "1376312589";
+      FoliageFile = "~/data/shapes/david/trees/grass";
+      FoliageCount = "5000";
+      FoliageRetries = "100";
+      InnerRadiusX = "0";
+      InnerRadiusY = "0";
+      OuterRadiusX = "800";
+      OuterRadiusY = "800";
+      MinWidth = "1";
+      MaxWidth = "3";
+      MinHeight = "1";
+      MaxHeight = "5";
+      FixAspectRatio = "1";
+      FixSizeToMax = "0";
+      OffsetZ = "0";
+      RandomFlip = "1";
+      UseCulling = "1";
+      CullResolution = "64";
+      ViewDistance = "150";
+      ViewClosest = "20";
+      FadeInRegion = "10";
+      FadeOutRegion = "2";
+      AlphaCutoff = "0.5";
+      GroundAlpha = "1";
+      SwayOn = "1";
+      SwaySync = "0";
+      SwayMagSide = "0.1";
+      SwayMagFront = "0.2";
+      MinSwayTime = "3";
+      MaxSwayTime = "10";
+      LightOn = "0";
+      LightSync = "0";
+      MinLuminance = "0.7";
+      MaxLuminance = "1";
+      lightTime = "5";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AllowedTerrainSlope = "30";
+   };
+   new StaticShape() {
+      position = "16.1689 -149.871 358.495";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "46.9584 -344.959 364.972";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-242.628 -552.085 293.677";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-320.167 -435 306.195";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-486.678 -397.079 330.008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-458.006 -388.3 331.048 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new StaticShape() {
+      position = "-529.054 -278.114 331.857";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-546.56 -13.7513 362.348";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-193.026 -33.3917 259.072";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-75.003 -176.079 273.482";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -400284";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+};
+//--- OBJECT WRITE END ---

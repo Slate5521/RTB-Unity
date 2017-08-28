@@ -1,0 +1,237 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         name = "Death Island";
+         descLines = "2";
+         desc0 = "An island completely surrounded by endless lava.\n\nBy SolarFlare\n\nGo to solarblock.googlepages.com to download the map.";
+   };
+   new MissionArea(MissionArea) {
+      area = "-448 -592 976 1040";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sunset/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "900";
+      fogDistance = "400";
+      fogColor = "0.900000 0.400000 0.100000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.880000 0.800000 0.700000 1.000000";
+      ambient = "0.530000 0.500000 0.500000 1.000000";
+         scale = "1 1 1";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./deathisland.ter";
+      squareSize = "8";
+         locked = "true";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "143.321 -178.644 252.141";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+   };
+   new WaterBlock(Water) {
+      position = "-856 -312 35.473";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 190";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/lava2.png";
+      ShoreTexture = "~/data/water/lava2.png";
+      liquidType = "CrustyLava";
+      density = "4";
+      viscosity = "40";
+      waveMagnitude = "3";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0.1";
+      TessSurface = "30";
+      TessShore = "30";
+      SurfaceParallax = "2";
+      FlowAngle = "110";
+      FlowRate = "0.01";
+      DistortGridScale = "0.01";
+      DistortMag = "0.5";
+      DistortTime = "10";
+      ShoreDepth = "2";
+      DepthGradient = "100";
+      MinAlpha = "1";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
+         params0 = "0.32 -0.67 0.066 0.5";
+         envMapTexture = "rtb/data/skies/Twightlight/7";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         extent = "256 256 1";
+         textureSize = "64 64";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.95534e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         client = "1463";
+         initialPosition = "  ";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.83502e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.96032e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         client = "1460";
+         initialPosition = "  ";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.99349e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         client = "1457";
+         initialPosition = "  ";
+   };
+   new StaticShape() {
+      position = "796 941.5 235.55";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         downSize = "3";
+         down1 = "3265";
+         down2 = "3267";
+         Down = "3263";
+   };
+   new StaticShape() {
+      position = "796 845.5 235.55";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -2.2415e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "860 910 235.55";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.93751e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -2.1482e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -426238";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         client = "2126";
+         initialPosition = "  ";
+   };
+   new WheeledVehicle() {
+      position = "71.7154 -212.207 250.896";
+      rotation = "-0.000119293 -6.45918e-005 -1 56.9199";
+      scale = "1 1 1";
+      dataBlock = "audi";
+      disableMove = "0";
+         mountable = "1";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.39873e+006";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -880323";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "149.756 -174.51 267.803 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+};
+//--- OBJECT WRITE END ---

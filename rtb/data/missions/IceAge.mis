@@ -1,0 +1,252 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "Ice Age";
+         desc0 = "Al Gore was Right - Map By Dorso";
+         desclines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "fps/data/skies/sky_blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.700000 0.900000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.800000 1.000000";
+      ambient = "0.550000 0.550000 0.550000 1.000000";
+         position = "0 0 0";
+         locked = "true";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "fps/data/terrains/details/detail1";
+      terrainFile = "./IceAge.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-35.931 -145.893 103.6";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new FileObject() {
+   };
+   new SimGroup(IRCPeople) {
+   };
+   new SimGroup(IRCChannel) {
+   };
+   new FileObject() {
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.35108e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.32204e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new WaterBlock() {
+      position = "0 -152 47.3";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 50";
+      UseDepthMask = "0";
+      surfaceTexture = "~/data/water/water03";
+      ShoreTexture = "~/data/water/water03";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "1";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0.01";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "20";
+      DepthGradient = "1";
+      MinAlpha = "0.03";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         textureSize = "32 32";
+         params0 = "0.32 -0.67 0.066 0.5";
+         floodFill = "1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         extent = "100 100 10";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params2 = "0.39 0.39 0.2 0.133";
+         envMapTexture = "fps/data/skies/sunset_0007";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -6.19434e+006";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "23.0507 -196.951 99.923";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "694.723 -698.539 393.635";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "staticPlate1x1";
+   };
+};
+//--- OBJECT WRITE END ---

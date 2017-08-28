@@ -1,0 +1,166 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         desclines = "2";
+         desc0 = "Boat Build > A large water area to build boats on \n\n Made by MrX - www.mrx-rtb.co.nr";
+         name = "Boat Build";
+         bitmap = "Boat Build";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "600";
+      fogDistance = "500";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "0 0 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.300000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-1.78026 -126.991 161.215";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "20";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            homingCount = "0";
+            locked = "false";
+      };
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.15955e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         client = "1467";
+         initialPosition = "  ";
+   };
+   new FileObject() {
+   };
+   new StaticShape() {
+      position = "-128.108 74.097 245.928 0";
+      rotation = "1 0 0 0";
+      scale = "0.001 0.001 0.001";
+      dataBlock = "flowers";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new WaterBlock(Water) {
+      position = "-856 -328 -38.927";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 190";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/water.png";
+      ShoreTexture = "~/data/water/water.png";
+      envMapOverTexture = "~/data/skies/Twightlight/7";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "40";
+      waveMagnitude = "3";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0.7";
+      TessSurface = "30";
+      TessShore = "30";
+      SurfaceParallax = "2";
+      FlowAngle = "110";
+      FlowRate = "0.01";
+      DistortGridScale = "0.01";
+      DistortMag = "0.5";
+      DistortTime = "10";
+      ShoreDepth = "2";
+      DepthGradient = "100";
+      MinAlpha = "1";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         extent = "256 256 1";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
+         params0 = "0.32 -0.67 0.066 0.5";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         envMapTexture = "rtb/data/skies/Twightlight/7";
+         textureSize = "64 64";
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+   new FileObject() {
+   };
+};
+//--- OBJECT WRITE END ---
+schedule( 2000, 0, winterrpgLoadexec);
+function winterrpgLoadexec()
+{
+	messageAll("MsgPersistence", "\c2Boat Build Map By Mrx - Get Mrx's Mods(C) @ www.mrx-rtb.co.nr");
+}
