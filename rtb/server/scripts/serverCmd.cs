@@ -73,7 +73,7 @@ function serverCmdModifyShiftSize(%client, %Shift)
 	}
 }
 
-function serverCmdDeleteBrickFX(%client)
+function serverCmdDeleteBrickFX1(%client)
 {
 	%brick = %client.FXBrickSelected;
 	if(%brick.FXmode $= 1)
@@ -81,49 +81,36 @@ function serverCmdDeleteBrickFX(%client)
 		%brick.FXmode = 0;
 		%client.FXCount--;
 		%brick.flameEmitter.delete();
-		%brick.smokeEmitter.delete();
-	}
-	else if(%brick.FXmode $= 2)
-	{
-		%brick.FXmode = 0;
-		%client.FXCount--;
-		%brick.flameEmitter.delete();
-	}
-	else if(%brick.FXmode $= 3)
-	{
-		%brick.FXmode = 0;
-		%client.FXCount--;
-	}
-	else if(%brick.FXmode $= 4)
-	{
-		%brick.FXmode = 0;
-		%client.FXCount--;
-	}
-	else if(%brick.FXmode $= 5)
-	{
-		%brick.FXmode = 0;
-		%client.FXCount--;
-		%brick.bubbleEmitter.delete();
-	}
-	else
-	{
-		messageClient(%client,'',"\c3This Brick has no FX Properties!");
-		return;
 	}
 }
 
-function serverCmdApplyBrickFX(%client,%FX)
+function serverCmdDeleteBrickFX2(%client)
+{
+	%brick = %client.FXBrickSelected;
+	if(%brick.FXmode2 $= 1)
+	{
+		%brick.FXsmoke2 = 0;
+		%client.FXCount--;
+		%brick.smokeEmitter.delete();
+	}
+}
+
+function serverCmdDeleteBrickFX5(%client)
+{
+	%brick = %client.FXBrickSelected;
+	if(%brick.FXmode5 $= 1)
+	{
+		%brick.FXmode5 = 0;
+		%client.FXCount--;
+		%brick.bubbleEmitter.delete();
+	}
+}
+
+function serverCmdApplyBrickFX1(%client,%FX)
 {
 	if(%client.FXCount <= ($Pref::Server::MaxFXBricks-1))
 	{
 		%brick = %client.FXBrickSelected;
-		if(%brick.FXmode >= 1)
-		{
-			messageClient(%client,'',"\c3This Brick already has FX Properties!");
-			return;
-		}
-
-
 
 		//Fire without Smoke
 		if(%FX $= 1)
@@ -148,11 +135,20 @@ function serverCmdApplyBrickFX(%client,%FX)
    			   };
 			   messageClient(%client,'',"\c0Fire\c4 Properties have been Applied to this Brick.");
 			   commandtoclient(%client,'',"pop",brickFX);
+			}
 		}
+	}
+
+function serverCmdApplyBrickFX2(%client,%FX)
+{
+	if(%client.FXCount <= ($Pref::Server::MaxFXBricks-1))
+	{
+		%brick = %client.FXBrickSelected;
+
 		//Smoke
-		else if(%FX $= 2)
+		if(%FX $= 2)
 		{
-			   %brick.FXmode = 2;
+			   %brick.FXmode2 = 1;
 		 	   %client.FXCount++;
 			   %curtrans = %brick.getTransform();
 			   %curx = getword(%curtrans,0);
@@ -172,23 +168,20 @@ function serverCmdApplyBrickFX(%client,%FX)
    			   };
 			   messageClient(%client,'',"\c0Smoke\c4 Properties have been Applied to this Brick.");
 			   commandtoclient(%client,'',"pop",brickFX);
+			}
 		}
-		//Light Pulsing
-		else if(%FX $= 3)
-		{
-    			messageAll('name',"\c3Case 3.");
-			return;
-		}
-		//Light Steady
-		else if(%FX $= 4)
-		{
-      			messageAll('name',"\c3Case 4.");
-			return;
-		}
+	}
+
+function serverCmdApplyBrickFX5(%client,%FX)
+{
+	if(%client.FXCount <= ($Pref::Server::MaxFXBricks-1))
+	{
+		%brick = %client.FXBrickSelected;
+
 		//Bubbles
-		else if(%FX $= 5)
+		if(%FX $= 5)
 		{
-			   %brick.FXmode = 5;
+			   %brick.FXmode5 = 1;
 		 	   %client.FXCount++;
 			   %curtrans = %brick.getTransform();
 			   %curx = getword(%curtrans,0);
@@ -344,8 +337,13 @@ function servercmddoAction(%client)
 
 function serverCmdsit(%client)
 {
+	if (%client.wrenchmode $= 8)
+	{
+	ServerCmdTC(%client);
+	return;
+	}
 
-	if($Pref::Server::CopsAndRobbers || %client.frozen $= 1)
+	if($Pref::Server::CopsAndRobbers || %client.frozen $= 1 || !$Pref::Server::EnabledSit)
 	{
 		return;
 	}
@@ -389,7 +387,7 @@ function serverCmdsit(%client)
 
 function serverCmdFreezeMe(%client)
 {
-	if($pref::server::copsandrobbers || %client.sitting)
+	if($pref::server::copsandrobbers || %client.sitting || !$pref::server::Freeze)
 	{
 		return;
 	}
@@ -449,7 +447,6 @@ function serverCmdClearOwnBricks(%client)
 	}
 
 }
-
 function canceldestroyownbricks(%client)
 {
 	%client.WantClearBricks = 0;
@@ -957,31 +954,54 @@ function ServerCmdRotateBrick( %client, %dir)
 
 }
 
-function staminaIncrease()
-{
-	if($Game::Running)
-	{
-		%maxClient = ClientGroup.getCount();
-
-		for(%clientNum = 0; %clientNum < %maxClient; %clientNum++)
-		{
-			%client = ClientGroup.getObject(%clientNum);
-
-			if(%client.BrickStamina < 50)
-			{
-				%client.BrickStamina++;
-			}
-		}
-
-		Schedule(1000,0,"staminaIncrease");
-	}
-}
-
-Schedule(10000,0,"staminaIncrease");
-
 function ServerCmdPlantBrick(%client)
 {
 	//echo(%client, " is planting brick");
+
+	%time = $Sim::Time - %client.LastBrickTime; 
+	%ip = getrawip(%client);
+	
+	if((%client.BricksPlaced >= $Pref::Server::MaxAllowedBricks) && %ip !$= "local" && !%client.isAdmin && !%client.isSuperAdmin)
+	{
+	messageClient(%client,'','\c3You have exceeded the maximun bricks (%1) allowed to be placed on this server!\n You can ask an admin to increase your maximum amount of bricks',$Pref::Server::MaxAllowedBricks);
+	return;
+	}
+	if(($Pref::Server::BlockScripts && %time < 0.1) && %ip !$= "local" && !%client.isAdmin && !%client.isSuperAdmin && $Pref::Server::AntiSpam)
+	{
+	%client.HBR = 0;
+	messageadmin('','\c3WARNING: \c2%1 (%2) has been flagged for using a spam script, his building rights have been taken away',%client.name, %ip);	
+	return;
+	}
+	if(($Pref::Server::BlockScripts && (%time >=0.11 && %time <= 0.28)) && %ip !$= "local" && !%client.isAdmin && !%client.isSuperAdmin && $Pref::Server::AntiSpam)
+	{
+	if(%client.BrickSpam $= 0)
+	{
+	messageClient(%client,'',"\c3You have been flagged for trying to spam this server, slow down your brick placement or you will be kicked.");
+	messageadmin('','\c3WARNING: \c2%1 (%2) has been flagged for spamming, he will be kicked next time',%client.name, %ip);
+	%client.BrickSpam++;
+	%client.schedule(80000, 0, "BrickSpamAdd", %client);
+	}
+	else
+	{
+	for (%i = 0; %i < MissionCleanup.getCount(); %i++) {
+        %brick = MissionCleanup.getObject(%i);
+        if (%brick.Owner == %client)
+        {
+        schedule(%i*10,0,killBrick,%brick);
+        if(%brick.Datablock $= "staticbrickFire")
+        {
+        %brick.Owner.firebrickcount--;
+        %brick.flameEmitter.delete();
+        %brick.smokeEmitter.delete();
+        }
+        }
+        }
+	messageAll('','\c3WARNING: \c2%1 (%2) has attempted to spam the server and has been kicked and his bricks destroyed.',%client.name, %ip);
+	%client.KickBan = "Kicked for spam";
+	%client.delete("You have been kicked for attempted brick spam");
+	return;
+	}
+	}
 
 	if(%client.player.tempBrick.isMoverGhost)
 	{
@@ -1016,37 +1036,8 @@ function ServerCmdPlantBrick(%client)
 	%time = $Sim::Time - %client.LastBrickTime; 
 	if($Pref::Server::BlockScripts && %time < 0.1)
 	{
-		%client.LastBrickTime = $Sim::Time;
 		return;
 	}
-
-	if($Pref::Server::BlockScripts && (!%client.isAdmin && !%client.isSuperAdmin))
-	{
-		if(%client.BrickStamina == 0)
-		{
-			%client.wantclearownbricks = 1;
-			serverCmdClearOwnBricks(%client);
-			%client.delete("You have been kicked for brick spamming.  Don't worry, your mess has been cleared for you.");
-			messageAll('',"\c3Warning:  " @ %client.namebase @ " (" @ getRawIP(%client) @ ") has been auto-kicked for brick spamming and their bricks have been cleared.");
-		}
-		else if(%client.BrickStamina == 5)
-		{
-			messageAllExcept(%client,'',"\c3Warning:  " @ %client.namebase @ " (" @ getRawIP(%client) @ ") might be trying to spam the server.  They have continued trying to build even after having their building rights suspended.");
-		}
-		else if(%client.BrickStamina == 10)
-		{
-			messageAllExcept(%client,'',"\c3Warning:  " @ %client.namebase @ " is building too quickly and has had their building rights suspended.");
-			messageClient(%client,'',"\c3Warning:  Your building rights have been suspended because you were building too quickly.");
-			%client.HBR = 0;
-		}
-		else if(%client.BrickStamina == 20)
-		{
-			messageClient(%client,'',"\c3Warning:  You are running low on stamina.  You need to stop building so quickly.");
-		}
-
-		%client.BrickStamina--;
-	}
-
 	if(%client.HBR $= 0 && %client.player.tempBrick.isMoverGhost !$= 1)
 	{
 		messageClient(%client,'',"\c3You do not have Building Rights!");
@@ -1614,6 +1605,7 @@ function ServerCmdPlantBrick(%client)
 			}
 			else
 			{
+				messageAll('name','Done!');
 				%client.FXBrickSelected = %newBrick;
 				commandtoclient(%client,'Push',brickFX);
 			}
@@ -1682,6 +1674,7 @@ function ServerCmdPlantBrick(%client)
 			%client.money = %client.money - %client.plantingPrice;
 			messageClient(%client,'MsgUpdateMoney','',%client.Money);
 		}
+		%client.BricksPlaced++;
 		%newBrick.setScale(%tempBrick.getScale());
 		%newBrick.EulerRot = %eulerRot;
 		%newBrick.EulerRotation = %eulerRot;
@@ -1781,7 +1774,6 @@ function ServerCmdScaleZup(%client)
 	%scaleY = getWord(%scale,1);
 	%scaleZ = getWord(%scale,2);
 	%finalscale = %scaleZ + 0.333333;
-	if(%finalscale > 10) %finalscale = 10;
 	%tempBrick.customscale = %scaleX SPC %scaleY SPC %finalscale;
 	%tempBrick.setScale(%scaleX SPC %scaleY SPC %finalscale);
 	}
@@ -1799,7 +1791,7 @@ function ServerCmdScaleZdown(%client)
 	%scaleY = getWord(%scale,1);
 	%scaleZ = getWord(%scale,2);
 	%finalscale = %scaleZ - 0.333333;
-	if(%finalscale <= "0.333333")
+	if(%finalscale <= "0.01")
 	{
 	%finalscale = "0.333333";
 	}
@@ -2179,6 +2171,7 @@ function serverCmdUndoLast(%client)
 		%client.Undo[1].dead = true;
 		%client.Undo[1].schedule(10, explode);
 		%client.Undo[1] = 0;
+		%client.BricksPlaced--;
 	}
 	if(%client.Undo[0] == 1)
 	{
@@ -2324,7 +2317,7 @@ function serverCmdAddToInvent(%client, %position, %index)
 
 function serverCmdMouseWheelClick(%client)
 {
-	if($Pref::Server::UseInventory == 1 && %client.curInvPos == 5)
+	if(($Pref::Server::UseInventory == 1 || %client.isInventoryRights) && %client.curInvPos == 5 && !%client.isDeInvent)
 	{
 		%client.curSprayCan++;
 		if(%client.curSprayCan > $SprayCans)
@@ -2486,7 +2479,7 @@ function serverCmdCycleInventory(%client,%position,%shift)
 
 function serverCmdUseInventory(%client,%position)
 {
-	if($Pref::Server::UseInventory == 1)
+	if(($Pref::Server::UseInventory == 1  || %client.isInventoryRights)&& !%client.isDeInvent)
 	{
 		%shift = 1;
 		if(%position < 8)
@@ -2533,7 +2526,7 @@ function serverCmdMouseScroll(%client,%shift)
 {
 	if(%client.CurrentInventoryPosition != -1)
 	{
-		if($Pref::Server::UseInventory == 1 && %client.CurrentInventoryPosition < 6)
+		if(($Pref::Server::UseInventory == 1 || %client.isInventoryRights) && %client.CurrentInventoryPosition < 6 && !%client.isDeInvent)
 		{
 			if(%shift == 1)
 			{
@@ -2578,10 +2571,28 @@ function serverCmdDropInventory(%client,%position)
 
 function serverCmdSendMessage(%client,%victim,%message)
 {
-	if(%message !$= "")
+	if($Pref::Server::PMSys $= 1)
 	{
-		messageClient(%victim,"",'\c1%1\c2(PM)\c1: %2',%client.name,%message);
-		messageClient(%client,"",'\c1%1\c2(%2)\c1: %3',%client.name,%victim.name,%message);
+		if(!%client.isTotalMuted)
+		{
+			if(%message !$= "")
+			{
+			$ChatLog = new FileObject();
+			$ChatLog.openForAppend("rtb/server/ChatLog.txt");
+			$ChatLog.writeLine(%client.namebase @ "(PM:"@%victim.namebase@"): "@%message);
+			$ChatLog.close();
+			messageClient(%victim,"",'\c4%1\c2(PM)\c4: %2',%client.name,%message);
+			messageClient(%client,"",'\c4%1\c2(%2)\c4: %3',%client.name,%victim.name,%message);
+			}
+		}
+		else
+		{
+		messageClient(%client,"",'You are not allowed to talk!');
+		}
+	}
+	else
+	{
+	messageClient(%client,"",'\c2The PM System is Off.');
 	}
 
 }
@@ -2696,6 +2707,16 @@ function ServerCmdColorLastBrick(%client,%color)
 	%client.LastBrickPlaced.setSkinName(%color);
 }
 
+function staminaIncrease(%client)
+{
+	//Original Concept from BlueGreen
+	//Re-Coded by Ephialtes.
+	if(%client.BrickStamina < 50)
+	{
+	%client.BrickStamina++;
+	}
+}
+
 function ServerCmdUpdatePrefs(%client, %name, %skin,
 								%headCode, %visorCode, %backCode, %leftHandCode,
 								%headCodeColor, %visorCodeColor, %backCodeColor, %leftHandCodeColor, %decal,%faceprint)
@@ -2776,4 +2797,76 @@ function setThePlayerName(%client)
 		{
 			%player.setShapeName(%client.namebase);
 		}
+}
+function ServerCmdMyViewAgain(%client)
+{
+%client.setControlObject(%client.player);
+%client.camera.setFlyMode();
+}
+
+function serverCmdTC(%client)
+{
+	if (!%client.player.inCamRoom)
+	{
+	//camera.setorbitmode(cam, cam transform, 1, 1, 1, client number);
+
+	echo("doing tc");
+	//new part
+	%count = %client.ncn;
+	%cco = %client.getControlObject();
+	%cam = %client.camera;
+	%player = %client.player;
+	%ccn = %player.ccap;
+		if (%cco == %player)
+		{
+		echo("player to cam");
+		%client.setControlObject(%cam);
+		}
+		for (%i = %cnn; %i <= %count; %i++)
+		{
+			if(%client.cam[%i] != %cco && %i > %ccn && isObject(%client.cam[%i]))
+			{
+			echo("Doing the if in the for");
+			%player.ccap = %i;
+			%cam.setOrbitMode(%client.cam[%i], %client.cam[%i].getTransform(), 1, 1, 1, %client);
+			return;
+			}
+		}
+		%player.ccap = 0;
+		%client.setControlObject(%player);
+		%cam.setFlyMode();
+	}
+	if (%client.player.inCamRoom)
+	{
+//	if (%client.isSuperAdmin || %client.isAdmin)
+//	{
+	//camera.setorbitmode(cam, cam transform, 1, 1, 1, client number);
+	echo("doing tc2");
+	//new part
+	%camRoom = %client.player.curCamRoom;
+	%count = %camRoom.ncn;
+	%cco = %client.getControlObject();
+	%cam = %client.camera;
+	%player = %client.player;
+	%ccn = %player.crcap;
+		if (%cco == %player)
+		{
+		echo("player to cam2");
+		%client.setControlObject(%cam);
+		}
+		for (%i = %cnn; %i <= %count; %i++)
+		{
+			if(%camRoom.cam[%i] != %cco && %i > %ccn && isObject(%camRoom.cam[%i]))
+			{
+			echo("Doing the if in the for");
+			%player.crcap = %i;
+			%cam.setOrbitMode(%camRoom.cam[%i], %camRoom.cam[%i].getTransform(), 1, 1, 1, %client);
+			return;
+			}
+		}
+		%player.crcap = 0;
+		%client.setControlObject(%player);
+		%cam.setFlyMode();
+//	}
+	}
 }

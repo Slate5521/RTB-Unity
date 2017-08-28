@@ -1,7 +1,7 @@
-//-------------------------- 8/27/2017 -- 20:34:00 -----
+//-------------------------- 8/27/2017 -- 20:40:01 -----
 Processor Init:
-   AMD (unknown), ~3.40 Ghz
-     (timed at roughly 3.42 Ghz)
+   AMD (unknown), ~3.45 Ghz
+     (timed at roughly 3.43 Ghz)
    FPU detected
    MMX detected
    3DNow detected
@@ -411,27 +411,15 @@ UDP initialized on port 28000
 rtb/server/scripts/game.cs (140): Unable to find function serverstats
 rtb/server/scripts/game.cs (141): Unable to find function AutoSave
 rtb/server/scripts/game.cs (142): Unable to find function Adverts
-Compiling rtb/server/scripts/PTTA/PTTAexec.cs...
-Loading compiled script rtb/server/scripts/PTTA/PTTAexec.cs.
-Compiling rtb/server/scripts/PTTA/pttaCommands.cs...
-Loading compiled script rtb/server/scripts/PTTA/pttaCommands.cs.
-Missing file: rtb/server/scripts/PTTA/sprayCan.cs!
-Missing file: rtb/server/scripts/PTTA/letterCan.cs!
-Missing file: rtb/server/scripts/PTTA/EditorWand.cs!
-Compiling rtb/server/scripts/PTTA/commands.cs...
-Loading compiled script rtb/server/scripts/PTTA/commands.cs.
-Missing file: rtb/server/scripts/PTTA/BlackLetterCan.cs!
-Missing file: rtb/server/scripts/PTTA/hammer.cs!
-Missing file: rtb/server/scripts/PTTA/TextureCan.cs!
-Missing file: rtb/server/scripts/PTTA/wand.cs!
-Missing file: rtb/server/scripts/PTTA/key.cs!
-Missing file: rtb/server/scripts/PTTA/wrench.cs!
+Compiling rtb/server/scripts/pttaCommands.cs...
+Loading compiled script rtb/server/scripts/pttaCommands.cs.
+Loading compiled script rtb/server/scripts/commands.cs.
 Compiling rtb/server/scripts/constants.cs...
 Loading compiled script rtb/server/scripts/constants.cs.
-Compiling rtb/server/scripts/PTTA/serverCmd.cs...
-Loading compiled script rtb/server/scripts/PTTA/serverCmd.cs.
-Compiling rtb/server/scripts/PTTA/adminCommands.cs...
-Loading compiled script rtb/server/scripts/PTTA/adminCommands.cs.
+Compiling rtb/server/scripts/serverCmd.cs...
+Loading compiled script rtb/server/scripts/serverCmd.cs.
+Compiling rtb/server/scripts/adminCommands.cs...
+Loading compiled script rtb/server/scripts/adminCommands.cs.
 Compiling rtb/server/scripts/audioProfiles.cs...
 Loading compiled script rtb/server/scripts/audioProfiles.cs.
 Compiling rtb/server/scripts/camera.cs...
@@ -457,8 +445,8 @@ rtb/server/scripts/weapon.cs (449): string always evaluates to 0.
 Loading compiled script rtb/server/scripts/weapon.cs.
 Compiling rtb/server/scripts/radiusDamage.cs...
 Loading compiled script rtb/server/scripts/radiusDamage.cs.
-Compiling rtb/server/scripts/ptta/player.cs...
-Loading compiled script rtb/server/scripts/ptta/player.cs.
+Compiling rtb/server/scripts/player.cs...
+Loading compiled script rtb/server/scripts/player.cs.
 Compiling rtb/data/shapes/player/player.cs...
 Loading compiled script rtb/data/shapes/player/player.cs.
 Compiling rtb/server/scripts/brick.cs...
@@ -869,18 +857,6 @@ Compiling rtb/server/scripts/Tools/wrench.cs...
 Loading compiled script rtb/server/scripts/Tools/wrench.cs.
 Compiling rtb/server/scripts/Tools/key.cs...
 Loading compiled script rtb/server/scripts/Tools/key.cs.
-Loading compiled script rtb/server/scripts/PTTA/PTTAexec.cs.
-Loading compiled script rtb/server/scripts/PTTA/pttaCommands.cs.
-Missing file: rtb/server/scripts/PTTA/sprayCan.cs!
-Missing file: rtb/server/scripts/PTTA/letterCan.cs!
-Missing file: rtb/server/scripts/PTTA/EditorWand.cs!
-Loading compiled script rtb/server/scripts/PTTA/commands.cs.
-Missing file: rtb/server/scripts/PTTA/BlackLetterCan.cs!
-Missing file: rtb/server/scripts/PTTA/hammer.cs!
-Missing file: rtb/server/scripts/PTTA/TextureCan.cs!
-Missing file: rtb/server/scripts/PTTA/wand.cs!
-Missing file: rtb/server/scripts/PTTA/key.cs!
-Missing file: rtb/server/scripts/PTTA/wrench.cs!
 Compiling rtb/server/scripts/Items/Itemexec.cs...
 Loading compiled script rtb/server/scripts/Items/Itemexec.cs.
 Compiling rtb/server/scripts/Items/100bill.cs...
@@ -977,20 +953,20 @@ Loading compiled script rtb/server/scripts/Weapons/chainsaw.cs.
 Compiling rtb/server/scripts/Weapons/smokegrenade.cs...
 Loading compiled script rtb/server/scripts/Weapons/smokegrenade.cs.
 Error: shape rtb/data/shapes/bricks/brickWeapon.dts-collision detail 0 (Collision-2) bounds box invalid!
-Compiling rtb/server/scripts/PTTA/movers.cs...
-Loading compiled script rtb/server/scripts/PTTA/movers.cs.
+Compiling rtb/server/scripts/movers.cs...
+Loading compiled script rtb/server/scripts/movers.cs.
 Compiling rtb/server/scripts/particles.cs...
 Loading compiled script rtb/server/scripts/particles.cs.
 Compiling rtb/server/scripts/bombexplosions.cs...
 Loading compiled script rtb/server/scripts/bombexplosions.cs.
 Compiling rtb/server/scripts/bombradiusdamage.cs...
 Loading compiled script rtb/server/scripts/bombradiusdamage.cs.
-Compiling rtb/server/scripts/PTTA/message.cs...
-Loading compiled script rtb/server/scripts/PTTA/message.cs.
+Compiling rtb/server/scripts/message.cs...
+Loading compiled script rtb/server/scripts/message.cs.
 Compiling rtb/server/scripts/precipitation.cs...
 Loading compiled script rtb/server/scripts/precipitation.cs.
-Compiling rtb/server/scripts/PTTA/persistence.cs...
-Loading compiled script rtb/server/scripts/PTTA/persistence.cs.
+Compiling rtb/server/scripts/persistence.cs...
+Loading compiled script rtb/server/scripts/persistence.cs.
 Compiling rtb/server/scripts/showImages.cs...
 Loading compiled script rtb/server/scripts/showImages.cs.
 Compiling rtb/server/scripts/inventorycommands.cs...
@@ -1008,7 +984,7 @@ Loading compiled script rtb/server/scripts/Radar.cs.
 Executing rtb/data/missions/bedroom.mis.
 *** Mission loaded
 -----------CONN = 2606
-Connect request from: IPX:20202020:202020206465:25459
+Connect request from: IPX:03000000:070000000300:0
 Checking IP Ban Entry Number: 0
 Connection established 2606
 CADD: 2607 local
@@ -1021,11 +997,11 @@ Mapping string: MsgLoadDescripition to index: 4
 Sending heartbeat to master server [IP:198.101.240.242:28002]
 Mapping string: updatePrefs to index: 0
 Mapping string: messagesent to index: 1
-rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
-rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
+rtb/server/scripts/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
 Blockdude: 
-rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
-rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
+rtb/server/scripts/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
 Blockdude:  I'm, running Xmenu 1.0 > Get it @ www.mrx-rtb.co.nr
 Mapping string: MsgLoadInfoDone to index: 5
 Mapping string: MsgClientJoin to index: 6
@@ -1148,6 +1124,8 @@ addthread empty
 addthread empty
 Could not locate texture: rtb/data/shapes/wary/neonwhite.brickSide
 Could not locate texture: rtb/data/shapes/wary/neonwhite.2x2Bottom
+   keyboard0 input device created.
+   mouse0 input device created.
 Error: shape rtb/data/shapes/bricks/brickWeapon.dts-collision detail 0 (Collision-2) bounds box invalid!
 Could not locate texture: rtb/data/shapes/player/Decals/base.backdecal.png
 Could not locate texture: rtb/data/shapes/player/Decals/base.decal.png
@@ -1169,11 +1147,11 @@ fxFoliageReplicator - Client Foliage Replication Startup is complete.
 Mission lighting done
 Mapping string: rotcompatibility to index: 4
 Mapping string: messageSent to index: 5
-rtb/server/scripts/PTTA/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
-rtb/server/scripts/PTTA/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
+rtb/server/scripts/message.cs (665): Unable to find object: '' attempting to call function 'playThread'
+rtb/server/scripts/message.cs (666): Unable to find object: '' attempting to call function 'schedule'
 Blockdude: /me is going to spawn in your server
 Mapping string: setstatus to index: 6
-rtb/server/scripts/PTTA/serverCmd.cs (2798): Unable to find object: '' attempting to call function 'setShapeName'
+rtb/server/scripts/serverCmd.cs (2798): Unable to find object: '' attempting to call function 'setShapeName'
 Mapping string: MissionStartPhase3Ack to index: 7
 Set::getObject index out of range.
 Mapping string: rotiscompatible to index: 19
@@ -1202,61 +1180,137 @@ Mapping string: Cool1 to index: 0
 Mapping string: Misc-Blank to index: 2
 Mapping string: Blockdude to index: 3
 getewsettingupdate: Unknown command.
-Mapping string: useInventory to index: 9
+Mapping string: ModifyShiftSize to index: 9
+keyboard0 input device unacquired.
+DirectInput deactivated.
 Mapping string: UpdateRadar to index: 4
 rtb/client/scripts/radar.cs (318): Unable to find object: '0' attempting to call function 'schedule'
-Mapping string: construction to index: 5
-Mapping string: plantBrick to index: 10
-Mapping string: shiftBrick to index: 11
-Mapping string: rainbow to index: 7
-Mapping string: redlight to index: 10
-Mapping string: MouseScroll to index: 12
-Mapping string: red to index: 11
-Mapping string: MouseWheelClick to index: 13
-Mapping string: silver to index: 12
-Mapping string: base2 to index: 14
-Mapping string: base3 to index: 15
-Could not locate texture: rtb/data/shapes/bricks/letterA.trans
-Could not locate texture: rtb/data/shapes/bricks/letterA.trans
-Could not locate texture: rtb/data/shapes/bricks/letterA.trans
-Mapping string: letterA to index: 16
-Could not locate texture: rtb/data/shapes/bricks/letterB.trans
-Could not locate texture: rtb/data/shapes/bricks/letterB.trans
-Could not locate texture: rtb/data/shapes/bricks/letterB.trans
-Mapping string: letterB to index: 17
-Could not locate texture: rtb/data/shapes/bricks/letterB.bottomLoop
-Could not locate texture: rtb/data/shapes/bricks/letterB.2x2Top
-Mapping string: black to index: 18
-Could not locate texture: rtb/data/shapes/bricks/letterAblack.trans
-Could not locate texture: rtb/data/shapes/bricks/letterAblack.trans
-Could not locate texture: rtb/data/shapes/bricks/letterAblack.trans
-Mapping string: letterAblack to index: 19
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.trans
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.trans
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.trans
-Mapping string: letterBblack to index: 20
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.trans
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.trans
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.trans
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.bottomLoop
-Could not locate texture: rtb/data/shapes/bricks/letterBblack.2x2Top
-Mapping string: OpenMoverGui to index: 21
-Mapping string: getWrenchSettings to index: 14
-Mapping string: MsgUpdateWrenchA to index: 22
-Mapping string: MsgUpdateWrenchB to index: 23
-Mapping string: ApplyDoorSettings to index: 15
-Mapping string: CloseMoverGUI to index: 24
-Mapping string: doAction to index: 16
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+Mapping string: useInventory to index: 10
 rtb/server/scripts/Tools/key.cs (220): Unknown command playAudio.
-  Object (3095) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
-Mapping string: Locked to index: 13
-Mapping string: getObjectData to index: 17
-Mapping string: MsgGetObjectData to index: 25
-Mapping string: EditorScale to index: 18
-Mapping string: freeHands to index: 19
+  Object (3066) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
+rtb/server/scripts/Tools/key.cs (220): Unknown command playAudio.
+  Object (3073) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
+rtb/server/scripts/Tools/key.cs (220): Unknown command playAudio.
+  Object (3080) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
+rtb/server/scripts/Tools/key.cs (220): Unknown command playAudio.
+  Object (3086) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
+rtb/server/scripts/Tools/key.cs (220): Unknown command playAudio.
+  Object (3092) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
+rtb/server/scripts/Tools/key.cs (220): Unknown command playAudio.
+  Object (3098) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
+rtb/server/scripts/Tools/key.cs (220): Unknown command playAudio.
+  Object (3105) Projectile -> GameBase -> SceneObject -> NetObject -> SimObject
 Received info request from a master server [IP:198.101.240.242:28002].
-Mapping string: ModifyShiftSize to index: 20
-Mapping string: toggleWandMode to index: 21
+Mapping string: construction to index: 5
+Mapping string: plantBrick to index: 11
+Mapping string: MouseScroll to index: 12
+Mapping string: OpenMoverGui to index: 7
+Mapping string: getWrenchSettings to index: 13
+Mapping string: MsgUpdateWrenchA to index: 10
+Mapping string: MsgUpdateWrenchB to index: 11
+Mapping string: ApplyDoorSettings to index: 14
+Mapping string: CloseMoverGUI to index: 12
+Mapping string: doAction to index: 15
+Mapping string: freeHands to index: 16
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+==>dev_checkUnusedScripts("rtb/server", "cs");
+<input> (0): Unable to find function dev_checkUnusedScripts
+Received info request from a master server [IP:198.101.240.242:28002].
+==>exec("rtb/dev.cs");
+Compiling rtb/dev.cs...
+Loading compiled script rtb/dev.cs.
+==>dev_checkUnusedScripts("rtb/server", "cs");
+rtb/server/*.cs
+Unused scripts found: 
+rtb/server/scripts/Weapons/SWP/cutlass.cs
+rtb/server/scripts/Weapons/pistol.cs
+rtb/server/scripts/Weapons/flashgrenade.cs
+rtb/server/scripts/Tools/FWRocket3.cs
+rtb/server/scripts/Tools/FWRocket2.cs
+rtb/server/scripts/Tools/FWRocket1.cs
+rtb/server/scripts/temp.persistence.cs
+rtb/server/scripts/PTTAexec.cs
+rtb/server/scripts/prefs.cs
+rtb/server/scripts/invSelect.cs
+rtb/server/banlist.cs
+Sending heartbeat to master server [IP:198.101.240.242:28002]
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+rtb/server/scripts/movers.cs (1694): Unable to find object: '' attempting to call function 'setShapeName'
+keyboard0 input device unacquired.
+DirectInput deactivated.
+Received info request from a master server [IP:198.101.240.242:28002].
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
 keyboard0 input device unacquired.
 DirectInput deactivated.
 Exporting client prefs
@@ -1270,7 +1324,7 @@ rtb/server/scripts/game.cs (48): Unable to find object: 'MissionCleanup' attempt
 rtb/server/scripts/game.cs (52): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
 rtb/server/scripts/game.cs (57): Unable to find object: 'MissionCleanup' attempting to call function 'getCount'
 rtb/server/scripts/game.cs (81): Unable to find object: '2622' attempting to call function 'delete'
-CDROP: 2607 IPX:20202020:202020206465:25459
+CDROP: 2607 IPX:03000000:070000000300:0
 Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...

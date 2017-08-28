@@ -1,6 +1,13 @@
 //###########################################
 //# 04 STUFF
 //###########################################
+function serverCmdTurret(%client) {
+	if(%client.isAdmin || %client.isSuperAdmin) {
+		serverCmdFreeHands(%client);
+		%client.player.mountImage("TurretImage", $rightHand);
+	}
+}
+
 function serverCmdModerateServer(%client)
 {
 	if(%client.isAdmin || %client.isSuperAdmin)
@@ -16,28 +23,6 @@ function serverCmdModerateServer(%client)
 			messageAll('name', '\c3The Server Moderation is now \c0ON\c3.');
 		}
 	}
-}
-
-function serverCmdDeleteByIP(%client, %ip)
-{
-	if(%client.isAdmin || %client.isSuperAdmin)
-	{
-		for (%i = 0; %i < MissionCleanup.getCount(); %i++)
-		{
-			%brick = MissionCleanup.getObject(%i);
-			if(%brick.OwnerIP == %ip)
-			{
-				%brick.dead = true;
-				%brick.schedule(10, explode);
-				if(%brick.Datablock $= "staticbrickFire")
-				{
-					%client.fireBrickCount--;
-					%brick.flameEmitter.delete();
-					%brick.smokeEmitter.delete();
-				}
-			} 
-		}
-	}	
 }
 
 function serverCmdsetIndivPlantCost(%client, %cost, %victim)
@@ -212,37 +197,223 @@ function serverCmdToggleWandMode(%client)
 	if(%client.isAdmin || %client.isSuperAdmin)
 	{
 		%client.WandMode++;
-		if(%client.WandMode > 5)
+		if(%client.WandMode > 10)
 		{
 			%client.WandMode = 0;
 		}
 
-	if(%client.WandMode == 0)
+	if(%client.WandMode == 6)
 	{
 		messageClient(%client,"","\c2Wand in Destroy-Mode");
 	}
-	if(%client.WandMode == 1)
+	if(%client.WandMode == 7)
 	{
 		messageClient(%client,"","\c2Wand in Teleport-Mode");
 	}
-	if(%client.WandMode == 2)
+	if(%client.WandMode == 8)
+	{
+		messageClient(%client,"","\c2Wand in Teleport-By-ID-Mode");
+	}
+	if(%client.WandMode == 9)
+	{
+		messageClient(%client,"","\c2Wand in Teleport-Gateway-Mode");
+	}
+	if(%client.WandMode == 10)
 	{
 		messageClient(%client,"","\c2Wand in Safe-Brick-Mode");
 	}
-	if(%client.WandMode == 3)
+	if(%client.WandMode == 0)
 	{
 		messageClient(%client,"","\c2Wand in Cloak-Mode");
 	}
-	if(%client.WandMode == 4)
+	if(%client.WandMode == 1)
 	{
 		messageClient(%client,"","\c2Wand in Jail-Mode");
 	}
-	if(%client.WandMode == 5)
+	if(%client.WandMode == 2)
 	{
 		messageClient(%client,"","\c2Wand in Destroy-By-Owner-Mode");
 	}
+	if(%client.WandMode == 3)
+	{
+		messageClient(%client,"","\c2Wand in Killing-Brick-Mode");
+	}
+	if(%client.WandMode == 4)
+	{
+		messageClient(%client,"","\c2Wand in Scale-Brick-Mode");
+	}
+	if(%client.WandMode == 5)
+	{
+		messageClient(%client,"","\c2Wand in Paint-Brick-Mode");
+	}
 	}
 }
+
+function serverCmdToggleWandMode2(%client)
+{
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+		%client.WandMode--;
+		if(%client.WandMode < 0)
+		{
+			%client.WandMode = 10;
+		}
+
+	if(%client.WandMode == 6)
+	{
+		messageClient(%client,"","\c2Wand in Destroy-Mode");
+	}
+	if(%client.WandMode == 7)
+	{
+		messageClient(%client,"","\c2Wand in Teleport-Mode");
+	}
+	if(%client.WandMode == 8)
+	{
+		messageClient(%client,"","\c2Wand in Teleport-By-ID-Mode");
+	}
+	if(%client.WandMode == 9)
+	{
+		messageClient(%client,"","\c2Wand in Teleport-Gateway-Mode");
+	}
+	if(%client.WandMode == 10)
+	{
+		messageClient(%client,"","\c2Wand in Safe-Brick-Mode");
+	}
+	if(%client.WandMode == 0)
+	{
+		messageClient(%client,"","\c2Wand in Cloak-Mode");
+	}
+	if(%client.WandMode == 1)
+	{
+		messageClient(%client,"","\c2Wand in Jail-Mode");
+	}
+	if(%client.WandMode == 2)
+	{
+		messageClient(%client,"","\c2Wand in Destroy-By-Owner-Mode");
+	}
+	if(%client.WandMode == 3)
+	{
+		messageClient(%client,"","\c2Wand in Killing-Brick-Mode");
+	}
+	if(%client.WandMode == 4)
+	{
+		messageClient(%client,"","\c2Wand in Scale-Brick-Mode");
+	}
+	if(%client.WandMode == 5)
+	{
+		messageClient(%client,"","\c2Wand in Paint-Brick-Mode");
+	}
+	}
+}
+
+function serverCmdToggleWandModeSet0(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=0;
+	messageClient(%client,"","\c2Wand in Cloak-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet1(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=1;
+	messageClient(%client,"","\c2Wand in Jail-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet2(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=2;
+	messageClient(%client,"","\c2Wand in Destroy-By-Owner-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet3(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=3;
+	messageClient(%client,"","\c2Wand in Killing-Brick-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet4(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=4;
+	messageClient(%client,"","\c2Wand in Scale-Brick-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet5(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=5;
+	messageClient(%client,"","\c2Wand in Paint-Brick-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet6(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=6;
+	messageClient(%client,"","\c2Wand in Destroy-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet7(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=7;
+	messageClient(%client,"","\c2Wand in Teleport-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet8(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=8;
+	messageClient(%client,"","\c2Wand in Teleport-By-ID-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet9(%client)
+{
+
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=9;
+	messageClient(%client,"","\c2Wand in Teleport-Gateway-Mode");
+	}
+}	
+
+function serverCmdToggleWandModeSet10(%client)
+{
+	if(%client.isAdmin || %client.isSuperAdmin)
+	{
+	%client.WandMode=10;
+	messageClient(%client,"","\c2Wand in Safe-Brick-Mode");
+	}
+}	
 
 function serverCmdImportBanlist(%client)
 {
@@ -339,9 +510,9 @@ function servercmdGiveEditorWand(%client,%victim)
 
 				%cl.player.unMountImage($RightHandSlot);
 				messageClient(%victim, 'MsgHilightInv', '', -1);
-				messageClient(%victim, 'MsgDropItem', '', 6);
+				messageClient(%victim, 'MsgDropItem', '', 9);
 				%victim.player.currWeaponSlot = -1;
-				%victim.player.inventory[6] = "";
+				%victim.player.inventory[9] = "";
 			}
 		}
 		else
@@ -351,7 +522,7 @@ function servercmdGiveEditorWand(%client,%victim)
 				%victim.isEWandUser = 1;
 				messageClient(%victim,"","\c3You were given editor wand priveledges");
 				messageClient(%client,"",'\c3%1 was granted editor wand priveledges',%victim.name);
-				servercmdAddtoInvent(%victim,6,$StartSpecial);
+				servercmdAddtoInvent(%victim,9,$StartSpecial);
 			}
 		}
 	}
@@ -736,7 +907,7 @@ function serverCmdStartDeathmatch(%client, %breakBricks, %friendlyFire, %brickre
 				for(%i= 0; %i < ClientGroup.getCount(); %i++)
 				{
 					%cl = ClientGroup.getObject(%i);
-					%cl.WrenchMode = 3;
+					%cl.WrenchMode = 2;
 					messageClient(%cl,"","\c4Auto-set your wrench mode to \'Repair\'"); 	
 				}
 			}
@@ -811,13 +982,30 @@ function serverCmdEndDeathmatch(%client)
 						%cl.player.currWeaponSlot = -1;
 						%cl.player.inventory[%t] = "";
 					}
-					serverCmdAddtoInvent(%cl,1,$StartPlates);
-   					serverCmdAddtoInvent(%cl,2,$StartSlopes);
+			   		serverCmdAddtoInvent(%cl,1,$StartPlates);
+  					serverCmdAddtoInvent(%cl,2,$StartSlopes);
   					serverCmdAddtoInvent(%cl,3,$StartMisc);
-   					serverCmdAddtoInvent(%cl,4,$StartTools);
-   					serverCmdAddtoInvent(%cl,5,$StartSprayCans);
-   					serverCmdAddtoInvent(%cl,6,$StartSpecial);
-   					serverCmdAddtoInvent(%cl,0,$StartBricks);
+  					serverCmdAddtoInvent(%cl,4,$StartMisc2);
+  					serverCmdAddtoInvent(%cl,5,$StartMisc3);
+  					serverCmdAddtoInvent(%cl,6,$StartMisc4);
+   					serverCmdAddtoInvent(%cl,7,$StartTools);
+   					serverCmdAddtoInvent(%cl,8,$StartSprayCans);
+		if(%cl.isEwanduserBBC || %cl.isEWandUser || %cl.isAdmin || %cl.isSuperAdmin)
+		{
+   			serverCmdAddtoInvent(%cl,9,$StartSpecial);
+		}
+   		serverCmdAddtoInvent(%cl,0,$StartBricks);
+   		servercmdFreeHands(%cl);
+messageClient(%cl, 'MsgItemPickup', '', 0, "Bricks");
+messageClient(%cl, 'MsgItemPickup', '', 1, "Plates");
+messageClient(%cl, 'MsgItemPickup', '', 2, "Slopes");
+messageClient(%cl, 'MsgItemPickup', '', 3, "Windows/Cylinders");
+messageClient(%cl, 'MsgItemPickup', '', 4, "Fences/Arches");
+messageClient(%cl, 'MsgItemPickup', '', 5, "Special Bricks");
+messageClient(%cl, 'MsgItemPickup', '', 6, "Other");
+messageClient(%cl, 'MsgItemPickup', '', 7, "Tools/Weapons");
+messageClient(%cl, 'MsgItemPickup', '', 8, "Coloring Tools");
+messageClient(%cl, 'MsgItemPickup', '', 9, "Special Objects");
 				}
 			}
 			else
@@ -833,13 +1021,30 @@ function serverCmdEndDeathmatch(%client)
 						%cl.player.currWeaponSlot = -1;
 						%cl.player.inventory[%t] = "";
 					}
-					serverCmdAddtoInvent(%cl,1,$StartPlates);
-   					serverCmdAddtoInvent(%cl,2,$StartSlopes);
+			   		serverCmdAddtoInvent(%cl,1,$StartPlates);
+  					serverCmdAddtoInvent(%cl,2,$StartSlopes);
   					serverCmdAddtoInvent(%cl,3,$StartMisc);
-   					serverCmdAddtoInvent(%cl,4,$StartTools);
-   					serverCmdAddtoInvent(%cl,5,$StartSprayCans);
-   					serverCmdAddtoInvent(%cl,6,$StartSpecial);
-   					serverCmdAddtoInvent(%cl,0,$StartBricks);
+  					serverCmdAddtoInvent(%cl,4,$StartMisc2);
+  					serverCmdAddtoInvent(%cl,5,$StartMisc3);
+  					serverCmdAddtoInvent(%cl,6,$StartMisc4);
+   					serverCmdAddtoInvent(%cl,7,$StartTools);
+   					serverCmdAddtoInvent(%cl,8,$StartSprayCans);
+		if(%cl.isEwanduserBBC || %cl.isEWandUser || %cl.isAdmin || %cl.isSuperAdmin)
+		{
+   			serverCmdAddtoInvent(%cl,9,$StartSpecial);
+		}
+   		serverCmdAddtoInvent(%cl,0,$StartBricks);
+   		servercmdFreeHands(%cl);
+messageClient(%cl, 'MsgItemPickup', '', 0, "Bricks");
+messageClient(%cl, 'MsgItemPickup', '', 1, "Plates");
+messageClient(%cl, 'MsgItemPickup', '', 2, "Slopes");
+messageClient(%cl, 'MsgItemPickup', '', 3, "Windows/Cylinders");
+messageClient(%cl, 'MsgItemPickup', '', 4, "Fences/Arches");
+messageClient(%cl, 'MsgItemPickup', '', 5, "Special Bricks");
+messageClient(%cl, 'MsgItemPickup', '', 6, "Other");
+messageClient(%cl, 'MsgItemPickup', '', 7, "Tools/Weapons");
+messageClient(%cl, 'MsgItemPickup', '', 8, "Coloring Tools");
+messageClient(%cl, 'MsgItemPickup', '', 9, "Special Objects");
 				}
 			}
 			for (%i = 0; %i < MissionCleanup.getCount(); %i++)
@@ -848,7 +1053,7 @@ function serverCmdEndDeathmatch(%client)
 				if(%brick.hits>0)
 				{
 					%brick.hits = 0;
-					%brick.setSkinName(%col.SkinName);
+					%brick.setSkinName(%brick.SkinName);
 				}
 			}		
 
@@ -867,7 +1072,7 @@ function serverCmdSaveBricks(%client,%file)
 {
 	if(%client.isAdmin || %client.isSuperAdmin)
 	{
-		SavePersistence(%file);
+		SavePersistence(%file, 1);
 	}
 }
 function serverCmdLoadBricks(%client,%file)
@@ -924,8 +1129,6 @@ function serverCmdTeleportToObj(%client,%obj,%waitTime)
 		%trans = %x SPC %y SPC %z;
 		if(%client.isSkele !$= 1 && %client.isDroid !$= 1)
 		   %client.player.setCloaked(true);
-		else
-		   %client.player.startFade(0, 0, 1000);
 		schedule(%waitTime,0,"Teleport",%client.player,%trans);
 	}
 
@@ -938,8 +1141,6 @@ function Teleport(%obj,%trans)
 		%obj.setTransform(%trans);
 		if(%obj.client.isSkele !$= 1 && %obj.client.isDroid !$= 1)
 		   %obj.setCloaked(false);
-		else
-		   %client.player.startFade(1000);
 		%obj.client.NoTeleport = 1;
 		%client = %obj.client;
 		schedule(3000,0,"TeleportReset",%client);
@@ -985,12 +1186,6 @@ function serverCmdJetPackLag(%client,%lag)
 		{
 			$Pref::Server::MaxEnergy = 0;
 			$Pref::Server::JetLag = 80;
-
-			for(%clientNum = 0; %clientNum < ClientGroup.getCount(); %clientNum++)
-			{
-				ClientGroup.getObject(%clientNum).player.setRechargeRate(0);
-			}
-
 			messageAll("","\c3Jetpacks are turned off");
 		}
 		else
@@ -1206,12 +1401,30 @@ function serverCmdToggleInventory(%client)
 			for(%i= 0; %i < ClientGroup.getCount(); %i++)
 			{
 				%cl = ClientGroup.getObject(%i);
-					serverCmdAddtoInvent(%cl,1,$StartPlates);
-   					serverCmdAddtoInvent(%cl,2,$StartSlopes);
+			   		serverCmdAddtoInvent(%cl,1,$StartPlates);
+  					serverCmdAddtoInvent(%cl,2,$StartSlopes);
   					serverCmdAddtoInvent(%cl,3,$StartMisc);
-   					serverCmdAddtoInvent(%cl,4,$StartTools);
-   					serverCmdAddtoInvent(%cl,5,$StartSprayCans);
-   					serverCmdAddtoInvent(%cl,0,$StartBricks);
+  					serverCmdAddtoInvent(%cl,4,$StartMisc2);
+  					serverCmdAddtoInvent(%cl,5,$StartMisc3);
+  					serverCmdAddtoInvent(%cl,6,$StartMisc4);
+   					serverCmdAddtoInvent(%cl,7,$StartTools);
+   					serverCmdAddtoInvent(%cl,8,$StartSprayCans);
+		if(%cl.isEwanduserBBC || %cl.isEWandUser || %cl.isAdmin || %cl.isSuperAdmin)
+		{
+   			serverCmdAddtoInvent(%cl,9,$StartSpecial);
+		}
+   		serverCmdAddtoInvent(%cl,0,$StartBricks);
+   		servercmdFreeHands(%cl);
+messageClient(%cl, 'MsgItemPickup', '', 0, "Bricks");
+messageClient(%cl, 'MsgItemPickup', '', 1, "Plates");
+messageClient(%cl, 'MsgItemPickup', '', 2, "Slopes");
+messageClient(%cl, 'MsgItemPickup', '', 3, "Windows/Cylinders");
+messageClient(%cl, 'MsgItemPickup', '', 4, "Fences/Arches");
+messageClient(%cl, 'MsgItemPickup', '', 5, "Special Bricks");
+messageClient(%cl, 'MsgItemPickup', '', 6, "Other");
+messageClient(%cl, 'MsgItemPickup', '', 7, "Tools/Weapons");
+messageClient(%cl, 'MsgItemPickup', '', 8, "Coloring Tools");
+messageClient(%cl, 'MsgItemPickup', '', 9, "Special Objects");
 			}
 
 		}
@@ -1251,7 +1464,7 @@ function serverCmdInventSearchAdd(%client,%item)
 	}
 }
 
-function serverCmdKick(%client, %victim)
+function serverCmdKick(%client, %victim, %reason)
 {
 	if(%client.isAdmin || %client.isSuperAdmin || %client.isTempAdmin)
 	{
@@ -1261,10 +1474,20 @@ function serverCmdKick(%client, %victim)
 			%ip = getRawIP(%victim);
 			if(%ip !$= "local")
 			{
-				//tell everyone about it
-				messageAll( 'MsgAdminForce', '\c3The Admin has kicked \c0%1\c3(%2).', %victim.name, getRawIP(%victim));
+				if(%reason $= "") %reason="N/A";
+				if($Pref::Server::Log)
+					{
+					$Logfile = new FileObject();
+					$Logfile.openForAppend("rtb/server/ServerLog.txt");
+					$Logfile.writeLine(">>*KICK*<<");
+					$Logfile.writeLine("Name: "@%victim.namebase @ " ip: "@getrawip(%victim)@" Time: " @ $Sim::Time@ " by: "@%client.namebase@ " reason: "@%reason);
+					$Logfile.close();
+					}
+								//tell everyone about it
+				messageAll( 'MsgAdminForce', '\c3The Admin (%1) has kicked \c0%2\c3(%3). Reason: %4',%client.name, %victim.name, getRawIP(%victim), %reason);
 				//kick them
-				%victim.delete("You have been kicked.");
+				%victim.KickBan = "Kick";
+				%victim.delete("You have been kicked. By: " @%client.namebase @" Reason: "@%reason);
 			}
 			else
 			{
@@ -1279,7 +1502,7 @@ function serverCmdKick(%client, %victim)
 		}
 	}
 }
-function serverCmdBan(%client, %victim, %Subnet)
+function serverCmdBan(%client, %victim, %Subnet, %reason)
 {
 	if(%client.isAdmin || %client.isSuperAdmin)
 	{
@@ -1290,8 +1513,19 @@ function serverCmdBan(%client, %victim, %Subnet)
 			%ip = getRawIP(%victim);
 			if(%ip !$= "local")
 			{
+				%victim.KickBan = "Ban";
+				if(%reason $= "") %reason="N/A";
+				if($Pref::Server::Log)
+					{
+					$Logfile = new FileObject();
+					$Logfile.openForAppend("rtb/server/ServerLog.txt");
+					$Logfile.writeLine(">>*BAN*<<");
+					$Logfile.writeLine("Name: "@%victim.namebase @ " ip: "@getrawip(%victim)@" Time: " @ $Sim::Time@ " by: "@%client.namebase@ " reason: "@%reason);
+					$Logfile.close();
+					}
+
 				//tell everyone about it
-				messageAll( 'MsgAdminForce', '\c3%3 has banned \c0%1\c3(%2).', %victim.name, getRawIP(%victim), %client.name);
+				messageAll( 'MsgAdminForce', '\c3The Admin (%3) has banned \c0%1\c3(%2). Reason: %4', %victim.name, getRawIP(%victim), %client.name, %reason);
 
 				$Ban::numBans++;
 				$Ban::ip[$Ban::numBans] = %ip;
@@ -1308,7 +1542,7 @@ function serverCmdBan(%client, %victim, %Subnet)
 			}
 		}
 		//kill the victim client
-		%victim.delete("You have been banned.");
+		%victim.delete("You have been banned. By: " @%client.namebase @" Reason: "@%reason);
 	}
 }
 

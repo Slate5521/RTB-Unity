@@ -144,12 +144,14 @@ function onServerCreated(%mission)
    $Pref::Server::OverWriteVote = false;
    $Pref::Server::VoteInProgress = false;
 
-   //***PTTA COMMANDS EXECUTION***
-   exec("./PTTA/PTTAexec.cs");
+   // Exec PTTA commands
+   exec("./pttaCommands.cs");
 
+   // Exec server scripts
+   exec("./commands.cs");
    exec("./constants.cs");
-   exec("./PTTA/serverCmd.cs");
-   exec("./PTTA/adminCommands.cs");
+   exec("./serverCmd.cs");
+   exec("./adminCommands.cs");
    exec("./audioProfiles.cs");
    exec("./camera.cs");
    exec("./markers.cs"); 
@@ -160,7 +162,7 @@ function onServerCreated(%mission)
    exec("./staticShape.cs");
    exec("./weapon.cs");
    exec("./radiusDamage.cs");
-   exec("./ptta/player.cs");
+   exec("./player.cs");
    exec("./brick.cs");
    
     // Check to see if the mission has custom datablocks
@@ -176,7 +178,6 @@ function onServerCreated(%mission)
    exec("./Bricks/Brickexec.cs");
    exec("./Vehicles/Vehicleexec.cs");
    exec("./Tools/Toolexec.cs");
-   exec("./PTTA/PTTAexec.cs");
    exec("./Items/Itemexec.cs");
    exec("./AI/AIexec.cs");
    exec("./Weapons/Weaponexec.cs");
@@ -184,13 +185,13 @@ function onServerCreated(%mission)
    //# End.
    //###################################
 
-   exec("./PTTA/movers.cs");
+   exec("./movers.cs");
    exec("./particles.cs");
    exec("./bombexplosions.cs");
    exec("./bombradiusdamage.cs");
-   exec("./PTTA/message.cs");
+   exec("./message.cs");
    exec("./precipitation.cs");
-   exec("./PTTA/persistence.cs");
+   exec("./persistence.cs");
    exec("./showImages.cs");
    //exec("./invSelect.cs");
    exec("./inventorycommands.cs");

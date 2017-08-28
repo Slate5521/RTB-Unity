@@ -84,9 +84,28 @@ for (%i = 0; %i < MissionCleanup.getCount(); %i++)
 				if(%brick.group > $ServerGroup)
 				{
 					$ServerGroup = %brick.group;
-
+				}
+				if(%brick.movenums > 1 && %brick.ReturnToggle $= 0)
+				{
+					%brick.onmovenum = 1;
+					%brick.HasReturned = 1;
+				}
+				if(%brick.movenums > 1 && %brick.isMoving $= 1)
+				{
+					%brick.onmovenum = 1;
+				}
+				if(%brick.origrot $= "")
+				{
+					%brick.isMoving = 0;
+				}
+				else if(%brick.isMoving $= 1)
+				{
+					%brick.EulerRot = %brick.origrot;
+					%brick.HasReturned = 1;
+					%brick.setTransform(%brick.origpos);
 				}
 				$Movers[$TotalMoversPlaced++] = %brick;
+				%brick.isMoving = 0;
 			}
 
 			if(%brick.isCopSpawn)
@@ -97,7 +116,7 @@ for (%i = 0; %i < MissionCleanup.getCount(); %i++)
 			{
 				$RobberSpawn[$TotalRobberSpawnPoints++] = %brick;
 			}
-			if(%brick.FXMode $= 1)
+			if(%brick.FXmode $= 1)
 			{
 			   %curtrans = %brick.getTransform();
 			   %curx = getword(%curtrans,0);
@@ -115,16 +134,8 @@ for (%i = 0; %i < MissionCleanup.getCount(); %i++)
      		   	   emitter = "FireParticleEmitter";
       			   velocity = "1.0";
    			   };
-			   %brick.smokeEmitter = new ParticleEmitterNode(brickSmokeNode) {
-     			   position = %newTrans;
-      			   rotation = "1 0 0 0";
-      			   scale = "1 1 1";
-      			   dataBlock = "SmokeParticleEmitterNode";
-     		   	   emitter = "SmokeParticleEmitter";
-      			   velocity = "1.0";
-   			   };
 			}
-			if(%brick.FXMode $= 2)
+			if(%brick.FXmode2 $= 1)
 			{
 			   %curtrans = %brick.getTransform();
 			   %curx = getword(%curtrans,0);
@@ -143,7 +154,7 @@ for (%i = 0; %i < MissionCleanup.getCount(); %i++)
       			   velocity = "1.0";
    			   };
 			}
-			if(%brick.FXMode $= 5)
+			if(%brick.FXmode5 $= 1)
 			{
 			   %curtrans = %brick.getTransform();
 			   %curx = getword(%curtrans,0);
@@ -368,25 +379,54 @@ function saveBlocks(%filename)
 		{
 			%file.writeLine("%block" @ %block @ " = new StaticShape()");
 			%file.writeLine("{");
-			%file.writeLine("\tposition = \"" @ %block.position @ "\";");
-			%file.writeLine("\trotation = \"" @ %block.rotation @ "\";");
+			if(%block.isMoving $= 1){
+				%file.writeLine("\tposition = \"" @ %block.origpos @ "\";");
+				%file.writeLine("\tposition = \"" @ %block.position @ "\";");
+				%file.writeLine("\trotation = \"" @ %block.origrot @ "\";");
+			}else{
+				%file.writeLine("\tposition = \"" @ %block.position @ "\";");
+				%file.writeLine("\trotation = \"" @ %block.rotation @ "\";");}
+			//%file.writeLine("\tposition = \"" @ %block.position @ "\";");
+			//%file.writeLine("\trotation = \"" @ %block.rotation @ "\";");
 			%file.writeLine("\tscale = \"" @ %block.scale @ "\";");
 			%file.writeLine("\tdataBlock = \"" @ %block.dataBlock @ "\";");
 			%file.writeLine("\townerIP = \"" @ %block.ownerIP @ "\";");
 			%file.writeLine("\townerAway = \"" @ 1 @ "\";");
-			
-			%file.writeLine("\t\FXMode = \"" @ %block.FXMode @ "\";");
 
-			%file.writeLine("\t\PrintName = \"" @ %block.printname @ "\";");
-			%file.writeLine("\t\Printer = \"" @ %block.printer @ "\";");
-			%file.writeLine("\t\mounteddecal = \"" @ %block.mounteddecal @ "\";");
-			%file.writeLine("\t\isprinted = \"" @ %block.isprinted @ "\";");
+			if(%block.FXmode > 0)
+			{
+				%file.writeLine("\t\FXmode = \"" @ %block.FXMode @ "\";");
+			}
+			if(%block.FXmode2 > 0)
+			{
+				%file.writeLine("\t\FXmode2 = \"" @ %block.FXMode2 @ "\";");
+			}
+			if(%block.FXmode5 > 0)
+			{
+				%file.writeLine("\t\FXmode5 = \"" @ %block.FXMode5 @ "\";");
+			}	
+
+			if(%block.isPrinted){
+				%file.writeLine("\t\PrintName = \"" @ %block.printname @ "\";");
+				%file.writeLine("\t\Printer = \"" @ %block.printer @ "\";");
+				%file.writeLine("\t\mounteddecal = \"" @ %block.mounteddecal @ "\";");
+				%file.writeLine("\t\isprinted = \"" @ %block.isprinted @ "\";");
+			}
 			%file.writeLine("\t\EulerRot = \"" @ %block.EulerRot @ "\";");
-			%file.writeLine("\t\IsAlarmSystem = \"" @ %block.IsAlarmSystem @ "\";");
-			%file.writeLine("\t\IsWeak = \"" @ %block.IsWeak @ "\";");
-			%file.writeLine("\t\IsAlarmSystemCode = \"" @ %block.IsAlarmSystemCode @ "\";");
-			%file.writeLine("\t\IsDoorbell = \"" @ %block.IsDoorbell @ "\";");
-
+			if(%block.IsWeak)
+				%file.writeLine("\t\IsWeak = \"" @ %block.IsWeak @ "\";");
+			if(%block.IsAlarmSystem)
+				%file.writeLine("\t\IsAlarmSystem = \"" @ %block.IsAlarmSystem @ "\";");
+			if(%block.IsAlarmSystemCode)
+				%file.writeLine("\t\IsAlarmSystemCode = \"" @ %block.IsAlarmSystemCode @ "\";");
+			if(%block.isDoorbell)
+				%file.writeLine("\t\IsDoorbell = \"" @ %block.IsDoorbell @ "\";");
+			if(%block.isteleportObjGateway)
+				%file.writeLine("\t\isTeleportObjGateway = \"" @ %block.IsTeleportObjGateway @ "\";");
+			if(%block.LinkedByID){
+				%file.writeLine("\t\LinkedByID = \"" @ %block.LinkedByID @ "\";");
+				%file.writeLine("\t\LinkNum = \"" @ %block.LinkNum @ "\";");
+			}
 			if(%block.isImp)
 			{
 				%file.writeLine("\t\IsImp = \"" @ %block.IsImp @ "\";");
@@ -410,18 +450,50 @@ function saveBlocks(%filename)
 				%file.writeLine("\t\HasReturned = \"" @ %block.HasReturned @ "\";");
 				%file.writeLine("\t\isImpulseTrigger = \"" @ %block.isImpulseTrigger @ "\";");
 				%file.writeLine("\t\TriggerCloak = \"" @ %block.TriggerCloak @ "\";");
+				%file.writeLine("\t\KeyProtected = \"" @ %block.KeyProtected @ "\";");
 				%file.writeLine("\t\Password = \"" @ %block.Password @ "\";");
 				%file.writeLine("\t\Team = \"" @ %block.Team @ "\";");
 				%file.writeLine("\t\Group = \"" @ %block.Group @ "\";");
 				%file.writeLine("\t\isLocked = \"" @ %block.isLocked @ "\";");
 				%file.writeLine("\t\DoorType = \"" @ %block.DoorType @ "\";");
+				%file.writeLine("\t\MoveNums = \"" @ %block.MoveNums @ "\";");
+				%file.writeLine("\t\OnMoveNum = \"" @ %block.OnMoveNum @ "\";");
 				%file.writeLine("\t\MoveXYZ = \"" @ %block.MoveXYZ @ "\";");
+				if(%block.MoveNums > 1)
+					%file.writeLine("\t\MoveXYZ2 = \"" @ %block.MoveXYZ2 @ "\";");
+				if(%block.MoveNums > 2)
+					%file.writeLine("\t\MoveXYZ3 = \"" @ %block.MoveXYZ3 @ "\";");
+				if(%block.MoveNums > 3)
+					%file.writeLine("\t\MoveXYZ4 = \"" @ %block.MoveXYZ4 @ "\";");
+				%file.writeLine("\t\origpos = \"" @ %block.origpos @ "\";");
+				%file.writeLine("\t\origrot = \"" @ %block.origrot @ "\";");
 				%file.writeLine("\t\awaitingReturn = \"" @ %block.awaitingReturn @ "\";");
 			}
 			if(%block.teleportObj > 0)
 			{
 				%file.writeLine("\t\ teleportObj = \"" @ %block.teleportObj @ "\";");
 			}
+			if(%block.isDetBrick > 0)
+			{
+				%file.writeLine("\t\ isDetBrick = \"" @ %block.isDetBrick @ "\";");
+			}
+			if(%block.isDoorBell > 0)
+			{
+				%file.writeLine("\t\ isDoorBell = \"" @ %block.isDoorBell @ "\";");
+			}
+			if(%block.iskiller > 0)
+			{
+				%file.writeLine("\t\ iskiller = \"" @ %block.iskiller @ "\";");
+			}
+			if(%block.isscale > 0)
+			{
+				%file.writeLine("\t\ isscale = \"" @ %block.isscale @ "\";");
+			}
+			if(%block.ispaint > 0)
+			{
+				%file.writeLine("\t\ ispaint = \"" @ %block.ispaint @ "\";");
+			}
+
 			%file.writeLine("};");
 			%file.writeLine("MissionCleanup.add(%block" @ %block @ ");");
 			$numBlocks++;
@@ -430,7 +502,7 @@ function saveBlocks(%filename)
 			%file.writeLine("%block" @ %block @ ".NoDestroy=\"" @ %block.noDestroy @ "\";");
 			%file.writeLine("%block" @ %block @ ".isJail=\"" @ %block.isJail @ "\";");
 			%file.writeLine("%block" @ %block @ ".JailMaxCount=\"" @ %block.JailMaxCount @ "\";");
-			if(%block.isWCloaked)
+			if(%block.isWCloaked $= 1)
 			{
 				%file.writeLine("%block" @ %block @ ".setcloaked(1)" @ ";");
 				%file.writeLine("%block" @ %block @ ".isWCloaked=\"" @ %block.isWCloaked @ "\";");

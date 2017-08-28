@@ -562,7 +562,7 @@ datablock PlayerData(LightMaleHumanArmor)
 
    rechargeRate = 1000; //0.256;
 
-   runForce = 48 * $Pref::Server::JetLag;
+   runForce = 48 * 90;
    runEnergyDrain = 0;
    minRunEnergy = 0;
    maxForwardSpeed = 7;
@@ -585,7 +585,7 @@ datablock PlayerData(LightMaleHumanArmor)
    maxUnderwaterBackwardSpeed = 7.8;
    maxUnderwaterSideSpeed = 7.8;
 
-   jumpForce = 12 * $Pref::Server::JetLag; //8.3 * 90;
+   jumpForce = 12 * 30; //8.3 * 90;
    jumpEnergyDrain = 0;
    minJumpEnergy = 0;
    jumpDelay = 0;
@@ -685,8 +685,8 @@ datablock PlayerData(LightMaleHumanArmor)
    observeParameters = "0.5 4.5 4.5";
 
    // Inventory Items
-	maxItems   = 10;	//total number of usable things you can carry including weapons
-	maxWeapons = 5;
+	maxItems   = 20;	//total number of usable things you can carry including weapons
+	maxWeapons = 10;
 
 };
 
@@ -703,16 +703,7 @@ function Armor::onAdd(%this,%obj)
    %obj.mountVehicle = true;
 
    // Default dynamic armor stats
-
-	if(%this.maxEnergy == 0)
-	{
-		%obj.setRechargeRate(0);
-	}
-	else
-	{
-		%obj.setRechargeRate(%this.rechargeRate);
-	}
-
+   %obj.setRechargeRate(%this.rechargeRate);
    %obj.setRepairRate(0);
 }
 
@@ -832,6 +823,10 @@ function Armor::onCollision(%this,%obj,%col,%vec,%speed)
 			}
 		}
 	}
+	if (%col.getClassName() $= "Light")
+	{
+		return;
+	}
 
 	if(%col.getClassName() $= "StaticShape")
 	{
@@ -848,6 +843,21 @@ function Armor::onCollision(%this,%obj,%col,%vec,%speed)
 			%pos = getwords(%col.getTransform(), 0, 2);
 			%obj.client.player.applyimpulse(%pos,%col.Imp);
 	}
+
+if(%col.isKiller)
+{
+	%obj.client.player.kill();
+}
+
+if(%col.isscale)
+{
+	%obj.client.player.setscale(%col.getScale());
+}
+
+if(%col.ispaint)
+{
+	%obj.client.player.setSkinName(%col.getSkinName());
+}
 
 
 if($Pref::Server::BombRigging $= 1)
@@ -876,7 +886,11 @@ if($Pref::Server::BombRigging $= 1)
 }
 
 
-
+		if(%col.isteleportObjGateway == 1){
+			if(%obj.client.NoTeleport == 0){
+				%obj.client.isRequestingTeletoID = 1;
+				commandtoclient(%client,'OpenPWBox');
+		}}
 		if(%col.teleportObj > 0)
 		{
 			if(%obj.client.NoTeleport == 0)
