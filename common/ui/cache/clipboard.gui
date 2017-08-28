@@ -4,13 +4,13 @@ new SimSet(guiClipboard) {
       profile = "GuiButtonProfile";
       horizSizing = "right";
       vertSizing = "bottom";
-      position = "340 52";
-      extent = "85 23";
+      position = "15 210";
+      extent = "105 28";
       minExtent = "8 2";
       visible = "1";
-      command = "commandToServer(\'MagicWand\');";
+      command = "onChatMessage(detag(\"Server Ping is\" SPC serverconnection.getping()), 0, 0);";
       helpTag = "0";
-      text = "Magic Wand";
+      text = "PTTA Server Menu";
       groupNum = "-1";
       buttonType = "PushButton";
    };
