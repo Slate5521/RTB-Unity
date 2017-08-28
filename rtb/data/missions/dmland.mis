@@ -1,0 +1,370 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         name = "War Lands";
+         bitmap = "pigby";
+         desc0 = "This is a map that is intended for use of Team DM’s and DMs. You can build bases where the ‘Dark Brown’ is. You can also find a few secrets. Map by Sephiroth. ‘Returntoblockland.net’";
+         desclines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -272 704 720";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_spooky3/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.003";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "600";
+      fogDistance = "0";
+      fogColor = "1.000000 1.000000 1.000000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "1.000000 1.000000 1.000000 1.000000";
+      useSkyTextures = "0";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.347509 0.560864 -0.751445";
+      color = "0.800000 0.800000 0.800000 1.000000";
+      ambient = "0.550000 0.550000 0.550000 1.000000";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./dmland.ter";
+      squareSize = "8";
+         locked = "true";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "198.651 94.3554 58";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new SimGroup(Fence0) {
+   };
+   new SimGroup(Trees0) {
+   };
+   new SimGroup(PlayerItems0) {
+   };
+   new StaticShape() {
+      position = "20.2432 -116.879 64.6839";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-8.11038 -137.425 64.6905";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "57.9752 -128.595 64.6882";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "19.889 38.2399 59.9631";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         BrickGhostOwner = "3078";
+   };
+   new StaticShape() {
+      position = "-18.0605 65.9253 59.3593";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         BrickGhostOwner = "3078";
+   };
+   new StaticShape() {
+      position = "-6.40347 144.16 58.5137";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         BrickGhostOwner = "3078";
+   };
+   new StaticShape() {
+      position = "220.322 237.488 53.9161";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         BrickGhostOwner = "3078";
+   };
+   new StaticShape() {
+      position = "206.47 273.044 53.7228";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         BrickGhostOwner = "3078";
+   };
+   new StaticShape() {
+      position = "188.006 248.075 54.4846";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         BrickGhostOwner = "3078";
+   };
+   new Item() {
+      position = "188.341 281.188 54.165";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "katana";
+      collideable = "1";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "187.192 276.79 54.4099";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "revolver";
+      collideable = "1";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "73.8034 209.133 58.5649";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "speargun";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "78.042 204.884 59.372";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "spear";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-12.8139 106.833 58.7675";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "sword";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-10.611 109.725 59.0239";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "spear";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "28.3504 102.357 59.955";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "axe";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "25.1664 99.912 59.3244";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "crossbow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-0.977648 -96.5396 65.3226";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "rifle";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-0.977649 -95.3261 65.3226";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "sword";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "322.709 -84.9366 51.3773";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "chainsaw";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "294.684 -68.8892 51.2394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lightsabre";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "296.179 -69.704 51.0803";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "katana";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "324.658 -85.8635 51.8225";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "smokegrenade";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "300.13 -72.3738 51.1252";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "revolver";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "302.717 -73.4377 51.5144";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "axe";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "305.076 -74.7736 51.2432";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "blaster";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "307.602 -75.9408 51.5169";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "bow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "308.903 -77.7374 50.8949";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "crossbow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "310.898 -78.0702 50.5489";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "pickaxe";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "312.64 -79.0562 49.9647";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "duallsabre";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "314.853 -81.5231 51.5077";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "rifle";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "317.188 -81.6317 51.7507";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "spear";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "318.992 -82.6533 51.2998";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "speargun";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "321.01 -83.798 51.5415";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "sword";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+};
+//--- OBJECT WRITE END ---

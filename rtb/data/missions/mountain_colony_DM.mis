@@ -1,0 +1,921 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         descLines = "2";
+         name = "Mountain Colony - DEATHMATCH";
+         desc0 = "If it doesnt load, get the new version here: \n http://filebox.vt.edu/users/ehartman/\n\c1This map is part of Bleh\'s Map Revival Project.";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "400";
+      fogDistance = "300";
+      fogColor = "0.600000 0.700000 0.900000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.800000 1.000000";
+      ambient = "0.550000 0.550000 0.550000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./mountain_colony.ter";//"./mountain_colony_DM.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-43.052 -200.547 87.2868";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+      new SpawnSphere() {
+         position = "-20.1086 -104.55 94.4935";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+      new SpawnSphere() {
+         position = "-175.707 -92.9529 142.895";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+      new SpawnSphere() {
+         position = "97.2077 -204.423 154.505";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+      new SpawnSphere() {
+         position = "177.815 -231.762 173.519";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+      new SpawnSphere() {
+         position = "103.045 -319.249 87.8126";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+      new SpawnSphere() {
+         position = "107.798 -414.242 134.477";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new WaterBlock() {
+      position = "-8 -296 -43.827";
+      rotation = "1 0 0 0";
+      scale = "256 256 128";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/Water01";
+      ShoreTexture = "~/data/water/Water01";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "40";
+      waveMagnitude = "0";
+      surfaceOpacity = "0.975";
+      envMapIntensity = "0.4";
+      TessSurface = "30";
+      TessShore = "30";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0";
+      DistortTime = "100";
+      ShoreDepth = "4";
+      DepthGradient = "1";
+      MinAlpha = "0.25";
+      MaxAlpha = "0.7";
+      removeWetEdges = "0";
+         extent = "100 100 10";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "0.32 -0.67 0.066 0.5";
+         floodFill = "1";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+   };
+   new StaticShape() {
+      position = "-26 -192 85.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "28.9879 -161.72 98.9";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up4 = "5039";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         groundCheckVal = "15";
+         up3 = "3396";
+   };
+   new Item() {
+      position = "-55.799 -185.116 85.6378";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-53.7745 -180.606 85.5377";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x4x5window";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.42829e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1463";
+   };
+   new Item() {
+      position = "-26.8387 -189.039 86.5712";
+      rotation = "0 0 1 90.5273";
+      scale = "1 1 1";
+      dataBlock = "sprayCan";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-42.6981 -179.405 85.6042";
+      rotation = "0 0 1 59.0147";
+      scale = "1 1 1";
+      dataBlock = "brick1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.48441e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1460";
+   };
+   new fxShapeReplicator(leaves) {
+      position = "46.2088 -182.161 90.2491";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      HideReplications = "0";
+      ShowPlacementArea = "1";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      shapeFile = "~/data/shapes/leaf.dts";
+      Seed = "1376312589";
+      ShapeCount = "30";
+      ShapeRetries = "100";
+      InnerRadiusX = "0";
+      InnerRadiusY = "0";
+      OuterRadiusX = "25";
+      OuterRadiusY = "25";
+      AllowOnTerrain = "0";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "1";
+      AllowWaterSurface = "1";
+      AlignToTerrain = "0";
+      Interactions = "1";
+      AllowedTerrainSlope = "90";
+      TerrainAlignment = "1 1 1";
+      ShapeScaleMin = "1 1 1";
+      ShapeScaleMax = "1 1 1";
+      ShapeRotateMin = "0 0 0";
+      ShapeRotateMax = "0 0 360";
+      OffsetZ = "0";
+   };
+   new Item() {
+      position = "-50.7361 -185.223 85.6423";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate6x12";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new StaticShape() {
+      position = "-5.24966 -183.52 85.7807";
+      rotation = "0 0 -1 118.602";
+      scale = "1 1 1";
+      dataBlock = "flowers";
+   };
+   new Item() {
+      position = "-44.9014 -179.778 85.7195";
+      rotation = "0 0 -1 30.3667";
+      scale = "1 1 1";
+      dataBlock = "brick2x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new StaticShape() {
+      position = "-7.95056 -183.442 85.3598";
+      rotation = "0 0 1 198.426";
+      scale = "1 1 1";
+      dataBlock = "flowers";
+   };
+   new Item() {
+      position = "-29.9841 -189.364 86.3441";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "hammer";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "114.71 -428.289 130.684";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x8";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new StaticShape() {
+      position = "-8.05515 -180.428 85.9025";
+      rotation = "0 0 -1 79.0679";
+      scale = "1 1 1";
+      dataBlock = "flowers";
+   };
+   new StaticShape() {
+      position = "-3.16173 -180.865 85.5511";
+      rotation = "0 0 -1 118.602";
+      scale = "1 1 1";
+      dataBlock = "flowers";
+   };
+   new StaticShape() {
+      position = "-6.86858 -176.789 85.864";
+      rotation = "0 0 -1 118.602";
+      scale = "1 1 1";
+      dataBlock = "flowers";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.85899e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1457";
+   };
+   new Item() {
+      position = "-32.3918 -187.621 85.5315";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x10";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new StaticShape() {
+      position = "-4.49892 -186.903 85.4487";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "pineTree";
+   };
+   new StaticShape() {
+      position = "-8.12182 -175.288 85.5095";
+      rotation = "0 0 -1 118.602";
+      scale = "1 1 1";
+      dataBlock = "flowers";
+   };
+   new StaticShape() {
+      position = "-70.9514 -206.276 85.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "-3.08482 -189.029 85.0241";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "pineTree";
+   };
+   new StaticShape() {
+      position = "-5.79738 -189.11 83.8363";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "pineTree";
+   };
+   new Item() {
+      position = "-38.7514 -180.253 85.6532";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-32.8034 -179.587 85.4625";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-35.4513 -179.984 85.7364";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-42.6517 -186.094 85.5738";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-40.7904 -186.767 85.5694";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-37.4639 -186.962 85.5492";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x6";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-35.0687 -187.309 85.5446";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x8";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new StaticShape() {
+      position = "-26 -208 85.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "116.229 -434.878 130.511";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "-43.586 -162.78 85.7992";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "-59.5763 -162.786 85.7992";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "-106.177 -142.21 105.334";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "12.046 -317.336 114.026";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new StaticShape() {
+      position = "173.007 -254.988 170.486";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "1657";
+         up2 = "3363";
+         up1 = "3334";
+         upSize = "4";
+         up3 = "3396";
+   };
+   new Precipitation(Precipitation) {
+      position = "121.806 -93.2321 157.899";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      nameTag = "rain";
+      dataBlock = "Snow";
+      offsetSpeed = "0.25";
+      minVelocity = "0.25";
+      maxVelocity = "1.5";
+      color1 = "1.000000 1.000000 1.000000 1.000000";
+      color2 = "-1.000000 0.000000 0.000000 1.000000";
+      color3 = "-1.000000 0.000000 0.000000 1.000000";
+      percentage = "1";
+      maxNumDrops = "2000";
+      maxRadius = "125";
+   };
+   new Item() {
+      position = "44.5996 -145.698 99.3236";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x8";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "43.4728 -144.943 99.3282";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x6";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "42.4487 -143.205 99.1484";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "41.3292 -140.958 99.1528";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "41.1519 -144.733 98.0322";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "35.8439 -144.441 99.1105";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x10";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "111.262 -427.324 131.392";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "45.6817 -145.761 99.7231";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "hammer";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "39.6293 -144.618 97.6985";
+      rotation = "0 0 -1 30.3667";
+      scale = "1 1 1";
+      dataBlock = "brick2x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "36.7919 -142.62 99.2213";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate6x12";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "37.2052 -143.885 97.9832";
+      rotation = "0 0 1 59.0147";
+      scale = "1 1 1";
+      dataBlock = "brick1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "45.4153 -151.344 99.9502";
+      rotation = "0 0 1 90.5273";
+      scale = "1 1 1";
+      dataBlock = "sprayCan";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "40.4247 -141.858 98.7167";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x4x5window";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "34.2869 -143.674 98.8168";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "115.252 -432.054 131.91";
+      rotation = "0 0 1 90.5273";
+      scale = "1 1 1";
+      dataBlock = "sprayCan";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "115.519 -426.471 131.483";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "hammer";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "107.332 -426.475 131.943";
+      rotation = "0 0 1 59.0147";
+      scale = "1 1 1";
+      dataBlock = "brick1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "109.739 -427.209 131.659";
+      rotation = "0 0 -1 30.3667";
+      scale = "1 1 1";
+      dataBlock = "brick2x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "104.397 -426.265 132.177";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "105.954 -427.032 132.471";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x10";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "106.902 -425.211 131.781";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate6x12";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "110.485 -424.392 131.477";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x4x5window";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "111.439 -423.549 131.113";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "112.559 -425.796 131.108";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "113.583 -427.534 131.088";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x6";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-89.5644 -242.191 85.4701";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "bow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-64.8041 -65.7177 118.272";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "bow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "77.719 -357.58 124.016";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "bow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "135.034 -149.529 94.6046";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "bow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "79.7606 -216.652 3.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "sword";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "78.931 -56.9174 174.392";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "spear";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "31.3171 -267.907 120.271";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "spear";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-36.6113 -193.634 86.7625";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "axe";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "170.036 -477.461 125.463";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "spear";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "46.9356 -148.294 100.017";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "axe";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "116.018 -429.615 131.742";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "axe";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "45.3615 -149.274 99.8039";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "paintBall";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "112.447 -430.576 132.614";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "paintBall";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new Item() {
+      position = "-26.7979 -191.005 86.4806";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "paintBall";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -13357.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+};
+//--- OBJECT WRITE END ---

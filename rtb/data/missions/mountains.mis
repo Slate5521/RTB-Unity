@@ -1,0 +1,121 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         name = "City in the Mountains";
+         desc0 = "A huge place to build a city, between 2 gigantic mountain chains!  Get more maps and mods at www.blockheadbleh.co.nr!";
+         descLines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "fps/data/skies/sky_blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.700000 0.900000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.800000 1.000000";
+      ambient = "0.550000 0.550000 0.550000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "fps/data/terrains/details/detail1";
+      terrainFile = "./mountains.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-492.425 -734.913 62.2868";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new WaterBlock() {
+      position = "-440 -1024 -60";
+      rotation = "1 0 0 0";
+      scale = "10000 10000 100";
+      UseDepthMask = "1";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "1000";
+      waveMagnitude = "0";
+      surfaceOpacity = "0.1";
+      envMapIntensity = "100";
+      TessSurface = "0";
+      TessShore = "0";
+      SurfaceParallax = "0";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "100";
+      DistortMag = "100";
+      DistortTime = "100";
+      ShoreDepth = "-100";
+      DepthGradient = "1";
+      MinAlpha = "0.7";
+      MaxAlpha = "100";
+      removeWetEdges = "0";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         envMapTexture = "rtb/data/skies/sunset_0007";
+         textureSize = "10000 10000";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "10000 10000 10";
+         floodFill = "1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params2 = "0.39 0.39 0.2 0.133";
+         seedPoints = "0 0 1 0 1 1 0 1";
+   };
+};
+//--- OBJECT WRITE END ---
+schedule( 3000, 0, MountainLoadexec);
+function MountainLoadexec()
+{
+	exec("rtb/data/missions/Mountainsbaseplates.persistence");
+	messageAll("MsgPersistence", "\c2Thank you for downloading Bleh7777's Mountain Map.  Get more mods and maps at www.blockheadbleh.co.nr!.");
+}
