@@ -127,13 +127,13 @@ datablock ExplosionData(blastExplosion)
 datablock ProjectileData(blastProjectile)
 {
    projectileShapeName = ""; 
-   directDamage        = 40;
+   directDamage        = 13;
    radiusDamage        = 10;
    damageRadius        = 0.5;
    explosion           = blastExplosion;
    particleEmitter     = blastTrailEmitter;
 
-   muzzleVelocity      = 300;
+   muzzleVelocity      = 375;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
@@ -142,7 +142,7 @@ datablock ProjectileData(blastProjectile)
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = true;
-   gravityMod = 0;
+   gravityMod = 0.05;
 
    hasLight    = false;
    lightRadius = 3.0;
@@ -311,7 +311,7 @@ datablock ShapeBaseImageData(blasterImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Reload";
-	stateTimeoutValue[2]            = 0.3;
+	stateTimeoutValue[2]            = 0.14;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = false;
 	stateSequence[2]                = "Fire";
@@ -322,7 +322,7 @@ datablock ShapeBaseImageData(blasterImage)
 	stateName[3]			= "Reload";
 	stateSequence[3]                = "Reload";
 	stateAllowImageChange[3]        = false;
-	stateTimeoutValue[3]            = 0.5;
+	stateTimeoutValue[3]            = 0.16;
 	stateWaitForTimeout[3]		= true;
 	stateTransitionOnTimeout[3]     = "Check";
 
@@ -409,7 +409,7 @@ datablock ShapeBaseImageData(superblasterImage)
 
 	stateName[8]					= "Pause1";
 	stateTransitionOnTimeout[8]     = "Fire2";
-	stateTimeoutValue[8]            = 0.25;
+	stateTimeoutValue[8]            = 0.05;
 	stateWaitForTimeout[8]			= true;
 	stateSequence[8]                = "Reload";
 	stateTransitionOnTriggerUp[8]	= "Reload";
@@ -427,7 +427,7 @@ datablock ShapeBaseImageData(superblasterImage)
 
 	stateName[9]					= "Pause2";
 	stateTransitionOnTimeout[9]     = "Fire3";
-	stateTimeoutValue[9]            = 0.25;
+	stateTimeoutValue[9]            = 0.05;
 	stateWaitForTimeout[9]			= true;
 	stateSequence[9]                = "Reload";
 	stateTransitionOnTriggerUp[9]	= "Reload";

@@ -112,13 +112,13 @@ datablock ExplosionData(pistolshotExplosion)
 datablock ProjectileData(pistolshotProjectile)
 {
    projectileShapeName = "";
-   directDamage        = 25;
+   directDamage        = 20;
    radiusDamage        = 10;
    damageRadius        = 0.5;
    explosion           = pistolshotExplosion;
 //   particleEmitter     = pistolshotTrailEmitter;
 
-   muzzleVelocity      = 600;
+   muzzleVelocity      = 380;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
@@ -127,7 +127,7 @@ datablock ProjectileData(pistolshotProjectile)
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = true;
-   gravityMod = 0;
+   gravityMod = 1;
 
    hasLight    = false;
    lightRadius = 3.0;
@@ -296,7 +296,7 @@ datablock ShapeBaseImageData(pistolImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Reload";
-	stateTimeoutValue[2]            = 0.05;
+	stateTimeoutValue[2]            = 0.15;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = false;
 	stateSequence[2]                = "Fire";
@@ -307,7 +307,7 @@ datablock ShapeBaseImageData(pistolImage)
 	stateName[3]			= "Reload";
 	stateSequence[3]                = "Reload";
 	stateAllowImageChange[3]        = false;
-	stateTimeoutValue[3]            = 0.5;
+	stateTimeoutValue[3]            = 0.3;
 	stateWaitForTimeout[3]		= true;
 	stateTransitionOnTimeout[3]     = "Check";
 
@@ -384,7 +384,7 @@ datablock ShapeBaseImageData(superpistolImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Pause1";
-	stateTimeoutValue[2]            = 0.05;
+	stateTimeoutValue[2]            = 0.1;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = true;
 	stateSequence[2]                = "Fire";
@@ -394,7 +394,7 @@ datablock ShapeBaseImageData(superpistolImage)
 
 	stateName[8]					= "Pause1";
 	stateTransitionOnTimeout[8]     = "Fire2";
-	stateTimeoutValue[8]            = 0.25;
+	stateTimeoutValue[8]            = 0.11;
 	stateWaitForTimeout[8]			= true;
 	stateSequence[8]                = "Reload";
 	stateTransitionOnTriggerUp[8]	= "Reload";
@@ -402,7 +402,7 @@ datablock ShapeBaseImageData(superpistolImage)
 	
 	stateName[3]                    = "Fire2";
 	stateTransitionOnTimeout[3]     = "Pause2";
-	stateTimeoutValue[3]            = 0.05;
+	stateTimeoutValue[3]            = 0.11;
 	stateFire[3]                    = true;
 	stateAllowImageChange[3]        = true;
 	stateSequence[3]                = "Fire";
@@ -412,7 +412,7 @@ datablock ShapeBaseImageData(superpistolImage)
 
 	stateName[9]					= "Pause2";
 	stateTransitionOnTimeout[9]     = "Fire3";
-	stateTimeoutValue[9]            = 0.25;
+	stateTimeoutValue[9]            = 0.11;
 	stateWaitForTimeout[9]			= true;
 	stateSequence[9]                = "Reload";
 	stateTransitionOnTriggerUp[9]	= "Reload";
@@ -420,7 +420,7 @@ datablock ShapeBaseImageData(superpistolImage)
 
 	stateName[4]                    = "Fire3";
 	stateTransitionOnTimeout[4]     = "Reload";
-	stateTimeoutValue[4]            = 0.05;
+	stateTimeoutValue[4]            = 0.11;
 	stateFire[4]                    = true;
 	stateAllowImageChange[4]        = true;
 	stateSequence[4]                = "Fire";
@@ -431,7 +431,7 @@ datablock ShapeBaseImageData(superpistolImage)
 	stateName[5]					= "Reload";
 	stateSequence[5]                = "Reload";
 	stateAllowImageChange[5]        = true;
-	stateTimeoutValue[5]            = 0.5;
+	stateTimeoutValue[5]            = 0.11;
 	stateWaitForTimeout[5]			= true;
 	stateTransitionOnTimeout[5]     = "Check";
 
@@ -443,7 +443,7 @@ datablock ShapeBaseImageData(superpistolImage)
 
 	stateName[7]                    = "StopFire";
 	stateTransitionOnTimeout[7]     = "Ready";
-	stateTimeoutValue[7]            = 0.5;
+	stateTimeoutValue[7]            = 0.11;
 	stateAllowImageChange[7]        = true;
 	stateWaitForTimeout[7]			= true;
 	//stateSequence[7]                = "Reload";

@@ -91,11 +91,11 @@ datablock ExplosionData(FlamethrowerExplosion)
    //explosionShape = "";
 	soundProfile = FlamethrowerFireSound;
 
-   lifeTimeMS = 150;
+   lifeTimeMS = 250;
 
    particleEmitter = GLFireParticleEmitter;
-	particleDensity = 25;
-	particleRadius  = 0.5;
+	particleDensity = 35;
+	particleRadius  = 0.7;
 
    faceViewer     = true;
    explosionScale = "1 1 1";
@@ -118,19 +118,19 @@ datablock ExplosionData(FlamethrowerExplosion)
 datablock ProjectileData(FlamethrowerProjectile)
 {
    projectileShapeName = "";
-   directDamage        = 2;
+   directDamage        = 4;
    radiusDamage        = 1;
-   damageRadius        = 1.5;
+   damageRadius        = 1;
    explosion           = FlamethrowerExplosion;
  particleEmitter     = FlamethrowerTrailEmitter;
 
-   muzzleVelocity      = 60;
-dragCoeffiecient = 50.0;
+   muzzleVelocity      = 100;
+dragCoeffiecient = 3.0;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
-   lifetime            = 1500;
-   fadeDelay           = 1500;
+   lifetime            = 800;
+   fadeDelay           = 800;
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = false;

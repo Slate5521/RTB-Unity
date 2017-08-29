@@ -28,11 +28,13 @@ To stay in touch with the RTB / v0002 community, there are several websites that
 Discord Server - https://discord.gg/9mEXtND
 
 A discord server housing everything v0002; RTB, TBM, AIO etc. All are welcome.
-
+--------------------------------------------------------------------------------------------
 
 RTB Forums - http://s3.zetaboards.com/AndoRTB/index/
 
 A forum for RTB 1.045 created by Android in 2009, active until about 2011 in which it was abandoned. Still, a useful resource for RTB information. Feel free to necro.
+--------------------------------------------------------------------------------------------
+
 
 Seph's V0002 Archive - http://sephrtbmods.webs.com/
 

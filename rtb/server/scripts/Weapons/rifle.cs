@@ -119,13 +119,13 @@ datablock ExplosionData(rifleshotExplosion)
 datablock ProjectileData(rifleshotProjectile)
 {
    projectileShapeName = "";
-   directDamage        = 40;
+   directDamage        = 30;
    radiusDamage        = 10;
    damageRadius        = 0.5;
    explosion           = rifleshotExplosion;
 //   particleEmitter     = rifleshotTrailEmitter;
 
-   muzzleVelocity      = 600;
+   muzzleVelocity      = 850;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
@@ -134,7 +134,7 @@ datablock ProjectileData(rifleshotProjectile)
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = true;
-   gravityMod = 0;
+   gravityMod = 0.25;
 
    hasLight    = false;
    lightRadius = 3.0;
@@ -254,7 +254,7 @@ datablock ShapeBaseImageData(RifleImage)
    skinName = 'brown';
    emap = true;
    PreviewFileName = "rtb/data/shapes/bricks/Previews/Rifle.png";
-	cloakable = false;
+	cloakable = true;
    // Specify mount point & offset for 3rd person, and eye offset
    // for first person rendering.
    mountPoint = 0;
@@ -293,7 +293,7 @@ datablock ShapeBaseImageData(RifleImage)
 
    // Initial start up state
 	stateName[0]                     = "Activate";
-	stateTimeoutValue[0]             = 0.5;
+	stateTimeoutValue[0]             = 0.2;
 	stateTransitionOnTimeout[0]       = "Ready";
 	stateSound[0]					= weaponSwitchSound;
 
@@ -303,7 +303,7 @@ datablock ShapeBaseImageData(RifleImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Reload";
-	stateTimeoutValue[2]            = 0.05;
+	stateTimeoutValue[2]            = 0.55;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = false;
 	stateSequence[2]                = "Fire";
@@ -314,7 +314,7 @@ datablock ShapeBaseImageData(RifleImage)
 	stateName[3]			= "Reload";
 	stateSequence[3]                = "Reload";
 	stateAllowImageChange[3]        = false;
-	stateTimeoutValue[3]            = 0.5;
+	stateTimeoutValue[3]            = 0.45;
 	stateWaitForTimeout[3]		= true;
 	stateTransitionOnTimeout[3]     = "Check";
 
@@ -324,7 +324,7 @@ datablock ShapeBaseImageData(RifleImage)
 
 	stateName[5]                    = "StopFire";
 	stateTransitionOnTimeout[5]     = "Ready";
-	stateTimeoutValue[5]            = 0.2;
+	stateTimeoutValue[5]            = 0.25;
 	stateAllowImageChange[5]        = false;
 	stateWaitForTimeout[5]		= true;
 	//stateSequence[5]                = "Reload";

@@ -120,13 +120,13 @@ datablock ExplosionData(arrowExplosion)
 datablock ProjectileData(crossbowarrowprojectile)
 {
    projectileShapeName = "~/data/shapes/arrow.dts";
-   directDamage        = 10;
+   directDamage        = 38;
    radiusDamage        = 10;
    damageRadius        = 0.5;
    explosion           = arrowExplosion;
    particleEmitter     = arrowTrailEmitter;
 
-   muzzleVelocity      = 99;
+   muzzleVelocity      = 200;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
@@ -135,7 +135,7 @@ datablock ProjectileData(crossbowarrowprojectile)
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = true;
-   gravityMod = 0.10;
+   gravityMod = 0.14;
 
    hasLight    = false;
    lightRadius = 3.0;
@@ -305,7 +305,7 @@ datablock ShapeBaseImageData(crossbowImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Reload";
-	stateTimeoutValue[2]            = 0.05;
+	stateTimeoutValue[2]            = 0.45;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = false;
 	stateSequence[2]                = "Fire";
@@ -316,7 +316,7 @@ datablock ShapeBaseImageData(crossbowImage)
 	stateName[3]			= "Reload";
 	stateSequence[3]                = "Reload";
 	stateAllowImageChange[3]        = false;
-	stateTimeoutValue[3]            = 0.5;
+	stateTimeoutValue[3]            = 0.8;
 	stateWaitForTimeout[3]		= true;
 	stateTransitionOnTimeout[3]     = "Check";
 
@@ -392,7 +392,7 @@ datablock ShapeBaseImageData(supercrossbowImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Pause1";
-	stateTimeoutValue[2]            = 0.05;
+	stateTimeoutValue[2]            = 0.25;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = true;
 	stateSequence[2]                = "Fire";
@@ -410,7 +410,7 @@ datablock ShapeBaseImageData(supercrossbowImage)
 	
 	stateName[3]                    = "Fire2";
 	stateTransitionOnTimeout[3]     = "Pause2";
-	stateTimeoutValue[3]            = 0.05;
+	stateTimeoutValue[3]            = 0.25;
 	stateFire[3]                    = true;
 	stateAllowImageChange[3]        = true;
 	stateSequence[3]                = "Fire";
@@ -428,7 +428,7 @@ datablock ShapeBaseImageData(supercrossbowImage)
 
 	stateName[4]                    = "Fire3";
 	stateTransitionOnTimeout[4]     = "Reload";
-	stateTimeoutValue[4]            = 0.05;
+	stateTimeoutValue[4]            = 0.25;
 	stateFire[4]                    = true;
 	stateAllowImageChange[4]        = true;
 	stateSequence[4]                = "Fire";
@@ -439,7 +439,7 @@ datablock ShapeBaseImageData(supercrossbowImage)
 	stateName[5]					= "Reload";
 	stateSequence[5]                = "Reload";
 	stateAllowImageChange[5]        = true;
-	stateTimeoutValue[5]            = 0.5;
+	stateTimeoutValue[5]            = 0.25;
 	stateWaitForTimeout[5]			= true;
 	stateTransitionOnTimeout[5]     = "Check";
 
@@ -451,7 +451,7 @@ datablock ShapeBaseImageData(supercrossbowImage)
 
 	stateName[7]                    = "StopFire";
 	stateTransitionOnTimeout[7]     = "Ready";
-	stateTimeoutValue[7]            = 0.5;
+	stateTimeoutValue[7]            = 0.25;
 	stateAllowImageChange[7]        = true;
 	stateWaitForTimeout[7]			= true;
 	//stateSequence[7]                = "Reload";

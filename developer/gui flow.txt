@@ -1,0 +1,95 @@
+
+
+PlayGUI
+ |
+ +--- Escape Menu (Esc)
+ +--- Editor Wand Menu (Ctrl E)
+ +--- Global Chat (T)
+ +--- PM Menu (Ctrl T)
+ +--- Team Chat (Y) 
+ +--- IRC (I)
+ |     |
+ |     +--- Help Menu
+ +--- Options (Ctrl O)
+ +--- Admin Menu (Ctrl A)
+ |     | 
+ +-----+--- XMenu (Ctrl Z)
+ |     |     |
+ |     |     +--- XMenu Server Options
+ |     |     +--- XMenu Personal Options
+ |     |           |
+ |     |           +--- Music Player
+ +----->-----------+--- Chat Options (Alt Z)
+ +-----+--- PTTA CP (Ctrl C)
+ |     |     | ^ aka Server Options
+ |     |     +--- Change Map
+ |     |     +--- Personal Options
+ |     |     +--- Player Options
+ +-----+--- Bac's Menu (M)
+ |     |     |
+ |     |     +--- Bot GUI
+ |     |     |       |
+ |     |     |       +--- Appearance UI (glitched)
+ |     |     +--- Chat Options  (defunct)  ^
+ |     |     +--- TransformMe   (defunct)  |
+ |     +--- Force Admin                    |
+ |     +--- Persistence List               |
+ |     +--- Player Rights                  |
+ +-----+--- Player Menu (Ctrl S)           |
+ |     |                                   |
+ |     +--- Appearance --------------------`
+ +-----+--- Minigames (Ctrl D)
+ |     +--- Teams
+ +--- Wrench Menu (J)
+ +--- Wand Menu (K)
+ +--- Voting GUI (Ctrl V)
+ +--- Help (F1)
+ +--- Radar Options (Ctrl M)
+ +--- Custom Shift Options (Numpad .)
+ 
+ 
+How it should be:
+
+
+PlayGUI
+ |
+ +--- Escape Menu (Esc)
+ |     |
+ +-----+--- IRC (I)
+ +-----+--- Options (Ctrl O)
+ +-----+--- Help Menu (F1)
+ +-----+--- XPTTA CP (Ctrl C)
+ |     |     |
+ |     |     +--- XMenu/PTTA Server Options
+ |     |     |     |
+ |     |     |     +--- Change Map
+ |     |     +--- XMenu/PTTA Client Options
+ |     +--- Bot GUI
+ |     |     |
+ |     |     +--- Appearance UI (glitched)
+ +-----+--- Player Menu (Ctrl S)           
+ |     |     |
+ |     |     +--- Chat Options  } < Bac's Themed
+ |     |     +--- TransformMe   } < Bac's Themed
+ |     |     +--- Appearance 
+ |     |     
+ +-----+--- Admin Menu (Ctrl A)
+ |     |     |
+ |     |     +--- Force Admin                    
+ |     |     +--- Persistence List               
+ |     |     +--- Player Rights                  
+ |     |                                   
+ +-----+--- Minigames (Ctrl D)
+ +-----+--- Teams (NEEDS KEYBIND)
+ +--- Wrench Menu (J, should be Ctrl + W)
+       |
+       +--- Brick Message
+ +--- Wand Menu (K, should be Alt + W)
+ +--- Voting GUI (Ctrl V)
+ +--- Radar Options (Ctrl M)
+ +--- Custom Shift Options (Numpad .)
+ +--- Editor Wand Menu (Ctrl E)
+ +--- Global Chat (T)
+ +--- PM Menu (Ctrl T)
+ +--- Team Chat (Y) 
+ 

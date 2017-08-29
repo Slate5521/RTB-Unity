@@ -1,0 +1,127 @@
+Max file C:\3dsmax4\Scenes\grate1.max exported to d:\dynamix\tribes2\gamedata\base\shapes\grate2.dts
+Exported on Tue Oct 28 07:02:43 2003
+
+
+Config file not found.
+First pass: collect useful nodes...
+
+Processing Node bounds with parent Scene Root
+Bounding box found
+Processing Node shape with parent Scene Root
+Found subtree starting at Node "shape"
+Processing Node start with parent shape
+Processing Node col-1 with parent start
+Processing Node grate145 with parent start
+Processing Node collision-1 with parent shape
+Processing Node detail145 with parent shape
+
+Second pass:  put shape structure together...
+
+Adding detail named "collision-1" of size -1 to subtree "shape".
+Adding detail named "detail145" of size 145 to subtree "shape".
+Adding node "shape" with parent "shape" to subtree rooted on max-node "shape".
+Adding node "start" with parent "shape" to subtree rooted on max-node "shape".
+Adding node "col-1" with parent "start" to subtree rooted on max-node "shape".
+Attaching object to node.
+Adding object named "col".
+Adding mesh of size -1 to object "col".
+Object offset transform:
+    scale:            x=1.00000, y=1.00000, z=1.00000
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00000, y=0.00000, z=0.00000
+    actual rotation:  x=0.00000, y=0.00000, z=0.00000, w=1.00000
+Adding node "grate145" with parent "start" to subtree rooted on max-node "shape".
+Attaching object to node.
+Adding object named "grate".
+Adding mesh of size 145 to object "grate".
+Object offset transform:
+    scale:            x=1.00000, y=1.00000, z=1.00000
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00000, y=-0.00000, z=0.00000
+    actual rotation:  x=-0.00000, y=0.00000, z=0.00000, w=1.00000
+
+Third pass:  Collapsing unneeded nodes...
+
+
+Add default object states...
+
+Adding object state to 1 detail level(s) of mesh "col".
+Adding frame.
+Object is visible.
+12 faces, 36 verts, 36 tverts before cropping textures and joining verts
+---------------------------------
+Adding object state to 1 detail level(s) of mesh "grate".
+Adding frame.
+Object is visible.
+64 faces, 96 verts, 96 tverts before cropping textures and joining verts
+---------------------------------
+
+Add default node states...
+
+Adding node rotation at time 0 for node "shape".
+  rotation:     x=-0.70708, y=0.00000, z=0.00000, w=0.70708
+---------------------------------
+Adding node translation at time 0 for node "shape".
+  translation:     x=1.63584, y=0.68793, z=0.61461
+---------------------------------
+Adding node rotation at time 0 for node "start".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0 for node "start".
+  translation:     x=0.03202, y=-0.21350, z=-0.00000
+---------------------------------
+Adding node rotation at time 0 for node "col-1".
+  rotation:     x=0.70708, y=0.00000, z=0.00000, w=0.70708
+---------------------------------
+Adding node translation at time 0 for node "col-1".
+  translation:     x=-1.66586, y=-0.37585, z=0.68793
+---------------------------------
+Adding node rotation at time 0 for node "grate145".
+  rotation:     x=0.70708, y=0.00000, z=0.00000, w=0.70708
+---------------------------------
+Adding node translation at time 0 for node "grate145".
+  translation:     x=-1.66268, y=-0.34799, z=0.68795
+---------------------------------
+
+Adding 0 sequences...
+
+
+Optimizing meshes...
+
+Optimizing mesh "col" detail level -1.
+36 verts before joining verts
+24 verts after joining verts
+12 faces before stripping
+Using quick and dirty stripping method.
+6 strips with average length 4.00 (range 4 to 4) and 0 reversals
+Results in 24 cache misses
+
+Optimizing mesh "grate" detail level 145.
+96 verts before joining verts
+25 verts after joining verts
+64 faces before stripping
+Using quick and dirty stripping method.
+16 strips with average length 6.50 (range 4 to 11) and 8 reversals
+Results in 57 cache misses
+
+Shape Hierarchy:
+
+   Details:
+      detail145, Subtree 0, objectDetail 0, size 145
+      collision-1, Subtree 0, objectDetail 1, size -1
+
+   Subtrees:
+      Subtree 0
+         shape
+            start
+               col-1 --> Object col with following details:  -1
+               grate145 --> Object grate with following details:  145
+
+   Sequences:
+
+   Material list:
+   material #0: "grate1".  Translucent.
+
+Checking for duplicate nodes...
+
+Checking for duplicate objects...

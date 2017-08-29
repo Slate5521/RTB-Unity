@@ -193,7 +193,7 @@ datablock ProjectileData(spearProjectile)
    explosion           = spearExplosion;
    particleEmitter     = spearTrailEmitter;
 
-   muzzleVelocity      = 50;
+   muzzleVelocity      = 70;
    velInheritFactor    = 1;
 
    armingDelay         = 0;

@@ -127,13 +127,13 @@ datablock ExplosionData(bulletExplosion)
 datablock ProjectileData(bulletProjectile)
 {
    projectileShapeName = "";
-   directDamage        = 25;
+   directDamage        = 22;
    radiusDamage        = 10;
    damageRadius        = 0.5;
    explosion           = bulletExplosion;
 //   particleEmitter     = bulletTrailEmitter;
 
-   muzzleVelocity      = 600;
+   muzzleVelocity      = 225;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
@@ -142,7 +142,7 @@ datablock ProjectileData(bulletProjectile)
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = true;
-   gravityMod = 0;
+   gravityMod = 0.15;
 
    hasLight    = false;
    lightRadius = 3.0;
@@ -311,7 +311,7 @@ datablock ShapeBaseImageData(RevolverImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Reload";
-	stateTimeoutValue[2]            = 0.05;
+	stateTimeoutValue[2]            = 0.15;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = false;
 	stateSequence[2]                = "Fire";
@@ -322,7 +322,7 @@ datablock ShapeBaseImageData(RevolverImage)
 	stateName[3]			= "Reload";
 	stateSequence[3]                = "Reload";
 	stateAllowImageChange[3]        = false;
-	stateTimeoutValue[3]            = 0.5;
+	stateTimeoutValue[3]            = 0.15;
 	stateWaitForTimeout[3]		= true;
 	stateTransitionOnTimeout[3]     = "Check";
 
@@ -409,7 +409,7 @@ datablock ShapeBaseImageData(superRevolverImage)
 
 	stateName[8]					= "Pause1";
 	stateTransitionOnTimeout[8]     = "Fire2";
-	stateTimeoutValue[8]            = 0.25;
+	stateTimeoutValue[8]            = 0.05;
 	stateWaitForTimeout[8]			= true;
 	stateSequence[8]                = "Reload";
 	stateTransitionOnTriggerUp[8]	= "Reload";
@@ -427,7 +427,7 @@ datablock ShapeBaseImageData(superRevolverImage)
 
 	stateName[9]					= "Pause2";
 	stateTransitionOnTimeout[9]     = "Fire3";
-	stateTimeoutValue[9]            = 0.25;
+	stateTimeoutValue[9]            = 0.05;
 	stateWaitForTimeout[9]			= true;
 	stateSequence[9]                = "Reload";
 	stateTransitionOnTriggerUp[9]	= "Reload";
@@ -446,7 +446,7 @@ datablock ShapeBaseImageData(superRevolverImage)
 	stateName[5]					= "Reload";
 	stateSequence[5]                = "Reload";
 	stateAllowImageChange[5]        = true;
-	stateTimeoutValue[5]            = 0.5;
+	stateTimeoutValue[5]            = 0.3;
 	stateWaitForTimeout[5]			= true;
 	stateTransitionOnTimeout[5]     = "Check";
 

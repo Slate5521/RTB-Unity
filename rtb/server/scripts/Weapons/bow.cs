@@ -127,13 +127,13 @@ datablock ExplosionData(arrowExplosion)
 datablock ProjectileData(arrowProjectile)
 {
    projectileShapeName = "~/data/shapes/arrow.dts";
-   directDamage        = 10;
+   directDamage        = 16;
    radiusDamage        = 10;
    damageRadius        = 0.5;
    explosion           = arrowExplosion;
    particleEmitter     = arrowTrailEmitter;
 
-   muzzleVelocity      = 65;
+   muzzleVelocity      = 125;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
@@ -142,7 +142,7 @@ datablock ProjectileData(arrowProjectile)
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = true;
-   gravityMod = 0.25;
+   gravityMod = 0.15;
 
    hasLight    = false;
    lightRadius = 3.0;
@@ -409,7 +409,7 @@ datablock ShapeBaseImageData(superBowImage)
 
 	stateName[8]					= "Pause1";
 	stateTransitionOnTimeout[8]     = "Fire2";
-	stateTimeoutValue[8]            = 0.25;
+	stateTimeoutValue[8]            = 0.12;
 	stateWaitForTimeout[8]			= true;
 	stateSequence[8]                = "Reload";
 	stateTransitionOnTriggerUp[8]	= "Reload";
@@ -427,7 +427,7 @@ datablock ShapeBaseImageData(superBowImage)
 
 	stateName[9]					= "Pause2";
 	stateTransitionOnTimeout[9]     = "Fire3";
-	stateTimeoutValue[9]            = 0.25;
+	stateTimeoutValue[9]            = 0.12;
 	stateWaitForTimeout[9]			= true;
 	stateSequence[9]                = "Reload";
 	stateTransitionOnTriggerUp[9]	= "Reload";
@@ -446,7 +446,7 @@ datablock ShapeBaseImageData(superBowImage)
 	stateName[5]					= "Reload";
 	stateSequence[5]                = "Reload";
 	stateAllowImageChange[5]        = true;
-	stateTimeoutValue[5]            = 0.5;
+	stateTimeoutValue[5]            = 0.25;
 	stateWaitForTimeout[5]			= true;
 	stateTransitionOnTimeout[5]     = "Check";
 

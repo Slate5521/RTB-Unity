@@ -1,0 +1,12 @@
+Update this text document with new features we've added, it'll go in the F1 In game and maybe a revised list of this.
+
+
+
+1. X new decals
+1.a X decals imported from AIO-R
+2. Weapon overhaul - damage rebalance, weaponspread added, random colors to ranged projectile particles
+3. GUI overhaul;
+4. X new maps;
+4a. Maps imported:
+5.
+6.

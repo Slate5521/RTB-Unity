@@ -112,13 +112,13 @@ datablock ExplosionData(boltsgExplosion)
 datablock ProjectileData(boltsgProjectile)
 {
    projectileShapeName = "~/data/shapes/arrow.dts";
-   directDamage        = 20;
+   directDamage        = 49;
    radiusDamage        = 5;
    damageRadius        = 0.5;
    explosion           = boltsgExplosion;
    particleEmitter     = boltsgTrailEmitter;
 
-   muzzleVelocity      = 80;
+   muzzleVelocity      = 155;
    velInheritFactor    = 1;
 
    armingDelay         = 0;
@@ -127,7 +127,7 @@ datablock ProjectileData(boltsgProjectile)
    bounceElasticity    = 0;
    bounceFriction      = 0;
    isBallistic         = true;
-   gravityMod = 0.25;
+   gravityMod = 0.18;
 
    hasLight    = false;
    lightRadius = 3.0;
@@ -296,7 +296,7 @@ datablock ShapeBaseImageData(speargunImage)
 
 	stateName[2]                    = "Fire";
 	stateTransitionOnTimeout[2]     = "Reload";
-	stateTimeoutValue[2]            = 0.05;
+	stateTimeoutValue[2]            = 0.7;
 	stateFire[2]                    = true;
 	stateAllowImageChange[2]        = false;
 	stateSequence[2]                = "Fire";
@@ -307,7 +307,7 @@ datablock ShapeBaseImageData(speargunImage)
 	stateName[3]			= "Reload";
 	stateSequence[3]                = "Reload";
 	stateAllowImageChange[3]        = false;
-	stateTimeoutValue[3]            = 0.5;
+	stateTimeoutValue[3]            = 0.7;
 	stateWaitForTimeout[3]		= true;
 	stateTransitionOnTimeout[3]     = "Check";
 
@@ -317,7 +317,7 @@ datablock ShapeBaseImageData(speargunImage)
 
 	stateName[5]                    = "StopFire";
 	stateTransitionOnTimeout[5]     = "Ready";
-	stateTimeoutValue[5]            = 0.2;
+	stateTimeoutValue[5]            = 0.7;
 	stateAllowImageChange[5]        = false;
 	stateWaitForTimeout[5]		= true;
 	//stateSequence[5]                = "Reload";

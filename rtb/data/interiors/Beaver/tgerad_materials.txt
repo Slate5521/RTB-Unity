@@ -1,0 +1,18 @@
+//TGERad Material File
+
+//filename - Texture filename (with or without extension)
+//reflective quality of surface
+//ecolor - emissive color
+//eintensity - emissive scalar
+
+//Material 1
+filename ASPHALT1AV
+reflective 5.0 5.0 1.0
+ecolor 1.0 0.0 0.0
+eintensity 1
+
+
+filename FLOOR2A
+reflective 5.0 5.0 5.0
+ecolor 1.0 0.0 0.0
+eintensity 1

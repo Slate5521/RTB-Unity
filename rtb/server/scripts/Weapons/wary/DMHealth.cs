@@ -13,7 +13,7 @@ datablock ItemData(DMHealthPickup)
    elasticity = 0.3;
    rotate = true;
    // Dynamic properties defined by the scripts
-   repairAmount = 25;
+   repairAmount = 200;
    maxInventory = 0; // No pickup or throw
 };
 

@@ -1,0 +1,32 @@
+It's not that hard to make your own decals for the game.
+
+====== PLAYER DECALS ==========
+For player decals, use the following format:
+
+
+AAAAA-title.decal
+
+
+(AAAAAA) ( - )  ( title ) (.decal) 
+
+
+AAAAAAA is the category for the decal; aka any decals starting with Adventurers- will be categorized in that section in the in-game GUI.
+
+- is for separating each segment of the decal's title. You don't have to use - to space words apart; aka "All In One Reloaded-business.decal" shows up under the "All In One Reloaded" category.
+
+title, is obviously whatever you want to call your decal; what it will show up as by name.
+
+.decal is to be added to the end of every image you make.
+
+
+Make sure to use PNG format. For image editing, your best bet is probably Paint.NET for simplicity and functionality, but feel free to use other tools.
+
+It is strongly recommended you make your images clear in png format; strip out any color that isn't the actual decal itsself. So for instance your decal is a black facial texture on a white background; delete the white background so only the facial texture is what remains. Only a .PNG format in 8bit or 32bit format will do this. Again, go with Paint.NET.
+
+
+By the way, when making your decal, make sure it doesn't exceed the dimmensions in the image in this folder named "boundary". Otherwise you texture will overlap the player's chest model.
+
+
+==== FACE DECALS =====
+
+Same as above, just make sure to end it with .facedecal
