@@ -1,0 +1,150 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PlayMenuGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "216 33";
+      extent = "207 414";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Menu";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "18 60";
+         extent = "170 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Resume";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "18 100";
+         extent = "170 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Options";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "18 140";
+         extent = "170 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Appearance";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "18 180";
+         extent = "170 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Exit Game";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "18 230";
+         extent = "170 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Admin Menu";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "18 270";
+         extent = "170 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Minigames/Team Menu";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "18 310";
+         extent = "170 53";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "BotGUI";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 370";
+         extent = "83 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "IRC";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "105 370";
+         extent = "83 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Servers";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
