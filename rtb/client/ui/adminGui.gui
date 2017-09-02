@@ -13,8 +13,8 @@ new GuiControl(admingui) {
       profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "relative";
-      position = "287 3";
-      extent = "450 588";
+      position = "287 0";
+      extent = "450 587";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -34,17 +34,48 @@ new GuiControl(admingui) {
          horizSizing = "right";
          vertSizing = "bottom";
          position = "4 59";
-         extent = "391 507";
+         extent = "391 518";
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
 
-         new GuiScrollCtrl() {
+         new GuiScrollCtrl(sclClientInfo) {
             profile = "GuiScrollProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "-3 49";
-            extent = "131 264";
+            position = "7 217";
+            extent = "122 65";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+         };
+         new GuiTextEditCtrl(slapDamage) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "339 323";
+            extent = "27 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "5";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiScrollCtrl(sclAdminPlayerList) {
+            profile = "GuiScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 65";
+            extent = "123 119";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
@@ -59,7 +90,7 @@ new GuiControl(admingui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "129 16";
+               extent = "121 16";
                minExtent = "8 2";
                visible = "1";
                helpTag = "0";
@@ -70,76 +101,11 @@ new GuiControl(admingui) {
                clipColumnText = "0";
             };
          };
-         new GuiScrollCtrl() {
-            profile = "GuiScrollProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "1 411";
-            extent = "386 74";
-            minExtent = "8 8";
-            visible = "1";
-            helpTag = "0";
-            willFirstRespond = "1";
-            hScrollBar = "dynamic";
-            vScrollBar = "alwaysOn";
-            constantThumbHeight = "0";
-            childMargin = "0 0";
-               defaultLineHeight = "15";
-
-            new GuiTextListCtrl(AL_Banlist) {
-               profile = "GuiTextArrayProfile";
-               horizSizing = "right";
-               vertSizing = "bottom";
-               position = "1 1";
-               extent = "367 8";
-               minExtent = "8 8";
-               visible = "1";
-               helpTag = "0";
-               enumerate = "0";
-               resizeCell = "1";
-               columns = "2 20 218 290";
-               fitParentWidth = "1";
-               clipColumnText = "0";
-                  noDuplicates = "false";
-            };
-         };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnJail) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "-1 34";
-            extent = "133 18";
-            minExtent = "8 2";
-            visible = "1";
-            command = "getip();";
-            helpTag = "0";
-            text = "Get IP";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-
-//X menu button
-	new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "242 51";
-            extent = "40 262";
-            minExtent = "8 2";
-            visible = "1";
-            command = "OpenClose(xgui,adminGui);";
-            helpTag = "0";
-            text = "X";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-//Nomral crap
-
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "134 51";
+            position = "142 81";
             extent = "75 22";
             minExtent = "8 2";
             visible = "1";
@@ -153,7 +119,7 @@ new GuiControl(admingui) {
             profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "209 53";
+            position = "219 83";
             extent = "27 18";
             minExtent = "8 2";
             visible = "1";
@@ -165,11 +131,11 @@ new GuiControl(admingui) {
             tabComplete = "0";
             sinkAllKeyEvents = "0";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnKick) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 73";
+            position = "142 103";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
@@ -179,11 +145,11 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnBan) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 95";
+            position = "142 125";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
@@ -193,51 +159,53 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
+         new GuiTextEditCtrl(TxtReason) {
+            profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 117";
-            extent = "105 22";
+            position = "145 145";
+            extent = "100 18";
             minExtent = "8 2";
             visible = "1";
-            command = "ban2();";
             helpTag = "0";
-            text = "Subnet Ban";
-            groupNum = "-1";
-            buttonType = "PushButton";
+            text = "reason";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
          };
-         new GuiTextCtrl() {
+         new GuiTextCtrl(lblPTTAOptions) {
             profile = "GuiTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "138 32";
-            extent = "97 18";
+            position = "268 85";
+            extent = "69 18";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
-            text = "Player Punishments:";
+            text = "PTTA Options:";
             maxLength = "255";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnPlayerOptions) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 139";
+            position = "142 184";
             extent = "105 33";
             minExtent = "8 2";
             visible = "1";
             command = "PlayerRights();";
             helpTag = "0";
-            text = "Player Rights";
+            text = "Player Options";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiTextCtrl() {
+         new GuiTextCtrl(lblAdminOperations) {
             profile = "GuiTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "138 186";
+            position = "148 166";
             extent = "89 18";
             minExtent = "8 2";
             visible = "1";
@@ -245,11 +213,11 @@ new GuiControl(admingui) {
             text = "Admin Operations:";
             maxLength = "255";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnBringPlayer) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 204";
+            position = "142 239";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
@@ -259,11 +227,11 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnGotoPlayer) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 226";
+            position = "142 261";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
@@ -277,7 +245,7 @@ new GuiControl(admingui) {
             profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "208 250";
+            position = "218 219";
             extent = "27 18";
             minExtent = "8 2";
             visible = "1";
@@ -288,11 +256,11 @@ new GuiControl(admingui) {
             tabComplete = "0";
             sinkAllKeyEvents = "0";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnGrantCash) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 248";
+            position = "142 217";
             extent = "75 22";
             minExtent = "8 2";
             visible = "1";
@@ -302,7 +270,7 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnForceAdmin) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
@@ -316,457 +284,545 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiTextCtrl() {
+         new GuiTextCtrl(lblPlayerPunishments) {
             profile = "GuiTextProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "293 32";
-            extent = "92 18";
+            position = "148 62";
+            extent = "97 18";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
-            text = "Server Operations:";
+            text = "Player Punishments:";
             maxLength = "255";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnKill) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "286 51";
+            position = "262 103";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "clearABricks();";
+            command = "kick();";
             helpTag = "0";
-            text = "Clear Bricks";
+            text = "Kill";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiBitmapCtrl(bmpPTTA) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "265 65";
+            extent = "99 22";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./pttaguilogo.PNG";
+            wrap = "0";
+         };
+         new GuiButtonCtrl(btnrespawn) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "286 73";
+            position = "262 125";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "commandtoserver(\'brickbuildthrough\');";
+            command = "kick();";
             helpTag = "0";
-            text = "Build Through";
+            text = "Respawn";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnCopy) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "286 95";
+            position = "262 147";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "commandtoserver(\'toggleinventory\');";
+            command = "kick();";
             helpTag = "0";
-            text = "Toggle Inventory";
+            text = "Copy";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnChangeAppearance) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "286 117";
+            position = "262 261";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "commandtoserver(\'togglefalldamage\');";
             helpTag = "0";
-            text = "Fall Damage";
+            text = "Change Appearance";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnBurn) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "286 139";
+            position = "262 239";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Burn";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(btnNoob) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 195";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Noob";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(btnSlap) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 217";
             extent = "75 22";
             minExtent = "8 2";
             visible = "1";
-            command = "jetlag();";
+            command = "jail();";
             helpTag = "0";
-            text = "Jetlag";
+            text = "Slap";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiTextEditCtrl(txtJet) {
+         new GuiTextEditCtrl(slapDamage) {
             profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "362 141";
+            position = "339 219";
             extent = "27 18";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
-            text = "35";
+            text = "5";
             maxLength = "255";
             historySize = "0";
             password = "0";
             tabComplete = "0";
             sinkAllKeyEvents = "0";
          };
-         new GuiButtonCtrl() {
+         new GuiTextCtrl(lblXMenuOptions) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "268 175";
+            extent = "76 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "XMenu Options:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl(lblHeaderPlayerOptions) {
+            profile = "GuiMediumTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 30";
+            extent = "138 28";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Player Options";
+            maxLength = "255";
+         };
+         new GuiTextCtrl(lblSepPlayerOptions) {
+            profile = "GuiMediumTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 30";
+            extent = "372 28";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "_______________________________";
+            maxLength = "255";
+         };
+         new GuiTextCtrl(lblHeaderServerOptions) {
+            profile = "GuiMediumTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 290";
+            extent = "141 28";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Server Options";
+            maxLength = "255";
+         };
+         new GuiTextCtrl(lblSepServerOptions) {
+            profile = "GuiMediumTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 290";
+            extent = "372 28";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "_______________________________";
+            maxLength = "255";
+         };
+         new GuiTextCtrl(lblPersistence) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "18 435";
+            extent = "60 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Persistence:";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl(btnCustomPersistence) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "286 161";
+            position = "12 494";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "commandtoserver(\'togglefloatingbricks\');";
+            command = "kick();";
             helpTag = "0";
-            text = "Floating Bricks";
+            text = "Custom Load/Save";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl() {
+         new GuiButtonCtrl(btnPersistenceSave) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "132 270";
-            extent = "105 22";
+            position = "12 472";
+            extent = "52 22";
             minExtent = "8 2";
             visible = "1";
-            command = "commandToServer(\'MagicWand\');";
-            helpTag = "0";
-            text = "Magic Wand";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "132 292";
-            extent = "105 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "commandToServer(\'ToggleWandMode\');";
-            helpTag = "0";
-            text = "Toggle Wand Modes";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "67 358";
-            extent = "44 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "load();";
-            helpTag = "0";
-            text = "Load";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "-1 358";
-            extent = "44 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "save();";
+            command = "kick();";
             helpTag = "0";
             text = "Save";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiTextEditCtrl(txtSaveLoad) {
+         new GuiButtonCtrl(btnBrickLimits) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "12 343";
+            extent = "105 44";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Brick Limits";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl(lblMapOptions) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "18 325";
+            extent = "63 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Map Options:";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl(btnClearBricks) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "12 387";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Clear Bricks";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(btnChangeMap) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "12 409";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Change Map";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(btnPersistenceLoad) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "65 472";
+            extent = "52 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Load";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextEditCtrl(txtPersistenceName) {
             profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "-1 338";
-            extent = "111 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            maxLength = "255";
-            historySize = "0";
-            password = "0";
-            tabComplete = "0";
-            sinkAllKeyEvents = "0";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "111 336";
-            extent = "22 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "canvas.pushDialog(persistenceload);";
-            helpTag = "0";
-            text = "V";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "139 356";
-            extent = "140 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "OpenClose(BACsM,adminGui);";
-            helpTag = "0";
-            text = "Open BAC\'s MENU";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "0 316";
-            extent = "137 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "Persistance Loading/Saving:";
-            maxLength = "255";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "5 379";
-            extent = "106 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "Banlist Administration:";
-            maxLength = "255";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "6 394";
-            extent = "9 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "ID";
-            maxLength = "255";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "26 394";
-            extent = "67 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "Banned Name";
-            maxLength = "255";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "224 394";
-            extent = "48 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "Banned IP";
-            maxLength = "255";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "295 394";
-            extent = "74 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "Banned Subnet";
-            maxLength = "255";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "-1 485";
-            extent = "387 18";
-            minExtent = "8 2";
-            visible = "1";
-            command = "unBan();";
-            helpTag = "0";
-            text = "Unban";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "286 356";
-            extent = "68 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "commandtoserver(\'deletelastaddedmapitem\');";
-            helpTag = "0";
-            text = "Delete Last";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "286 334";
-            extent = "105 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "commandtoserver(\'placebase\');";
-            helpTag = "0";
-            text = "Place Baseplate";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "286 312";
-            extent = "105 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "PlaceItem();";
-            helpTag = "0";
-            text = "Add Item";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiTextEditCtrl(txtItem) {
-            profile = "GuiTextEditProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "288 292";
-            extent = "101 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            maxLength = "255";
-            historySize = "0";
-            password = "0";
-            tabComplete = "0";
-            sinkAllKeyEvents = "0";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "354 356";
-            extent = "37 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "commandtoserver(\'deletealladdedmapitems\');";
-            helpTag = "0";
-            text = "All";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiTextCtrl() {
-            profile = "GuiTextProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "290 271";
-            extent = "68 18";
-            minExtent = "8 2";
-            visible = "1";
-            helpTag = "0";
-            text = "Add Map Item:";
-            maxLength = "255";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "286 183";
-            extent = "105 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "commandtoserver(\'toggleitemcost\');";
-            helpTag = "0";
-            text = "Item Costs";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "286 205";
-            extent = "105 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "commandtoserver(\'toggleplantingcosts\');";
-            helpTag = "0";
-            text = "Brick Planting Cost";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiButtonCtrl() {
-            profile = "GuiButtonProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "158 329";
-            extent = "105 22";
-            minExtent = "8 2";
-            visible = "1";
-            command = "openclose(pttagui, admingui);";
-            helpTag = "0";
-            text = "PTTA CP";
-            groupNum = "-1";
-            buttonType = "PushButton";
-         };
-         new GuiTextEditCtrl(TxtReason) {
-            profile = "GuiTextEditProfile";
-            horizSizing = "right";
-            vertSizing = "bottom";
-            position = "135 171";
+            position = "15 453";
             extent = "100 18";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
-            text = "reason";
             maxLength = "255";
             historySize = "0";
             password = "0";
             tabComplete = "0";
             sinkAllKeyEvents = "0";
          };
-         new GuiButtonCtrl() {
+         new GuiTextCtrl(lblServerOptions) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "148 325";
+            extent = "76 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Server Options:";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl(btnToggleForceAdmin) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "286 227";
+            position = "142 343";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "commandtoserver(\'ModerateServer\');";
+            command = "kick();";
             helpTag = "0";
-            text = "Moderate Server";
+            text = "Force Admin";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleForceXAdmin) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "142 365";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Force XAdmin";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleSuicide) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "142 387";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Suicide";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleSitFreeze) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "142 409";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Sit/Freeze";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btntogglepm) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 343";
+            extent = "52 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "PM";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleChat) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "315 343";
+            extent = "52 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Chat";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleNameMonitor) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 387";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Name Monitor";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleSlashCommand) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "142 431";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Slash Commands";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleImposterMonitor) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 365";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Imposter Monitor";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnBanManagement) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "142 494";
+            extent = "225 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Ban Management";
             groupNum = "-1";
             buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(btnAdvServerOptions) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "142 472";
+            extent = "225 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Advanced Server Options";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(btnToggleImposterMonitor) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 431";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Inventory";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleImposterMonitor) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 409";
+            extent = "105 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Fall Damage";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiButtonCtrl(btnToggleImposterMonitor) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "262 321";
+            extent = "75 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Jetlag";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiTextCtrl(lblClientInformation) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "12 196";
+            extent = "85 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Client Information:";
+            maxLength = "255";
          };
       };
       new GuiButtonCtrl() {
