@@ -14,7 +14,7 @@ new GuiControl(admingui) {
       horizSizing = "center";
       vertSizing = "relative";
       position = "287 0";
-      extent = "450 587";
+      extent = "450 585";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -90,7 +90,7 @@ new GuiControl(admingui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "121 16";
+               extent = "121 2";
                minExtent = "8 2";
                visible = "1";
                helpTag = "0";
@@ -747,7 +747,7 @@ new GuiControl(admingui) {
             horizSizing = "right";
             vertSizing = "bottom";
             position = "142 494";
-            extent = "225 22";
+            extent = "149 22";
             minExtent = "8 2";
             visible = "1";
             command = "kick();";
@@ -770,7 +770,7 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiButtonCtrl(btnToggleImposterMonitor) {
+         new GuiButtonCtrl(btnToggleInventory) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
@@ -784,7 +784,7 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "ToggleButton";
          };
-         new GuiButtonCtrl(btnToggleImposterMonitor) {
+         new GuiButtonCtrl(btnToggleFallDamage) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
@@ -798,7 +798,7 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "ToggleButton";
          };
-         new GuiButtonCtrl(btnToggleImposterMonitor) {
+         new GuiButtonCtrl(btnJetLag) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
@@ -823,6 +823,20 @@ new GuiControl(admingui) {
             helpTag = "0";
             text = "Client Information:";
             maxLength = "255";
+         };
+         new GuiButtonCtrl(btnAuditLog) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "291 494";
+            extent = "76 22";
+            minExtent = "8 2";
+            visible = "1";
+            command = "kick();";
+            helpTag = "0";
+            text = "Audit Log";
+            groupNum = "-1";
+            buttonType = "PushButton";
          };
       };
       new GuiButtonCtrl() {
@@ -1300,7 +1314,7 @@ new GuiControl(admingui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "174 16";
+               extent = "174 2";
                minExtent = "8 2";
                visible = "1";
                helpTag = "0";
