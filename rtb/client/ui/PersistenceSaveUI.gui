@@ -4,7 +4,7 @@ new GuiControl(PersistenceSaveUI) {
    horizSizing = "right";
    vertSizing = "bottom";
    position = "0 0";
-   extent = "1024 768";
+   extent = "640 480";
    minExtent = "8 2";
    visible = "1";
    helpTag = "0";
@@ -13,7 +13,7 @@ new GuiControl(PersistenceSaveUI) {
       profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "345 257";
+      position = "153 113";
       extent = "334 253";
       minExtent = "8 2";
       visible = "1";
@@ -81,16 +81,16 @@ new GuiControl(PersistenceSaveUI) {
          tabComplete = "0";
          sinkAllKeyEvents = "0";
       };
-      new GuiTextCtrl(lblMissionName) {
+      new GuiTextCtrl(lblPersistenceFiles) {
          profile = "GuiTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
          position = "14 120";
-         extent = "128 18";
+         extent = "85 18";
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
-         text = "Persistence Save Options:";
+         text = "Persistence Files:";
          maxLength = "255";
       };
       new GuiButtonCtrl(btnSavePersistence) {

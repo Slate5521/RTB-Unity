@@ -4,7 +4,7 @@ new GuiControl(PersistenceLoadUI) {
    horizSizing = "right";
    vertSizing = "bottom";
    position = "0 0";
-   extent = "1024 768";
+   extent = "640 480";
    minExtent = "8 2";
    visible = "1";
    helpTag = "0";
@@ -13,7 +13,7 @@ new GuiControl(PersistenceLoadUI) {
       profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "center";
-      position = "345 257";
+      position = "153 107";
       extent = "334 266";
       minExtent = "8 2";
       visible = "1";
@@ -71,11 +71,11 @@ new GuiControl(PersistenceLoadUI) {
          horizSizing = "right";
          vertSizing = "bottom";
          position = "14 120";
-         extent = "128 18";
+         extent = "85 18";
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
-         text = "Persistence Save Options:";
+         text = "Persistence Files:";
          maxLength = "255";
       };
       new GuiButtonCtrl(btnLoadPersistence) {
@@ -104,7 +104,7 @@ new GuiControl(PersistenceLoadUI) {
          groupNum = "-1";
          buttonType = "ToggleButton";
       };
-      new GuiCheckBoxCtrl() {
+      new GuiCheckBoxCtrl(chkShouldShowPrivatePersistences) {
          profile = "GuiCheckBoxProfile";
          horizSizing = "right";
          vertSizing = "bottom";
@@ -117,7 +117,7 @@ new GuiControl(PersistenceLoadUI) {
          groupNum = "-1";
          buttonType = "ToggleButton";
       };
-      new GuiCheckBoxCtrl() {
+      new GuiCheckBoxCtrl(chkShouldShowAutosaves) {
          profile = "GuiCheckBoxProfile";
          horizSizing = "right";
          vertSizing = "bottom";
