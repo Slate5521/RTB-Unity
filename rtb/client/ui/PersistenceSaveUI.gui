@@ -106,18 +106,17 @@ new GuiControl(PersistenceSaveUI) {
          groupNum = "-1";
          buttonType = "PushButton";
       };
-      new GuiButtonCtrl(btnSetPrivateDirectory) {
-         profile = "GuiButtonProfile";
+      new GuiTextCtrl(lblMinute) {
+         profile = "GuiTextProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "184 118";
-         extent = "140 22";
+         position = "253 62";
+         extent = "34 18";
          minExtent = "8 2";
          visible = "1";
          helpTag = "0";
-         text = "Set Private Directory";
-         groupNum = "-1";
-         buttonType = "PushButton";
+         text = "minute.";
+         maxLength = "255";
       };
       new GuiCheckBoxCtrl(chkShouldAutosave) {
          profile = "GuiCheckBoxProfile";
@@ -176,18 +175,6 @@ new GuiControl(PersistenceSaveUI) {
          format = "%3.0f";
          range = "0.000000 60.000000";
          increment = "1";
-      };
-      new GuiTextCtrl(lblMinute) {
-         profile = "GuiTextProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "253 62";
-         extent = "34 18";
-         minExtent = "8 2";
-         visible = "1";
-         helpTag = "0";
-         text = "minute.";
-         maxLength = "255";
       };
    };
 };
