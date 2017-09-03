@@ -14,7 +14,7 @@ new GuiControl(admingui) {
       horizSizing = "center";
       vertSizing = "relative";
       position = "287 0";
-      extent = "450 585";
+      extent = "450 584";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -503,7 +503,7 @@ new GuiControl(admingui) {
             visible = "1";
             command = "kick();";
             helpTag = "0";
-            text = "Custom Load/Save";
+            text = "Custom Save";
             groupNum = "-1";
             buttonType = "PushButton";
          };
@@ -1197,7 +1197,7 @@ new GuiControl(admingui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "187 48";
+               extent = "188 2";
                minExtent = "8 2";
                visible = "1";
                helpTag = "0";
