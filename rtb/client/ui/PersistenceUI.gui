@@ -1,0 +1,116 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PersistenceUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "153 113";
+      extent = "334 271";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Save Persistence";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiBitmapCtrl(bmpMissionPreview) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 40";
+         extent = "100 73";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         wrap = "0";
+      };
+      new GuiTextCtrl(lblMissionName) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "114 40";
+         extent = "65 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "mission name";
+         maxLength = "255";
+      };
+      new GuiScrollCtrl(sclMissionList) {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 144";
+         extent = "314 76";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+      };
+      new GuiTextCtrl(lblPersistenceFiles) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 120";
+         extent = "85 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Persistence Files:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnChangeUI) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "253 40";
+         extent = "70 26";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "ERROR";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiControl(btnSaveUIContent) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "334 271";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+      };
+      new GuiControl(btnLoadUIContent) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "334 271";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
