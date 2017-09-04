@@ -14,7 +14,7 @@ new GuiControl(admingui) {
       horizSizing = "center";
       vertSizing = "relative";
       position = "287 0";
-      extent = "450 585";
+      extent = "450 584";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -497,13 +497,13 @@ new GuiControl(admingui) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "12 494";
+            position = "12 472";
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
             command = "kick();";
             helpTag = "0";
-            text = "Custom Load/Save";
+            text = "Setup Load/Save";
             groupNum = "-1";
             buttonType = "PushButton";
          };
@@ -511,7 +511,7 @@ new GuiControl(admingui) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "12 472";
+            position = "12 494";
             extent = "52 22";
             minExtent = "8 2";
             visible = "1";
@@ -579,7 +579,7 @@ new GuiControl(admingui) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "65 472";
+            position = "65 494";
             extent = "52 22";
             minExtent = "8 2";
             visible = "1";
@@ -589,20 +589,19 @@ new GuiControl(admingui) {
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiTextEditCtrl(txtPersistenceName) {
-            profile = "GuiTextEditProfile";
+         new GuiButtonCtrl(btnAuditLog) {
+            profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "15 453";
-            extent = "100 18";
+            position = "291 494";
+            extent = "76 22";
             minExtent = "8 2";
             visible = "1";
+            command = "kick();";
             helpTag = "0";
-            maxLength = "255";
-            historySize = "0";
-            password = "0";
-            tabComplete = "0";
-            sinkAllKeyEvents = "0";
+            text = "Audit Log";
+            groupNum = "-1";
+            buttonType = "PushButton";
          };
          new GuiTextCtrl(lblServerOptions) {
             profile = "GuiTextProfile";
@@ -824,19 +823,27 @@ new GuiControl(admingui) {
             text = "Client Information:";
             maxLength = "255";
          };
-         new GuiButtonCtrl(btnAuditLog) {
-            profile = "GuiButtonProfile";
+         new GuiControl() {
+            profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "291 494";
-            extent = "76 22";
+            position = "13 454";
+            extent = "103 17";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
             helpTag = "0";
-            text = "Audit Log";
-            groupNum = "-1";
-            buttonType = "PushButton";
+
+            new GuiTextCtrl(lblPersistenceName) {
+               profile = "GuiTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "8 18";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               maxLength = "255";
+            };
          };
       };
       new GuiButtonCtrl() {
