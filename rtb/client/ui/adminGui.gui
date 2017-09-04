@@ -14,7 +14,7 @@ new GuiControl(admingui) {
       horizSizing = "center";
       vertSizing = "relative";
       position = "287 0";
-      extent = "450 584";
+      extent = "400 584";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -274,7 +274,7 @@ new GuiControl(admingui) {
             profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "0 6";
+            position = "4 6";
             extent = "384 18";
             minExtent = "8 2";
             visible = "1";
