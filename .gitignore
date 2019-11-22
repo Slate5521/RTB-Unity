@@ -20,3 +20,8 @@ rtb/server/ChatLog.txt
 rtb/logs/Chatlog.txt
 rtb/server/SystemServerLog.txt
 *.dropbox
+rtb/logs/Chatlog.txt
+rtb/server/ChatLog.txt
+rtb/server/clientCash.cs
+rtb/server/ServerLog.txt
+rtb/server/SystemServerLog.txt
