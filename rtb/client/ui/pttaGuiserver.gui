@@ -221,7 +221,7 @@ new GuiControl(pttaguiserver) {
          bitmap = "./pttaguilogo.PNG";
          wrap = "0";
       };
-      new GuiButtonCtrl(btntogglepm) {
+      new GuiButtonCtrl(defunct) {
          profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";

@@ -23,6 +23,24 @@ $Game::EndGamePause = 2;
 //# 04 STUFF
 //----------------------------------------
 
+// RTB-R
+// Privileges
+$Priv::Normal = 0;
+$Priv::TempAdmin = 1;
+$Priv::SuperAdmin = 2;
+$Priv::XAdmin = 3;
+$Priv::Host = 4;
+
+function GameConnection::setPrivilegeLevel(%this, %level) {
+	%this.privLevel = %level;
+}
+
+function GameConnection::isNormalPriv(%this)	{ return %this.privLevel >= $Priv::Normal; 		}
+function GameConnection::isTempAdmin(%this)		{ return %this.privLevel >= $Priv::TempAdmin; 	}
+function GameConnection::isSuperAdmin(%this)	{ return %this.privLevel >= $Priv::SuperAdmin;	}
+function GameConnection::isXAdmin(%this)		{ return %this.privLevel >= $Priv::XAdmin;		}
+function GameConnection::isHost(%this)			{ return %this.privLevel == $Priv::Host;		}
+
 function GameConnection::onClientLeaveGame(%this)
 {
         //----------------------------------------PTTA LOG FILES-------------------------------------------
@@ -471,6 +489,7 @@ function GameConnection::onConnect( %client, %name )
    
    // Set admin status
    if (%client.getAddress() $= "local") {
+	  %client.setPrivilegeLevel($Priv::Host);
       %client.isAdmin = true;
       %client.isSuperAdmin = true;
       %client.isXAdmin = true;
@@ -804,7 +823,10 @@ function GameConnection::onConnect( %client, %name )
 	}		
 
 //---------------------------->>*END* PTTA COMMANDS FOR SERVER LOG<<-------------------------------
-
+	// RTB-R
+	// Send info to the client.
+	
+	serverCmdRequestAdminPrefs(%client);
 }
 
 function cancelexpandlog(%client)

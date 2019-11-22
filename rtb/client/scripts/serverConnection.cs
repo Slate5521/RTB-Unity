@@ -10,6 +10,8 @@
 // Server connection error
 //-----------------------------------------------------------------------------
 
+$dropReason = "unknown reason";
+
 addMessageCallback( 'MsgWrongVersion', handleWrongVersion );
 
 function handleWrongVersion(%msgType, %msgString)
@@ -69,11 +71,15 @@ function GameConnection::onConnectionTimedOut(%this)
    MessageBoxOK( "TIMED OUT", "The server connection has timed out.");
 }
 
+function GameConnection::setDisconnectReason(%this, %reason) {
+	$dropReason = %reason;
+}
+
 function GameConnection::onConnectionDropped(%this, %msg)
 {
    // Established connection was dropped by the server
    disconnectedCleanup();
-   MessageBoxOK( "DISCONNECT", "The server has dropped the connection: " @ %msg);
+   MessageBoxOK( "DISCONNECT", "The server has dropped the connection: " @ $dropReason);
 }
 
 function GameConnection::onConnectionError(%this, %msg)

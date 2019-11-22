@@ -2,18 +2,6 @@
 //Player Gui functions
 
 //Noob function
-function noob()
-{
-%victimId = lstxmenuPlayerList.getSelectedId();
-commandtoserver('noob',%victimId);
-}
-
-//Burn function
-function burn()
-{
-%victimId = lstxmenuPlayerList.getSelectedId();
-commandtoserver('burn',%victimId);
-}
 
 //Cop function
 function xcop()
@@ -51,13 +39,6 @@ function xpay()
 commandtoserver('PlayerGiveMoney',%victimId,%xamount);
 }
 
-//Slap function
-function slap()
-{
-%victimId = lstxmenuPlayerList.getSelectedId();
-%dmg = slapdmg.getValue();
-commandtoserver('slap',%victimId, %dmg);
-}
 
 //Change name
 function xchgname()

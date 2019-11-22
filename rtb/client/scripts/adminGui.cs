@@ -1,6 +1,111 @@
 //###################################
 //# 04 Stuff
 //###################################
+
+// ####################
+// ## ADMIN TAB
+
+// ----
+// User Management
+
+function admingui::onAdminPlayerListChanged() {
+	%index = nameToID(lstAdminPlayerList).getSelectedID();
+	
+	if(%index $= "-1")
+		return;
+	
+	commandToServer('requestPlayerInfo', %index);
+}
+
+
+function admingui::kick() {
+	// get client id from admin player list
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	//send command to server
+	if(%victimId $= "-1")
+	   return;
+   
+	commandToServer('kick', %victimId, %reason);
+}
+
+function admingui::ban() {
+	//get client id from admin player list
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	%reason = nameToID(TxtReason).getValue();
+	//send command to server
+	if(%victimId $= "-1")
+	   return;
+	commandToServer('ban', %victimId, %reason);
+}
+
+function admingui::kill() {
+	//get client id from admin player list
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	//send command to server
+	if(%victimId $= "-1")
+	   return;
+	commandToServer('kill', %victimId);
+}
+
+function admingui::respawn() {
+	//get client id from admin player list
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	//send command to server
+	if(%victimId $= "-1")
+	   return;
+	commandToServer('respawn', %victimId);
+}
+
+function admingui::copy() {
+	//get client id from admin player list
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	//send command to server
+	if(%victimId $= "-1")
+	   return;
+	commandToServer('copy', %victimId);
+}
+
+function admingui::noob() {
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	if(%victimId $= "-1")
+	   return;
+	commandtoserver('noob', %victimId);
+}
+
+function admingui::burn() {
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	if(%victimId $= "-1")
+	   return;
+	commandtoserver('burn',%victimId);
+}
+
+function admingui::slap()
+{
+	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	%dmg = nameToID(txtSlapDamage).getValue();
+	if(%victimId $= "-1" && %dmg < 0)
+	   return;
+	commandtoserver('slap', %victimId, %dmg);
+}
+
+function admingui::clearAllBricks() {
+	MessageBoxYesNo("Clear Bricks?", 
+				    "Are you sure you want to clear ALL the Bricks?", 
+					"commandtoserver('clearAllBricks');", "");
+}
+
+
+// ----
+// Server Options
+
+
+function admingui::jetLag()
+{
+	%lag = nameToID(txtJetlag).getValue();
+	commandToserver('jetpacklag', %lag);
+}
+
+
 function setPlantingCost()
 {
 	%cost = txtCashCost.getValue();
@@ -74,16 +179,6 @@ function unBan()
 	
 	commandtoserver('RemoveBan', %ID);
 	AL_banList.clear();
-}
-
-function clearABricks()
-{
-	MessageBoxYesNo( "Clear Bricks?", "Are you Sure you want to clear ALL the Bricks?", "clearBricksA();", "");
-}
-
-function clearBricksA()
-{
-	commandtoserver('clearAllBricks');
 }
 
 function appBP()
@@ -474,26 +569,6 @@ function StartSuperMan()
 	commandToServer('startSuperManMode',%breakBricks, %friendlyFire, %brickrespawn, %brickHits, %jetPack, %clearInv);  
 }
 
-function kick()
-{
-	//get client id from admin player list
-	%victimId = lstAdminPlayerList.getSelectedId();
-	//send command to server
-	if(%victimId $= "-1")
-	   return;
-	commandToServer('kick', %victimId);
-}
-
-function ban()
-{
-	//get client id from admin player list
-	%victimId = lstAdminPlayerList.getSelectedId();
-	//send command to server
-	if(%victimId $= "-1")
-	   return;
-	commandToServer('ban', %victimId);
-}
-
 function SB()
 {
 
@@ -610,9 +685,4 @@ function Load()
 	commandtoserver('loadBricks',%filename);
 }
 
-function JetLag()
-{
-	%lag = txtJet.getValue();
-	commandToserver('jetpacklag',%lag);
-}
 

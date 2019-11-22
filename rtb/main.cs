@@ -90,6 +90,7 @@ function onStart()
 	// Load the scripts that start it all...
 	exec("./client/init.cs");
 	exec("./server/init.cs");
+	exec("./shared/init.cs");
 	exec("./data/init.cs");
 	exec("./rss/main.cs");
 		
@@ -100,11 +101,15 @@ function onStart()
 	// can host in-game servers.
 	initServer();
 	
+	
 	// Start up in either client, or dedicated server mode
 	if ($Server::Dedicated)
 		initDedicated();
 	else
 		initClient();
+	
+	initShared();
+	activatePackage(sharedServerside);
 }
 
 function onExit()

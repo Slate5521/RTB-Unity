@@ -107,25 +107,11 @@ function muteclient()
 commandToServer('muteclient', %victimId);
 }
 
-//gui script by ©YTUD FO LLAC - kill
-function kill()
-{
-%victimId = lstPttaPlayerList.getSelectedId();
-commandToServer('kill', %victimId);
-}
-
 //gui script by ©YTUD FO LLAC - balete
 function balete()
 {
 %victimId = lstPttaPlayerList.getSelectedId();
 commandToServer('balete', %victimId);
-}
-
-//gui script by ©YTUD FO LLAC - copy
-function copy()
-{
-%victimId = lstPttaPlayerList.getSelectedId();
-commandToServer('copy', %victimId);
 }
 
 //gui script by ©YTUD FO LLAC - unadmin

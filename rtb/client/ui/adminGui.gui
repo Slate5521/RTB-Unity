@@ -13,8 +13,8 @@ new GuiControl(admingui) {
       profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "relative";
-      position = "287 0";
-      extent = "400 584";
+      position = "312 0";
+      extent = "400 577";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -53,22 +53,44 @@ new GuiControl(admingui) {
             vScrollBar = "dynamic";
             constantThumbHeight = "0";
             childMargin = "0 0";
+
+            new GuiTextListCtrl(lstPlayerInfo) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "1 1";
+               extent = "120 2";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
          };
-         new GuiTextEditCtrl(slapDamage) {
+         new GuiControl() {
             profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "339 323";
-            extent = "27 18";
+            position = "13 454";
+            extent = "103 17";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
-            text = "5";
-            maxLength = "255";
-            historySize = "0";
-            password = "0";
-            tabComplete = "0";
-            sinkAllKeyEvents = "0";
+
+            new GuiTextCtrl(lblPersistenceName) {
+               profile = "GuiTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "8 18";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               maxLength = "255";
+            };
          };
          new GuiScrollCtrl(sclAdminPlayerList) {
             profile = "GuiScrollProfile";
@@ -90,9 +112,10 @@ new GuiControl(admingui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "121 2";
+               extent = "121 16";
                minExtent = "8 2";
                visible = "1";
+               command = "admingui.onAdminPlayerListChanged();";
                helpTag = "0";
                enumerate = "0";
                resizeCell = "1";
@@ -111,7 +134,7 @@ new GuiControl(admingui) {
             visible = "1";
             command = "jail();";
             helpTag = "0";
-            text = "Jail";
+            text = "(Un)Jail";
             groupNum = "-1";
             buttonType = "PushButton";
          };
@@ -139,7 +162,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.kick();";
             helpTag = "0";
             text = "Kick";
             groupNum = "-1";
@@ -153,7 +176,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "ban();";
+            command = "adminGui.ban();";
             helpTag = "0";
             text = "Ban";
             groupNum = "-1";
@@ -304,7 +327,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.kill();";
             helpTag = "0";
             text = "Kill";
             groupNum = "-1";
@@ -330,7 +353,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.respawn();";
             helpTag = "0";
             text = "Respawn";
             groupNum = "-1";
@@ -344,7 +367,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.copy();";
             helpTag = "0";
             text = "Copy";
             groupNum = "-1";
@@ -371,7 +394,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "admingui.burn();";
             helpTag = "0";
             text = "Burn";
             groupNum = "-1";
@@ -385,7 +408,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "admingui.noob();";
             helpTag = "0";
             text = "Noob";
             groupNum = "-1";
@@ -399,13 +422,13 @@ new GuiControl(admingui) {
             extent = "75 22";
             minExtent = "8 2";
             visible = "1";
-            command = "jail();";
+            command = "adminGui.slap();";
             helpTag = "0";
             text = "Slap";
             groupNum = "-1";
             buttonType = "PushButton";
          };
-         new GuiTextEditCtrl(slapDamage) {
+         new GuiTextEditCtrl(txtSlapDamage) {
             profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
@@ -555,7 +578,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "admingui.clearAllBricks();";
             helpTag = "0";
             text = "Clear Bricks";
             groupNum = "-1";
@@ -569,7 +592,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "canvas.pushDialog(Changemap);";
             helpTag = "0";
             text = "Change Map";
             groupNum = "-1";
@@ -623,7 +646,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"AdminForce\");";
             helpTag = "0";
             text = "Force Admin";
             groupNum = "-1";
@@ -637,7 +660,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"XAdminForce\");";
             helpTag = "0";
             text = "Force XAdmin";
             groupNum = "-1";
@@ -651,7 +674,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"Suicide\");";
             helpTag = "0";
             text = "Suicide";
             groupNum = "-1";
@@ -665,7 +688,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"SitFreeze\");();";
             helpTag = "0";
             text = "Sit/Freeze";
             groupNum = "-1";
@@ -679,7 +702,7 @@ new GuiControl(admingui) {
             extent = "52 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"PM\");";
             helpTag = "0";
             text = "PM";
             groupNum = "-1";
@@ -693,7 +716,7 @@ new GuiControl(admingui) {
             extent = "52 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"Chat\");";
             helpTag = "0";
             text = "Chat";
             groupNum = "-1";
@@ -707,7 +730,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"NameMonitor\");";
             helpTag = "0";
             text = "Name Monitor";
             groupNum = "-1";
@@ -721,7 +744,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"SlashCommand\");";
             helpTag = "0";
             text = "Slash Commands";
             groupNum = "-1";
@@ -735,7 +758,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"ImposterMonitor\");";
             helpTag = "0";
             text = "Imposter Monitor";
             groupNum = "-1";
@@ -777,7 +800,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"Inventory\");";
             helpTag = "0";
             text = "Inventory";
             groupNum = "-1";
@@ -791,7 +814,7 @@ new GuiControl(admingui) {
             extent = "105 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.changePref(\"FallDamage\");";
             helpTag = "0";
             text = "Fall Damage";
             groupNum = "-1";
@@ -805,11 +828,11 @@ new GuiControl(admingui) {
             extent = "75 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "adminGui.jetlag();";
             helpTag = "0";
             text = "Jetlag";
             groupNum = "-1";
-            buttonType = "ToggleButton";
+            buttonType = "PushButton";
          };
          new GuiTextCtrl(lblClientInformation) {
             profile = "GuiTextProfile";
@@ -823,27 +846,21 @@ new GuiControl(admingui) {
             text = "Client Information:";
             maxLength = "255";
          };
-         new GuiControl() {
+         new GuiTextEditCtrl(txtJetlag) {
             profile = "GuiTextEditProfile";
             horizSizing = "right";
             vertSizing = "bottom";
-            position = "13 454";
-            extent = "103 17";
+            position = "339 323";
+            extent = "27 18";
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
-
-            new GuiTextCtrl(lblPersistenceName) {
-               profile = "GuiTextProfile";
-               horizSizing = "right";
-               vertSizing = "bottom";
-               position = "0 0";
-               extent = "8 18";
-               minExtent = "8 2";
-               visible = "1";
-               helpTag = "0";
-               maxLength = "255";
-            };
+            text = "5";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
          };
       };
       new GuiButtonCtrl() {
@@ -1321,7 +1338,7 @@ new GuiControl(admingui) {
                horizSizing = "right";
                vertSizing = "bottom";
                position = "1 1";
-               extent = "174 2";
+               extent = "174 16";
                minExtent = "8 2";
                visible = "1";
                helpTag = "0";
