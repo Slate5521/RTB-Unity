@@ -71,10 +71,6 @@ function GameConnection::onConnectionTimedOut(%this)
    MessageBoxOK( "TIMED OUT", "The server connection has timed out.");
 }
 
-function GameConnection::setDisconnectReason(%this, %reason) {
-	$dropReason = %reason;
-}
-
 function GameConnection::onConnectionDropped(%this, %msg)
 {
    // Established connection was dropped by the server

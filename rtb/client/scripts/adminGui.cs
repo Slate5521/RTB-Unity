@@ -21,9 +21,11 @@ function admingui::onAdminPlayerListChanged() {
 function admingui::kick() {
 	// get client id from admin player list
 	%victimId = nameToID(lstAdminPlayerList).getSelectedId();
+	%reason = nameToID(TxtReason).getValue();
 	//send command to server
 	if(%victimId $= "-1")
 	   return;
+   
    
 	commandToServer('kick', %victimId, %reason);
 }

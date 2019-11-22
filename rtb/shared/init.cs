@@ -3,4 +3,5 @@ function initShared() {
 	
 	exec("./scripts/datascrubbing.cs");
 	exec("./scripts/adminGui.cs");
+	exec("./scripts/BanListGui.cs");
 }
