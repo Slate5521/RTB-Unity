@@ -14,7 +14,7 @@ new GuiControl(admingui) {
       horizSizing = "center";
       vertSizing = "relative";
       position = "312 0";
-      extent = "400 577";
+      extent = "400 579";
       minExtent = "8 2";
       visible = "1";
       helpTag = "0";
@@ -855,7 +855,7 @@ new GuiControl(admingui) {
             minExtent = "8 2";
             visible = "1";
             helpTag = "0";
-            text = "5";
+            text = "35";
             maxLength = "255";
             historySize = "0";
             password = "0";

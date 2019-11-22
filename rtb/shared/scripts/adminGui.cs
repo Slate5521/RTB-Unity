@@ -37,7 +37,7 @@ function clientCmdRequestAdminPrefsResponse(%updateString) {
 			case "NameMonitor": nameToID(btnToggleNameMonitor).setValue(%valueTF);
 			case "FallDamage": nameToID(btnToggleFallDamage).setValue(%valueTF);
 			case "Inventory": nameToID(btnToggleInventory).setValue(%valueTF);
-			case "JetLag": nameToID(txtJet).setValue(%valueTF);
+			case "JetLag": nameToID(txtJetlag).setValue(%valueTF);
 			case "SpawnEW": // Not implemented.
 			case "PlayerTP": // Not implemented.
 			case "AutoFriend": // Not implemented.
