@@ -1482,7 +1482,6 @@ function serverCmdKick(%client, %victim, %reason) {
 				messageAll( 'MsgAdminForce', '\c3The Admin (%1) has kicked \c0%2\c3(%3). <Reason: %4>', %client.name, %victim.name, getRawIP(%victim), %reason);
 				//kick them
 				%victim.KickBan = "Kick";
-				commandToClient(%victim, 'setDisconnectReason', "You have been kicked by: " @ %client.namebase @ " <Reason: " @ %reason @ ">");
 				%victim.delete();
 			}
 			else
@@ -1537,7 +1536,7 @@ function serverCmdBan(%client, %victim, %Subnet, %reason)
 			}
 		}
 		//kill the victim client
-				commandToClient(%victim, 'setDisconnectReason', "You have been banned by: " @ %client.namebase @ " <Reason: " @ %reason @ ">");
+				
 		%victim.delete();
 	}
 }

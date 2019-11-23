@@ -10,8 +10,6 @@
 // Server connection error
 //-----------------------------------------------------------------------------
 
-$dropReason = "unknown reason";
-
 addMessageCallback( 'MsgWrongVersion', handleWrongVersion );
 
 function handleWrongVersion(%msgType, %msgString)
@@ -75,7 +73,7 @@ function GameConnection::onConnectionDropped(%this, %msg)
 {
    // Established connection was dropped by the server
    disconnectedCleanup();
-   MessageBoxOK( "DISCONNECT", "The server has dropped the connection: " @ $dropReason);
+   MessageBoxOK( "DISCONNECT", "The server has dropped the connection.");
 }
 
 function GameConnection::onConnectionError(%this, %msg)
