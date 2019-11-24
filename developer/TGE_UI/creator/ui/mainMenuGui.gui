@@ -1,0 +1,91 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MainMenuGui) {
+   canSaveDynamicFields = "0";
+   Profile = "GuiContentProfile";
+   HorizSizing = "width";
+   VertSizing = "height";
+   position = "0 0";
+   Extent = "640 480";
+   MinExtent = "8 8";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+   bitmap = "rtb/client/ui/background";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiChunkedBitmapCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "center";
+      VertSizing = "bottom";
+      position = "240 0";
+      Extent = "160 55";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      bitmap = "rtb/client/ui/gray_bar";
+      useVariable = "0";
+      tile = "0";
+
+      new GuiBitmapButtonCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiBorderButtonProfile";
+         HorizSizing = "left";
+         VertSizing = "top";
+         position = "121 5";
+         Extent = "31 43";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         Command = "quit();";
+         tooltipprofile = "GuiToolTipProfile";
+         ToolTip = "Close down the engine";
+         hovertime = "1000";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "rtb/client/ui/buttons/exit";
+      };
+      new GuiBitmapButtonCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiBorderButtonProfile";
+         HorizSizing = "left";
+         VertSizing = "top";
+         position = "71 6";
+         Extent = "41 42";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         Command = "Canvas.pushDialog(optionsDlg);";
+         tooltipprofile = "GuiToolTipProfile";
+         ToolTip = "Adjust basic video, sound and other options";
+         hovertime = "1000";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "rtb/client/ui/buttons/options";
+      };
+      new GuiBitmapButtonCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiBorderButtonProfile";
+         HorizSizing = "right";
+         VertSizing = "top";
+         position = "9 10";
+         Extent = "54 38";
+         MinExtent = "8 2";
+         canSave = "1";
+         Visible = "1";
+         Command = "GuiEdit();";
+         tooltipprofile = "GuiToolTipProfile";
+         ToolTip = "Open the GUI Editor, which helps you create graphical user interfaces for your games";
+         hovertime = "1000";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "rtb/client/ui/buttons/gui";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
