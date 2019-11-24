@@ -182,6 +182,7 @@ function onServerCreated(%mission)
    exec("./radiusDamage.cs");
    exec("./player.cs");
    exec("./brick.cs");
+   exec("./banManager.cs");
    
     // Check to see if the mission has custom datablocks
 	%missionDBFile = filePath(%mission) @ "/" @ fileBase(%mission) @ ".datablocks.cs";
