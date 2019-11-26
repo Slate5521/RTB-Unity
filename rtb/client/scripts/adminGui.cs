@@ -96,6 +96,42 @@ function admingui::clearAllBricks() {
 					"commandtoserver('clearAllBricks');", "");
 }
 
+// ----
+// BanListGui
+
+function BanListGui::unban() {
+	%ID = AL_banList.getSelectedID();
+	if(%ID $= "")
+	   return;
+	
+	commandtoserver('RemoveBan', %ID);
+	AL_banList.clear();
+}
+
+function BanListGui::newBan() {
+	%banIP     = nameToID(txtBanIP).getValue();
+	if(%banIP $= "") return;
+	%banName   = nameToID(txtBanName).getValue();
+	%banReason = nameToID(txtBanReason).getValue();
+	
+	commandToServer('ipBan', %banIP, %banName, %banReason);
+}
+
+function BanListGui::onIndexChanged(%this, %caller) {
+	if(!isObject(nameToID(%caller))) 
+		return;
+	
+	%id = nameToID(%caller).getSelectedID();
+	
+	nameToID(sclBanList).selectedId = %id;
+	
+	if(nameToID(%caller) != nameToID(sclColBanName))
+		nameToID(sclColBanName).setSelectedById(%id);
+	
+	nameToID(sclColBanIP).clearSelection();
+	nameToID(sclColBanReason).clearSelection();
+}
+
 
 // ----
 // Server Options

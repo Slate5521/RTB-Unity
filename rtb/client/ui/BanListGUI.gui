@@ -1,0 +1,237 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(BanListGUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "63 116";
+      extent = "514 225";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Ban Management";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+	  closeCommand = "canvas.popDialog(BanListGui);";
+
+      new GuiScrollCtrl(sclBanList) {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 50";
+         extent = "487 114";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+		 
+		 new GuiTextListCtrl(sclColBanName) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "1 1";
+			   extent = "110 23";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+			   command = "BanListGui.onIndexChanged(sclColBanName);";
+            };
+		 new GuiTextListCtrl(sclColBanIP) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "111 1";
+               extent = "110 23";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+			   command = "BanListGui.onIndexChanged(sclColBanIP);";
+            };
+		 new GuiTextListCtrl(sclColBanReason) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "221 1";
+               extent = "245 23";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+			   command = "BanListGui.onIndexChanged(sclColBanReason);";
+            };
+		// new GuiControl(sclColBanName) {
+        //    profile = "GuiDefaultProfile";
+        //    horizSizing = "right";
+        //    vertSizing = "bottom";
+        //    position = "1 1";
+        //    extent = "110 23";
+        //    minExtent = "8 2";
+        //    visible = "1";
+        //    helpTag = "0";
+        // };
+        // new GuiControl(sclColBanIP) {
+        //    profile = "GuiDefaultProfile"; 
+        //    horizSizing = "right";
+        //    vertSizing = "bottom";
+        //    position = "111 1";
+        //    extent = "110 23";
+        //    minExtent = "8 2";
+        //    visible = "1";
+        //    helpTag = "0";
+        // };
+        // new GuiControl(sclColBanReason) {
+        //    profile = "GuiDefaultProfile";
+        //    horizSizing = "right";
+        //    vertSizing = "bottom";
+        //    position = "221 1";
+        //    extent = "245 23";
+        //    minExtent = "8 2";
+        //    visible = "1";
+         //   helpTag = "0";
+         //};
+      };
+      new GuiTextCtrl(lblBannedName) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 31";
+         extent = "27 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Name";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(lblBannedIP) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "121 31";
+         extent = "53 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "IP Address";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(lblBanReason) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "231 31";
+         extent = "37 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Reason";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnUnban) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 192";
+         extent = "218 22";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Unban";
+         groupNum = "-1";
+         buttonType = "PushButton";
+		 command = "BanListGui.unban();";
+      };
+      new GuiButtonCtrl(btnNewBan) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "232 192";
+         extent = "248 22";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Ban With Provided Settings";
+         groupNum = "-1";
+         buttonType = "PushButton";
+		 command = "BanListGui.newBan();";
+      };
+      new GuiTextEditCtrl(txtBanName) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 170";
+         extent = "110 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtBanIP) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 170";
+         extent = "110 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(txtBanReason) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "230 170";
+         extent = "249 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

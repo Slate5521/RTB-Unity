@@ -772,7 +772,7 @@ new GuiControl(admingui) {
             extent = "149 22";
             minExtent = "8 2";
             visible = "1";
-            command = "kick();";
+            command = "canvas.pushDialog(BanListGui);";
             helpTag = "0";
             text = "Ban Management";
             groupNum = "-1";

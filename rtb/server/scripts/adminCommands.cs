@@ -61,13 +61,13 @@ function serverCmdTogglePlantingCosts(%client)
 
 function serverCmdgetBanList(%client)
 {
-	if(%client.isAdmin || %client.isSuperAdmin)
+	if(%client.isSuperAdmin())
 	{
 		for(%i = 1; %i <= $Ban::numBans; %i++)
 		{
-			messageClient(%client,'MsgBanAdd',"",%i,$Ban::Name[%i],$Ban::IP[%i],$Ban::Subnet[%i]);
+			messageClient(%client, 'MsgBanAdd', "", %i, $Ban::Name[%i], $Ban::IP[%i], $Ban::Reason[%i]);
 		}
-	}
+	} else messageClient(%client, 'MsgBanAdd', "", 0, -1, -1, -1);
 }
 
 function servercmdRemoveBan(%client, %ID)
@@ -81,7 +81,7 @@ function servercmdRemoveBan(%client, %ID)
 		}
 		$Ban::Name[%ID] = "";
 		$Ban::IP[%ID] = "";
-		$Ban::Subnet[%ID] = "";
+		$Ban::Reason[%ID] = "";
 		$IDer = 0;
 		for(%i = 1; %i <= $Ban::numBans+1; %i++)
 		{
@@ -92,9 +92,9 @@ function servercmdRemoveBan(%client, %ID)
 				$Ban::Name[$IDer] = $Ban::Name[%i];
 				$Ban::IP[$IDer] = $Ban::IP[%i];
 				echo($Ban::IP[$IDer]);
-				if($Ban::Subnet[%i] !$= "")
+				if($Ban::Reason[%i] !$= "")
 				{
-					$Ban::Subnet[$IDer] = $Ban::Subnet[%i];
+					$Ban::Reason[$IDer] = $Ban::Reason[%i];
 				}
 			}
 		}
@@ -1523,10 +1523,10 @@ function serverCmdBan(%client, %victim, %Subnet, %reason)
 
 				$Ban::numBans++;
 				$Ban::ip[$Ban::numBans] = %ip;
-				if(%Subnet $= 1)
-				{
-				$Ban::ipsubnet[$Ban::numBans] = getIPMask(%ip);
-				}
+				if(strlen(%reason) > 255)
+					%reason = getsubstr(%reason, 0, 255);
+				
+				$Bam::reason[$Ban::numBans] = %reason;
 				$Ban::name[$Ban::numBans] = %victim.namebase;
 			}
 			else
