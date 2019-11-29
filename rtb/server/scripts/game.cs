@@ -259,11 +259,16 @@ function onServerCreated(%mission)
    $Pref::BBC::Mode = 0;
    $Pref::BBC::NoBuilding = 0;
    $Pref::Server::TotalTeams = 0;
+   
+	//load banlist
+    BanManagerInitialize();
+	BanManager.loadBans();
 }
 
 function onServerDestroyed()
 {
-   // This function is called as part of a server shutdown.
+    BanManager.saveBans();
+	BanManager.delete();
 }
 
 

@@ -94,8 +94,6 @@ function onStart()
 	exec("./data/init.cs");
 	exec("./rss/main.cs");
 		
-	//load ip banlist
-	exec("./server/ipBanList.cs");
 
 	// Server gets loaded for all sessions, since clients
 	// can host in-game servers.
@@ -124,10 +122,9 @@ function onExit()
 
    echo("Exporting server prefs");
    export("$Pref::Server::*", "./server/prefs.cs", False);
-   BanList::Export("./server/banlist.cs");
-
+   
    echo("Exporting IP banlist");
-   export("$Ban::*", "./server/ipBanList.cs", False);
+   BanManager.saveBans();
 
    Parent::onExit();
 }

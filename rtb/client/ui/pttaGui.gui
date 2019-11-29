@@ -29,7 +29,7 @@ new GuiControl(pttagui) {
       minSize = "50 50";
       closeCommand = "canvas.popDialog(pttaGui);";
 
-      new GuiTextEditCtrl(txtBanIP) {
+      new GuiTextEditCtrl(txtBanIPFuckPTTA) {
          profile = "GuiTextEditProfile";
          horizSizing = "right";
          vertSizing = "bottom";

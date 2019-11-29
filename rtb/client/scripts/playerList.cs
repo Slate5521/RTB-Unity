@@ -16,7 +16,7 @@ addMessageCallback('MsgTeamAdd', handleTeamAdd);
 addMessageCallback('MsgTeamRemove', handleTeamRemove);
 
 addMessageCallback('MsgBanAdd', handleBanAdd);
-addMessageCallback('MsgBanRemove', handleBanRemove);
+addMessageCallback('MsgBanListClear', handleBanListClear);
 
 addMessageCallback('MsgSendPlayerList', handlePlayerList);
 addMessageCallback('MsgSendPlayerTeamList', handlePlayerTeamList);
@@ -51,20 +51,13 @@ function handlePlayerList(%msgType, %msgString, %PlayerName, %Friend, %Safe, %cl
 	AP_PlayerStatus.addRow(%cl, %PlayerName TAB %Friend TAB %Safe, 0);
 }
 
-function handleBanRemove(%msgType, %msgString, %BanID)
-{
+function handleBanListClear(%msgType) {
+	banListGui.clearBanList();
+	commandtoserver('getBanList');
 }
 
-function handleBanAdd(%msgType, %msgString, %BanID, %BanName, %BanIP, %BanSubnet)
-{	
-	if(%BanSubnet !$= "")
-	{
-		AL_Banlist.addRow(%BanID,%BanID TAB %BanName TAB %BanIP TAB %BanSubnet, %BanID);
-	}
-	else
-	{
-		AL_Banlist.addRow(%BanID,%BanID TAB %BanName TAB %BanIP TAB "No", %BanID);
-	}
+function handleBanAdd(%msgType, %msgString, %BanID, %BanName, %BanIP, %BanReason) {	
+	banListGui.addBan(%BanID, %BanName, %BanIP, %BanReason);
 }
 
 function handleTeamRemove(%msgType, %msgString, %teamID)

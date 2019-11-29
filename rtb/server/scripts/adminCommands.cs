@@ -59,47 +59,87 @@ function serverCmdTogglePlantingCosts(%client)
 	}
 }
 
-function serverCmdgetBanList(%client)
-{
-	if(%client.isSuperAdmin())
-	{
-		for(%i = 1; %i <= $Ban::numBans; %i++)
-		{
-			messageClient(%client, 'MsgBanAdd', "", %i, $Ban::Name[%i], $Ban::IP[%i], $Ban::Reason[%i]);
+function serverCmdgetBanList(%client) {
+	if(%client.isSuperAdmin()) {
+		for(%i = 0; %i < BanManager.banCount; %i++) {
+			messageClient(%client, 'MsgBanAdd', "", %i, BanManager.getBanName(%i), BanManager.getBanIP(%i), BanManager.getBanReason(%i));
 		}
 	} else messageClient(%client, 'MsgBanAdd', "", 0, -1, -1, -1);
 }
 
-function servercmdRemoveBan(%client, %ID)
-{
-	if(%client.isSuperAdmin)
-	{
-		if($Ban::IP[%ID] $= "")
-		{
-			serverCmdgetBanList(%client);
+function servercmdRemoveBan(%client, %ip) {
+	if(%client.isSuperAdmin()) {
+		%banID = BanManager.hasBan(%ip);
+		if(%banID >= 0) {
+			messageAll('MsgAdminForce', '\c3The Admin (%1) has unbanned \c0%2\c3(%3).', %client.namebase, BanManager.getBanName(%banID), %ip);
+			BanManager.removeBan(%ip);
+			messageAdmin('MsgBanListClear');
+		}
+	}
+}
+
+function serverCmdBanIp(%client, %banIp, %banName, %banReason) {
+	if(%client.isSuperAdmin()) {
+		if(!isValidIP(%banIP))
+			return;
+		
+		if(%ip !$= "local") {
+			//if(%reason $= "" || %reason $= "reason") %reason = "N/A";
+			//if($Pref::Server::Log) {
+			//	$Logfile = new FileObject();
+			//	$Logfile.openForAppend("rtb/server/ServerLog.txt");
+			//	$Logfile.writeLine(">>*BAN*<<");
+			//	$Logfile.writeLine("Name: "@%victim.namebase @ " ip: "@getrawip(%victim)@" Time: " @ $Sim::Time@ " by: "@%client.namebase@ " reason: "@%reason);
+			//	$Logfile.close();
+			//}
+			
+			//tell everyone about it
+			messageAll( 'MsgAdminForce', '\c3The Admin (%3) has IP-banned "\c0%1\c3"(%2). <Reason: %4>', %banName, %banIp, %client.name, %banReason);
+			BanManager.addBan(%banIp, %banName, %banReason);
+			messageAdmin('MsgBanListClear');
+		} else {
+			messageClient(%client, 'MsgAdminForce', '\c3You can\'t ban the local client.');
 			return;
 		}
-		$Ban::Name[%ID] = "";
-		$Ban::IP[%ID] = "";
-		$Ban::Reason[%ID] = "";
-		$IDer = 0;
-		for(%i = 1; %i <= $Ban::numBans+1; %i++)
+	}
+}
+
+function serverCmdBan(%client, %victim, %reason)
+{
+	if(%client.isSuperAdmin())
+	{
+		//add player to ban list
+		if (!%victim.isAIControlled())
 		{
-			if($Ban::IP[%i] !$= "")
+			//this isnt a bot so add their ip to the banlist
+			%ip = getRawIP(%victim);
+			if(%ip !$= "local")
 			{
-				$IDer++;
-				echo($IDer);
-				$Ban::Name[$IDer] = $Ban::Name[%i];
-				$Ban::IP[$IDer] = $Ban::IP[%i];
-				echo($Ban::IP[$IDer]);
-				if($Ban::Reason[%i] !$= "")
-				{
-					$Ban::Reason[$IDer] = $Ban::Reason[%i];
+				%victim.KickBan = "Ban";
+				if(%reason $= "" || %reason $= "reason") %reason="N/A";
+				if($Pref::Server::Log) {
+					$Logfile = new FileObject();
+					$Logfile.openForAppend("rtb/server/ServerLog.txt");
+					$Logfile.writeLine(">>*BAN*<<");
+					$Logfile.writeLine("Name: "@%victim.namebase @ " ip: "@getrawip(%victim)@" Time: " @ $Sim::Time@ " by: "@%client.namebase@ " reason: "@%reason);
+					$Logfile.close();
 				}
+
+				//tell everyone about it
+				messageAll( 'MsgAdminForce', '\c3The Admin (%3) has banned \c0%1\c3(%2). <Reason: %4>', %victim.name, getRawIP(%victim), %client.name, %reason);
+
+				BanManager.addBan(%ip, %victim.namebase, %reason);
+				messageAdmin('MsgBanListClear');
+			}
+			else
+			{
+				messageClient(%client, 'MsgAdminForce', '\c3You can\'t ban the local client.');
+				return;
 			}
 		}
-		$Ban::numBans--;
-		serverCmdgetBanList(%client);
+		//kill the victim client
+				
+		%victim.delete();
 	}
 }
 
@@ -1495,49 +1535,6 @@ function serverCmdKick(%client, %victim, %reason) {
 			//always kick bots
 			%victim.delete("You have been kicked.");
 		}
-	}
-}
-function serverCmdBan(%client, %victim, %Subnet, %reason)
-{
-	if(%client.isSuperAdmin())
-	{
-		//add player to ban list
-		if (!%victim.isAIControlled())
-		{
-			//this isnt a bot so add their ip to the banlist
-			%ip = getRawIP(%victim);
-			if(%ip !$= "local")
-			{
-				%victim.KickBan = "Ban";
-				if(%reason $= "" || %reason $= "reason") %reason="N/A";
-				if($Pref::Server::Log) {
-					$Logfile = new FileObject();
-					$Logfile.openForAppend("rtb/server/ServerLog.txt");
-					$Logfile.writeLine(">>*BAN*<<");
-					$Logfile.writeLine("Name: "@%victim.namebase @ " ip: "@getrawip(%victim)@" Time: " @ $Sim::Time@ " by: "@%client.namebase@ " reason: "@%reason);
-					$Logfile.close();
-				}
-
-				//tell everyone about it
-				messageAll( 'MsgAdminForce', '\c3The Admin (%3) has banned \c0%1\c3(%2). <Reason: %4>', %victim.name, getRawIP(%victim), %client.name, %reason);
-
-				$Ban::numBans++;
-				$Ban::ip[$Ban::numBans] = %ip;
-				if(strlen(%reason) > 255)
-					%reason = getsubstr(%reason, 0, 255);
-				
-				$Bam::reason[$Ban::numBans] = %reason;
-				$Ban::name[$Ban::numBans] = %victim.namebase;
-			}
-			else
-			{
-				messageClient(%client, 'MsgAdminForce', '\c3You can\'t ban the local client.');
-				return;
-			}
-		}
-		//kill the victim client
-				
-		%victim.delete();
 	}
 }
 

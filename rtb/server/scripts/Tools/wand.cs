@@ -478,9 +478,9 @@ function colourBrick(%brick,%colour)
 	%brick.setskinname(%colour);
 }
 
-function serverCmdBanPlayerIP(%client, %victimip, %victimname)
+function serverCmdBanPlayerIP(%client, %victimip, %victimname, %reason)
 {
-	if(%client.isAdmin || %client.isSuperAdmin)
+	if(%client.isSuperAdmindmin())
 	{
 		for(%t = 0; %t<ClientGroup.getCount(); %t++)
 		{
@@ -499,7 +499,7 @@ function serverCmdBanPlayerIP(%client, %victimip, %victimname)
 			%ip = %victimip;
 			if(%ip !$= "local")
 			{
-				messageAll( 'MsgAdminForce', '\c0%3\c3 has banned \c0%1\c3(\c0%2\c3) for Brickspamming.', %victimname, %victimip, %client.name);
+				messageAll( 'MsgAdminForce', '\c0%3\c3 has IP banned \c0%1\c3(\c0%2\c3) for Brickspamming.', %victimname, %victimip, %client.name);
 
 				$Ban::numBans++;
 				$Ban::ip[$Ban::numBans] = %ip;

@@ -112,6 +112,7 @@ function initClient()
 	exec("./ui/login.gui");
 	exec("./ui/impulseGUI.gui");
 	exec("./ui/tgelobby/execall.cs");
+	exec("./ui/BanListGui.gui");
 	
 	// Load up PTTA UI
 	exec("./ui/voting.gui");

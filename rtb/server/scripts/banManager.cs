@@ -1,10 +1,12 @@
-if(!isObject(BanManager)) {
-	new TCPObject(BanManager) {
-		saveDirectory = "rtb/server/bans.txt";
-		banCount = 0;
-	};
+function BanManagerInitialize() {
+	if(!isObject(BanManager)) {
+		new TCPObject(BanManager) {
+			saveDirectory = "rtb/server/bans.txt";
+			banCount = 0;
+		};
+	}
+	
 }
-
 function BanManager::loadBans(%this) {
 	%banList = new FileObject();
 	%banList.openForRead(%this.saveDirectory);
@@ -15,8 +17,9 @@ function BanManager::loadBans(%this) {
 		
 		%line = nextToken(%line, "banIP", "\t");
 		
-		if(%banIP $= "") 
+		if(!isValidIP(%banIP)) 
 			continue;
+		
 		
 		%line = nextToken(%line, "banName", "\t");
 		%line = nextToken(%line, "banReason", "\t");
@@ -40,7 +43,7 @@ function BanManager::saveBans(%this) {
 		%banName = %this.getBanName(%i);
 		%banReason = %this.getBanReason(%i);
 		
-		if(%banIP == -1) continue;
+		if(!isValidIP(%banIP)) continue;
 		
 		%banList.writeLine(%banIP TAB collapseEscape(%banName) TAB collapseEscape(%banReason));
 	}
@@ -50,9 +53,14 @@ function BanManager::saveBans(%this) {
 }
 
 function BanManager::addBan(%this, %ip, %name, %reason) {
-	if(%ip $= "") return;
+	if(!isValidIP(%ip)) return;
+	if(%this.hasBan(%ip) != -1) return;
+	echo("DEBUG");
+	
 	if(%name $= "") %name = "NO NAME";
 	if(%reason $= "") %reason = "N/A";
+	
+	
 	
 	%this.banIP[%this.banCount] = %ip;
 	%this.banName[%this.banCount] = %name;
@@ -65,15 +73,28 @@ function BanManager::removeBan(%this, %ip) {
 	%banIndex = -1;
 	
 	for(%i = 0; %i < %this.banCount; %i++) {
-		if(%this.banIP[%i] == %ip) {
+		if(%this.banIP[%i] $= %ip) {
 			%banIndex = %i;
 			break;
 		}
 	}
 	
-	%this.banIP[%banIndex] = -1;
-	%this.banName[%banIndex] = "";
-	%this.banReason[%banReason] = "";	
+	// Ban not found.
+	if(%banIndex == -1) return;
+		
+	for(%i = %banIndex; %i < %this.banCount; %i++) {
+		%this.banIP[%i] = %this.banIP[%i + 1];
+		%this.banName[%i] = %this.banName[%i + 1];
+		%this.banReason[%i] = %this.banReason[%i + 1];
+	}
+	
+	// Remove ban at end of list
+	
+	%this.banIP[%this.banCount] = "";
+	%this.banName[%this.banCount] = "";
+	%this.banReason[%this.banCount] = "";
+	
+	%this.banCount--;
 }
 
 function BanManager::getBanName(%this, %i) {
@@ -83,7 +104,7 @@ function BanManager::getBanName(%this, %i) {
 function BanManager::getBanIP(%this, %i) {
 	%ip = %this.banIP[%i];
 	
-	if(%ip $= "") 
+	if(!isValidIP(%ip)) 
 		%ip = -1;
 	
 	return %ip;
@@ -91,4 +112,12 @@ function BanManager::getBanIP(%this, %i) {
 
 function BanManager::getBanReason(%this, %i) {
 	return %this.banReason[%i];
+}
+
+function BanManager::hasBan(%this, %ip) {
+	for(%i = 0; %i < %this.banCount; %i++)
+		if(%this.banIP[%i] $= %ip)
+			return %i;
+		
+	return -1;
 }
