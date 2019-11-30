@@ -184,6 +184,10 @@ function onServerCreated(%mission)
    exec("./brick.cs");
    exec("./banManager.cs");
    
+	//load banlist
+    BanManagerInitialize();
+	BanManager.loadBans();
+   
     // Check to see if the mission has custom datablocks
 	%missionDBFile = filePath(%mission) @ "/" @ fileBase(%mission) @ ".datablocks.cs";
 	if(isFile(%missionDBFile)) {
@@ -260,9 +264,6 @@ function onServerCreated(%mission)
    $Pref::BBC::NoBuilding = 0;
    $Pref::Server::TotalTeams = 0;
    
-	//load banlist
-    BanManagerInitialize();
-	BanManager.loadBans();
 }
 
 function onServerDestroyed()
@@ -432,8 +433,6 @@ function onCyclePauseEnd()
 //-----------------------------------------------------------------------------
 function GameConnection::onConnectRequest( %client, %netAddress, %name )
 {
-	
-
 	echo("Connect request from: " @ %netAddress);
 	%client.name = %name;
 	%client.HBR = 1;
@@ -443,19 +442,11 @@ function GameConnection::onConnectRequest( %client, %netAddress, %name )
 
 	//check ban list
 	%ip = getRawIP(%client);
-	%i = 0;
+	
 	if($Pref::Server::Lock == 0)
 	{
-		for(%i = 0; %i <= $Ban::numBans; %i++)
-		{
-			echo("Checking IP Ban Entry Number: ", %i);
-			if(%ip $= $Ban::ip[%i])
-			{
+		if(BanManager.hasBan(%ip) != -1)
 			return "You are banned.";
-			messageall('','%1 tried to enter the server but is banned',%client.namebase);
-			}
-
-		}
 	}
 	//moded script by ©YTUD FO LLAC - function GameConnection::onConnectRequest
 	if($Pref::Server::Lock == 1 && %ip !$= $Pref::Server::IP)
