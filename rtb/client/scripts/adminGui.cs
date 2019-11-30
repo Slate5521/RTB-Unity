@@ -198,8 +198,7 @@ function appBP()
 
 function adminGui::onWake()
 {
-	AL_Banlist.clear();
-	commandtoserver('getBanList');
+	commandToServer('RequestAdminPrefs');
 	AP_PlayerStatus.clear();
 	commandtoserver('getPLayerList');
 	AT_PlayerTeams.clear();
