@@ -274,7 +274,7 @@ package sharedServerside {
 	}
 	
 	function serverCmdSetPlayerRights(%client, %client2, %rights) {
-		if(%client < $Priv::TempAdmin) 
+		if(!%client.isTempAdmin()) 
 			return;
 		
 		%right = getFirstWord(%rights);

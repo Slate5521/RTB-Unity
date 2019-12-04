@@ -288,3 +288,13 @@ Time: 141.024002
 Action: XAdmin :: Noob-A-Fied
 By: Blockdude
 Client Ip: local
+
+
+«=X=»¦ XAdmin :: Burnt To Death ¦«=X=»
+
+Victim Name: Blockdude
+Victim Ip: local
+Time: 156.640015
+Action: XAdmin :: Burnt To Death
+By: Blockdude
+Client Ip: local
