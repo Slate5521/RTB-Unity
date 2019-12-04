@@ -218,7 +218,7 @@ new GuiControl(admingui) {
             extent = "105 33";
             minExtent = "8 2";
             visible = "1";
-            command = "PlayerRights();";
+            command = "adminGui.openPlayerOptions();";
             helpTag = "0";
             text = "Player Options";
             groupNum = "-1";

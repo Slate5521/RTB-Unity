@@ -2,7 +2,6 @@ function scrubDataTrueFalse(%var) {
 	if(%var == 0 || %var == 1)
 		return %var;
 }
-
 	
 function isValidIP(%ip) {	
 	if(%ip == -1) return false;

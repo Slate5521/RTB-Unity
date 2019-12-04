@@ -113,13 +113,14 @@ function initClient()
 	exec("./ui/impulseGUI.gui");
 	exec("./ui/tgelobby/execall.cs");
 	exec("./ui/BanListGui.gui");
+	exec("./ui/PlayerRightsGui.gui");
 	
 	// Load up PTTA UI
-	exec("./ui/voting.gui");
-	exec("./ui/pttaGuiserver.gui");
-	exec("./ui/pttaGuipersonal.gui");
-	exec("./ui/pttaGui.gui");
-	exec("./ui/Changemap.gui");
+	//exec("./ui/voting.gui");
+	//exec("./ui/pttaGuiserver.gui");
+	//exec("./ui/pttaGuipersonal.gui");
+	//exec("./ui/pttaGui.gui");
+	//exec("./ui/Changemap.gui");
 
 
 	// Client scripts

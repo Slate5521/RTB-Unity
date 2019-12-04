@@ -66,6 +66,39 @@ function admingui::changePref(%this, %pref) {
 	}
 }
 
+function clientCmdPlayerRightsRequestResponse(%response) {
+	%responseTokens = %response;
+	
+	while(%responseTokens !$= "") {
+		%responseTokens = nextToken(%responseTokens, "curToken", "\n");
+		
+		%variable = firstWord(%curToken);
+		%value = getWords(%curToken, 1, getWordCount(%curToken));
+		
+		%valueTF = scrubDataTrueFalse(%value);
+		
+		switch$(%variable) {
+			case "PrivLevel": 
+				%radio = -1;
+				
+				     if(%value == $Priv::Normal)     %radio = nametoID(radioPrivNormal);
+				else if(%value == $Priv::TempAdmin)  %radio = nametoID(radioPrivTempAdmin);
+				else if(%value == $Priv::SuperAdmin) %radio = nametoID(radioPrivSuperAdmin);
+				else if(%value == $Priv::XAdmin)     %radio = nametoID(radioPrivXAdmin);
+				else if(%value == $Priv::Host)       %radio = nametoID(radioPrivXAdmin);
+				
+				// Invalid value or radio control doesn't exist.
+				if(%radio == -1) continue;
+				
+				%radio.setValue(true);
+				
+			case "EW": nameToID(btnRightsEditorWand).setValue(%valueTF);
+			case "BuildRights": nameToID(btnRightsBuilding).setValue(%valueTF);
+			case "Inventory": nameToID(btnRightsInventory).setValue(%valueTF);
+			case "God": nameToID(btnRightsGod).setValue(%valueTF);
+		}
+	}
+}
 
 // SERVERSIDE
 
@@ -225,5 +258,49 @@ package sharedServerside {
 		}
 		
 		commandToClient(%client, 'PlayerInfoRequestResponse', %infobase);
+	}
+	
+	function serverCmdRequestPlayerRights(%client, %client2) {
+		%infobase = "PrivLevel" SPC %client2.privLevel;
+		
+		if(%client.isTempAdmin()) // Update this when I implement EW and whatnot.
+			%infobase = %infobase NL
+						"EW" SPC "0" NL
+						"BuildRights" SPC "0" NL
+						"Inventory" SPC "0" NL
+						"God" SPC "0";
+						
+		commandToClient(%client, 'PlayerRightsRequestResponse', %infobase);
+	}
+	
+	function serverCmdSetPlayerRights(%client, %client2, %rights) {
+		if(%client < $Priv::TempAdmin) 
+			return;
+		
+		%right = getFirstWord(%rights);
+		%value = getWord(%rights, 1);
+		%valueTF = scrubDataTrueFalse(%value);
+		
+		switch$(%right) {
+			case "PrivLevel":
+				// If client is trying to set a privlevel that is equivalent to his or her role or higher, stop. 
+				if(%client.privLevel >= %value) 
+					return;
+				// If client is trying to set the privlevel of someone who is his or her role or higher, stop.
+				if(%client.privLevel <= %client2.privLevel) 
+					return;
+				// If client is trying to set a privlevel that doesn't exist, stop.
+				if(%value < $Priv::Normal || %value > $Priv::XAdmin)
+					return;
+				if(%client == %client2) 
+					return;
+				
+				%client2.privLevel = %value;
+				messageAll('', 'priv level');
+			case "EW": // Not implemented.
+			case "BuildRights": // Not implemented.
+			case "Inventory": // Not implemented.
+			case "God": // Not implemented.
+		}
 	}
 };

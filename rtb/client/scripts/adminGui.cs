@@ -96,6 +96,61 @@ function admingui::clearAllBricks() {
 					"commandtoserver('clearAllBricks');", "");
 }
 
+// ----
+// Player Options
+
+function admingui::openPlayerOptions() {
+	%id = nameToID(lstAdminPlayerList).getSelectedId();
+	
+	if(%id == -1) 
+		return;
+	
+	Canvas.pushDialog(PlayerRightsGui);
+}
+
+function PlayerRightsGui::onWake(%this) {
+	nametoID(radioPrivNormal).setValue(false);
+	nametoID(radioPrivTempAdmin).setValue(false);
+	nametoID(radioPrivSuperAdmin).setValue(false);
+	nametoID(radioPrivXAdmin).setValue(false);
+				
+	nameToID(btnRightsEditorWand).setValue(false);
+	nameToID(btnRightsBuilding).setValue(false);
+	nameToID(btnRightsInventory).setValue(false);
+	nameToID(btnRightsGod).setValue(false);
+	
+	commandToServer('RequestPlayerRights', nameToID(lstAdminPlayerList).getSelectedId());
+}
+
+function PlayerRightsGui::setEW(%this) {
+	commandToServer('SetPlayerRights', nameToID(lstAdminPlayerList).getSelectedId(), "EW" SPC nameToID(btnRightsEditorWand).getValue);
+}
+
+function PlayerRightsGui::setBuildingRights(%this) {
+	commandToServer('SetPlayerRights', nameToID(lstAdminPlayerList).getSelectedId(), "BuildRights" SPC nameToID(btnRightsBuilding).getValue);
+}
+
+function PlayerRightsGui::setInventory(%this) {
+	commandToServer('SetPlayerRights', nameToID(lstAdminPlayerList).getSelectedId(), "Inventory" SPC nameToID(btnRightsInventory).getValue);
+}
+
+function PlayerRightsGui::setGodMode(%this) {
+	commandToServer('SetPlayerRights', nameToID(lstAdminPlayerList).getSelectedId(), "God" SPC nameToID(btnRightsGod).getValue);
+}
+
+function PlayerRightsGui::setPrivLevel(%this) {
+	%newPrivLevel = -1;
+	
+	     if(nametoID(radioPrivNormal).getValue())     %newPrivLevel = $Priv::Normal;
+	else if(nametoID(radioPrivTempAdmin).getValue())  %newPrivLevel = $Priv::TempAdmin;
+	else if(nametoID(radioPrivSuperAdmin).getValue()) %newPrivLevel = $Priv::SuperAdmin;
+	else if(nametoID(radioPrivXAdmin).getValue())     %newPrivLevel = $Priv::XAdmin;
+	
+	if(%newPrivLevel == -1) return;
+	
+	commandToServer('SetPlayerRights', nameToID(lstAdminPlayerList).getSelectedId(), "PrivLevel" SPC %newPrivLevel);
+}
+
 
 // ----
 // Server Options
@@ -198,7 +253,7 @@ function appBP()
 
 function adminGui::onWake()
 {
-	commandToServer('RequestAdminPrefs');
+	commandToServer('RequestAdminPrefs'); 
 	AP_PlayerStatus.clear();
 	commandtoserver('getPLayerList');
 	AT_PlayerTeams.clear();
